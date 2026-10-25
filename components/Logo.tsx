@@ -17,7 +17,7 @@ const paths = Array.from({ length: N }, (_, i) => archPath(i)).join("");
 
 export function LogoMark({ size = 40 }: { size?: number }) {
   return (
-    <svg width={size} height={size * 0.8} viewBox="0 0 400 320" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+    <svg width={size} height={size * 0.8} viewBox="0 0 400 320" fill="none" stroke="currentColor" strokeWidth="9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
       <path d={paths} />
     </svg>
   );
@@ -26,7 +26,9 @@ export function LogoMark({ size = 40 }: { size?: number }) {
 export function Logo({ light = false }: { light?: boolean }) {
   return (
     <span className={`logo${light ? " logo-light" : ""}`}>
-      <LogoMark size={44} />
+      <span className="logo-tile">
+        <LogoMark size={30} />
+      </span>
       <span className="logo-text">
         <span className="logo-name">MEPAL</span>
         <span className="logo-sub">Orman Ürünleri</span>

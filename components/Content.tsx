@@ -5,6 +5,8 @@ import { PRICES_UPDATED_LABEL, PRICE_ROWS, TIERS, VAT_NOTE, rowByKey, tl } from 
 import { waLink, telHref, site } from "@/lib/site";
 import { breadcrumbLd, faqLd } from "@/lib/seo";
 import { slugify } from "@/lib/format";
+import { Icon } from "@/components/Icons";
+import { Photo, type PhotoName } from "@/components/Photo";
 
 export function JsonLd({ data }: { data: object | object[] }) {
   const items = Array.isArray(data) ? data : [data];
@@ -37,25 +39,24 @@ export function CtaButtons({ message, source }: { message: string; source?: stri
   return (
     <div className="cta-row">
       <a className="btn btn-wa" href={waLink(message)} data-evt="whatsapp_click" data-src={source} rel="noopener" target="_blank">
-        WhatsApp ile Fiyat Al
+        <Icon name="chat" size={18} /> WhatsApp ile Fiyat Al
       </a>
       <a className="btn btn-dark" href={telHref} data-evt="tel_click" data-src={source}>
-        Hemen Ara · {site.phone}
+        <Icon name="phone" size={18} /> Hemen Ara · {site.phone}
       </a>
     </div>
   );
 }
 
-export function PageHero({ h1, answer, children, aside }: { h1: string; answer?: string; children?: ReactNode; aside?: ReactNode }) {
+export function PageHero({ h1, answer, children, kicker, photo }: { h1: string; answer?: string; children?: ReactNode; kicker?: string; photo?: PhotoName }) {
   return (
-    <header className="page-hero">
-      <div className="wrap hero-grid">
-        <div>
-          <h1>{h1}</h1>
-          {answer && <p className="answer">{answer}</p>}
-          {children}
-        </div>
-        {aside && <div className="hero-aside">{aside}</div>}
+    <header className={`page-hero ${photo ? "has-photo" : "plain"}`}>
+      {photo && <Photo name={photo} className="hero-bg" sizes="100vw" alt="" priority />}
+      <div className="wrap hero-in">
+        {kicker && <p className="eyebrow">{kicker}</p>}
+        <h1>{h1}</h1>
+        {answer && <p className="answer">{answer}</p>}
+        {children}
       </div>
     </header>
   );
@@ -240,16 +241,25 @@ export function RelatedLinks({ title, links }: { title: string; links: [string, 
   );
 }
 
-export function FinalCta({ message, title = "Palet ihtiyacınız için bugün teklif alın" }: { message: string; title?: string }) {
+export function FinalCta({ message, title = "Palet mi lazım, paletinizi mi satmak istiyorsunuz?" }: { message: string; title?: string }) {
   return (
     <section className="final-cta">
-      <div className="wrap">
-        <h2>{title}</h2>
-        <p>Ürün, adet ve teslimat ilini yazın; aynı gün güncel fiyatla dönüş yapalım. Mesai dışında sabah 08:30’da arıyoruz.</p>
-        <CtaButtons message={message} source="final" />
-        <p className="quiet">
-          Ya da <Link href="/teklif-al/">teklif sihirbazını</Link> kullanın — 30 saniye sürer.
-        </p>
+      <div className="wrap final-in">
+        <div>
+          <h2>{title}</h2>
+          <p>Ürün, adet ve konumunuzu yazın; aynı gün teklifle dönelim. Mesai dışında sabah 08:30’da arıyoruz.</p>
+        </div>
+        <div className="cta-row">
+          <Link className="btn btn-gold" href="/teklif-al/">
+            Teklif Al
+          </Link>
+          <a className="btn btn-outline-light" href={waLink(message)} data-evt="whatsapp_click" data-src="final" rel="noopener" target="_blank">
+            <Icon name="chat" size={18} /> WhatsApp
+          </a>
+          <a className="btn btn-outline-light" href={telHref} data-evt="tel_click" data-src="final">
+            <Icon name="phone" size={18} /> Ara
+          </a>
+        </div>
       </div>
     </section>
   );

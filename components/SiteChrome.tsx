@@ -1,43 +1,66 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
+import { Icon } from "@/components/Icons";
 import { footerGroups, mainNav } from "@/lib/data/nav";
 import { site, telHref, waLink, warehouseAddress, officeAddress } from "@/lib/site";
 
 export function SiteHeader() {
   return (
-    <header className="site-header">
-      <div className="wrap bar">
-        <Link href="/" className="brand" aria-label={`${site.name} ana sayfa`}>
-          <Logo />
-        </Link>
-        <nav className="nav-desktop" aria-label="Ana menü">
-          {mainNav.map(([label, href]) => (
-            <Link key={href} href={href}>
-              {label}
-            </Link>
-          ))}
-        </nav>
-        <a className="head-phone" href={telHref} data-evt="tel_click" data-src="header">
-          <span className="head-phone-label">Hemen ara</span>
-          <strong>{site.phone}</strong>
-        </a>
-        <details className="nav-mobile">
-          <summary aria-label="Menüyü aç">
-            <span className="burger" aria-hidden="true" />
-          </summary>
-          <nav aria-label="Mobil menü">
+    <>
+      <div className="topbar">
+        <div className="wrap topbar-in">
+          <a href={telHref} data-evt="tel_click" data-src="topbar">
+            <Icon name="phone" size={14} /> {site.phone}
+          </a>
+          <a href={`mailto:${site.email}`} className="topbar-mail">
+            <Icon name="mail" size={14} /> {site.email}
+          </a>
+          <a href={waLink()} className="topbar-wa" data-evt="whatsapp_click" data-src="topbar" rel="noopener" target="_blank">
+            <Icon name="chat" size={14} /> WhatsApp’tan yazın
+          </a>
+        </div>
+      </div>
+      <header className="site-header">
+        <div className="wrap bar">
+          <Link href="/" className="brand" aria-label={`${site.name} ana sayfa`}>
+            <Logo />
+          </Link>
+          <nav className="nav-desktop" aria-label="Ana menü">
             {mainNav.map(([label, href]) => (
               <Link key={href} href={href}>
                 {label}
               </Link>
             ))}
-            <Link href="/teklif-al/" className="btn btn-gold">
-              Teklif Al
-            </Link>
           </nav>
-        </details>
-      </div>
-    </header>
+          <Link href="/teklif-al/" className="btn btn-green btn-sm bar-cta">
+            Teklif Al
+          </Link>
+          <details className="nav-mobile">
+            <summary aria-label="Menüyü aç">
+              <span className="burger" aria-hidden="true" />
+            </summary>
+            <nav aria-label="Mobil menü">
+              {mainNav.map(([label, href]) => (
+                <Link key={href} href={href}>
+                  {label}
+                </Link>
+              ))}
+              <div className="nav-mobile-actions">
+                <a className="btn btn-dark" href={telHref} data-evt="tel_click" data-src="menu">
+                  <Icon name="phone" size={18} /> Ara
+                </a>
+                <a className="btn btn-green" href={waLink()} data-evt="whatsapp_click" data-src="menu" rel="noopener" target="_blank">
+                  <Icon name="chat" size={18} /> WhatsApp
+                </a>
+                <Link href="/teklif-al/" className="btn btn-gold">
+                  Teklif Al
+                </Link>
+              </div>
+            </nav>
+          </details>
+        </div>
+      </header>
+    </>
   );
 }
 
@@ -94,16 +117,22 @@ export function SiteFooter() {
   );
 }
 
-/** Fixed bottom bar on phones: one tap to call or WhatsApp. */
+/** Fixed bottom bar on phones (call / WhatsApp) and a round WhatsApp button on desktop. */
 export function MobileBar() {
+  const msg = "Merhaba, palet için fiyat almak istiyorum. Ürün: … Adet: … İl: …";
   return (
-    <div className="mobile-bar" role="group" aria-label="Hızlı iletişim">
-      <a href={telHref} className="mb-call" data-evt="tel_click" data-src="mobile-bar">
-        Ara
+    <>
+      <div className="mobile-bar" role="group" aria-label="Hızlı iletişim">
+        <a href={telHref} className="mb-call" data-evt="tel_click" data-src="mobile-bar">
+          Ara
+        </a>
+        <a href={waLink(msg)} className="mb-wa" data-evt="whatsapp_click" data-src="mobile-bar" rel="noopener" target="_blank">
+          WhatsApp
+        </a>
+      </div>
+      <a href={waLink(msg)} className="wa-float" aria-label="WhatsApp ile yazın" data-evt="whatsapp_click" data-src="float" rel="noopener" target="_blank">
+        <Icon name="chat" size={26} />
       </a>
-      <a href={waLink("Merhaba, palet için fiyat almak istiyorum. Ürün: … Adet: … İl: …")} className="mb-wa" data-evt="whatsapp_click" data-src="mobile-bar" rel="noopener" target="_blank">
-        WhatsApp
-      </a>
-    </div>
+    </>
   );
 }

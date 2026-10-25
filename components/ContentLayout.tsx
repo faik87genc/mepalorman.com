@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ArtKind } from "@/lib/types";
-import { Art } from "@/components/Art";
+import { Photo, photoFor } from "@/components/Photo";
 import { Breadcrumbs, FinalCta, JsonLd, PageHero, CtaButtons } from "@/components/Content";
 import { site, telHref, waLink } from "@/lib/site";
 
@@ -67,12 +67,12 @@ export function ContentLayout({
 }) {
   return (
     <>
-      <Breadcrumbs items={crumbs} />
-      <PageHero h1={h1} answer={answer} aside={art ? <Art kind={art} /> : undefined}>
+      <PageHero h1={h1} answer={answer} kicker={crumbs[0]?.[0]} photo={art ? photoFor(art) : undefined}>
         {meta && <p className="meta">{meta}</p>}
         <CtaButtons message={message} source="hero" />
         {heroExtra}
       </PageHero>
+      <Breadcrumbs items={crumbs} />
       <div className="wrap content-grid">
         <div className="content-main">{children}</div>
         <aside className="sidebar" aria-label="Yardımcı bilgiler">
@@ -86,12 +86,16 @@ export function ContentLayout({
   );
 }
 
+const POS = ["50% 50%", "30% 60%", "70% 40%", "50% 20%", "20% 50%", "80% 70%"];
+
 export function CardGrid({ items }: { items: { href: string; title: string; blurb: string; art: ArtKind; foot?: string }[] }) {
   return (
     <div className="grid">
-      {items.map((it) => (
+      {items.map((it, i) => (
         <article key={it.href} className="card">
-          <Art kind={it.art} />
+          <div className="card-photo">
+            <Photo name={photoFor(it.art)} sizes="(min-width: 900px) 360px, 100vw" position={POS[i % POS.length]} alt="" />
+          </div>
           <div className="card-body">
             <h3>
               <Link href={it.href}>{it.title}</Link>

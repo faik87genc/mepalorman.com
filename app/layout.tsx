@@ -1,10 +1,14 @@
 import type { Metadata, Viewport } from "next";
+import { Archivo } from "next/font/google";
 import "./globals.css";
+import "./theme.css";
 import { site } from "@/lib/site";
 import { SiteHeader, SiteFooter, MobileBar } from "@/components/SiteChrome";
 import CookieConsent from "@/components/CookieConsent";
 import { JsonLd } from "@/components/Content";
 import { localBusinessLd, orgLd, websiteLd } from "@/lib/seo";
+
+const archivo = Archivo({ subsets: ["latin", "latin-ext"], display: "swap", variable: "--font-archivo" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.baseUrl),
@@ -16,11 +20,11 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false },
 };
 
-export const viewport: Viewport = { themeColor: "#faf7f0", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#1b4a2f", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr">
+    <html lang="tr" className={archivo.variable}>
       <body>
         <a className="skip" href="#icerik">
           İçeriğe geç

@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const runtime = "nodejs";
 
-type Lead = { product: string; quantity: string; city: string; name: string; phone: string; note: string; estimate: string; source: string };
+type Lead = { product: string; quantity: string; city: string; name: string; phone: string; note: string; estimate: string; source: string; company: string; email: string; type: string };
 
 /** Rule-based triage (no external AI call): corporate vs. individual, urgency. */
 function classify(l: Lead) {
@@ -17,7 +17,7 @@ function classify(l: Lead) {
 async function deliver(l: Lead) {
   const c = classify(l);
   const subject = `[${c.kind}${c.urgent ? " · ACİL" : ""}] ${l.product} · ${l.quantity} adet · ${l.city}`;
-  const text = [`Ad: ${l.name}`, `Telefon: ${l.phone}`, `Ürün: ${l.product}`, `Adet: ${l.quantity}`, `İl/ilçe: ${l.city}`, l.estimate && `Sitedeki tahmin: ${l.estimate}`, l.note && `Not: ${l.note}`, `Kaynak: ${l.source}`].filter(Boolean).join("\n");
+  const text = [`Talep türü: ${l.type || "satın alma"}`, `Ad: ${l.name}`, l.company && `Firma: ${l.company}`, `Telefon: ${l.phone}`, l.email && `E-posta: ${l.email}`, `Ürün: ${l.product}`, `Adet: ${l.quantity}`, `İl/ilçe: ${l.city}`, l.estimate && `Sitedeki tahmin: ${l.estimate}`, l.note && `Not: ${l.note}`, `Kaynak: ${l.source}`].filter(Boolean).join("\n");
   if (!process.env.SMTP_HOST) {
     console.log("[teklif] SMTP_HOST tanımlı değil; talep yalnızca günlüğe yazıldı:\n" + subject + "\n" + text);
     return;
@@ -61,7 +61,11 @@ export async function POST(req: Request) {
     note: clean(raw.note, 400),
     estimate: clean(raw.estimate, 80),
     source: clean(raw.source, 40) || "web",
+    company: clean(raw.company, 100),
+    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(clean(raw.email, 120)) ? clean(raw.email, 120) : "",
+    type: raw.type === "sell" ? "satış (paletini satmak istiyor)" : "satın alma",
   };
+  lead.note = [lead.note, clean(raw.details, 600)].filter(Boolean).join(" | ");
   const consent = raw.consent === true || raw.consent === "1" || raw.consent === "on";
   const digits = lead.phone.replace(/\D/g, "");
   if (!lead.name || digits.length < 10 || digits.length > 13 || !lead.product || !lead.city || !consent) return fail(400, "Lütfen tüm alanları ve KVKK onayını doldurun.");
