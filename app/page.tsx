@@ -14,7 +14,7 @@ import { PRICES_UPDATED_LABEL } from "@/lib/data/prices";
 import type { FAQ } from "@/lib/types";
 
 export const metadata: Metadata = pageMeta({
-  title: "Palet Satışı Gebze, Kocaeli, İstanbul | Euro, Ahşap, Plastik | MEPAL",
+  title: "Palet Satışı Türkiye Geneli | Euro, Ahşap, Plastik | MEPAL",
   description: "Gebze deposundan euro palet, ahşap palet, plastik palet, ikinci el palet satışı ve hurda palet alımı. Tarihli güncel fiyat tablosu, WhatsApp'tan hızlı teklif.",
   path: "/",
 });
@@ -33,7 +33,7 @@ const SERVICES: { icon: string; title: string; text: string; href: string }[] = 
 const faq: FAQ[] = [
   { q: "Palet fiyatlarına KDV dahil mi?", a: "Sitedeki fiyat tabloları KDV hariç, adet başına TL olarak verilir. Nakliye ve KDV, teklif aşamasında teslimat ilinize göre ayrıca hesaplanır." },
   { q: "En az kaç adet palet satıyorsunuz?", a: "Toplu alım odaklı çalışıyoruz; adet kademeleri tablolarda 1–50, 51–200 ve 201+ olarak gösterilir. Küçük miktarlar için de stok durumuna göre teklif verebiliriz." },
-  { q: "Hangi bölgelere teslimat yapıyorsunuz?", a: "Gebze depomuzdan Kocaeli ve İstanbul Anadolu yakasındaki fabrika ve depolara sevkiyat yapıyoruz. Bölge sayfalarında ilçelere göre bilgi bulabilirsiniz; farklı iller için teklif isteyin." },
+  { q: "Hangi bölgelere teslimat yapıyorsunuz?", a: "Gebze depomuzdan Türkiye genelinde sevkiyat yapıyoruz. Kocaeli ve İstanbul’da en hızlı teslimat sağlanır; diğer illerde süre ve nakliye maliyeti miktara ve mesafeye göre teklifte bildirilir." },
   { q: "İhracat için ısıl işlemli (ISPM-15) palet temin ediyor musunuz?", a: "Evet, HT damgalı ISPM-15 uyumlu ihracat paleti temin ediyoruz. Ülkenizin gereksinimleri için rehber yazımıza bakabilir veya bize danışabilirsiniz." },
   { q: "Kullanılmış paletlerimi satabilir miyim?", a: "Evet. Hurda ve ikinci el palet alımı yapıyoruz. Paletlerin fotoğrafını WhatsApp'tan veya fotoğraftan değerleme aracımızla gönderirseniz ön değerlendirme yapılır; kesin fiyat yerinde kontrolle verilir." },
   { q: "Teklif ne kadar sürede gelir?", a: "Mesai saatlerinde çoğunlukla aynı gün dönüş yapıyoruz. Mesai dışı talepleri ertesi sabah 08:30'da arıyoruz." },
@@ -49,10 +49,10 @@ export default function HomePage() {
       <header className="home-hero">
         <div className="wrap home-hero-grid">
           <div>
-            <p className="eyebrow">Gebze · Kocaeli · İstanbul Anadolu Yakası</p>
-            <h1>Ahşap ve Plastik Palet Satışı – Gebze, Kocaeli, İstanbul</h1>
+            <p className="eyebrow">Gebze depo · Türkiye geneli sevkiyat</p>
+            <h1>Ahşap ve Plastik Palet Satışı – Gebze Depodan Türkiye Geneli</h1>
             <p className="lead">
-              Bugün fiyat, yarın teslimat. Gebze deposundan fabrikalara toplu palet tedariki: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı.
+              Bugün fiyat, yarın teslimat. Gebze deposundan Türkiye’nin her yerine toplu palet tedariki: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı.
             </p>
             <CtaButtons message="Merhaba, palet için fiyat almak istiyorum. Ürün: … Adet: … İl: …" source="home-hero" />
             <ul className="trust-list">
@@ -70,7 +70,7 @@ export default function HomePage() {
 
       <section className="split-strip" aria-label="Alıcı ve satıcılar için">
         <div className="wrap split-in">
-          <Link href="/palet-fiyatlari/" className="split-cell">
+          <Link prefetch={false} href="/palet-fiyatlari/" className="split-cell">
             <span>
               <small>Alıcılar için</small>
               <strong>Palet Satın Al</strong>
@@ -78,7 +78,7 @@ export default function HomePage() {
             </span>
             <Icon name="arrow" size={22} />
           </Link>
-          <Link href="/hizmetler/hurda-palet-alimi/" className="split-cell">
+          <Link prefetch={false} href="/hizmetler/hurda-palet-alimi/" className="split-cell">
             <span>
               <small>Satıcılar için</small>
               <strong>Paletinizi Bize Satın</strong>
@@ -99,7 +99,7 @@ export default function HomePage() {
                 <Icon name={s.icon} size={26} />
                 <h3>{s.title}</h3>
                 <p>{s.text}</p>
-                <Link href={s.href}>
+                <Link prefetch={false} href={s.href}>
                   Detaylı bilgi <Icon name="arrow" size={16} />
                 </Link>
               </article>
@@ -115,7 +115,7 @@ export default function HomePage() {
             { n: "forklift" as const, t: "Ahşap Palet", h: "/urunler/sifir-ahsap-palet/" },
             { n: "euro-damga" as const, t: "Euro Palet", h: "/urunler/80x120-euro-palet/" },
           ].map((x) => (
-            <Link key={x.h} href={x.h} className="trio-item">
+            <Link prefetch={false} key={x.h} href={x.h} className="trio-item">
               <Photo name={x.n} sizes="(min-width: 900px) 360px, 100vw" alt="" />
               <span>{x.t}</span>
             </Link>
@@ -130,10 +130,10 @@ export default function HomePage() {
           <p className="muted">Her ürünün sayfasında ölçü, taşıma kapasitesi ve adet kademeli fiyat tablosu var. Fiyatlar {PRICES_UPDATED_LABEL} tarihinde güncellendi.</p>
           <CardGrid items={featured.map((p) => ({ href: `/urunler/${p.slug}/`, title: p.name, blurb: p.blurb, art: p.art, foot: fromPriceLabel(p.slug) ?? "Ölçüye göre teklif" }))} />
           <p className="cta-row">
-            <Link className="btn btn-green" href="/palet-fiyatlari/">
+            <Link prefetch={false} className="btn btn-green" href="/palet-fiyatlari/">
               Palet fiyatları tablosu
             </Link>
-            <Link className="btn btn-ghost" href="/urunler/">
+            <Link prefetch={false} className="btn btn-ghost" href="/urunler/">
               Tüm ürünler
             </Link>
           </p>
@@ -157,7 +157,7 @@ export default function HomePage() {
               </li>
             </ol>
             <p className="muted">
-              Daha ayrıntılı seçim için adım adım <Link href="/teklif-al/">teklif sihirbazını</Link> veya <Link href="/araclar/">palet araçlarını</Link> kullanabilirsiniz.
+              Daha ayrıntılı seçim için adım adım <Link prefetch={false} href="/teklif-al/">teklif sihirbazını</Link> veya <Link prefetch={false} href="/araclar/">palet araçlarını</Link> kullanabilirsiniz.
             </p>
           </div>
           <MiniQuote id="home" />
@@ -168,15 +168,15 @@ export default function HomePage() {
         <section className="section" aria-labelledby="bolge-h">
           <div className="wrap">
             <p className="eyebrow">Hizmet bölgeleri</p>
-            <h2 id="bolge-h">Depomuz Gebze’de, teslimat Kocaeli ve İstanbul’a</h2>
+            <h2 id="bolge-h">Depomuz Gebze’de, sevkiyat Türkiye’nin her yerine</h2>
             <ul className="chips">
               {[...wave1, ...wave2].map((r) => (
                 <li key={r.slug}>
-                  <Link href={`/bolge/${r.slug}/`}>{r.name}</Link>
+                  <Link prefetch={false} href={`/bolge/${r.slug}/`}>{r.name}</Link>
                 </li>
               ))}
               <li>
-                <Link href="/bolge/">Tüm bölgeler →</Link>
+                <Link prefetch={false} href="/bolge/">Tüm bölgeler →</Link>
               </li>
             </ul>
           </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
             <h2 id="rehber-h">Palet rehberinden</h2>
             <CardGrid items={homeGuides.map((g) => ({ href: `/rehber/${g.slug}/`, title: g.h1, blurb: g.description, art: g.art, foot: `${g.readMinutes} dk okuma` }))} />
             <p>
-              <Link href="/rehber/">Tüm rehber yazıları →</Link>
+              <Link prefetch={false} href="/rehber/">Tüm rehber yazıları →</Link>
             </p>
           </div>
         </section>

@@ -97,13 +97,13 @@ export default function Selector() {
           {recommend(ans).map((r) => (
             <div key={r.href} className="result">
               <h3 style={{ marginBottom: ".3rem" }}>
-                <Link href={r.href}>{r.name}</Link>
+                <Link prefetch={false} href={r.href}>{r.name}</Link>
               </h3>
               <p style={{ margin: 0 }}>{r.why}</p>
             </div>
           ))}
           <div className="tool-actions">
-            <Link className="btn btn-gold" href="/teklif-al/" data-evt="selector_complete">
+            <Link prefetch={false} className="btn btn-gold" href="/teklif-al/" data-evt="selector_complete">
               Bu palet için teklif al
             </Link>
             <button type="button" className="btn btn-ghost" onClick={() => { setStep(0); setAns({}); }}>

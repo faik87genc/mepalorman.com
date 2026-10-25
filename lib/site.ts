@@ -7,7 +7,7 @@ export const site = {
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mepalorman.com",
   tagline: "Ahşap ve plastik palette bugün fiyat, yarın teslimat.",
   description:
-    "Gebze deposundan Kocaeli ve İstanbul Anadolu yakası fabrikalarına toplu palet tedariki: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı. Güncel fiyat, hızlı teklif.",
+    "Gebze deposundan Türkiye genelinde toplu palet tedariki ve sevkiyatı: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı. Güncel fiyat, hızlı teklif.",
   phone: "0536 866 83 07",
   phoneE164: "+905368668307",
   wa: "905368668307",

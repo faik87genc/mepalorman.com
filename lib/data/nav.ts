@@ -36,6 +36,7 @@ export const footerGroups: { title: string; links: [string, string][] }[] = [
       ["Dilovası palet", "/bolge/dilovasi-palet/"],
       ["Tuzla palet", "/bolge/tuzla-palet/"],
       ["Pendik palet", "/bolge/pendik-palet/"],
+      ["Türkiye geneli sevkiyat", "/turkiye-geneli-palet-sevkiyati/"],
       ["Tüm bölgeler", "/bolge/"],
     ],
   },
@@ -43,6 +44,7 @@ export const footerGroups: { title: string; links: [string, string][] }[] = [
     title: "Kurumsal",
     links: [
       ["Hakkımızda", "/hakkimizda/"],
+      ["Sık sorulan sorular", "/sss/"],
       ["Referanslar", "/referanslar/"],
       ["Belgeler", "/belgeler/"],
       ["İletişim", "/iletisim/"],

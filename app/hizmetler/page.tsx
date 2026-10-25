@@ -6,7 +6,7 @@ import { pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
   title: "Palet Hizmetleri: Hurda Alımı, Tamir, Toptan | MEPAL",
-  description: "Hurda palet alımı, ikinci el palet alım-satımı, palet tamiri ve toptan kurumsal palet tedariki. Gebze merkezli, Kocaeli ve İstanbul'a hizmet.",
+  description: "Hurda palet alımı, ikinci el palet alım-satımı, palet tamiri ve toptan kurumsal palet tedariki. Gebze merkezli, Türkiye geneli hizmet.",
   path: "/hizmetler/",
 });
 

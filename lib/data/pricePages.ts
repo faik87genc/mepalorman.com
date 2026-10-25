@@ -26,7 +26,7 @@ const quoteSection = (what: string): Section => ({
   steps: [
     `${what} için tip, ölçü ve yaklaşık adedi WhatsApp'tan (0536 866 83 07) veya teklif formundan iletin.`,
     "Stok durumuna göre net birim fiyat, toplam tutar ve teslim planı bildirilir.",
-    "Onaydan sonra paletler hazırlanır; Gebze deposundan teslim alabilir veya Kocaeli ve İstanbul Anadolu yakasına araçla sevk isteyebilirsiniz.",
+    "Onaydan sonra paletler hazırlanır; Gebze deposundan teslim alabilir veya Türkiye genelinde araçla sevk isteyebilirsiniz.",
   ],
   p: ["Teslimat stok ve araç programına göre çoğunlukla ertesi iş günü yapılır; net süre teklifte bildirilir."],
   links: [["Teklif al", "/teklif-al/"], ["Palet seçici", "/araclar/palet-secici/"]],

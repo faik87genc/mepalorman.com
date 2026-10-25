@@ -22,17 +22,17 @@ export function SiteHeader() {
       </div>
       <header className="site-header">
         <div className="wrap bar">
-          <Link href="/" className="brand" aria-label={`${site.name} ana sayfa`}>
+          <Link prefetch={false} href="/" className="brand">
             <Logo />
           </Link>
           <nav className="nav-desktop" aria-label="Ana menü">
             {mainNav.map(([label, href]) => (
-              <Link key={href} href={href}>
+              <Link prefetch={false} key={href} href={href}>
                 {label}
               </Link>
             ))}
           </nav>
-          <Link href="/teklif-al/" className="btn btn-green btn-sm bar-cta">
+          <Link prefetch={false} href="/teklif-al/" className="btn btn-green btn-sm bar-cta">
             Teklif Al
           </Link>
           <details className="nav-mobile">
@@ -41,7 +41,7 @@ export function SiteHeader() {
             </summary>
             <nav aria-label="Mobil menü">
               {mainNav.map(([label, href]) => (
-                <Link key={href} href={href}>
+                <Link prefetch={false} key={href} href={href}>
                   {label}
                 </Link>
               ))}
@@ -52,7 +52,7 @@ export function SiteHeader() {
                 <a className="btn btn-green" href={waLink()} data-evt="whatsapp_click" data-src="menu" rel="noopener" target="_blank">
                   <Icon name="chat" size={18} /> WhatsApp
                 </a>
-                <Link href="/teklif-al/" className="btn btn-gold">
+                <Link prefetch={false} href="/teklif-al/" className="btn btn-gold">
                   Teklif Al
                 </Link>
               </div>
@@ -86,7 +86,7 @@ export function SiteFooter() {
               <ul>
                 {g.links.map(([label, href]) => (
                   <li key={href}>
-                    <Link href={href}>{label}</Link>
+                    <Link prefetch={false} href={href}>{label}</Link>
                   </li>
                 ))}
               </ul>

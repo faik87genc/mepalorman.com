@@ -6,22 +6,22 @@ import { pageMeta } from "@/lib/seo";
 import { site, warehouseAddress } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Palet Hizmet Bölgeleri: Gebze, Kocaeli, İstanbul | MEPAL",
-  description: "Gebze Pelitli deposundan Dilovası, Tuzla, Pendik, Kartal, İzmit ve Anadolu yakası sanayi bölgelerine palet teslimatı. Bölgenizi seçin.",
+  title: "Palet Hizmet Bölgeleri: Türkiye Geneli Sevkiyat | MEPAL",
+  description: "Gebze Pelitli deposundan Türkiye genelinde palet sevkiyatı; Kocaeli ve İstanbul’da en hızlı teslimat. Bölgenizi seçin.",
   path: "/bolge/",
 });
 
 const WAVES: [1 | 2 | 3, string][] = [
   [1, "Depoya en yakın bölgeler"],
   [2, "İstanbul Anadolu yakası ve çevresi"],
-  [3, "İzmit ve geniş hizmet alanı"],
+  [3, "İzmit ve çevre iller"],
 ];
 
 export default function RegionsIndex() {
   return (
     <>
       <Breadcrumbs items={[["Hizmet bölgeleri", "/bolge/"]]} />
-      <PageHero h1="Palet Hizmet Bölgeleri" answer={`Deponuz ${warehouseAddress} adresinde. Buradan Kocaeli ve İstanbul Anadolu yakasındaki sanayi bölgelerine toplu palet teslimatı yapıyoruz; ofisimiz Kadıköy Kozyatağı'ndadır.`}>
+      <PageHero h1="Palet Hizmet Bölgeleri" answer={`Deponuz ${warehouseAddress} adresinde. Buradan Türkiye’nin her yerine toplu palet sevkiyatı yapıyoruz; Kocaeli ve İstanbul’da en hızlı teslimat sağlanır. Aşağıda en sık hizmet verdiğimiz bölgeler var; listede olmayan iller için de teklif isteyin. Ofisimiz Kadıköy Kozyatağı'ndadır.`}>
         <p>
           <a className="btn btn-ghost" href={site.mapsUrl} rel="noopener" target="_blank">
             Depo için yol tarifi al
@@ -40,7 +40,7 @@ export default function RegionsIndex() {
                   <article key={r.slug} className="card">
                     <div className="card-body">
                       <h3>
-                        <Link href={`/bolge/${r.slug}/`}>{r.name}</Link>
+                        <Link prefetch={false} href={`/bolge/${r.slug}/`}>{r.name}</Link>
                       </h3>
                       <p>{r.blurb}</p>
                       <span className="from">{r.distance}</span>

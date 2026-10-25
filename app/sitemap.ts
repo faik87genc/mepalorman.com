@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const at = (path: string, date: string, priority: number) => ({ url: absoluteUrl(path), lastModified: d(date), priority });
   return [
     at("/", PRICES_UPDATED, 1),
-    ...["/urunler/", "/hizmetler/", "/bolge/", "/sektorler/", "/rehber/", "/araclar/", "/teklif-al/", "/iletisim/"].map((p) => at(p, PRICES_UPDATED, 0.7)),
+    ...["/urunler/", "/hizmetler/", "/bolge/", "/sektorler/", "/rehber/", "/araclar/", "/teklif-al/", "/iletisim/", "/sss/"].map((p) => at(p, PRICES_UPDATED, 0.7)),
     ...["/araclar/konteyner-palet-hesaplama/", "/araclar/palet-secici/", "/araclar/palet-danismani/", "/araclar/fotograftan-palet-degerleme/"].map((p) => at(p, PRICES_UPDATED, 0.7)),
     ...pricePages.map((p) => at(`/${p.slug}/`, PRICES_UPDATED, 0.95)),
     ...products.map((p) => at(`/urunler/${p.slug}/`, PRICES_UPDATED, 0.9)),

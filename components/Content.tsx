@@ -26,7 +26,7 @@ export function Breadcrumbs({ items }: { items: [string, string][] }) {
       <nav className="crumbs" aria-label="Sayfa yolu">
         <ol>
           {all.map(([label, href], i) => (
-            <li key={href}>{i === all.length - 1 ? <span aria-current="page">{label}</span> : <Link href={href}>{label}</Link>}</li>
+            <li key={href}>{i === all.length - 1 ? <span aria-current="page">{label}</span> : <Link prefetch={false} href={href}>{label}</Link>}</li>
           ))}
         </ol>
       </nav>
@@ -115,7 +115,7 @@ export function SectionsView({ sections, cta }: { sections: Section[]; cta?: { m
           {s.links && (
             <p className="inline-links">
               {s.links.map(([label, href]) => (
-                <Link key={href} href={href}>
+                <Link prefetch={false} key={href} href={href}>
                   {label} →
                 </Link>
               ))}
@@ -135,7 +135,7 @@ export function SectionsView({ sections, cta }: { sections: Section[]; cta?: { m
   );
 }
 
-export function FaqList({ items, title = "Sık sorulan sorular" }: { items: FAQ[]; title?: string }) {
+export function FaqList({ items, title = "Sık sorulan sorular", schema = true }: { items: FAQ[]; title?: string; schema?: boolean }) {
   if (!items.length) return null;
   return (
     <section className="block faq">
@@ -146,7 +146,7 @@ export function FaqList({ items, title = "Sık sorulan sorular" }: { items: FAQ[
           <p>{f.a}</p>
         </details>
       ))}
-      <JsonLd data={faqLd(items)} />
+      {schema && <JsonLd data={faqLd(items)} />}
     </section>
   );
 }
@@ -233,7 +233,7 @@ export function RelatedLinks({ title, links }: { title: string; links: [string, 
       <ul className="chips">
         {links.map(([label, href]) => (
           <li key={href}>
-            <Link href={href}>{label}</Link>
+            <Link prefetch={false} href={href}>{label}</Link>
           </li>
         ))}
       </ul>
@@ -250,7 +250,7 @@ export function FinalCta({ message, title = "Palet mi lazım, paletinizi mi satm
           <p>Ürün, adet ve konumunuzu yazın; aynı gün teklifle dönelim. Mesai dışında sabah 08:30’da arıyoruz.</p>
         </div>
         <div className="cta-row">
-          <Link className="btn btn-gold" href="/teklif-al/">
+          <Link prefetch={false} className="btn btn-gold" href="/teklif-al/">
             Teklif Al
           </Link>
           <a className="btn btn-outline-light" href={waLink(message)} data-evt="whatsapp_click" data-src="final" rel="noopener" target="_blank">

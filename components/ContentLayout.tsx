@@ -13,7 +13,7 @@ export function SideCard({ title, links }: { title: string; links: [string, stri
       <ul>
         {links.map(([label, href]) => (
           <li key={href}>
-            <Link href={href}>{label}</Link>
+            <Link prefetch={false} href={href}>{label}</Link>
           </li>
         ))}
       </ul>
@@ -32,7 +32,7 @@ export function ContactCard({ message }: { message: string }) {
       <a className="btn btn-dark" href={telHref} data-evt="tel_click" data-src="sidebar">
         {site.phone}
       </a>
-      <Link className="btn btn-ghost" href="/teklif-al/">
+      <Link prefetch={false} className="btn btn-ghost" href="/teklif-al/">
         Teklif sihirbazı
       </Link>
     </section>
@@ -98,7 +98,7 @@ export function CardGrid({ items }: { items: { href: string; title: string; blur
           </div>
           <div className="card-body">
             <h3>
-              <Link href={it.href}>{it.title}</Link>
+              <Link prefetch={false} href={it.href}>{it.title}</Link>
             </h3>
             <p>{it.blurb}</p>
             {it.foot && <span className="from">{it.foot}</span>}

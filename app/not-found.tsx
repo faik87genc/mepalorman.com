@@ -9,11 +9,11 @@ export default function NotFound() {
       <h1>Aradığınız sayfa bulunamadı</h1>
       <p>Adres değişmiş olabilir. Aşağıdaki bağlantılardan devam edin veya doğrudan bize yazın.</p>
       <ul className="chips" style={{ justifyContent: "center" }}>
-        <li><Link href="/palet-fiyatlari/">Palet fiyatları</Link></li>
-        <li><Link href="/urunler/">Ürünler</Link></li>
-        <li><Link href="/hizmetler/hurda-palet-alimi/">Hurda palet alımı</Link></li>
-        <li><Link href="/bolge/">Hizmet bölgeleri</Link></li>
-        <li><Link href="/iletisim/">İletişim</Link></li>
+        <li><Link prefetch={false} href="/palet-fiyatlari/">Palet fiyatları</Link></li>
+        <li><Link prefetch={false} href="/urunler/">Ürünler</Link></li>
+        <li><Link prefetch={false} href="/hizmetler/hurda-palet-alimi/">Hurda palet alımı</Link></li>
+        <li><Link prefetch={false} href="/bolge/">Hizmet bölgeleri</Link></li>
+        <li><Link prefetch={false} href="/iletisim/">İletişim</Link></li>
       </ul>
       <CtaButtons message="Merhaba, sitenizde aradığım sayfayı bulamadım. Palet için bilgi almak istiyorum." source="404" />
     </div>

@@ -52,13 +52,12 @@ export function Photo({
   position?: string;
 }) {
   const [w, h] = DIMS[name];
-  const small = Math.round((640 / w) * h);
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       className={className}
       src={`/img/${name}-1280.webp`}
-      srcSet={`/img/${name}-640.webp 640w, /img/${name}-1280.webp 1280w`}
+      srcSet={`/img/${name}-480.webp 480w, /img/${name}-800.webp 800w, /img/${name}-1280.webp 1280w`}
       sizes={sizes}
       width={w}
       height={h}
@@ -67,7 +66,6 @@ export function Photo({
       decoding="async"
       fetchPriority={priority ? "high" : undefined}
       style={position ? { objectPosition: position, aspectRatio: `${w} / ${h}` } : { aspectRatio: `${w} / ${h}` }}
-      data-small={small}
     />
   );
 }

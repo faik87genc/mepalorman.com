@@ -15,7 +15,7 @@ export default function ThanksPage() {
         <p>Daha hızlı dönüş için aşağıdan WhatsApp’tan da yazabilirsiniz.</p>
         <CtaButtons message="Merhaba, az önce web sitesinden teklif talebi gönderdim." source="thanks" />
         <p>
-          Beklerken <Link href="/rehber/">palet rehberine</Link> göz atabilirsiniz.
+          Beklerken <Link prefetch={false} href="/rehber/">palet rehberine</Link> göz atabilirsiniz.
         </p>
       </div>
     </>

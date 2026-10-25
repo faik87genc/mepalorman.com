@@ -66,7 +66,7 @@ export const services: Service[] = [
           "Araç girişi ve istif alanını önceden bildirin; çatallı ekipman varsa belirtin.",
           "Düzenli hurda çıkışınız varsa periyodik alım için görüşün.",
         ],
-        p: ["Gebze, Dilovası, Çayırova, Tuzla ve İstanbul Anadolu yakasındaki tesislerden alım yapıyoruz. Araç programına göre çoğunlukla kısa sürede randevu verilir; net zaman teklifte bildirilir."],
+        p: ["Gebze, Dilovası, Çayırova, Tuzla ve İstanbul Anadolu yakasındaki tesislerden doğrudan; yeterli miktarda ise Türkiye genelinde planlı alım yapıyoruz. Araç programına göre çoğunlukla kısa sürede randevu verilir; net zaman teklifte bildirilir."],
         links: [["Bölge sayfaları: Gebze", "/bolge/gebze-palet/"], ["Teklif al", "/teklif-al/"]],
       },
     ],
@@ -75,7 +75,7 @@ export const services: Service[] = [
       { q: "Minimum kaç palet alıyorsunuz?", a: "Yerinden alımın verimli olması için belirli bir adet gerekir. Net alt limit bölgenize göre değişebilir; adedi ve konumu bildirirseniz size uygun olup olmadığını söyleriz." },
       { q: "Kırık paletler ne oluyor?", a: "Onarılabilen parçalar ayrılıp palet tamirinde kullanılır, kullanılamayan ahşap atık geri dönüşüme yönlendirilir." },
       { q: "Fotoğrafla değerleme bağlayıcı mı?", a: "Hayır. Fotoğraf yalnızca ön değerlemedir. Kesin teklif, adet ve durum netleştikten sonra verilir." },
-      { q: "Yerinden alım için araç gönderiyor musunuz?", a: "Evet. Gebze, Dilovası, Çayırova, Tuzla ve İstanbul Anadolu yakasındaki işletmelerden araçla alım yapılır. Gün ve saat, araç programına göre birlikte belirlenir." },
+      { q: "Yerinden alım için araç gönderiyor musunuz?", a: "Evet. Gebze, Dilovası, Çayırova, Tuzla ve İstanbul Anadolu yakasında araçla alım yapılır; Türkiye genelinde yeterli miktarda planlı alım mümkündür. Gün ve saat, araç programına göre birlikte belirlenir." },
     ],
   },
   {
@@ -148,7 +148,7 @@ export const services: Service[] = [
       { q: "İkinci el paletler hangi sınıflarda?", a: "Euro ölçülü ikinci el paletler 1. sınıf (sağlam, onarılmış) ve 2. sınıf (yerli kullanım) olarak ayrılır. Sınıf farkları palet kalite sınıfları rehberinde açıklanmıştır." },
       { q: "EPAL paletleri satıyor musunuz?", a: "İkinci el EPAL palet alım-satımı yapıyoruz. EPAL tescilli bir markadır; yeni palet tarafında EPAL ölçülerinde Euro palet (80x120) tedarik edilir." },
       { q: "Fiyatlar neye göre değişiyor?", a: "Palet tipi, sınıfı, ölçüsü ve sipariş adedi fiyatı belirler. Güncel fiyat tablosu sitede yayındadır; büyük adetlerde teklif alınması önerilir." },
-      { q: "Paletleri kapıma getiriyor musunuz?", a: "Evet, Kocaeli ve İstanbul Anadolu yakasına araçla sevkiyat yapılır. İsterseniz Gebze deposundan kendiniz de alabilirsiniz." },
+      { q: "Paletleri kapıma getiriyor musunuz?", a: "Evet, Türkiye genelinde araçla sevkiyat yapılır (Kocaeli ve İstanbul’da en hızlı). İsterseniz Gebze deposundan kendiniz de alabilirsiniz." },
     ],
   },
   {
@@ -224,10 +224,10 @@ export const services: Service[] = [
     slug: "toptan-palet",
     name: "Toptan Palet",
     title: "Toptan Palet Tedariki | Kurumsal Palet | MEPAL",
-    description: "Fabrika ve depolar için toptan palet tedariki: adet kademeli fiyat, planlı sevkiyat, Gebze deposundan Kocaeli ve İstanbul Anadolu yakasına teslimat.",
+    description: "Fabrika ve depolar için toptan palet tedariki: adet kademeli fiyat, planlı sevkiyat, Gebze deposundan Türkiye geneli teslimat.",
     h1: "Toptan Palet Tedariki — Kurumsal ve Düzenli Sevkiyat",
     answer:
-      "Fabrikalar, depolar ve lojistik firmaları için toptan palet tedariki yapıyoruz. Adet arttıkça birim fiyat düşer; düzenli ihtiyaçlar için sevkiyat takvimi birlikte planlanır. Gebze deposundan Kocaeli ve İstanbul Anadolu yakasına araçla teslim edilir.",
+      "Fabrikalar, depolar ve lojistik firmaları için toptan palet tedariki yapıyoruz. Adet arttıkça birim fiyat düşer; düzenli ihtiyaçlar için sevkiyat takvimi birlikte planlanır. Gebze deposundan Türkiye genelinde araçla teslim edilir.",
     keyword: "toptan palet",
     art: "truck",
     blurb: "Adet kademeli fiyat, planlı sevkiyat ve düzenli tedarik için kurumsal çözüm.",
@@ -292,7 +292,7 @@ export const services: Service[] = [
       { q: "Aylık düzenli tedarik yapıyor musunuz?", a: "Evet. İhtiyacınızı ve sıklığı bildirdiğinizde stok ve araç planına göre düzenli sevkiyat takvimi oluşturulur." },
       { q: "Kurumsal fatura kesiyor musunuz?", a: "Evet, sipariş için yasal düzenlemelere uygun fatura düzenlenir. Cari ve vade gibi koşullar görüşülerek belirlenir." },
       { q: "Hangi paletlerde toptan alım yapılabiliyor?", a: "Euro ölçülü, 100x120 ve CP paletler, ikinci el paletler, ISPM-15 uyumlu ihracat paleti ve plastik paletlerde toptan teklif alabilirsiniz." },
-      { q: "Teslimat nereye yapılıyor?", a: "Gebze deposundan Kocaeli ve İstanbul Anadolu yakasındaki tesislere araçla teslim edilir. Diğer bölgeler için teklif isteyin." },
+      { q: "Teslimat nereye yapılıyor?", a: "Gebze deposundan Türkiye genelindeki tesislere araçla teslim edilir; Kocaeli ve İstanbul’da en hızlıdır. Süre ve nakliye için teklif isteyin." },
     ],
   },
 ];

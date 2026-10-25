@@ -9,7 +9,7 @@ export const sectors: Sector[] = [
     description: "Gıda ve içecek sevkiyatı için temiz, kuru, standart Euro palet ve plastik palet. Hijyen kuralları, seçim ipuçları ve Gebze depodan toplu teslim.",
     h1: "Gıda ve İçecek Sektörü İçin Palet",
     answer:
-      "Gıda ve içecekte palet temiz, kuru, kokusuz ve standart ölçülü olmalıdır. Çoğu üretici sıfır Euro palet ya da yıkanabilir plastik palet tercih eder. Gebze deposundan Kocaeli ve İstanbul Anadolu yakasına toplu teslim yapıyoruz.",
+      "Gıda ve içecekte palet temiz, kuru, kokusuz ve standart ölçülü olmalıdır. Çoğu üretici sıfır Euro palet ya da yıkanabilir plastik palet tercih eder. Gebze deposundan Türkiye genelinde toplu teslim yapıyoruz.",
     keyword: "gıda sektörü palet",
     art: "euro",
     blurb: "Hijyen odaklı sevkiyat için temiz sıfır Euro palet ve plastik palet seçenekleri.",
@@ -178,7 +178,7 @@ export const sectors: Sector[] = [
       },
       {
         h: "Tedarik",
-        p: ["Gebze depodan Kocaeli ve İstanbul Anadolu yakasındaki fabrika ve dağıtım merkezlerine toplu teslim yapılır. Büyük ölçülü paletlerde stok durumuna göre süre değişebilir; net teslim planı teklifte bildirilir."],
+        p: ["Gebze depodan Türkiye genelindeki fabrika ve dağıtım merkezlerine toplu teslim yapılır (Kocaeli ve İstanbul’da en hızlı). Büyük ölçülü paletlerde stok durumuna göre süre değişebilir; net teslim planı teklifte bildirilir."],
         links: [["Toptan palet", "/hizmetler/toptan-palet/"], ["Teklif al", "/teklif-al/"]],
       },
     ],

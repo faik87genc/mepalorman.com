@@ -82,7 +82,7 @@ export const guidesA: Guide[] = [
       {
         h: "Euro palet fiyatını ne belirler?",
         p: [
-          "Fiyat; paletin sıfır, ikinci el ya da tamirli olmasına, EPAL damgalı olup olmadığına, ısıl işlem (HT) şartına, adede ve teslim noktasına göre değişir. Güncel rakamlar için Euro palet fiyat tablosuna bakabilir, adet ve teslim adresini belirterek teklif alabilirsiniz. Gebze deposundan Kocaeli ve İstanbul Anadolu yakasına stok ve araç programına göre çoğunlukla ertesi iş günü sevkiyat yapılır; net süre teklifte bildirilir.",
+          "Fiyat; paletin sıfır, ikinci el ya da tamirli olmasına, EPAL damgalı olup olmadığına, ısıl işlem (HT) şartına, adede ve teslim noktasına göre değişir. Güncel rakamlar için Euro palet fiyat tablosuna bakabilir, adet ve teslim adresini belirterek teklif alabilirsiniz. Gebze deposundan Türkiye genelinde stok ve araç programına göre çoğunlukla ertesi iş günü sevkiyat yapılır; net süre teklifte bildirilir.",
         ],
         links: [["Euro palet fiyatları", "/euro-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -267,7 +267,7 @@ export const guidesA: Guide[] = [
       {
         h: "Fiyat ve teklif",
         p: [
-          "Palet fiyatı; çeşit, ölçü, durum, adet, damga şartı ve teslim noktasına göre değişir. Güncel rakamlar için fiyat sayfalarındaki tabloya bakın. Toplu alımda ya da özel ölçüde teklif alın. Gebze deposundan Kocaeli ve İstanbul Anadolu yakasına stok ve araç programına göre çoğunlukla ertesi iş günü teslimat planlanır; net süre teklifte bildirilir.",
+          "Palet fiyatı; çeşit, ölçü, durum, adet, damga şartı ve teslim noktasına göre değişir. Güncel rakamlar için fiyat sayfalarındaki tabloya bakın. Toplu alımda ya da özel ölçüde teklif alın. Gebze deposundan Türkiye genelinde stok ve araç programına göre çoğunlukla ertesi iş günü teslimat planlanır; net süre teklifte bildirilir.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Ahşap palet fiyatları", "/ahsap-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -734,7 +734,7 @@ export const guidesA: Guide[] = [
       {
         h: "Toplu palet tedariki ve teklif",
         p: [
-          "Tır dolusu palet alıyorsanız, adet ve ölçü bilgisiyle teklif isteyin. Gebze deposundan Kocaeli ve İstanbul Anadolu yakasındaki fabrikalara toplu palet tedariki yapıyoruz. Güncel fiyatlar için fiyat tablosuna bakın; stok ve araç programına göre çoğunlukla ertesi iş günü sevkiyat planlanır, net süre teklifte bildirilir.",
+          "Tır dolusu palet alıyorsanız, adet ve ölçü bilgisiyle teklif isteyin. Gebze deposundan Türkiye genelinde sevkiyat planlıyoruz. Güncel fiyatlar için fiyat tablosuna bakın; stok ve araç programına göre çoğunlukla ertesi iş günü sevkiyat planlanır, net süre teklifte bildirilir.",
         ],
         links: [["Toptan palet", "/hizmetler/toptan-palet/"], ["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -1102,7 +1102,7 @@ export const guidesA: Guide[] = [
           "Teklif alın; güncel fiyat için fiyat sayfasındaki tabloya bakın.",
         ],
         p: [
-          "Gebze deposundan Kocaeli ve İstanbul Anadolu yakasına stok ve araç programına göre çoğunlukla ertesi iş günü teslimat planlanır; net süre teklifte bildirilir.",
+          "Gebze deposundan Türkiye genelinde stok ve araç programına göre çoğunlukla ertesi iş günü teslimat planlanır; net süre teklifte bildirilir.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },

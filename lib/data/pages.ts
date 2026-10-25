@@ -17,10 +17,10 @@ export const staticPages: StaticPage[] = [
     slug: "hakkimizda",
     title: "Hakkımızda | MEPAL Orman Ürünleri",
     description:
-      "MEPAL Orman Ürünleri: Gebze deposundan Kocaeli ve İstanbul Anadolu yakası fabrikalarına toplu palet tedariki. Firma bilgileri ve çalışma şeklimiz.",
+      "MEPAL Orman Ürünleri: Gebze deposundan Türkiye genelinde toplu palet tedariki. Firma bilgileri ve çalışma şeklimiz.",
     h1: "MEPAL Orman Ürünleri Hakkında",
     answer:
-      "MEPAL Orman Ürünleri Sanayi ve Ticaret Ltd. Şti., Gebze'deki deposundan Kocaeli ve İstanbul Anadolu yakasındaki fabrika ve depolara toplu palet tedarik eder. Euro palet, ahşap palet, plastik palet ve ikinci el palet satışının yanında palet tamiri ve hurda palet alımı yapar.",
+      "MEPAL Orman Ürünleri Sanayi ve Ticaret Ltd. Şti., Gebze'deki deposundan Türkiye genelindeki fabrika ve depolara toplu palet tedarik eder. Euro palet, ahşap palet, plastik palet ve ikinci el palet satışının yanında palet tamiri ve hurda palet alımı yapar.",
     sections: [
       {
         h: "Kimiz?",
@@ -117,7 +117,7 @@ export const staticPages: StaticPage[] = [
       },
       {
         q: "Hangi bölgelere palet gönderiyorsunuz?",
-        a: "Ağırlıklı olarak Kocaeli ve İstanbul Anadolu yakasındaki fabrika ve depolara toplu sevkiyat yapıyoruz. Diğer bölgeler için teklif isteyebilirsiniz.",
+        a: "Türkiye genelinde toplu sevkiyat yapıyoruz. Kocaeli ve İstanbul’da teslimat en hızlıdır; diğer illerde süre ve nakliye maliyeti miktara ve mesafeye göre teklifte bildirilir.",
       },
     ],
     updated: "2026-10-25",
@@ -207,7 +207,7 @@ export const staticPages: StaticPage[] = [
       "MEPAL'in palet tedarik ettiği sektörler ve bölgeler. Referans mektubu talep üzerine paylaşılır.",
     h1: "Referanslar ve Hizmet Verdiğimiz Alanlar",
     answer:
-      "Gebze deposundan Kocaeli ve İstanbul Anadolu yakasındaki gıda, otomotiv yan sanayi, beyaz eşya, kimya ve plastik, ihracat ve e-ticaret depolarına palet tedarik ediyoruz. Müşteri adlarını izinsiz yayımlamıyoruz; referans mektubu talep üzerine paylaşılır.",
+      "Gebze deposundan Türkiye genelindeki gıda, otomotiv yan sanayi, beyaz eşya, kimya ve plastik, ihracat ve e-ticaret depolarına palet tedarik ediyoruz. Müşteri adlarını izinsiz yayımlamıyoruz; referans mektubu talep üzerine paylaşılır.",
     sections: [
       {
         h: "Hangi sektörlere palet tedarik ediyoruz?",
@@ -234,7 +234,7 @@ export const staticPages: StaticPage[] = [
       {
         h: "Hangi bölgelere hizmet veriyoruz?",
         p: [
-          "Depomuz Gebze'dedir. Kocaeli'nin sanayi bölgelerine ve İstanbul'un Anadolu yakasındaki fabrika ve depolara düzenli sevkiyat planlıyoruz.",
+          "Depomuz Gebze'dedir. Türkiye genelindeki fabrika ve depolara planlı sevkiyat yapıyoruz; Kocaeli ve İstanbul’da teslimat en hızlıdır.",
         ],
         list: [
           "Kocaeli: Gebze, Dilovası, Çayırova, İzmit, Körfez, Derince, Kartepe",
@@ -450,6 +450,59 @@ export const staticPages: StaticPage[] = [
       },
     ],
     updated: "2026-10-25",
+  },
+  {
+    slug: "turkiye-geneli-palet-sevkiyati",
+    title: "Türkiye Geneli Palet Sevkiyatı | MEPAL Orman Ürünleri",
+    description: "Gebze deposundan Türkiye’nin her iline toplu palet sevkiyatı: euro, ahşap, plastik ve ikinci el palet. Mesafeye göre nakliye, teklifte net süre.",
+    h1: "Türkiye Geneli Palet Sevkiyatı",
+    answer:
+      "Palet stoklarımız Gebze’deki depomuzdan sevk edilir ve Türkiye’nin her iline toplu olarak gönderilir. Kocaeli ve İstanbul’da teslimat en hızlıdır; diğer illerde süre ve nakliye maliyeti miktara ve mesafeye göre teklifte bildirilir.",
+    updated: "2026-10-25",
+    sections: [
+      {
+        h: "Nasıl çalışıyoruz?",
+        p: [
+          "Depomuz Gebze Pelitli’de, Türkiye’nin en yoğun sanayi koridorlarından birinin üzerinde bulunur. Bu konum, Marmara’nın ve Anadolu’nun büyük bölümüne karayoluyla kolay çıkış sağlar. Tır, kamyon veya kamyonet ile sevkiyat yapılabilir; miktar küçükse taşıyıcı firma ile de gönderim planlanabilir.",
+          "Siparişin kapsamı arttıkça birim nakliye maliyeti düşer. Bu yüzden tam tır dolusu veya düzenli sevkiyat planlayan işletmeler için adet kademeli fiyat ve sevkiyat takvimi birlikte hazırlanır.",
+        ],
+      },
+      {
+        h: "Sipariş süreci",
+        steps: [
+          "Ürün, ölçü, adet ve teslimat ilini WhatsApp’tan, telefonla veya teklif sihirbazıyla bildirin.",
+          "Aynı gün güncel fiyat, stok durumu ve nakliye bilgisiyle dönelim.",
+          "Onaydan sonra paletler hazırlanır; araç programı belirlenir.",
+          "Sevkiyat yapılır; teslimatta adet ve kalite kontrolü birlikte yapılır.",
+        ],
+        links: [["Teklif sihirbazı", "/teklif-al/"], ["Palet fiyatları", "/palet-fiyatlari/"]],
+      },
+      {
+        h: "Yükleme planı ve araç kapasitesi",
+        p: [
+          "Bir tır veya konteynere kaç palet sığdığını önceden bilmek nakliye maliyetini doğrudan etkiler. Konteyner ve tır hesaplayıcımızla palet ölçünüze göre yerleşimi görebilir, rehber yazımızdan standart araç kapasitelerini öğrenebilirsiniz.",
+        ],
+        links: [["Konteyner ve tır hesaplayıcı", "/araclar/konteyner-palet-hesaplama/"], ["Konteynere ve tıra kaç palet sığar?", "/rehber/konteynere-ve-tira-kac-palet-sigar/"]],
+      },
+      {
+        h: "İhracat için palet",
+        p: [
+          "Yurt dışına gidecek yükler için ISPM-15 uyumlu, HT damgalı ahşap palet temin ediyoruz. Ülkenizin gereksinimleri farklı olabileceği için sipariş öncesinde ithalatçı ülkenin kurallarını teyit etmenizi öneririz.",
+        ],
+        links: [["ISPM-15 ihracat paleti", "/urunler/ihracat-paleti/"], ["İhracatta palet ve ambalaj kuralları", "/rehber/ihracatta-palet-ve-ambalaj-kurallari/"]],
+      },
+      {
+        h: "En hızlı teslimat bölgeleri",
+        p: ["Depoya yakın bölgelerde teslimat süresi en kısadır. Bölge sayfalarımızda ilçelere göre bilgi bulabilirsiniz."],
+        links: [["Gebze", "/bolge/gebze-palet/"], ["Dilovası", "/bolge/dilovasi-palet/"], ["Tuzla", "/bolge/tuzla-palet/"], ["Tüm bölgeler", "/bolge/"]],
+      },
+    ],
+    faq: [
+      { q: "Türkiye’nin her iline palet gönderiyor musunuz?", a: "Evet. Gebze deposundan Türkiye genelinde sevkiyat yapıyoruz. Süre ve nakliye maliyeti miktara ve mesafeye göre teklifte bildirilir." },
+      { q: "Nakliye ücreti fiyata dahil mi?", a: "Sitedeki fiyatlar KDV ve nakliye hariçtir. Nakliye teslimat ilinize ve araç tipine göre ayrıca hesaplanır." },
+      { q: "Az sayıda palet de gönderebilir misiniz?", a: "Stok durumuna göre evet; ancak toplu siparişlerde birim maliyet daha düşüktür. Küçük miktarlar için taşıyıcı firma ile gönderim planlanabilir." },
+      { q: "Depodan kendim alabilir miyim?", a: "Evet. Önce arayıp ürün ve adedi bildirirseniz hazırlığı yapar, Gebze deposunda teslim ederiz." },
+    ],
   },
 ];
 
