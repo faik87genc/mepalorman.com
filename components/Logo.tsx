@@ -5,7 +5,7 @@ import Image from "next/image";
 export function Logo({ light = false }: { light?: boolean }) {
   return (
     <span className={`logo${light ? " logo-light" : ""}`}>
-      <Image src="/assets/logo-mark.png" alt="MEPAL" width={380} height={296} className="logo-img" priority={!light} />
+      <Image src={light ? "/assets/logo-light.png" : "/assets/logo-mark.png"} alt="MEPAL" width={570} height={444} className="logo-img" priority={!light} />
       <span className="logo-text">
         <span className="logo-sub">Orman Ürünleri</span>
       </span>
