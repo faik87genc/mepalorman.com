@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type Choice = { analytics: boolean; marketing: boolean };
@@ -91,7 +92,7 @@ export default function CookieConsent() {
     <div className="consent" role="dialog" aria-modal="false" aria-label="Çerez tercihleri">
       <p>
         Siteyi çalıştırmak için zorunlu çerezler kullanıyoruz. İzin verirseniz ziyaret istatistikleri için analitik çerezler de kullanırız. Ayrıntı:{" "}
-        <a href="/cerez-politikasi/">Çerez politikası</a>.
+        <Link href="/cerez-politikasi/">Çerez politikası</Link>.
       </p>
       {detail && (
         <div className="consent-detail">

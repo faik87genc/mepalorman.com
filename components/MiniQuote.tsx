@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { products } from "@/lib/data/products";
 
 /**
@@ -70,7 +71,7 @@ export function MiniQuote({ product, id = "mq" }: { product?: string; id?: strin
       <label className="check">
         <input type="checkbox" name="consent" value="1" required />
         <span>
-          <a href="/kvkk/">KVKK aydınlatma metnini</a> okudum; bilgilerimin teklif amacıyla işlenmesini kabul ediyorum.
+          <Link href="/kvkk/">KVKK aydınlatma metnini</Link> okudum; bilgilerimin teklif amacıyla işlenmesini kabul ediyorum.
         </span>
       </label>
       <button type="submit" className="btn btn-green">
