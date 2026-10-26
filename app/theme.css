@@ -202,3 +202,9 @@ a.c-card:hover { border-color: var(--green); box-shadow: 0 6px 18px rgba(27, 74,
 .contact-form .btn-green { background: var(--gold); color: var(--ink); }
 .contact-form .btn-green:hover { background: #cda274; color: var(--ink); }
 .contact-faq { padding-bottom: 2.4rem; }
+
+/* Logo görseli */
+.logo { gap: .55rem; }
+.logo-img { height: 54px; width: auto; display: block; }
+.logo-text .logo-sub { font-size: .66rem; letter-spacing: .22em; margin-top: 0; font-weight: 600; }
+@media (max-width: 420px) { .logo-img { height: 46px; } .logo-text .logo-sub { font-size: .58rem; letter-spacing: .16em; } }
