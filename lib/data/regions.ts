@@ -1012,6 +1012,583 @@ export const regions: Region[] = [
       { q: "Hurda palet için araç gönderir misiniz?", a: "Yeterli miktar varsa evet. Adet ve fotoğrafla yazın." },
     ],
   },
+  // ───────────────────────── YENİ BÖLGE SAYFALARI (rakip analizi turu) ─────────────────────────
+  {
+    slug: "kocaeli-palet",
+    name: "Kocaeli",
+    wave: 1,
+    title: "Kocaeli Palet Tedariği: Euro, Ahşap, Plastik | MEPAL",
+    description: "Kocaeli genelinde palet tedariği: İzmit, Körfez, Derince, Gölcük, Karamürsel, Kandıra ve Dilovası fabrikalarına Gebze depodan toplu palet, hurda palet alımı.",
+    h1: "Kocaeli Palet Tedariği",
+    keyword: "kocaeli palet",
+    art: "region",
+    distance: "il geneli · yaklaşık 10–110 km · 15 dk–2 saat",
+    blurb: "Gebze deposundan Kocaeli’nin tüm sanayi ilçelerine toplu palet ve hurda palet alımı.",
+    answer:
+      "MEPAL’in deposu Kocaeli’nin Gebze ilçesindedir ve il genelindeki fabrikalara Euro palet, ahşap palet, ikinci el palet, plastik palet ve HT damgalı ihracat paleti tedarik eder. Hurda ve kırık paletleri yerinden alırız. Mesafeye göre süre değişir; net süre ve miktar eşiği teklifte bildirilir.",
+    zones: ["İzmit", "Körfez", "Derince", "Kartepe", "Gölcük", "Karamürsel", "Kandıra", "Dilovası", "Başiskele", "Çayırova", "Darıca"],
+    nearby: ["gebze-palet", "izmit-palet", "korfez-palet", "derince-palet", "kartepe-palet", "dilovasi-palet"],
+    sections: [
+      {
+        h: "Kocaeli neden palet tüketen bir il",
+        p: [
+          "Kocaeli, Türkiye’nin sanayi üretiminde en yüksek paya sahip illerinden biridir. Otomotiv ve yan sanayi, petrokimya, kimya, lastik, kâğıt, metal işleme, makine ve gıda tesisleri il sınırları içinde yan yana çalışır. Üretimin kendisi kadar, üretilenin sevk edilmesi de palet tüketir: her mamul, her ara ürün bir paletin üstünde yola çıkar.",
+          "Bu yoğunluk, palet tedariğinde iki şeyi öne çıkarır. Birincisi düzenlilik: haftalık ya da aylık ihtiyaçlar önceden planlanabilir. İkincisi ölçü çeşitliliği: aynı ilde 80x120 Euro palet, 100x120 kimya paleti, 114x114 CP paleti ve özel ölçülü paletler birlikte talep edilir.",
+        ],
+        links: [["Toptan palet", "/hizmetler/toptan-palet/"], ["Euro palet 80x120", "/urunler/80x120-euro-palet/"]],
+      },
+      {
+        h: "Depodan ilçelere yaklaşık mesafeler",
+        p: [
+          "Depomuz Gebze Pelitli’dedir. Aşağıdaki mesafe ve süreler yaklaşık değerlerdir; trafik, araç programı ve yükleme noktasına göre değişir.",
+        ],
+        table: {
+          caption: "Gebze Pelitli depodan Kocaeli ilçelerine yaklaşık değerler",
+          head: ["Bölge", "Yaklaşık mesafe", "Yaklaşık süre", "Sayfa"],
+          rows: [
+            ["Gebze, Dilovası, Çayırova, Darıca", "5–25 km", "10–30 dk", "Gebze ve komşu ilçe sayfaları"],
+            ["Körfez, Derince", "35–45 km", "40–50 dk", "Körfez ve Derince sayfaları"],
+            ["İzmit, Kartepe", "45–60 km", "45–70 dk", "İzmit ve Kartepe sayfaları"],
+            ["Gölcük, Karamürsel", "65–90 km", "1–1,5 saat", "Bu sayfa"],
+            ["Kandıra", "100 km ve üzeri", "1,5–2 saat", "Bu sayfa"],
+          ],
+        },
+        links: [
+          ["Gebze", "/bolge/gebze-palet/"],
+          ["İzmit", "/bolge/izmit-palet/"],
+          ["Körfez", "/bolge/korfez-palet/"],
+          ["Derince", "/bolge/derince-palet/"],
+          ["Kartepe", "/bolge/kartepe-palet/"],
+          ["Dilovası", "/bolge/dilovasi-palet/"],
+        ],
+      },
+      {
+        h: "Gölcük, Karamürsel ve Kandıra",
+        p: [
+          "Gölcük ve Karamürsel körfezin güney kıyısındadır. Gölcük’te otomotiv ve tersane çevresi iş kolları, Karamürsel’de ise küçük ve orta ölçekli üretim ile gıda ve tarım ürünleri öne çıkar. Bu ilçelerde palet talebi genellikle tek seferde birkaç yüz ile birkaç bin arasında değişen partiler halinde gelir.",
+          "Kandıra Karadeniz kıyısındaki geniş, ormanlık ve tarım ağırlıklı bir ilçedir. Orman ürünleri, tarım ve küçük işletmeler palet ihtiyacı duyar. Mesafe uzun olduğu için burada birkaç talebi birleştirerek toplu sevkiyat planlamak daha verimlidir.",
+        ],
+      },
+      {
+        h: "Hurda palet ve düzenli program",
+        p: [
+          "Üretici tesislerde kırık, çürük ya da kullanım ömrünü doldurmuş palet düzenli olarak birikir. Yerinden alım için adet, tür ve yükleme noktasını bildirmeniz yeterlidir. Miktar yeterliyse araç planlanır; küçük partilerde iki üç talep birleştirilebilir.",
+          "Düzenli ihtiyacı olan tesisler için hem satış hem hurda alımını tek programda toplamak mümkündür: yeni ya da onarılmış paletler gelir, kullanılamaz paletler aynı araçla geri döner.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet alım-satım", "/hizmetler/palet-alim-satim/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+      },
+    ],
+    faq: [
+      { q: "Kocaeli’nin hangi ilçelerine palet teslim ediyorsunuz?", a: "Gebze, Dilovası, Çayırova, Darıca, Körfez, Derince, İzmit, Kartepe, Gölcük, Karamürsel ve Kandıra dahil il genelini kapsıyoruz. Süre mesafeye göre teklifte bildirilir." },
+      { q: "Kocaeli dışına da sevkiyat yapıyor musunuz?", a: "Evet, hizmet alanımız Türkiye geneli; Kocaeli ve İstanbul depodan en hızlı ulaşılan bölgelerdir." },
+      { q: "Uzak ilçeler için asgari miktar var mı?", a: "Mesafe arttıkça toplu sevkiyat daha uygun olur. Miktar eşiği ürün ve ilçeye göre teklifte netleşir." },
+      { q: "Hurda paletimi nasıl satarım?", a: "Adet, tür ve yükleme noktasını WhatsApp’tan yazın; değerlendirme sonrası alım planlanır." },
+      { q: "Düzenli aylık palet ihtiyacı için program yapılır mı?", a: "Evet. Ürün, adet ve sıklık belirlenerek program ve koşullar teklifte yazılı hale getirilir." },
+    ],
+  },
+  {
+    slug: "istanbul-palet",
+    name: "İstanbul",
+    wave: 2,
+    title: "İstanbul Palet Tedariği: Anadolu ve Avrupa | MEPAL",
+    description: "İstanbul’da Anadolu ve Avrupa yakası sanayi alanlarına palet tedariği: Euro, ahşap, ikinci el ve plastik palet; hurda palet alımı. Gebze depodan toplu sevkiyat.",
+    h1: "İstanbul Palet Tedariği",
+    keyword: "istanbul palet",
+    art: "region",
+    distance: "il geneli · yaklaşık 35–120 km · 40 dk–2,5 saat",
+    blurb: "Gebze deposundan İstanbul’un Anadolu ve Avrupa yakası sanayi alanlarına toplu palet.",
+    answer:
+      "MEPAL, Gebze deposundan İstanbul’un Anadolu yakasına en kısa sürede, Avrupa yakasına ise planlı toplu sevkiyatla palet tedarik eder. Euro palet, ahşap palet, ikinci el palet, plastik palet ve HT damgalı ihracat paleti sunar, hurda paletleri yerinden alırız. Net süre trafik ve araç programına göre teklifte bildirilir.",
+    zones: ["Tuzla", "Pendik", "Kurtköy", "Kartal", "Maltepe", "Ümraniye", "Çekmeköy", "Sancaktepe", "Sultanbeyli", "Esenyurt", "Hadımköy", "İkitelli", "Başakşehir", "Silivri"],
+    nearby: ["tuzla-palet", "pendik-palet", "kartal-palet", "umraniye-palet", "atasehir-kadikoy-palet", "sancaktepe-palet"],
+    sections: [
+      {
+        h: "Anadolu yakası: depoya en yakın bölge",
+        p: [
+          "İstanbul’un Anadolu yakası, Gebze deposuna Kocaeli sınırından hemen sonra başlar. Tuzla’daki tersane ve kimya tesisleri ile organize sanayi bölgeleri, Pendik ve Kurtköy’deki lojistik ve üretim alanları, Kartal, Maltepe, Ümraniye, Çekmeköy, Sancaktepe ve Sultanbeyli’deki küçük ve orta ölçekli atölyeler palet tüketicisidir.",
+          "Bu yakada TEM ve D-100 ile hızlı bağlantı sayesinde depodan çıkış çoğu zaman aynı gün ya da ertesi iş günü planlanabilir. Süre hat boyunca trafik yoğunluğuna bağlıdır; sabah ve akşam saatlerinden kaçınan yükleme düzeni tavsiye ederiz.",
+        ],
+        links: [
+          ["Tuzla", "/bolge/tuzla-palet/"],
+          ["Pendik", "/bolge/pendik-palet/"],
+          ["Kartal", "/bolge/kartal-palet/"],
+          ["Ümraniye", "/bolge/umraniye-palet/"],
+          ["Sancaktepe", "/bolge/sancaktepe-palet/"],
+          ["Sultanbeyli", "/bolge/sultanbeyli-palet/"],
+        ],
+      },
+      {
+        h: "Avrupa yakası sanayi alanları",
+        p: [
+          "Avrupa yakasında palet talebi birkaç büyük kümede toplanır. İkitelli ve Başakşehir çevresi matbaa, metal, plastik ve ticaret ağırlıklıdır; Esenyurt, Beylikdüzü ve Hadımköy tarafında üretim ve depolama tesisleri yoğundur; Silivri ve Çatalca’da daha geniş araziler ve gıda ile lojistik depoları bulunur.",
+          "Köprü ve otoyol geçişleri nedeniyle Avrupa yakası sevkiyatlarında süre ve geçiş masrafı planı etkiler. Bu nedenle tek tek küçük teslimat yerine bir ya da birkaç günlük ihtiyacı birleştirmenizi öneririz; net koşullar teklifte yazılır.",
+        ],
+      },
+      {
+        h: "İstanbul’da hangi paletler öne çıkar",
+        list: [
+          "Euro palet (80x120): perakende, gıda ve lojistik depolarında standart birim.",
+          "İkinci el palet: iç sevkiyat, depo içi hareket ve bütçeyi koruyan alımlar.",
+          "Plastik palet: hijyen gerektiren gıda, ilaç ve kozmetik hatları.",
+          "HT damgalı, ISPM-15 uyumlu ihracat paleti: liman ve ihracat sevkiyatları.",
+          "Özel ölçülü palet ve sandık: makine, parça ve ağır yük sevkiyatları.",
+        ],
+        links: [
+          ["Euro palet", "/urunler/80x120-euro-palet/"],
+          ["Plastik palet", "/urunler/plastik-palet/"],
+          ["İhracat paleti", "/urunler/ihracat-paleti/"],
+          ["İkinci el palet", "/urunler/ikinci-el-palet/"],
+          ["Özel ölçü palet", "/urunler/ozel-olcu-palet/"],
+        ],
+      },
+      {
+        h: "Hurda palet alımı ve ofis",
+        p: [
+          "İstanbul’daki depo ve fabrikalarda biriken hurda paletler için yerinden alım yapıyoruz. Miktar ve adres bilgisiyle yazarsanız araç planlanır. Ofisimiz Anadolu yakasında, Kozyatağı’ndadır; ürün stoğu ve yükleme ise Gebze deposundan yapılır, bu yüzden stok ve ürün kontrolü için önce arayın.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["İletişim", "/iletisim/"]],
+      },
+    ],
+    faq: [
+      { q: "İstanbul’un hangi bölgelerine teslim ediyorsunuz?", a: "Anadolu yakasına öncelikli, Avrupa yakasına planlı toplu sevkiyatla teslimat yapıyoruz. Süre ilçeye ve trafiğe göre teklifte bildirilir." },
+      { q: "Avrupa yakasına küçük adetle palet gönderir misiniz?", a: "Mesafe ve geçiş masrafı nedeniyle toplu sevkiyat daha uygun olur. Küçük adetlerde koşullar teklifte netleşir." },
+      { q: "Ürünü depodan kendi aracımla alabilir miyim?", a: "Evet. Gebze Pelitli deposundan yükleme yapılır; gelmeden önce stok ve adedi telefonla teyit edin." },
+      { q: "İstanbul’dan hurda palet alıyor musunuz?", a: "Evet. Adet, tür ve adres bilgisi ile talebi iletirseniz alım planlanır." },
+      { q: "İhracat için hangi palet kullanılmalı?", a: "Ahşap ambalajda ISPM-15 uyumlu, HT damgalı palet gerekir; ayrıntı için ihracat paleti sayfasına bakın." },
+    ],
+  },
+  {
+    slug: "balcik-palet",
+    name: "Balçık",
+    wave: 1,
+    title: "Balçık Palet Satışı ve Hurda Alımı | MEPAL",
+    description: "Gebze Balçık’taki fabrikalara dakikalar içinde palet: Euro, ikinci el, plastik ve HT paleti. Pelitli depodan hızlı çıkış, hurda palet alımı, hızlı teklif.",
+    h1: "Balçık Palet Satışı ve Hurda Palet Alımı",
+    keyword: "balçık palet",
+    art: "region",
+    distance: "yaklaşık 5–8 km · 10–15 dk",
+    blurb: "Pelitli deposundan Balçık fabrikalarına dakikalar içinde palet çıkışı.",
+    answer:
+      "Balçık, Gebze’nin sanayi mahallelerinden biridir ve MEPAL’in Pelitli deposuna yaklaşık 5–8 km uzaklıktadır. Buradaki fabrikalara Euro palet, ikinci el palet, plastik palet ve HT damgalı ihracat paleti sağlar, hurda paletleri yerinden alırız. Stoğa göre çoğunlukla ertesi iş günü, acil işlerde daha kısa sürede teslim planlanır.",
+    zones: ["Balçık Mahallesi", "Balçık sanayi siteleri", "Gebze Plastikçiler OSB çevresi", "Pelitli", "Mollafenari", "Hacıhalil", "Gebze Güzeller yönü"],
+    nearby: ["gebze-palet", "dilovasi-palet", "cayirova-palet", "darica-palet"],
+    sections: [
+      {
+        h: "Balçık sanayisi",
+        p: [
+          "Balçık, Gebze’nin güney-batı tarafında, Pelitli ve Gebze OSB hattının yakınında yer alan yoğun bir sanayi bölgesidir. Mahalle içinde ve çevresinde metal işleme, plastik enjeksiyon, kimya ve boya, makine imalatı, ambalaj ve küçük ölçekli yan sanayi tesisleri birlikte çalışır. Büyük OSB parsellerinin yanında, kiralık depo ve atölye yapıları da çok sayıdadır.",
+          "Bu karma yapı, palet talebini de çeşitli kılar: aynı caddede bir tesis günde onlarca palet tüketirken komşusu ayda birkaç yüz palet alır. Çoğu zaman ihtiyaç plansız doğar, bu yüzden depoya yakınlık en büyük avantajdır.",
+        ],
+        links: [["Gebze sayfası", "/bolge/gebze-palet/"], ["Kimya ve plastik sektörü", "/sektorler/kimya-ve-plastik/"]],
+      },
+      {
+        h: "Aynı gün çıkış ve acil ihtiyaç",
+        p: [
+          "Sevkiyatın öne çekildiği, bir tırın beklenenden erken geldiği ya da paletlerin yarısının kırık çıktığı anlar Balçık’ta sık yaşanır. Mesafe kısa olduğundan stoğumuzda bulunan ürün için aynı gün çıkış mümkün olabilir; bunun için sabah saatlerinde ürün ve adet bilgisini bildirmeniz işleri hızlandırır.",
+          "Kendi aracınızla gelmek isterseniz yol 10–15 dakikayı bulmaz. Önce telefonla arayın, ürün hazır tutulsun.",
+        ],
+        list: [
+          "Ürün türü, ölçü ve adedi birlikte yazın.",
+          "Yükleme ya da boşaltma yapılacak kapı ve araç tipini belirtin.",
+          "Fatura bilgilerinizi hazır bulundurun.",
+        ],
+      },
+      {
+        h: "Balçık’ta çok sorulan ürünler",
+        table: {
+          caption: "Balçık fabrikalarının sık talep ettiği ürünler",
+          head: ["Ürün", "Kullanım", "Not"],
+          rows: [
+            ["80x120 Euro palet", "Genel depolama ve sevkiyat", "Raf ve tır yüklemesine uygun"],
+            ["İkinci el palet", "İç sevkiyat, depo içi hareket", "Sınıflandırılmış stok"],
+            ["100x120 palet", "Kimya, boya, IBC ve varil", "Ağır ve sıvı ambalajlar için"],
+            ["Plastik palet", "Hijyen gerektiren hatlar", "Yıkanabilir, kıymıksız"],
+            ["HT damgalı ihracat paleti", "İhracat yapan tesisler", "ISPM-15 uyumlu temin"],
+          ],
+        },
+        links: [
+          ["Euro palet", "/urunler/80x120-euro-palet/"],
+          ["100x120 palet", "/urunler/100x120-palet/"],
+          ["Plastik palet", "/urunler/plastik-palet/"],
+          ["İhracat paleti", "/urunler/ihracat-paleti/"],
+        ],
+      },
+      {
+        h: "Hurda ve kırık palet",
+        p: [
+          "Balçık’taki tesislerde kırık palet hızla birikir ve depoda yer kaplar. Adet, tür ve yükleme noktasını yazarsanız hurda ve onarılabilir paletleri yerinden alırız. Onarıma uygun olanlar tamir edilerek yeniden değerlendirilir.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet tamiri", "/hizmetler/palet-tamiri/"], ["Teklif al", "/teklif-al/"]],
+      },
+    ],
+    faq: [
+      { q: "Balçık’a teslimat ne kadar sürer?", a: "Depo yakın olduğu için stoktaki ürünlerde çoğunlukla ertesi iş günü, acil işlerde daha kısa sürede çıkış planlanır. Net süre teklifte bildirilir." },
+      { q: "Depodan kendim yükleme yapabilir miyim?", a: "Evet. Pelitli deposu Pazartesi–Cumartesi 08:30–18:00 arasında açıktır; gelmeden önce stok teyidi alın." },
+      { q: "Küçük adetli sipariş alıyor musunuz?", a: "Evet. Birkaç adetten tır dolusuna kadar talepler değerlendirilir; koşullar teklifte bildirilir." },
+      { q: "Hurda palet için araç gönderir misiniz?", a: "Miktar yeterliyse evet. Adet ve fotoğrafla WhatsApp’tan yazın." },
+    ],
+  },
+  {
+    slug: "gebze-osb-palet",
+    name: "Gebze OSB",
+    wave: 1,
+    title: "Gebze OSB Palet Tedariği | MEPAL",
+    description: "Gebze Organize Sanayi Bölgesi fabrikalarına palet tedariği: Euro, ikinci el, plastik ve HT paleti; hurda palet alımı. Pelitli depodan hızlı toplu sevkiyat.",
+    h1: "Gebze OSB Palet Tedariği",
+    keyword: "gebze osb palet",
+    art: "region",
+    distance: "yaklaşık 8–12 km · 15–20 dk",
+    blurb: "Gebze OSB fabrikalarına Pelitli depodan düzenli, toplu palet tedariği.",
+    answer:
+      "Gebze Organize Sanayi Bölgesi (GOSB) MEPAL’in Pelitli deposundan yaklaşık 8–12 km uzaklıktadır. OSB’deki tesislere Euro palet, ikinci el palet, plastik palet ve HT damgalı ihracat paleti tedarik eder, hurda paletleri yerinden alırız. Düzenli ihtiyaçlar için program yapılabilir; net süre teklifte bildirilir.",
+    zones: ["Gebze OSB (GOSB)", "GOSB kapı girişleri", "Çayırova sınırı", "Mollafenari", "Pelitli", "Hacıhalil"],
+    nearby: ["gebze-palet", "cayirova-palet", "dilovasi-palet", "darica-palet"],
+    sections: [
+      {
+        h: "Gebze OSB’nin yapısı",
+        p: [
+          "Gebze Organize Sanayi Bölgesi, Gebze ile Çayırova sınırında, TEM otoyoluna yakın kurulmuş büyük bir üretim alanıdır. Bölgede otomotiv ve yan sanayi, makine, metal, kimya, elektrik-elektronik ve savunma ile ilgili üretim yapan tesisler yer alır. Parseller geniştir; birçok tesis hem üretim hem lojistik depo olarak çalışır.",
+          "Bu ölçek palet talebini düzenli ve yüksek hacimli kılar. OSB içindeki bir tesis için palet, yan malzeme değil üretim akışının parçasıdır: eksik ya da uygunsuz palet yükleme hattını durdurur.",
+        ],
+        links: [["Otomotiv ve yan sanayi", "/sektorler/otomotiv-ve-yan-sanayi/"], ["Toptan palet", "/hizmetler/toptan-palet/"]],
+      },
+      {
+        h: "OSB tesislerinin palet beklentileri",
+        p: [
+          "OSB’deki büyük tesisler genellikle ölçü ve kalite şartnamesi ile çalışır. Müşterinin ya da tedarik zincirinin belirlediği ölçü (80x120, 100x120, 114x114 ya da özel ölçü), alt tabla yapısı ve nem düzeyi önceden tanımlıdır. Biz sipariş öncesi şartname ya da örnek palet üzerinden ölçü ve sınıf teyidi yapmanızı öneririz.",
+        ],
+        list: [
+          "Euro palet (80x120): standart sevkiyat ve raf yüklemesi.",
+          "100x120 ve 114x114 (CP) palet: kimya ve proses sanayi ambalajı.",
+          "Özel ölçülü palet: makine, parça ve büyük hacimli ürünler.",
+          "HT damgalı ihracat paleti: ISPM-15 uyumlu temin.",
+          "İkinci el palet: iç sevkiyat ve ara depolama.",
+        ],
+        links: [
+          ["CP palet", "/urunler/cp-palet/"],
+          ["100x120 palet", "/urunler/100x120-palet/"],
+          ["Özel ölçü palet", "/urunler/ozel-olcu-palet/"],
+          ["İhracat paleti", "/urunler/ihracat-paleti/"],
+        ],
+      },
+      {
+        h: "Düzenli program ve hurda palet",
+        p: [
+          "Tesisler için en verimli düzen, haftalık ya da iki haftalık sabit sevkiyat programıdır: ihtiyaç duyulan palet gelir, kullanılamaz hale gelen palet aynı araçla geri alınır. Böylece depo alanı yığılmadan temiz kalır. Hacim büyüdüğünde ürün, kalite sınıfı ve teslim penceresi yazılı olarak teklifte netleştirilir.",
+          "Hurda ve onarılabilir paletleri yerinden alıyoruz; onarıma uygun olanlar tamir edilerek tekrar sevkiyata verilir.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet tamiri", "/hizmetler/palet-tamiri/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+      },
+      {
+        h: "Giriş ve teslimat koordinasyonu",
+        p: [
+          "OSB tesislerine araç girişinde kapı kontrolü ve randevu saatleri uygulanabilir. Teslimat öncesi araç plakası, şoför bilgisi ve kapı numarasını bize iletmeniz sevkiyatın sorunsuz geçmesini sağlar.",
+        ],
+        links: [["Teklif al", "/teklif-al/"]],
+      },
+    ],
+    faq: [
+      { q: "Gebze OSB’ye teslimat yapıyor musunuz?", a: "Evet. Pelitli deposundan OSB’deki tesislere toplu ve düzenli sevkiyat yapıyoruz. Süre teklifte bildirilir." },
+      { q: "Şartnameye uygun ölçü ve kalite sağlanabilir mi?", a: "Şartname ya da örnek palet gönderirseniz uygun ürünü teklifte önerir, ölçü ve sınıf teyidi yaparız." },
+      { q: "Düzenli aylık palet tedariği yapılır mı?", a: "Evet. Ürün, adet ve sıklık belirlenerek program ve koşullar teklifte yazılı hale getirilir." },
+      { q: "OSB içinden hurda palet alıyor musunuz?", a: "Evet. Adet ve yükleme noktasıyla yazarsanız yerinden alım planlanır." },
+      { q: "İhracat için HT damgalı palet temin edilebilir mi?", a: "Evet. ISPM-15 uyumlu, HT damgalı ihracat paleti temin ediyoruz; adet ve ölçüyle teklif isteyin." },
+    ],
+  },
+  {
+    slug: "plastikciler-osb-palet",
+    name: "Plastikçiler OSB",
+    wave: 1,
+    title: "Plastikçiler OSB Palet Tedariği | MEPAL",
+    description: "Gebze Plastikçiler OSB tesislerine palet: Euro, ikinci el, plastik ve HT paleti. Pelitli depodan dakikalar içinde sevkiyat, hurda palet alımı, hızlı teklif.",
+    h1: "Plastikçiler OSB Palet Tedariği",
+    keyword: "plastikçiler osb palet",
+    art: "region",
+    distance: "yaklaşık 4–7 km · 8–15 dk",
+    blurb: "Plastik sanayicilerinin OSB’sine Pelitli depodan dakikalar içinde palet.",
+    answer:
+      "Gebze Plastikçiler OSB, plastik ve polimer ürün üretimine odaklı bir organize sanayi bölgesidir ve MEPAL’in Pelitli deposundan yaklaşık 4–7 km uzaktadır. Buradaki tesislere Euro palet, ikinci el palet, plastik palet ve HT damgalı ihracat paleti sağlıyor, hurda paletleri yerinden alıyoruz.",
+    zones: ["Gebze Plastikçiler OSB (GEPOSB)", "Pelitli", "Balçık", "Mollafenari", "Gebze OSB yönü"],
+    nearby: ["gebze-palet", "dilovasi-palet", "cayirova-palet", "darica-palet"],
+    sections: [
+      {
+        h: "Plastikçiler OSB nedir",
+        p: [
+          "Gebze Plastikçiler Organize Sanayi Bölgesi, 2000’li yılların başında plastik sektörüne yönelik kurulmuş, yaklaşık 140 hektarlık bir alanda yüz kırkın üzerinde sanayi parseline sahip bir bölgedir. Plastik enjeksiyon, ekstrüzyon, şişirme, ambalaj filmi, boru ve profil, geri dönüşüm ve kalıp işleri bölgenin ana faaliyet alanlarıdır.",
+          "Plastik üretimi hacimli ama hafif bir yük üretir. Mamul çoğunlukla koli, çuval, bigbag, kasa ya da rulo halinde paletlenir; bu da paletin yük taşıma kapasitesinden çok boyutlarına ve istiflenebilirliğine önem kazandırır.",
+        ],
+        links: [["Kimya ve plastik", "/sektorler/kimya-ve-plastik/"], ["Gebze sayfası", "/bolge/gebze-palet/"]],
+      },
+      {
+        h: "Plastik sektöründe palet seçimi",
+        p: [
+          "Plastik sanayicilerinde iki kullanım tipi öne çıkar. Hammadde (granül, reçine) ağır çuvallar halinde gelir ve sağlam, düzgün yüzeyli bir palet ister. Mamul ise koli ya da hacimli kasalarla çıkar; burada paletin ölçüsü, ürünü paletin dışına taşırmadan taşıyabilmesi ve istif yükünü kaldırabilmesi önemlidir.",
+          "Üretim hattında hijyen ve temizlik öncelikliyse plastik palet iyi bir seçimdir; yıkanabilir, çivisiz ve kıymıksızdır. Sevkiyat maliyetini düşük tutmak istiyorsanız ikinci el Euro palet işinizi görür.",
+        ],
+        list: [
+          "Çuvalda hammadde için: sağlam, düzgün ağızlı ahşap ya da plastik palet.",
+          "Hijyen gerektiren hatlar için: yıkanabilir plastik palet.",
+          "Koli ve kasa sevkiyatı için: 80x120 Euro palet.",
+          "İhracat için: HT damgalı, ISPM-15 uyumlu palet.",
+        ],
+        links: [
+          ["Plastik palet", "/urunler/plastik-palet/"],
+          ["Ahşap mı plastik mi", "/rehber/ahsap-palet-mi-plastik-palet-mi/"],
+          ["Euro palet", "/urunler/80x120-euro-palet/"],
+          ["İhracat paleti", "/urunler/ihracat-paleti/"],
+        ],
+      },
+      {
+        h: "Hızlı çıkış ve düzenli tedarik",
+        p: [
+          "Mesafe kısa olduğu için stoktaki ürünlerde aynı gün ya da ertesi iş günü çıkış planlanabilir. Düzenli hammadde girişi ve mamul çıkışı olan tesisler için haftalık program tavsiye ederiz. Net süre ve koşullar teklifte bildirilir.",
+          "Üretim sırasında hasar gören ya da kullanım ömrü biten paletleri yerinden alıyoruz. Aynı araçla yeni palet getirip kullanılmış paleti geri almak mümkündür.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Fiyat tablosu", "/palet-fiyatlari/"]],
+      },
+    ],
+    faq: [
+      { q: "Plastikçiler OSB’ye ne kadar sürede teslim edersiniz?", a: "Depo yakın olduğu için stoktaki ürünlerde çoğunlukla aynı gün ya da ertesi iş günü çıkış planlanır. Net süre teklifte bildirilir." },
+      { q: "Granül çuvalları için hangi palet uygundur?", a: "Çuvalın yüzey ve ağırlığına göre sağlam, düzgün yüzeyli bir ahşap ya da plastik palet önerilir. Ürün ve adedi yazın, uygun seçimi birlikte belirleyelim." },
+      { q: "Plastik palet mi ahşap palet mi tercih etmeliyim?", a: "Hijyen ve yıkanabilirlik öncelikliyse plastik, maliyet ve esneklik öncelikliyse ahşap palet uygundur." },
+      { q: "Hurda ve kırık palet alıyor musunuz?", a: "Evet. Adet, tür ve yükleme noktasını bildirmeniz yeterlidir." },
+      { q: "Toplu alımda koşullar nasıl belirlenir?", a: "Ürün, adet ve teslim sıklığına göre teklifte yazılı olarak netleştirilir." },
+    ],
+  },
+  {
+    slug: "imes-palet",
+    name: "İMES OSB",
+    wave: 2,
+    title: "İMES OSB Palet Tedariği Dilovası | MEPAL",
+    description: "İMES OSB (Dilovası) makine ve metal sanayisine palet: Euro, özel ölçü, ikinci el ve HT paleti. Gebze depodan hızlı sevkiyat, hurda palet alımı.",
+    h1: "İMES OSB Palet Tedariği",
+    keyword: "imes palet",
+    art: "region",
+    distance: "yaklaşık 18–25 km · 25–35 dk",
+    blurb: "Dilovası’ndaki İMES OSB makine ve metal tesislerine Gebze’den palet ve sandık.",
+    answer:
+      "İMES OSB, Kocaeli’nin Dilovası ilçesinde yer alan makine ve metal imalat ağırlıklı bir organize sanayi bölgesidir. MEPAL’in Gebze deposundan yaklaşık 18–25 km uzaktadır; tesislere Euro palet, özel ölçülü palet, ikinci el palet ve HT damgalı ihracat paleti sağlıyor, hurda paletleri yerinden alıyoruz.",
+    zones: ["İMES OSB", "Dilovası sanayi hattı", "Diliskelesi yönü", "Dilovası OSB çevresi", "Tavşancıl yönü"],
+    nearby: ["dilovasi-palet", "gebze-palet", "cayirova-palet", "derince-palet"],
+    sections: [
+      {
+        h: "İMES OSB nerede, ne üretir",
+        p: [
+          "İMES, İstanbul’daki İMES Sanayi Sitesi ile karıştırılabilen ama ondan ayrı bir yapıdır. İMES OSB, Kocaeli’nin Dilovası ilçesindedir ve makine sektörü firmalarının yoğun olduğu, üç yüzün üzerinde firmanın ve on binlerce çalışanın yer aldığı bir organize sanayi bölgesi olarak bilinir. Metal işleme, makine imalatı, kalıp, hidrolik ve pnömatik parçalar, ağır ekipman ve yan sanayi bölgenin ana kolları arasındadır.",
+          "Makine sanayisinin palet ihtiyacı diğer sektörlerden farklıdır: ürünler ağır, köşeli ve çoğu zaman standart dışı ölçülüdür. Bu nedenle sıradan bir Euro palet her zaman yeterli olmaz.",
+        ],
+        links: [["Dilovası sayfası", "/bolge/dilovasi-palet/"], ["Otomotiv ve yan sanayi", "/sektorler/otomotiv-ve-yan-sanayi/"]],
+      },
+      {
+        h: "Ağır ve standart dışı yük için palet",
+        p: [
+          "Makine parçaları, kalıplar ve metal mamuller için paletin taşıma kapasitesi, alt tabla yapısı ve ölçüsü belirleyicidir. Yük paletten taşıyorsa ya da ağırlık tek noktada toplanıyorsa özel ölçülü, takviyeli palet veya ahşap sandık gerekebilir. Ürünün en, boy, yükseklik ve ağırlık bilgisini paylaşırsanız uygun çözümü öneririz.",
+        ],
+        list: [
+          "Özel ölçülü palet: makine ve parça ölçüsüne göre üretim.",
+          "Ahşap sandık: hassas ya da ağır ürünlerin ihracatı ve nakli.",
+          "100x120 ve 114x114 palet: orta ve ağır yükler için yaygın ölçüler.",
+          "HT damgalı palet ve sandık: ISPM-15 uyumlu ihracat ambalajı.",
+          "İkinci el palet: iç sevkiyat ve ara depolama.",
+        ],
+        links: [
+          ["Özel ölçü palet", "/urunler/ozel-olcu-palet/"],
+          ["Ahşap sandık", "/urunler/ahsap-sandik/"],
+          ["İhracat paleti", "/urunler/ihracat-paleti/"],
+          ["Palet kaç kg taşır", "/rehber/palet-kac-kg-tasir/"],
+        ],
+      },
+      {
+        h: "Teslimat ve hurda alımı",
+        p: [
+          "Gebze’den İMES OSB’ye TEM otoyolu üzerinden gidilir; yaklaşık 25–35 dakikalık yoldur. Özel ölçülü üretim gerektiren siparişlerde süre ürüne ve yoğunluğa bağlıdır; net süre teklifte bildirilir.",
+          "Hurda ve onarıma uygun paletleri yerinden alıyoruz. Kalıp ve ağır yük taşıyan paletler yıpranmaya yatkındır; düzenli tamir ve yenileme programı hem maliyeti hem iş güvenliğini olumlu etkiler.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet tamiri", "/hizmetler/palet-tamiri/"], ["Teklif al", "/teklif-al/"]],
+      },
+    ],
+    faq: [
+      { q: "İMES OSB Sultanbeyli ya da Tuzla’da mı?", a: "Hayır. İMES OSB Kocaeli’nin Dilovası ilçesindedir; İstanbul’daki İMES Sanayi Sitesi ile karıştırılmamalıdır." },
+      { q: "Makine parçaları için hangi palet uygundur?", a: "Ağırlık ve ölçüye göre takviyeli ya da özel ölçülü palet, gerekirse ahşap sandık önerilir. Ölçü ve ağırlık bilgisini iletin." },
+      { q: "Özel ölçülü palet ne kadar sürede hazırlanır?", a: "Süre ölçü, adet ve üretim yoğunluğuna bağlıdır; net süre teklifte bildirilir." },
+      { q: "İhracat için sandık ve palet temin ediyor musunuz?", a: "Evet. ISPM-15 uyumlu, HT damgalı palet ve sandık temin ediyoruz." },
+    ],
+  },
+  {
+    slug: "kurtkoy-palet",
+    name: "Kurtköy",
+    wave: 2,
+    title: "Kurtköy Palet Satışı ve Hurda Alımı | MEPAL",
+    description: "Pendik Kurtköy sanayi ve lojistik alanlarına palet: Euro, ikinci el, plastik ve HT paleti. Gebze depodan toplu sevkiyat, hurda palet alımı, hızlı teklif.",
+    h1: "Kurtköy Palet Satışı ve Hurda Palet Alımı",
+    keyword: "kurtköy palet",
+    art: "region",
+    distance: "yaklaşık 35 km · 35–50 dk",
+    blurb: "Pendik Kurtköy’deki üretim ve lojistik tesislerine Gebze’den toplu palet.",
+    answer:
+      "Kurtköy, İstanbul’un Pendik ilçesinde, Sabiha Gökçen Havalimanı ve TEM otoyolu çevresinde yoğun bir sanayi ve lojistik alanıdır. MEPAL’in Gebze deposundan yaklaşık 35 km uzaktadır; buradaki tesislere Euro palet, ikinci el palet, plastik palet ve HT damgalı ihracat paleti sağlar, hurda paletleri yerinden alırız.",
+    zones: ["Kurtköy sanayi", "Sabiha Gökçen havalimanı çevresi", "Pendik Kurtköy lojistik alanları", "Yenişehir", "Çınardere yönü"],
+    nearby: ["pendik-palet", "tuzla-palet", "sancaktepe-palet", "sultanbeyli-palet"],
+    sections: [
+      {
+        h: "Kurtköy’ün sanayi ve lojistik karakteri",
+        p: [
+          "Kurtköy, Sabiha Gökçen Havalimanı ve TEM otoyolu bağlantısı sayesinde İstanbul’un Anadolu yakasında kritik bir lojistik düğümdür. Bölgede depolama ve dağıtım merkezleri, kargo ve havacılık hizmetleri, ambalaj, metal işleme, mobilya ve küçük-orta ölçekli imalat tesisleri bir arada çalışır.",
+          "Lojistik ağırlığı palet talebini düzenli kılar: giden ve gelen mallar sürekli paletlenir, sık palet değişimi ve kırık palet birikimi yaşanır. Bu nedenle satış ve hurda alımını bir arada planlamak depo verimliliğini artırır.",
+        ],
+        links: [["Pendik sayfası", "/bolge/pendik-palet/"], ["E-ticaret ve depo", "/sektorler/e-ticaret-ve-depo/"]],
+      },
+      {
+        h: "Depo ve dağıtım merkezleri için palet",
+        p: [
+          "Dağıtım merkezlerinde en yaygın birim 80x120 Euro paletidir. Raf sistemleri ve tır yüklemesi bu ölçüye göre düzenlendiği için ölçü ve kalite tutarlılığı önemlidir. Raflı sistemlerde özellikle alt tabla ve ayak yapısının sağlamlığına dikkat edilmelidir.",
+          "Bütçeyi korumak isteyen tesisler için sınıflandırılmış ikinci el Euro palet, hijyen gerektiren ürünler için plastik palet, havayolu ve deniz ihracatı için HT damgalı palet sağlanır.",
+        ],
+        list: [
+          "80x120 Euro palet: raflı depo ve tır yüklemesi.",
+          "İkinci el palet: iç sevkiyat ve bütçe odaklı alımlar.",
+          "Plastik palet: gıda, ilaç ve kozmetik depoları.",
+          "HT damgalı palet: ihracat ve hava kargo.",
+        ],
+        links: [
+          ["Euro palet", "/urunler/80x120-euro-palet/"],
+          ["Palet raf sistemleri", "/rehber/palet-raf-sistemleri-ve-raf-yuku/"],
+          ["Plastik palet", "/urunler/plastik-palet/"],
+          ["İhracat paleti", "/urunler/ihracat-paleti/"],
+        ],
+      },
+      {
+        h: "Teslimat ve hurda palet",
+        p: [
+          "Gebze’den Kurtköy’e TEM otoyolu üzerinden gidilir. Yoğun saatlerde süre artabilir; sabah erken ya da öğleden sonra yüklemelerde akış genellikle daha rahattır. Net süre teklifte bildirilir.",
+          "Lojistik tesislerde biriken kırık ve hurda paletleri yerinden alırız. Miktar yeterliyse araç planlanır; ürün getiren araç dönüşte hurda palet alarak sefer sayısını azaltabilir.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Fiyat tablosu", "/palet-fiyatlari/"]],
+      },
+    ],
+    faq: [
+      { q: "Kurtköy’e teslimat yapıyor musunuz?", a: "Evet. Gebze deposundan Kurtköy ve çevresine toplu sevkiyat planlıyoruz. Süre teklifte bildirilir." },
+      { q: "Raflı depo için hangi palet uygundur?", a: "Çoğu raflı sistemde 80x120 Euro palet kullanılır. Raf üreticisinin yük bilgisine göre uygun sınıf seçilir." },
+      { q: "Küçük adetle sipariş verebilir miyim?", a: "Mesafe nedeniyle toplu sevkiyat daha uygundur. Küçük adetlerde koşullar teklifte netleşir." },
+      { q: "Kurtköy’den hurda palet alıyor musunuz?", a: "Evet. Adet, tür ve adres bilgisiyle yazarsanız alım planlanır." },
+    ],
+  },
+  {
+    slug: "maltepe-palet",
+    name: "Maltepe",
+    wave: 2,
+    title: "Maltepe Palet Satışı ve Hurda Alımı | MEPAL",
+    description: "Maltepe’deki atölye, depo ve küçük üretim tesislerine palet: Euro, ikinci el, plastik. Gebze depodan sevkiyat, hurda palet alımı, hızlı teklif için yazın.",
+    h1: "Maltepe Palet Satışı ve Hurda Palet Alımı",
+    keyword: "maltepe palet",
+    art: "region",
+    distance: "yaklaşık 45–50 km · 50–70 dk",
+    blurb: "Maltepe’deki depo, atölye ve küçük üretim tesislerine Gebze’den palet.",
+    answer:
+      "Maltepe, İstanbul’un Anadolu yakasında büyük ölçüde yerleşim ve ticaret ağırlıklı bir ilçedir; sanayi tesisleri sınırlı ve küçük-orta ölçeklidir. MEPAL, Gebze deposundan (yaklaşık 45–50 km) Maltepe’deki depo, atölye ve üretim tesislerine Euro palet, ikinci el palet ve plastik palet sağlar, hurda palet alır.",
+    zones: ["Maltepe sanayi alanları", "Başıbüyük", "Cevizli", "Gülsuyu", "Zümrütevler", "Bağlarbaşı", "Esenkent yönü"],
+    nearby: ["kartal-palet", "atasehir-kadikoy-palet", "umraniye-palet", "sancaktepe-palet"],
+    sections: [
+      {
+        h: "Maltepe’de palet kimlere lazım",
+        p: [
+          "Maltepe’nin ekonomik yapısı sanayiden çok hizmet ve ticarete dayanır. Buna rağmen ilçede küçük üretim atölyeleri, tekstil ve gıda işletmeleri, inşaat malzemesi ve ticari depolar, mobilya ve dekorasyon atölyeleri, perakende zincirlerinin yerel depoları palet kullanır. Başıbüyük ve çevresinde atölye ve depo yapıları özellikle yoğundur.",
+          "Talep çoğunlukla düşük ya da orta hacimlidir; bir seferde on paletten birkaç yüz palete kadar değişir. Bu tür siparişlerde adetler birleştirilip planlı sevkiyat yapılırsa hem süre hem maliyet açısından en verimli sonuç alınır.",
+        ],
+        links: [["Kartal sayfası", "/bolge/kartal-palet/"], ["Ataşehir ve Kadıköy", "/bolge/atasehir-kadikoy-palet/"]],
+      },
+      {
+        h: "Küçük işletmeler için seçenekler",
+        p: [
+          "Küçük işletmeler için en ekonomik çözüm genellikle sınıflandırılmış ikinci el Euro paletidir. Daha sık palet değiştiren ya da temiz görünüm isteyen işletmeler sıfır ahşap palet veya plastik palete yönelir. Mobilya, dekorasyon ve mağaza düzenlemeleri için de temiz, uygun görünümlü paletler sağlanabilir.",
+        ],
+        list: [
+          "İkinci el Euro palet: bütçeyi koruyan, yaygın seçim.",
+          "Sıfır ahşap palet: tertipli, temiz sevkiyat.",
+          "Plastik palet: gıda ve hijyen gerektiren işler.",
+          "Özel ölçülü palet: standart dışı ürünler için.",
+        ],
+        links: [
+          ["İkinci el palet", "/urunler/ikinci-el-palet/"],
+          ["Sıfır ahşap palet", "/urunler/sifir-ahsap-palet/"],
+          ["Plastik palet", "/urunler/plastik-palet/"],
+          ["Özel ölçü palet", "/urunler/ozel-olcu-palet/"],
+        ],
+      },
+      {
+        h: "Teslimat ve hurda palet",
+        p: [
+          "Gebze’den Maltepe’ye TEM, D-100 ve Anadolu yakası bağlantı yolları kullanılır. Trafik yoğunluğu süreyi belirgin biçimde etkiler; bu nedenle teslimat saatleri sabah erken ya da trafik azaldığında planlanır. Net süre teklifte bildirilir.",
+          "Biriken kırık ve hurda paletleri yerinden alıyoruz. Küçük miktarlar için bölgeden diğer talepler birleştirilir; adet ve fotoğrafla yazmanız yeterlidir.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+      },
+    ],
+    faq: [
+      { q: "Maltepe’ye küçük adetle palet gönderir misiniz?", a: "Evet, ancak mesafe nedeniyle talepler birleştirilerek planlanır. Koşullar teklifte bildirilir." },
+      { q: "Mağaza ya da atölye için temiz palet bulunur mu?", a: "Evet. Temiz, sınıflandırılmış ikinci el ya da sıfır palet seçenekleri sunulur." },
+      { q: "Maltepe’den hurda palet alıyor musunuz?", a: "Evet. Adet, tür ve adresle yazarsanız yerinden alım planlanır." },
+      { q: "Teslimat ne kadar sürer?", a: "Stok ve araç programına göre planlanır, çoğunlukla ertesi iş günü; net süre teklifte bildirilir." },
+    ],
+  },
+  {
+    slug: "cekmekoy-palet",
+    name: "Çekmeköy",
+    wave: 2,
+    title: "Çekmeköy Palet Satışı ve Hurda Alımı | MEPAL",
+    description: "Çekmeköy’deki imalat, depo ve inşaat işletmelerine palet: Euro, ikinci el, plastik ve özel ölçü. Gebze depodan sevkiyat, hurda palet alımı, hızlı teklif.",
+    h1: "Çekmeköy Palet Satışı ve Hurda Palet Alımı",
+    keyword: "çekmeköy palet",
+    art: "region",
+    distance: "yaklaşık 50–55 km · 60–80 dk",
+    blurb: "Çekmeköy’deki küçük üretim ve depo işletmelerine Gebze’den planlı palet sevkiyatı.",
+    answer:
+      "Çekmeköy, İstanbul’un Anadolu yakasında hızlı büyüyen, yeşil alanları geniş bir ilçedir; sanayi tesisleri sınırlıdır, atölye, depo ve inşaat sektörü ağırlıktadır. MEPAL, Gebze deposundan (yaklaşık 50–55 km) Çekmeköy’e Euro palet, ikinci el palet, plastik palet ve özel ölçülü palet sağlar, hurda palet alır.",
+    zones: ["Çekmeköy sanayi alanları", "Alemdağ", "Taşdelen", "Çamlık", "Mehmet Akif", "Ömerli yönü", "Sultançiftliği yönü"],
+    nearby: ["sancaktepe-palet", "umraniye-palet", "sultanbeyli-palet", "atasehir-kadikoy-palet"],
+    sections: [
+      {
+        h: "Çekmeköy’de palet talebinin kaynağı",
+        p: [
+          "Çekmeköy, son yıllarda konut ve ticaretle büyümüş bir ilçe olmakla birlikte Alemdağ Caddesi ve çevresinde atölye, küçük imalat ve depo yapıları barındırır. İnşaat malzemesi toptancıları, mobilya ve dekorasyon atölyeleri, gıda üretim ve dağıtım işletmeleri, metal ve kaynak atölyeleri ilçenin palet kullanan başlıca işletmeleridir.",
+          "Komşu Sancaktepe, Ümraniye ve Sultanbeyli ile birlikte bu hat Anadolu yakasının üretim koridorlarından birini oluşturur. Sevkiyatlar çoğunlukla birbirine yakın birkaç işletmeye aynı güzergâhta yapılabildiği için talepleri birleştirmek mümkündür.",
+        ],
+        links: [["Sancaktepe sayfası", "/bolge/sancaktepe-palet/"], ["Ümraniye sayfası", "/bolge/umraniye-palet/"], ["Sultanbeyli sayfası", "/bolge/sultanbeyli-palet/"]],
+      },
+      {
+        h: "İnşaat ve atölye işletmeleri için palet",
+        p: [
+          "İnşaat malzemesi, seramik, boya ve yapı kimyasalları paletle gelir ve çoğu zaman 100x120 ya da 80x120 ölçüsünde olur. Atölyelerde ise palet hem sevkiyat hem de depolama ve üretim ekipmanı olarak kullanılır. Bu işler için sağlam, sınıflandırılmış ikinci el palet genellikle yeterlidir.",
+        ],
+        list: [
+          "İkinci el palet: inşaat ve atölye kullanımında yaygın seçim.",
+          "100x120 palet: boya, yapı kimyasalı ve ağır ambalaj.",
+          "Plastik palet: gıda ve hijyen gerektiren işler.",
+          "Özel ölçülü palet: standart dışı ürünler için üretim.",
+        ],
+        links: [
+          ["İkinci el palet", "/urunler/ikinci-el-palet/"],
+          ["100x120 palet", "/urunler/100x120-palet/"],
+          ["Plastik palet", "/urunler/plastik-palet/"],
+          ["Özel ölçü palet", "/urunler/ozel-olcu-palet/"],
+        ],
+      },
+      {
+        h: "Teslimat ve hurda palet",
+        p: [
+          "Gebze’den Çekmeköy’e TEM otoyolu ve Anadolu yakası bağlantı yolları üzerinden gidilir. Yoğun trafik saatlerinde süre belirgin biçimde uzayabilir. Mümkünse sabah erken ya da öğleden sonra teslimat penceresi seçmenizi öneririz. Net süre teklifte bildirilir.",
+          "Biriken kırık ve hurda paletleri yerinden alıyoruz. Küçük partilerde yakındaki diğer taleplerle birleştirme yapılır; adet, tür ve fotoğrafla yazmanız yeterlidir.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+      },
+    ],
+    faq: [
+      { q: "Çekmeköy’e palet teslim ediyor musunuz?", a: "Evet. Gebze deposundan Çekmeköy ve çevresine planlı sevkiyat yapıyoruz. Süre teklifte bildirilir." },
+      { q: "İnşaat şantiyesi için palet alabilir miyim?", a: "Evet. Kullanım amacını ve adedi bildirirseniz uygun palet türü ve miktarı önerilir." },
+      { q: "Küçük adetli sipariş olur mu?", a: "Mesafe nedeniyle talepler birleştirilerek planlanır. Koşullar teklifte netleşir." },
+      { q: "Çekmeköy’den hurda palet alıyor musunuz?", a: "Evet. Adet, tür ve adresle yazarsanız alım planlanır." },
+    ],
+  },
 ];
 
 export const regionBySlug = (slug: string) => regions.find((r) => r.slug === slug);

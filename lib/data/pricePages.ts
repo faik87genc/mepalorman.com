@@ -299,6 +299,182 @@ export const pricePages: PricePage[] = [
     related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet", "80x120-euro-palet", "ihracat-paleti"],
     guides: ["plastik-palet-cesitleri", "ahsap-palet-mi-plastik-palet-mi", "palet-raf-sistemleri-ve-raf-yuku", "gida-sektoru-icin-palet-secimi"],
   },
+  {
+    slug: "hurda-palet-fiyatlari",
+    title: "Hurda Palet Fiyatları ve Değerleme | MEPAL",
+    description: "Hurda palet fiyatı neye göre belirlenir? Kalite sınıfı, adet, ölçü ve nem etkisi; fotoğrafla ön değerleme ve teklif süreci.",
+    h1: "Hurda Palet Fiyatları ve Değerleme",
+    answer:
+      "Hurda ve kullanılmış palet alım değeri sabit bir liste fiyatı değildir; partinin sağlam palet oranı, ölçü ve tipi, adedi, nem ve kirlilik durumu ile yükleme koşullarına göre belirlenir. Bu nedenle bu sayfada rakam değil, değerlemenin nasıl yapıldığı anlatılır. Fotoğraf göndererek ön değerleme alabilirsiniz.",
+    keyword: "hurda palet fiyatları",
+    art: "scrap",
+    rowKeys: [],
+    sections: [
+      {
+        h: "Hurda palet için neden sabit fiyat verilmez?",
+        p: [
+          "Hurda palet yığını tek tip bir mal değildir. Aynı depodaki iki parti; sağlam palet oranı, ölçü dağılımı ve kuruluk bakımından çok farklı olabilir. Bu yüzden alım değeri, partiyi görmeden veya fotoğrafını incelemeden doğru verilemez. Sabit bir rakam açıklayan her liste, ya partiyi aşırı basitleştirir ya da gerçek değeri yansıtmaz.",
+          "Bu sayfa fiyat tablosu içermez; değerlemeyi hangi unsurların belirlediğini ve süreci net biçimde gösterir. Hurda alımı hizmetinin kapsamı için ilgili hizmet sayfasına bakabilirsiniz.",
+        ],
+        links: [["Hurda palet alımı hizmeti", "/hizmetler/hurda-palet-alimi/"]],
+      },
+      {
+        h: "Alım değerini belirleyen faktörler",
+        list: [
+          "Sağlam palet oranı: partinin ne kadarı doğrudan yeniden kullanılabilir veya küçük onarımla kurtarılabilir",
+          "Ölçü ve tip: 80x120 Euro ölçülü ve 100x120 gibi yaygın ölçüler daha çok talep görür; özel ölçülerde alıcı bulmak zordur",
+          "Adet ve parti büyüklüğü: büyük ve düzenli partiler lojistik açıdan daha verimlidir",
+          "Nem ve kirlilik: ıslanmış, küflü, yağlı veya boyalı palet değeri düşürür",
+          "Ayrıştırılmışlık: ölçü ve duruma göre önceden ayrılmış parti daha hızlı değerlenir",
+          "Yükleme koşulları: forklift, rampa, araç erişimi ve çalışma saatleri",
+          "Konum: yerinden alım için sevkiyat planı ve mesafe",
+          "Piyasa koşulları: ikinci el palet talebi ve ahşap atık piyasası zamanla değişir",
+        ],
+      },
+      {
+        h: "Kalite sınıfına göre değerleme (niteliksel)",
+        p: ["Aşağıdaki tablo rakam vermez; palet durumunun alım değerini nasıl etkilediğini karşılaştırmalı gösterir."],
+        table: {
+          caption: "Palet sınıfı ve değerleme etkisi",
+          head: ["Sınıf", "Tipik durum", "Değerleme eğilimi", "Olası yol"],
+          rows: [
+            ["Sağlam (1. sınıf)", "Bloklar ve kızaklar bütün, en fazla 1–2 yüzey tahtası aşınmış", "En yüksek değerlenir", "İkinci el palet olarak yeniden satış"],
+            ["Sağlam (2. sınıf)", "Yerli kullanıma uygun, görünümü düşük", "Orta düzey", "İkinci el palet, yerli kullanım"],
+            ["Tamirlik", "Birkaç tahta kırık, blok sağlam", "Onarım maliyeti düşülerek değerlenir", "Tamir edilip dolaşıma girer"],
+            ["Hurda", "Blok parçalanmış, çürüme ve küf var", "Ahşap atık değeri; çok düşük", "Ahşap atık olarak geri dönüşüm"],
+            ["Bulaşmış / riskli", "Kimyasal, yağ veya gıda kalıntısı", "Alıma uygun olmayabilir", "Mevzuata uygun bertaraf; ayrıca bildirin"],
+          ],
+        },
+        links: [["Palet kalite sınıfları", "/rehber/palet-kalite-siniflari/"]],
+      },
+      {
+        h: "Değerleme nasıl yapılır?",
+        steps: [
+          "Paletleri mümkünse ölçü ve duruma göre kabaca ayırın: sağlam, tamirlik, hurda.",
+          "Partinin fotoğrafını çekin; yığının genel görüntüsünü ve birkaç palet yakın planını ekleyin.",
+          "Ölçü, yaklaşık adet, konum ve yükleme koşulunu (forklift, rampa) belirtin.",
+          "Fotoğraf ve bilgilerle ön değerleme alın; gerekirse yerinde görülerek değerleme netleştirilir.",
+          "Onay sonrası araç planlanır, yükleme yapılır ve ödeme koşulları teklifte belirtildiği gibi tamamlanır.",
+        ],
+        links: [["Fotoğraftan palet değerleme", "/araclar/fotograftan-palet-degerleme/"], ["Teklif al", "/teklif-al/"]],
+      },
+      {
+        h: "Değeri artırmak için yapılabilecekler",
+        list: [
+          "Paletleri yağmurdan koruyun; kuru parti her zaman daha iyi değerlenir",
+          "Sağlam ve hurdayı karıştırmayın; tek yığın hâlinde bırakmak değeri düşürür",
+          "Ölçülere göre ayırın; en çok talep gören ölçüleri ayrı istifleyin",
+          "Kimyasal veya yağ bulaşmış paletleri ayrı tutun",
+          "Düzenli çıkıyorsa periyodik alım planı isteyin",
+        ],
+        links: [["Hurda paletinizi nasıl değerlendirirsiniz?", "/rehber/hurda-paletinizi-nasil-degerlendirirsiniz/"], ["Ahşap palet geri dönüşüm", "/rehber/ahsap-palet-geri-donusum/"]],
+      },
+      {
+        h: "Sağlam paletleriniz için güncel satış fiyatları",
+        p: [
+          "Hurda değerleme alım tarafıdır. Eğer ikinci el palet satın almak istiyorsanız, ölçü ve sınıfa göre güncel birim fiyatlar ikinci el palet fiyat sayfasında adet kademeleriyle listelenir.",
+        ],
+        links: [["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"], ["Palet alım satım", "/hizmetler/palet-alim-satim/"]],
+      },
+    ],
+    faq: [
+      { q: "Hurda palet ton bazında mı alınır?", a: "Alım değeri adet, ölçü ve sağlam palet oranına göre belirlenir. Partinin içeriğine göre değerleme yöntemi teklifte netleştirilir." },
+      { q: "Hurda palet için rakam verebilir misiniz?", a: "Partiyi görmeden veya fotoğrafını incelemeden doğru rakam vermek mümkün değildir. Fotoğraf ve adet bilgisiyle ön değerleme alabilirsiniz." },
+      { q: "Kırık palet de alınır mı?", a: "Evet. Tamirlik ve hurda paletler de değerlenir; kırık oranı ve blok durumu alım değerini etkiler." },
+      { q: "Yerinden alım yapıyor musunuz?", a: "Evet, adet ve konuma göre yerinden alım planlanır. Hizmet alanımız Türkiye geneli olup depomuz Gebze'dedir; Kocaeli ve İstanbul'da planlama en hızlıdır." },
+      { q: "Yağlı veya kimyasal bulaşmış palet alınır mı?", a: "Bulaşmış paletler normal alıma uygun olmayabilir. Durumu önceden bildirin; mevzuata uygun değerlendirme yolu birlikte belirlenir." },
+      { q: "Ödeme ve yükleme nasıl yapılır?", a: "Değerleme onaylandıktan sonra araç planlanır ve yükleme yapılır. Ödeme koşulları teklifte açıkça belirtilir." },
+    ],
+    related: ["ikinci-el-palet-fiyatlari", "palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet", "ahsap-sandik"],
+    guides: ["hurda-paletinizi-nasil-degerlendirirsiniz", "palet-kalite-siniflari", "ahsap-palet-geri-donusum", "palet-omru-nasil-uzatilir"],
+  },
+  {
+    slug: "ozel-olcu-palet-fiyatlari",
+    title: "Özel Ölçü Palet Fiyatları ve Teklif | MEPAL",
+    description: "Özel ölçülü palet fiyatı nasıl belirlenir? Ölçü, yük, adet etkisi, teknik bilgi nasıl verilir. 145x145 dahil, hızlı teklif için WhatsApp.",
+    h1: "Özel Ölçü Palet Fiyatları",
+    answer:
+      "Özel ölçülü palet fiyatı sabit bir liste değildir; ölçüye, taşınacak yüke, kereste ve tahta kalınlığına, adede ve ihracat gereksinimine göre hesaplanır. Ölçü ve yük bilgisini paylaştığınızda stok durumuna göre net teklif verilir. 145x145 gibi standart dışı ölçüler de aynı mantıkla fiyatlanır.",
+    keyword: "özel ölçü palet fiyatları",
+    art: "custom",
+    rowKeys: ["ozel-olcu", "145x145"],
+    sections: [
+      {
+        h: "Özel ölçü palet fiyatı nasıl belirlenir?",
+        p: [
+          "Standart ölçülü paletler hazır stoktan çıkar ve fiyatları tabloda görünür. Özel ölçülü palet ise yüke göre tasarlanır ve üretilir; bu yüzden fiyat, ölçü ve yük bilgisi belli olmadan hesaplanamaz. Aşağıdaki tabloda özel ölçülü ve 145x145 satırları “teklif alın” olarak görünür; sebebi budur.",
+          "Teklifin doğru olması için hangi bilgilerin gerektiğini bilmek, süreci hızlandırır.",
+        ],
+        links: [["Özel ölçülü palet", "/urunler/ozel-olcu-palet/"], ["145x145 palet", "/urunler/145x145-palet/"]],
+      },
+      {
+        h: "Fiyatı etkileyen faktörler",
+        list: [
+          "Ölçü: boy ve en; standart ölçülere yakınsa kesim ve tasarım maliyeti düşer",
+          "Taşıma kapasitesi: statik, dinamik ve raf yükü; yük arttıkça tahta kalınlığı ve takviye artar",
+          "Yapı: bloklu mu kızaklı mı, çatal girişi iki yönlü mü dört yönlü mü",
+          "Kereste cinsi ve tahta kalınlığı",
+          "İhracat gereksinimi: ISPM-15 uyumlu, HT damgalı palet farklı fiyatlanır",
+          "Adet: tasarım ve kalıp maliyeti adede yayıldığı için büyük adetlerde birim fiyat düşer",
+          "Sipariş sıklığı: düzenli tekrar eden siparişlerde teklif avantajlı olabilir",
+          "Teslimat: adrese sevkiyat, mesafe ve araç planı",
+        ],
+      },
+      {
+        h: "Standart ve özel ölçü karşılaştırması",
+        table: {
+          caption: "Standart ve özel ölçülü palet",
+          head: ["Ölçüt", "Standart ölçü (ör. 80x120)", "Özel ölçü"],
+          rows: [
+            ["Fiyat", "Tabloda açıkça listelenir", "Ölçü ve yüke göre teklifle belirlenir"],
+            ["Tedarik", "Stoktan hızlı çıkış", "Üretim planı gerekir"],
+            ["Adet", "Küçük adet de uygundur", "Adet arttıkça birim maliyet avantajı artar"],
+            ["Uyum", "Raf ve araçlarla hazır uyumlu", "Yüke tam uyumlu, israf az"],
+            ["Ne zaman?", "Genel sevkiyat", "Büyük, uzun, ağır veya düzensiz yük"],
+          ],
+        },
+        links: [["Euro palet fiyatları", "/euro-palet-fiyatlari/"], ["Palet seçici", "/araclar/palet-secici/"]],
+      },
+      {
+        h: "Ölçü ve teknik bilgi nasıl verilir?",
+        p: ["Teklif için teknik çizim zorunlu değildir; aşağıdaki bilgiler çoğu zaman yeterlidir. Çizim, taslak veya yük fotoğrafı varsa eklemek hatayı azaltır."],
+        steps: [
+          "Palet ölçüsü: boy x en (mm olarak), varsa yükseklik sınırı.",
+          "Yük bilgisi: ürünün ağırlığı, ambalajı ve palet üzerinde nasıl dizildiği.",
+          "Kullanım yeri: raf, kamyon, konteyner veya otomatik hat; çatalın hangi yönden gireceği.",
+          "İhracat olup olmadığı ve ISPM-15 gereksinimi.",
+          "Yaklaşık adet ve tekrar sıklığı; teslim adresi.",
+          "Varsa eski palet numunesi, fotoğraf veya teknik çizim.",
+        ],
+        links: [["Teklif al", "/teklif-al/"], ["Palet kaç kg taşır?", "/rehber/palet-kac-kg-tasir/"]],
+      },
+      {
+        h: "Minimum sipariş ve teslimat",
+        p: [
+          "Özel ölçülü üretimde genellikle belirli bir adetten itibaren birim fiyat belirgin biçimde iyileşir. Bu, katı bir alt sınır değil, ekonomik bir eşiktir; tek veya birkaç adetlik ihtiyaçlar için de teklif alınabilir. Net adet mantığı ve üretim süresi, ölçüye ve stok durumuna göre teklifte bildirilir.",
+          "Teslimat stok ve araç programına göre planlanır; net süre teklifte belirtilir. Hizmet alanımız Türkiye geneli olup depomuz Gebze'dedir.",
+        ],
+        links: [["Toptan palet", "/hizmetler/toptan-palet/"]],
+      },
+      {
+        h: "Özel ölçü yerine standart ölçü yetebilir mi?",
+        p: [
+          "Her standart dışı yük özel palet gerektirmez. Yük 80x120, 100x120 veya 114x114 ölçülerinden birine makul ölçüde uyuyorsa standart palet hem daha ekonomik hem de daha hızlı tedarik edilir. Paletin yükü her yönden aşırı taşımaması ve istif güvenliğini bozmaması yeterlidir. Emin değilseniz ölçüleri paylaşın, hangi seçeneğin mantıklı olduğunu birlikte değerlendirelim.",
+        ],
+        links: [["Palet çeşitleri ve seçimi", "/rehber/palet-cesitleri-ve-secimi/"], ["100x120 palet", "/urunler/100x120-palet/"]],
+      },
+    ],
+    faq: [
+      { q: "Özel ölçü palet fiyatı neden tabloda yazmıyor?", a: "Çünkü fiyat ölçüye, yüke, tahta kalınlığına ve adede göre ayrı hesaplanır. Bilgi paylaşıldığında net teklif verilir." },
+      { q: "Teknik çizim şart mı?", a: "Hayır. Ölçü, yük bilgisi ve kullanım yeri çoğu zaman yeterlidir. Çizim, fotoğraf veya numune varsa teklif daha hızlı ve doğru hazırlanır." },
+      { q: "Minimum sipariş adedi var mı?", a: "Katı bir alt sınır konmaz; ancak adet arttıkça birim fiyat avantajı artar. Küçük adetler için de teklif alabilirsiniz." },
+      { q: "145x145 palet özel ölçü sayılır mı?", a: "145x145 yaygın bir endüstriyel ölçüdür ancak standart tabloda olmadığı için ölçü ve yüke göre teklifle fiyatlanır." },
+      { q: "Özel ölçülü palet ihracat için olabilir mi?", a: "Evet. ISPM-15 uyumlu ve HT damgalı ihracat paleti temin edilebilir; ihracat gereksinimini teklifte belirtin." },
+      { q: "Teslimat ne kadar sürer?", a: "Ölçüye, adede ve stok durumuna göre değişir. Net süre teklifte bildirilir." },
+    ],
+    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "euro-palet-fiyatlari", "ozel-olcu-palet", "145x145-palet", "ihracat-paleti"],
+    guides: ["palet-cesitleri-ve-secimi", "palet-kac-kg-tasir", "ispm-15-nedir", "palet-maliyetini-dusurmenin-yollari"],
+  },
 ];
 
 export const pricePageBySlug = (slug: string) => pricePages.find((p) => p.slug === slug);

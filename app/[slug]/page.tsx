@@ -51,10 +51,12 @@ export default async function RootPage({ params }: Props) {
           </>
         }
       >
-        <section className="block">
-          <h2>Güncel fiyat tablosu</h2>
-          <PriceTable rowKeys={pp.rowKeys} />
-        </section>
+        {pp.rowKeys.length > 0 && (
+          <section className="block">
+            <h2>Güncel fiyat tablosu</h2>
+            <PriceTable rowKeys={pp.rowKeys} />
+          </section>
+        )}
         <SectionsView sections={pp.sections} cta={{ message, after: 0 }} />
         <FaqList items={pp.faq} />
         <RelatedLinks title="İlgili ürünler" links={relProducts.map((r) => [r.name, `/urunler/${r.slug}/`])} />

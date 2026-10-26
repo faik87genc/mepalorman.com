@@ -295,6 +295,178 @@ export const services: Service[] = [
       { q: "Teslimat nereye yapılıyor?", a: "Gebze deposundan Türkiye genelindeki tesislere araçla teslim edilir; Kocaeli ve İstanbul’da en hızlıdır. Süre ve nakliye için teklif isteyin." },
     ],
   },
+  {
+    slug: "yerinde-palet-toplama",
+    name: "Yerinde Palet Toplama",
+    title: "Yerinde Palet Toplama ve Sahadan Yükleme | MEPAL",
+    description: "Tesisinizdeki paletleri araçla yerinde toplama: randevu, yükleme düzeni, saha hazırlığı ve periyodik toplama planı. Teklif için WhatsApp'tan yazın.",
+    h1: "Yerinde Palet Toplama — Tesisinizden Planlı Yükleme",
+    answer:
+      "Yerinde palet toplama, depo veya fabrikanızda biriken paletlerin araçla sahadan yüklenip alınmasıdır. Randevu, araç tipi, istif düzeni ve yükleme ekipmanı önceden netleştirilir; böylece araç bekletmeden tek seferde toplama yapılır. Gebze çevresinde en hızlıdır, Türkiye genelinde planlı sefer mümkündür.",
+    keyword: "yerinde palet toplama",
+    art: "truck",
+    blurb: "Tesisinizdeki paletlerin randevulu, planlı biçimde araçla toplanması.",
+    related: ["hurda-palet-alimi", "palet-nakliye-lojistik", "palet-alim-satim", "palet-tamiri"],
+    guides: ["palet-nasil-istiflenir", "palet-havuzu-ve-palet-kiralama", "palet-omru-nasil-uzatilir"],
+    sections: [
+      {
+        h: "Yerinde toplama ne zaman gerekir?",
+        p: [
+          "Depoda geri dönmeyen palet istifleri büyüdüğünde sevkiyat alanı daralır, forklift manevrası zorlaşır ve düzensiz yığınlar iş güvenliği riski yaratır. Yerinde toplama, bu birikimi kendi aracınızı ve personelinizi meşgul etmeden eritmenin yoludur.",
+          "Tek seferlik temizlik, taşınma, depo kapatma veya mevsimsel yoğunluk sonrası fazla kalan paletler için kullanılır; düzenli çıkışı olan tesislerde ise periyodik toplama planına bağlanır.",
+        ],
+      },
+      {
+        h: "Toplama operasyonu adım adım",
+        steps: [
+          "Palet cinsi, tahmini adet, adres ve istif alanı bilgisini bildirin; birkaç fotoğraf operasyonu planlamayı kolaylaştırır.",
+          "Adet, yükleme noktası ve araç erişimi netleştirilir; uygun araç tipi seçilir.",
+          "Randevu günü ve saat aralığı birlikte belirlenir; sahada sorumlu kişi ve giriş prosedürü bildirilir.",
+          "Araç adresinize gelir, paletler sayılarak yüklenir ve sevk edilir.",
+          "Yükleme sonunda adet teyit edilir; kayıt ve irsaliye düzeni sipariş koşullarına göre yapılır.",
+        ],
+        links: [["Teklif al", "/teklif-al/"]],
+      },
+      {
+        h: "Saha hazırlığı: operasyonu hızlandıran küçük adımlar",
+        list: [
+          "Paletleri aynı yönde ve düzgün istiflenmiş hâlde toplayın; devrilme riski olan yığınları önceden düzeltin.",
+          "Sağlam ve kırık paletleri ayrı yığınlara koyun; yükleme ve değerleme kolaylaşır.",
+          "Aracın yanaşacağı rampa veya alan için giriş yüksekliğini ve zemini bildirin.",
+          "Forklift veya transpalet mevcutsa belirtin; yükleme ekipmanı sürede belirleyici olur.",
+          "Çember, streç ve ürün kalıntılarını temizleyin.",
+        ],
+        links: [["Palet nasıl istiflenir", "/rehber/palet-nasil-istiflenir/"]],
+      },
+      {
+        h: "Araç ve yükleme düzeni",
+        p: [
+          "Toplama aracı, palet adedine ve alanın erişimine göre seçilir. Dar sokakta veya düşük tavanlı girişte küçük araç, büyük istiflerde tır veya açık kasa araç uygundur.",
+          "Yükleme elle veya çatallı ekipmanla yapılır. Palet sayısı arttıkça sefer tek araçta tamamlanamayabilir; bu durumda sefer planı önceden birlikte çıkarılır.",
+        ],
+        table: {
+          caption: "Toplama operasyonunda planı etkileyen unsurlar",
+          head: ["Unsur", "Neden önemli?"],
+          rows: [
+            ["Toplam adet", "Araç sayısı ve sefer planını belirler"],
+            ["Erişim ve rampa", "Araç tipi ve yükleme süresini etkiler"],
+            ["Yükleme ekipmanı", "Forklift varsa yükleme hızlanır"],
+            ["Palet ayrıştırması", "Sağlam/kırık ayrımı sonrası işlemi kolaylaştırır"],
+            ["Randevu saati", "Giriş izni ve vardiya düzenine uyum sağlar"],
+          ],
+        },
+      },
+      {
+        h: "Hurda alımı ile farkı",
+        p: [
+          "Hurda palet alımı, paletlerin değerlendirilmesi ve alım teklifi üzerine odaklanır. Yerinde toplama ise toplama operasyonunun kendisidir: randevu, araç, yükleme ve saha düzeni. İki hizmet birlikte de talep edilebilir; paletlerin durumu belirleyicidir.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet nakliye ve lojistik", "/hizmetler/palet-nakliye-lojistik/"]],
+      },
+      {
+        h: "Hizmet alanı ve planlama",
+        p: [
+          "Depomuz Gebze'dedir; Gebze, Dilovası, Çayırova, Tuzla ve Anadolu yakasında toplama en hızlı planlanır. Yeterli miktar olduğunda Türkiye genelinde sefer organize edilebilir. Süre araç programına ve adede bağlıdır; net zaman teklifte bildirilir.",
+        ],
+        links: [["Türkiye geneli palet sevkiyatı", "/turkiye-geneli-palet-sevkiyati/"], ["Gebze palet", "/bolge/gebze-palet/"]],
+      },
+    ],
+    faq: [
+      { q: "Yerinde palet toplama için minimum adet var mı?", a: "Toplama operasyonunun verimli olması için belirli bir miktar gerekir. Net limit konuma göre değişebilir; adet ve adresi bildirirseniz size uygun olup olmadığını söyleriz." },
+      { q: "Paletleri sizin personeliniz mi yüklüyor?", a: "Yükleme düzeni randevuda netleştirilir. Çatallı ekipmanınız varsa yükleme hızlanır; bunu önceden bildirmeniz planı kolaylaştırır." },
+      { q: "Palet cinsi önemli mi?", a: "Evet. Euro, 100x120, CP, özel ölçülü veya karışık paletler için araç ve plan farklı olabilir. Cins ve durum, değerleme ve sefer planında dikkate alınır." },
+      { q: "Düzenli periyodik toplama yapılıyor mu?", a: "Evet. Düzenli palet çıkışınız varsa haftalık ya da aylık gibi periyotlarla toplama planı oluşturulabilir." },
+      { q: "Toplama ücretli mi?", a: "Koşullar paletin durumuna, adedine ve konumuna göre belirlenir; teklifte açıkça yazılır. Detay için WhatsApp'tan yazın." },
+    ],
+  },
+  {
+    slug: "palet-nakliye-lojistik",
+    name: "Palet Nakliye ve Lojistik",
+    title: "Palet Nakliye ve Lojistik | Türkiye Geneli | MEPAL",
+    description: "Gebze deposundan Türkiye geneline palet sevkiyatı: araç tipleri, yükleme düzeni ve nakliye maliyetini etkileyen faktörler. Teklif için arayın.",
+    h1: "Palet Nakliye ve Lojistik — Türkiye Geneli Sevkiyat",
+    answer:
+      "Gebze deposundan Türkiye genelindeki tesislere palet sevkiyatı yapılır. Araç tipi adede ve palet ölçüsüne göre seçilir; yükleme düzeni ve nakliye maliyeti mesafe, adet, istif şekli ve erişim koşullarına bağlıdır. Kocaeli ve İstanbul'da planlama en hızlıdır, net süre ve nakliye bedeli teklifte bildirilir.",
+    keyword: "palet nakliye",
+    art: "truck",
+    blurb: "Gebze'den Türkiye geneline araç tipine göre planlı palet sevkiyatı.",
+    related: ["toptan-palet", "yerinde-palet-toplama", "palet-alim-satim", "hurda-palet-alimi"],
+    guides: ["1-tir-kac-palet-alir", "konteynere-ve-tira-kac-palet-sigar", "palet-nasil-istiflenir", "palet-maliyetini-dusurmenin-yollari"],
+    sections: [
+      {
+        h: "Palet nakliyesi nasıl yürür?",
+        p: [
+          "Palet sevkiyatında üç şey belirleyicidir: ne kadar palet gideceği, nereye gideceği ve boşaltma noktasının koşulları. Bu bilgiler netleşince uygun araç ve yükleme planı çıkarılır.",
+          "Sipariş edilen paletler Gebze deposunda yüklenir ve adresinize teslim edilir. Teslimde adet kontrolü birlikte yapılır; eksik veya hasarlı palet varsa aynı anda tutanağa geçirilir.",
+        ],
+      },
+      {
+        h: "Hangi araç tipleri kullanılır?",
+        p: ["Araç seçimi palet adedine, palet ölçüsüne ve yükleme-boşaltma koşullarına göre yapılır."],
+        table: {
+          caption: "Palet sevkiyatında araç tipleri ve kullanım",
+          head: ["Araç tipi", "Ne zaman uygun?"],
+          rows: [
+            ["Kamyonet / küçük kamyon", "Az adetli, dar erişimli teslimatlar"],
+            ["Kamyon (açık veya kapalı kasa)", "Orta adetli bölgesel sevkiyat"],
+            ["Tır (13,6 m)", "Büyük adetli, şehirler arası toplu sevkiyat"],
+            ["Konteyner", "İhracat ve özel bağlantılı yüklemeler"],
+          ],
+        },
+        links: [["Bir tıra kaç palet sığar", "/rehber/1-tir-kac-palet-alir/"], ["Konteynere ve tıra kaç palet sığar", "/rehber/konteynere-ve-tira-kac-palet-sigar/"]],
+      },
+      {
+        h: "Yükleme ve istif düzeni",
+        list: [
+          "Paletler aynı ölçüde ve düzgün istiflenmeli; karışık ölçü araç kapasitesini düşürür.",
+          "İstif yüksekliği araç yüksekliğini ve yol mevzuatını aşmamalı.",
+          "Boşaltma noktasında çatallı ekipman olup olmadığı önceden bildirilmeli.",
+          "Yağmur veya nem riski varsa örtü talebi sipariş sırasında belirtilmeli.",
+          "Karışık yüklerde (ahşap, plastik, sandık) yükleme sırası dikkatle planlanmalı.",
+        ],
+        links: [["Palet nasıl istiflenir", "/rehber/palet-nasil-istiflenir/"]],
+      },
+      {
+        h: "Nakliye maliyetini etkileyen faktörler",
+        p: ["Nakliye bedeli sabit bir rakam değildir; teklif şu unsurlara göre hazırlanır. Güncel bedel için teklif alın."],
+        list: [
+          "Mesafe: depodan teslim noktasına yol uzunluğu",
+          "Palet adedi ve araç doluluğu; dolu araç birim maliyeti düşürür",
+          "Palet ölçüsü ve istif yüksekliği",
+          "Araç tipi ve kullanılabilirliği",
+          "Boşaltma noktasının erişimi, rampa ve ekipman durumu",
+          "Teslim zamanı: acil ve randevulu teslimatlar plan gerektirir",
+          "Dönüş yükü veya çoklu teslimat noktası olup olmadığı",
+        ],
+        links: [["Palet maliyetini düşürmenin yolları", "/rehber/palet-maliyetini-dusurmenin-yollari/"], ["Teklif al", "/teklif-al/"]],
+      },
+      {
+        h: "Türkiye geneli sevkiyat",
+        p: [
+          "Depomuz Gebze'dedir. Kocaeli ve İstanbul'a planlama en hızlıdır; diğer illere sevkiyat adet, mesafe ve araç programına göre ayrı planlanır. Süre vaadi vermiyoruz; stok ve araç durumuna göre net zaman teklifte yazılır.",
+          "Fiyat tablosundaki rakamlar palet bedelidir. Nakliyenin dahil olup olmadığı teklifte açıkça belirtilir.",
+        ],
+        links: [["Türkiye geneli palet sevkiyatı", "/turkiye-geneli-palet-sevkiyati/"], ["Toptan palet", "/hizmetler/toptan-palet/"]],
+      },
+      {
+        h: "Sevkiyat için bilgi listesi",
+        steps: [
+          "Palet cinsi, ölçüsü ve adedini bildirin.",
+          "Teslim adresini, boşaltma noktasının erişimini ve ekipman durumunu yazın.",
+          "İstenen teslim aralığını belirtin; mümkünse esnek bir tarih verin.",
+          "Teklif ve sevkiyat planı iletilir; onay sonrası araç yüklemeye programlanır.",
+        ],
+        links: [["Palet fiyatları", "/palet-fiyatlari/"]],
+      },
+    ],
+    faq: [
+      { q: "Türkiye'nin her iline sevkiyat yapıyor musunuz?", a: "Depomuz Gebze'dedir; Türkiye genelindeki tesislere adet ve mesafeye göre planlı sevkiyat yapılır. Kocaeli ve İstanbul'da en hızlıdır, diğer illerde süre ve bedel teklifte bildirilir." },
+      { q: "Fiyatlara nakliye dahil mi?", a: "Fiyat tablosundaki rakamlar palet bedelidir. Nakliyenin dahil olup olmadığı teklifte ayrıca ve açıkça yazılır." },
+      { q: "Teslimat ne kadar sürer?", a: "Stok ve araç programına göre çoğunlukla kısa sürede planlanır; ancak mesafe ve adet süreyi değiştirir. Net süre teklifte bildirilir." },
+      { q: "Az sayıda palet için de nakliye yapılıyor mu?", a: "Evet; adet azaldıkça birim nakliye maliyeti yükselebilir. Küçük adetler için stok ve araç durumunu WhatsApp'tan sorabilirsiniz." },
+      { q: "Teslimat adresinde forklift yoksa ne olur?", a: "Boşaltma yönteminin siparişte önceden netleştirilmesi gerekir. Ekipman yoksa araç tipi ve elle boşaltma planı buna göre belirlenir." },
+    ],
+  },
 ];
 
 export const serviceBySlug = (slug: string) => services.find((s) => s.slug === slug);

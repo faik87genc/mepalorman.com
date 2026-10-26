@@ -26,6 +26,7 @@ export const footerGroups: { title: string; links: [string, string][] }[] = [
       ["Palet alım satım", "/hizmetler/palet-alim-satim/"],
       ["Palet tamiri", "/hizmetler/palet-tamiri/"],
       ["Toptan / kurumsal palet", "/hizmetler/toptan-palet/"],
+      ["Sektörler", "/sektorler/"],
       ["Teklif al", "/teklif-al/"],
     ],
   },

@@ -1,13 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CardGrid } from "@/components/ContentLayout";
-import { CtaButtons, FaqList, FinalCta } from "@/components/Content";
+import { CtaButtons, FaqList, FinalCta, PriceTable } from "@/components/Content";
 import { Icon } from "@/components/Icons";
 import { MiniQuote } from "@/components/MiniQuote";
 import { Photo } from "@/components/Photo";
 import { products } from "@/lib/data/products";
 import { regions } from "@/lib/data/regions";
 import { guides } from "@/lib/data/guides";
+import { sectors } from "@/lib/data/sectors";
 import { fromPriceLabel } from "@/lib/format";
 import { pageMeta } from "@/lib/seo";
 import { PRICES_UPDATED_LABEL } from "@/lib/data/prices";
@@ -140,7 +141,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section beige" aria-labelledby="teklif-h">
+      <section className="section" aria-labelledby="fiyat-h">
+        <div className="wrap">
+          <p className="eyebrow">Fiyat özeti</p>
+          <h2 id="fiyat-h">Güncel palet fiyatları — {PRICES_UPDATED_LABEL}</h2>
+          <PriceTable rowKeys={["euro-ikinci-el-1", "euro-sifir", "ahsap-sifir-100x120", "ihracat-ispm15", "plastik-hafif"]} compact />
+          <p>
+            <Link prefetch={false} href="/palet-fiyatlari/">Tüm fiyatları gör →</Link>
+          </p>
+        </div>
+      </section>
+
+      {sectors.length > 0 && (
+        <section className="section beige" aria-labelledby="sektor-h">
+          <div className="wrap">
+            <p className="eyebrow">Sektörler</p>
+            <h2 id="sektor-h">Sektörünüze uygun palet</h2>
+            <ul className="chips">
+              {sectors.map((x) => (
+                <li key={x.slug}>
+                  <Link prefetch={false} href={`/sektorler/${x.slug}/`}>{x.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      <section className="section" aria-labelledby="teklif-h">
         <div className="wrap steps-grid">
           <div>
             <p className="eyebrow">Nasıl çalışıyoruz</p>

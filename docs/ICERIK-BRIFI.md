@@ -38,3 +38,12 @@ Tipler: lib/types.ts (Product, Service, Region, Sector, Guide, Section, FAQ, Tab
 - Dosyaya UTF-8 (Türkçe karakter) yaz. Dize içinde çift tırnak kullanıyorsan kaçır veya tipografik tırnak (“ ”) kullan. TS dosyası hatasız derlenmeli.
 - Doğrulama: `cd C:\Users\FAIKGENC\Desktop\mepalorman.com && npx tsc --noEmit 2>&1 | grep <kendi-dosyan>` — sadece kendi dosyandaki hatalar önemli (diğer dosyalar başka ajanlarca yazılıyor). `next build` / `npm run dev` ÇALIŞTIRMA (aynı .next klasörü çakışır).
 - Başka dosyaya dokunma. İşin bitince: yazdığın slug listesini ve dikkat edilmesi gerekenleri 5 satırda raporla.
+
+## EK (rakip analizi turu) — yeni slug'lar
+Ürün: takozlu-palet, ince-palet, ikinci-el-euro-palet, isil-islemli-palet
+Hizmet: yerinde-palet-toplama, palet-nakliye-lojistik
+Fiyat: hurda-palet-fiyatlari, ozel-olcu-palet-fiyatlari
+Bölge: kocaeli-palet, istanbul-palet, balcik-palet, gebze-osb-palet, plastikciler-osb-palet, imes-palet, kurtkoy-palet, maltepe-palet, cekmekoy-palet
+Rehber: ahsap-palet-nedir, sifir-palet-mi-ikinci-el-palet-mi, palet-fiyatlarini-etkileyen-faktorler, ikinci-el-palet-guvenli-mi, ahsap-palet-geri-donusum
+Kurumsal: /sss/, /turkiye-geneli-palet-sevkiyati/
+Not: Hizmet alanı TÜRKİYE GENELİ (depo Gebze'de; Kocaeli/İstanbul en hızlı). "Kocaeli ve İstanbul'a özel" gibi dar ifade kullanma. Rakip adı verme.

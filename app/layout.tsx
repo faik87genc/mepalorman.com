@@ -8,7 +8,7 @@ import CookieConsent from "@/components/CookieConsent";
 import { JsonLd } from "@/components/Content";
 import { localBusinessLd, orgLd, websiteLd } from "@/lib/seo";
 
-const archivo = Archivo({ subsets: ["latin", "latin-ext"], display: "swap", variable: "--font-archivo" });
+const archivo = Archivo({ subsets: ["latin", "latin-ext"], display: "swap", variable: "--font-archivo", preload: true });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.baseUrl),

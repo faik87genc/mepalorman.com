@@ -1075,6 +1075,381 @@ export const products: Product[] = [
       { q: "Fiyat nasıl öğrenilir?", a: "Ölçü ve adet bilgisiyle WhatsApp'tan teklif isteyin." },
     ],
   },
+
+  // ───────────────────────── 13. Takozlu palet
+  {
+    slug: "takozlu-palet",
+    name: "Takozlu Palet",
+    title: "Takozlu Palet Nedir, Nerede Kullanılır | MEPAL",
+    description:
+      "Takozlu palet: blok (takoz) ayaklı yapı, dört yönden çatal girişi, taşıma kapasitesi ve ayaklı paletten farkı. Gebze depodan toplu temin için teklif alın.",
+    h1: "Takozlu Palet — Dört Yönden Çatallanabilen Blok Ayaklı Palet",
+    answer:
+      "Takozlu palet, alt ve üst tahtaları kare veya dikdörtgen ahşap bloklar (takozlar) üzerinde taşıyan paletdir. Dört yönden transpalet ve forklift girişine izin verir; yük dağılımı, kenar dayanımı ve istif kararlılığı bakımından ayaklı (kızaklı) paletlerden daha dengelidir. Ölçüye ve yüke göre Gebze deposundan temin edilir.",
+    keyword: "takozlu palet",
+    art: "wood",
+    blurb: "Blok (takoz) ayaklı, dört yönden çatallanabilen ahşap palet.",
+    specs: [
+      ["Yapı", "Üst ve alt tahta, aralarında ahşap takozlar (bloklar)"],
+      ["Çatal girişi", "4 yönden"],
+      ["Takoz sayısı", "Tipik olarak 9 (bazı tiplerde 6 veya 12)"],
+      ["Yaygın ölçüler", "800 × 1200, 1000 × 1200, özel ölçü"],
+      ["Malzeme", "Ahşap (çam/kayın ağırlıklı); çivili"],
+      ["Taşıma kapasitesi", "Tahta kalınlığına ve takoz düzenine göre değişir"],
+      ["İhracat uyumu", "HT damgalı ısıl işlemli seçenek istenebilir"],
+    ],
+    uses: ["Forklift ve transpaletle yoğun depo hareketi", "Raflı depolama sistemleri", "Ağır ve dengesiz yükler", "Otomatik istif ve konveyör hatları"],
+    related: ["80x120-euro-palet", "100x120-palet", "ozel-olcu-palet", "isil-islemli-palet"],
+    guides: ["palet-cesitleri-ve-secimi", "euro-palet-olculeri", "palet-kalite-siniflari"],
+    sections: [
+      {
+        h: "Takozlu palet nedir?",
+        p: [
+          "Takozlu palet, iki tahta katman arasına yerleştirilen ahşap bloklarla (takozlarla) ayakta duran palet türüdür. Bloklar arasında kalan boşluklar iki yönde de açık olduğu için çatal palete her kenardan girebilir.",
+          "Euro ölçülü palet de takoz üzerine kurulu bir palettir; ancak takozlu palet daha geniş bir kavramdır. Euro palet tek bir ölçü ve spesifikasyon iken takozlu palet, farklı ölçü ve tahta kalınlığında üretilebilir.",
+        ],
+      },
+      {
+        h: "Takozlu palet ile ayaklı (kızaklı) palet farkı",
+        p: ["Seçim yaparken iki yapı arasındaki temel fark şudur; yükünüze ve depo ekipmanınıza göre karar verin."],
+        table: {
+          caption: "Takozlu ve kızaklı palet karşılaştırması",
+          head: ["Özellik", "Takozlu palet", "Kızaklı (ayaklı) palet"],
+          rows: [
+            ["Çatal girişi", "4 yönden", "Çoğunlukla 2 yönden"],
+            ["Yük dağılımı", "Daha dengeli", "Kızak hattına bağlı"],
+            ["İstif kararlılığı", "Yüksek", "Orta"],
+            ["Maliyet", "Genellikle biraz yüksek", "Genellikle daha düşük"],
+            ["Tipik kullanım", "Depo, raf, ağır yük", "Tek yönlü sevkiyat, hafif yük"],
+          ],
+        },
+      },
+      {
+        h: "Kimler için uygun?",
+        list: [
+          "Sık forklift ve transpalet hareketi olan depolar",
+          "Raf sistemine giren ve çıkan yükler",
+          "Üst üste istiflenen ağır koliler, kasalar ve makine parçaları",
+          "Ölçüsü standart dışı ürün gönderen üreticiler",
+        ],
+        links: [
+          ["80x120 Euro palet", "/urunler/80x120-euro-palet/"],
+          ["Özel ölçü palet", "/urunler/ozel-olcu-palet/"],
+        ],
+      },
+      {
+        h: "Takozlu palet alırken nelere bakılır?",
+        list: [
+          "Takozlar tahtaya sağlam çivilenmiş, çatlamamış ve hizalı olmalı.",
+          "Tahta kalınlığı yüke uygun olmalı; ince tahta ağır yükte esner.",
+          "Palet düz oturmalı, bir köşesi sallanmamalı.",
+          "Nem yüksekse ağırlık artar ve küf riski doğar; kuru malzeme tercih edin.",
+          "İhracat yapıyorsanız HT damgalı ısıl işlemli ürün isteyin.",
+        ],
+        links: [["Isıl işlemli palet", "/urunler/isil-islemli-palet/"]],
+      },
+      {
+        h: "Fiyatı ne belirler?",
+        p: [
+          "Takozlu palet fiyatı ölçüye, tahta kalınlığına, takoz sayısına, ahşap cinsine ve adede göre değişir. Sıfır ya da ikinci el olması da etkiler. Sabit bir liste yerine ölçünüze göre teklif hazırlanır.",
+          "Standart ölçülerdeki güncel kademeli rakamlar için fiyat tablosuna bakabilirsiniz; farklı ölçü için teklif alın.",
+        ],
+        links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
+      },
+      {
+        h: "Sipariş nasıl verilir?",
+        steps: [
+          "Ölçü, yük ağırlığı, adet ve kullanım şeklini WhatsApp veya teklif formuyla bildirin.",
+          "Stok durumuna ve araç programına göre teklif hazırlanır; net süre teklifte yazılır.",
+          "Palet Gebze deposundan araçla teslim edilir; Türkiye genelinde sevkiyat planlanabilir.",
+        ],
+      },
+    ],
+    faq: [
+      { q: "Takozlu palet ile Euro palet aynı mı?", a: "Euro ölçülü palet de takozlu yapıdadır; ancak takozlu palet daha geniş bir gruptur. Euro palet 800×1200 mm ölçü ve belirli spesifikasyonla anılır, takozlu palet ise farklı ölçülerde yapılabilir." },
+      { q: "Takozlu palet kaç kg taşır?", a: "Kapasite tahta kalınlığına, takoz düzenine ve ahşabın kalitesine göre değişir. Yükünüzün ağırlığını bildirirseniz uygun yapıyı öneririz." },
+      { q: "Takozlu palet raf sisteminde kullanılır mı?", a: "Evet; dört yönlü giriş ve dengeli yük dağılımı sayesinde raflı depolamada yaygın tercih edilir. Raf yükü sınırını raf üreticisinin verisinden kontrol edin." },
+      { q: "İkinci el takozlu palet bulunur mu?", a: "Euro ölçülü ikinci el palet stoklarımızda bulunur. Diğer ölçülerde stok durumuna göre WhatsApp'tan sorabilirsiniz." },
+      { q: "İhracat için kullanılabilir mi?", a: "Ham ahşap ambalaj olduğu için ISPM-15 uyumlu, HT damgalı olması gerekir. HT damgalı palet temini için ihracat paleti sayfamıza bakın." },
+    ],
+  },
+
+  // ───────────────────────── 14. İnce palet
+  {
+    slug: "ince-palet",
+    name: "İnce Palet (Hafif Hizmet)",
+    title: "İnce Palet | Hafif Yük, Tek Kullanımlık | MEPAL",
+    description:
+      "İnce palet: hafif yük ve tek yönlü sevkiyat için düşük yükseklikli, ekonomik ahşap palet. Kullanım alanları, sınırları ve doğru seçim. Teklif alın.",
+    h1: "İnce Palet — Hafif Yükler İçin Ekonomik Çözüm",
+    answer:
+      "İnce palet, daha ince tahta ve düşük yükseklikle yapılan, hafif yükler ve tek yönlü sevkiyat için tasarlanmış ekonomik ahşap paletdir. Geri dönüşü beklenmeyen gönderilerde maliyeti düşürür; ağır ve raflı kullanımda ise yeterli olmayabilir. Ölçü ve yüke göre Gebze deposundan temin edilir.",
+    keyword: "ince palet",
+    art: "wood",
+    blurb: "Hafif yük ve tek yönlü sevkiyat için ince tahtalı ekonomik palet.",
+    specs: [
+      ["Yapı", "İnce tahta, düşük yükseklikli kızak veya takoz"],
+      ["Kullanım tipi", "Tek yönlü (geri dönüşsüz) sevkiyat"],
+      ["Yük sınıfı", "Hafif hizmet"],
+      ["Yaygın ölçüler", "800 × 1200, 1000 × 1200, özel ölçü"],
+      ["Ağırlık", "Standart paletten hafif"],
+      ["Raf kullanımı", "Genellikle önerilmez"],
+      ["Malzeme", "Ahşap; çivili"],
+    ],
+    uses: ["Hafif koli ve ambalajlı ürün sevkiyatı", "Tek seferlik ihracat ve dağıtım gönderileri", "E-ticaret depo çıkışları", "Konteynerde yer kazanmak isteyen yüklemeler"],
+    related: ["sifir-ahsap-palet", "80x120-euro-palet", "ozel-olcu-palet", "ihracat-paleti"],
+    guides: ["palet-cesitleri-ve-secimi", "palet-yuksekligi-kac-cm", "palet-maliyetini-dusurmenin-yollari"],
+    sections: [
+      {
+        h: "İnce palet nedir?",
+        p: [
+          "İnce palet, standart bir palete göre daha ince tahtalarla ve daha az ahşapla üretilen hafif hizmet paletidir. Amaç, düşük yüklü gönderilerde palet maliyetini ve nakliye ağırlığını azaltmaktır.",
+          "Bu paletler çoğunlukla tek seferlik kullanılır: ürün alıcıya ulaşır ve palet geri gönderilmez. Bu yüzden dayanıklılıktan çok ekonomi öne çıkar.",
+        ],
+      },
+      {
+        h: "Hangi durumlarda tercih edilir?",
+        list: [
+          "Yük ağırlığı düşük ve sevkiyat tek yönlü olduğunda",
+          "Palet geri dönüşünün planlanmadığı bayi ve müşteri gönderilerinde",
+          "Konteyner veya tırda yüksekliği kısıtlı yüklemelerde",
+          "Büyük adetlerde birim palet maliyetini düşürmek istendiğinde",
+        ],
+        links: [["Konteynere ve tıra kaç palet sığar", "/rehber/konteynere-ve-tira-kac-palet-sigar/"]],
+      },
+      {
+        h: "İnce palet ne zaman uygun değildir?",
+        p: ["Her işe uygun değildir. Aşağıdaki durumlarda standart ya da takviyeli palet seçmek daha güvenlidir."],
+        list: [
+          "Ağır makine, metal, sıvı veya yoğun yüklerde",
+          "Raflı depolamada (raf yükü kapasitesi yetersiz kalabilir)",
+          "Üst üste istif ve uzun süreli bekletmede",
+          "Palet tekrar tekrar kullanılacaksa (döngüsel kullanım)",
+        ],
+        links: [["Sıfır ahşap palet", "/urunler/sifir-ahsap-palet/"], ["80x120 Euro palet", "/urunler/80x120-euro-palet/"]],
+      },
+      {
+        h: "Ölçü, yük ve yükseklik nasıl belirlenir?",
+        p: [
+          "Önce ürününüzün ağırlığını, kutu ölçüsünü ve istif yüksekliğini belirleyin. Palet taban ölçüsü, yük taşmayacak şekilde seçilmelidir; taşan koliler hasar riskini artırır.",
+          "Yükseklik, transpalet ve çatal girişine uyumlu olmalıdır. Çok alçak paletler her ekipmanla çalışmayabilir; kullanacağınız ekipmanı bize bildirin.",
+        ],
+        links: [["Palet yüksekliği kaç cm", "/rehber/palet-yuksekligi-kac-cm/"]],
+      },
+      {
+        h: "İhracatta ince palet kullanılır mı?",
+        p: [
+          "Ham ahşap palet yurt dışına gidecekse ISPM-15 uyumlu ve HT damgalı olmalıdır; paletin ince veya kalın olması bu şartı değiştirmez. İhracat için damgalı palet temini ayrı bir üründür.",
+        ],
+        links: [["Isıl işlemli palet", "/urunler/isil-islemli-palet/"], ["İhracat paleti", "/urunler/ihracat-paleti/"]],
+      },
+      {
+        h: "Fiyat ve teslimat",
+        steps: [
+          "Ölçü, yük ağırlığı ve adedi WhatsApp veya teklif formuyla bildirin.",
+          "Fiyat ölçüye, tahta kalınlığına ve adede göre belirlenir; sabit liste yoktur, teklif alın.",
+          "Stok ve araç programına göre teslim zamanı teklifte yazılır; Gebze deposundan Türkiye geneli sevkiyat planlanabilir.",
+        ],
+        links: [["Teklif al", "/teklif-al/"], ["Palet fiyatları", "/palet-fiyatlari/"]],
+      },
+    ],
+    faq: [
+      { q: "İnce palet kaç kg taşır?", a: "Kapasite tahta kalınlığına ve yapıya göre değişir; genel olarak hafif yükler içindir. Yükünüzün ağırlığını bildirirseniz uygun olup olmadığını söyleriz." },
+      { q: "İnce palet ile standart palet arasındaki fark nedir?", a: "İnce palette tahta daha ince, yükseklik daha düşüktür ve tek kullanım hedeflenir. Standart palet daha dayanıklıdır ve tekrar tekrar kullanılabilir." },
+      { q: "İnce palet raflı depoda kullanılabilir mi?", a: "Genellikle önerilmez; raf yükü altında esneme ve kırılma riski vardır. Raflı sistem için Euro ölçülü ya da takviyeli palet seçin." },
+      { q: "Hafif ve ince palet ihracat için yeterli mi?", a: "Taşıma kapasitesi yeterliyse kullanılabilir; ancak ham ahşap olduğundan ISPM-15 uyumlu, HT damgalı olması gerekir." },
+      { q: "Toplu alımda indirim var mı?", a: "Fiyatlar adet kademesine göre değişir; büyük partilerde özel teklif hazırlanır. Teklif formunu doldurabilirsiniz." },
+    ],
+  },
+
+  // ───────────────────────── 15. İkinci el Euro palet
+  {
+    slug: "ikinci-el-euro-palet",
+    name: "İkinci El Euro Palet",
+    title: "İkinci El Euro Palet 80x120 Temini | MEPAL",
+    description:
+      "İkinci el Euro ölçülü palet (80x120): 1. ve 2. sınıf seçenekler, kontrol kriterleri ve kullanım alanları. Gebze depodan toplu satış, teklif alın.",
+    h1: "İkinci El Euro Palet (80x120) — Sınıflı ve Kontrollü Temin",
+    answer:
+      "İkinci el Euro palet, 800 × 1200 mm ölçülü ve daha önce kullanılmış, kontrol edilip gerektiğinde onarılmış ahşap paletdir. Fabrika içi dolaşım, iç lojistik ve ihracat dışı sevkiyatta maliyeti düşürür. MEPAL, 1. ve 2. sınıf seçeneklerle Gebze deposundan toplu temin eder.",
+    keyword: "ikinci el euro palet",
+    art: "used",
+    blurb: "800×1200 mm ikinci el Euro ölçülü palet; sınıflı, kontrollü, toplu satış.",
+    priceRow: "euro-ikinci-el-1",
+    specs: [
+      ["Ölçü", "800 × 1200 mm"],
+      ["Sınıf", "1. sınıf (sağlam, onarılmış) ve 2. sınıf (yerli kullanım)"],
+      ["Çatal girişi", "4 yönden"],
+      ["Durum", "Kontrol edilmiş; gerektiğinde onarılmış"],
+      ["Ağırlık", "Nem oranına göre değişir"],
+      ["Kullanım yeri", "İç lojistik, depo, yurt içi sevkiyat"],
+      ["Satış şekli", "Toplu, adet kademeli"],
+    ],
+    uses: ["Fabrika içi ve depo içi taşıma", "Yurt içi dağıtım sevkiyatı", "Geri dönüşü olan palet döngüsü", "Maliyet odaklı toplu tedarik"],
+    related: ["80x120-euro-palet", "ikinci-el-palet", "epal-palet", "ihracat-paleti"],
+    guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "ahsap-palet-mi-plastik-palet-mi"],
+    sections: [
+      {
+        h: "İkinci el Euro palet nedir?",
+        p: [
+          "İkinci el Euro palet, 80x120 ölçüsünde olup bir kez veya birkaç kez kullanılmış paletlerin ayrıştırılıp kontrol edilmesiyle satışa sunulan üründür. Kırık tahta ve zayıf bloklar değiştirilir, kullanılabilir durumda olanlar sınıflandırılır.",
+          "Yeni palete göre daha uygun maliyetlidir; iç lojistikte bu fark hacim arttıkça belirginleşir.",
+        ],
+        links: [["İkinci el palet ürünü", "/urunler/ikinci-el-palet/"]],
+      },
+      {
+        h: "1. sınıf ve 2. sınıf nasıl ayrılır?",
+        table: {
+          caption: "İkinci el Euro palet sınıf farkları",
+          head: ["Kriter", "1. sınıf", "2. sınıf"],
+          rows: [
+            ["Genel durum", "Sağlam, onarılmış, düzgün", "Yerli kullanım, daha fazla aşınma"],
+            ["Tahta/blok", "Eksiksiz ve sağlam", "Küçük kusurlar olabilir"],
+            ["Önerilen kullanım", "Sevkiyat, raf dışı depo, müşteriye teslim", "Fabrika içi, kısa mesafe, tek seferlik"],
+            ["Görünüm", "Daha temiz", "Aşınma izleri belirgin"],
+          ],
+        },
+        links: [["Palet kalite sınıfları", "/rehber/palet-kalite-siniflari/"]],
+      },
+      {
+        h: "Kimler için uygundur?",
+        list: [
+          "Fabrika içi ve depo içi taşımada maliyeti düşürmek isteyen işletmeler",
+          "Yurt içi dağıtımda palet geri dönüşü yapan firmalar",
+          "Geçici veya sezonluk palet ihtiyacı olanlar",
+          "Büyük adetle düzenli palet alımı planlayanlar",
+        ],
+        links: [["Toptan palet", "/hizmetler/toptan-palet/"]],
+      },
+      {
+        h: "Satın almadan önce kontrol listesi",
+        list: [
+          "Üst ve alt tahtalarda kırık veya yırtık olmamalı.",
+          "Dokuz bloğun hepsi yerinde ve sağlam olmalı.",
+          "Çıkık çivi bulunmamalı; çivi uçları yükü yırtabilir.",
+          "Palet düz zeminde sallanmamalı.",
+          "Koku, küf veya yağ lekesi gibi kirlilik işaretlerine bakın; gıda teması varsa özellikle önemlidir.",
+        ],
+        links: [["İkinci el palet alırken dikkat edilecekler", "/rehber/ikinci-el-palet-alirken-dikkat-edilecekler/"]],
+      },
+      {
+        h: "İhracat ve gıda için uygun mu?",
+        p: [
+          "İhracatta ham ahşap ambalajın ISPM-15 uyumlu ve HT damgalı olması gerekir; ikinci el paletin damgası eksik veya okunaksızsa kabul edilmeyebilir. Bu iş için damgalı palet temini daha güvenlidir.",
+          "Gıdayla doğrudan temas eden depolarda ve hijyen şartı yüksek işlerde sıfır palet veya sıkı kontrollü 1. sınıf tercih edilmelidir.",
+        ],
+        links: [["İhracat paleti", "/urunler/ihracat-paleti/"], ["Gıda sektörü", "/sektorler/gida-ve-icecek/"]],
+      },
+      {
+        h: "Fiyat ve teslimat",
+        p: [
+          "Fiyat sınıfa ve adet kademesine göre belirlenir. Güncel rakamlar fiyat tablosunda yer alır; büyük partiler için teklif alın.",
+        ],
+        steps: [
+          "Sınıf tercihini, adedi ve teslim adresini bildirin.",
+          "Stok ve araç programına göre teklif ve teslim zamanı iletilir; net süre teklifte yazılır.",
+          "Palet Gebze deposundan araçla teslim edilir; Türkiye genelinde sevkiyat planlanabilir.",
+        ],
+        links: [["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
+      },
+    ],
+    faq: [
+      { q: "İkinci el Euro palet güvenli mi?", a: "Kontrol edilmiş ve gerekirse onarılmış paletler iç lojistikte güvenle kullanılır. Ağır yük, raf ve gıda temaslı işlerde 1. sınıf ya da sıfır palet daha uygundur." },
+      { q: "İkinci el Euro palet ile ikinci el EPAL palet aynı mı?", a: "Ölçü aynıdır (800×1200 mm). EPAL tescilli bir markadır ve damgalı paletlerin statüsü ayrıdır; MEPAL EPAL üreticisi değildir, ikinci el EPAL alım satımı yapar." },
+      { q: "Kaç adetten alım yapabiliyorsunuz?", a: "Toplu tedarik ağırlıklıdır; küçük adetler için stok durumuna göre WhatsApp'tan sorabilirsiniz." },
+      { q: "İkinci el palet ihracata gidebilir mi?", a: "ISPM-15 uyumlu ve HT damgalıysa gidebilir; damgasız ya da okunmayan paletler kabul edilmez. İhracat için damgalı palet temin ediyoruz." },
+      { q: "Paletleri geri alıyor musunuz?", a: "Fazla veya hurda paletlerinizi yerinden alabiliriz; hurda palet alımı sayfamıza bakın." },
+    ],
+  },
+
+  // ───────────────────────── 16. Isıl işlemli palet
+  {
+    slug: "isil-islemli-palet",
+    name: "Isıl İşlemli Palet (HT)",
+    title: "Isıl İşlemli Palet HT Damgalı Temini | MEPAL",
+    description:
+      "ISPM-15 uyumlu, HT damgalı ısıl işlemli palet temini: işlem şartı, damga bilgisi ve ihracat öncesi kontrol. Gebze'den teslim, teklif için arayın.",
+    h1: "Isıl İşlemli Palet — ISPM-15 Uyumlu, HT Damgalı Temin",
+    answer:
+      "Isıl işlemli palet, ISPM-15 standardına göre ahşabın çekirdeğine ulaşan ısıl işlem (HT) görmüş ve üzerinde IPPC damgası taşıyan paletdir. MEPAL ısıl işlemi kendi tesisinde yapmaz; ISPM-15 uyumlu, HT damgalı palet temin eder. Damga ve evrak, sevkiyat öncesi kontrol edilmelidir.",
+    keyword: "ısıl işlemli palet",
+    art: "ispm",
+    blurb: "ISPM-15 uyumlu, HT damgalı ısıl işlemli palet temini.",
+    priceRow: "ihracat-ispm15",
+    specs: [
+      ["Standart", "ISPM-15 (IPPC)"],
+      ["İşlem", "Isıl işlem (HT): ahşap çekirdeğinde en az 56 °C, en az 30 dk"],
+      ["Damga", "IPPC logosu, ülke kodu, üretici kodu, HT"],
+      ["Ölçü", "800 × 1200 mm ve diğer ölçüler (talebe göre)"],
+      ["Malzeme", "Ahşap; kabuksuz (debarked) olmalı"],
+      ["MEPAL rolü", "Uyumlu, damgalı palet temini (işlemi yapan MEPAL değildir)"],
+      ["Kontrol", "Damga okunaklılığı ve ülke/işletme kodu"],
+    ],
+    uses: ["Avrupa ve Orta Doğu ihracat sevkiyatları", "Gümrükte ahşap ambalaj kontrolü olan gönderiler", "Konteyner ile yurt dışı yüklemeleri", "Ahşap ambalajda karantina şartı olan ülkeler"],
+    related: ["ihracat-paleti", "80x120-euro-palet", "ahsap-sandik", "takozlu-palet"],
+    guides: ["ispm-15-nedir", "ihracatta-palet-ve-ambalaj-kurallari", "konteynere-ve-tira-kac-palet-sigar"],
+    sections: [
+      {
+        h: "Isıl işlemli palet nedir?",
+        p: [
+          "Isıl işlemli palet, ahşabın içindeki zararlıların başka ülkelere taşınmasını önlemek için uygulanan ısıl işlemden geçmiş paletdir. İşlemden sonra palete IPPC logosu, ülke kodu, üretici kodu ve işlem kısaltması (HT) içeren damga basılır.",
+          "Damga, paletin ISPM-15 şartına uygun olduğunu gösterir. Birçok ülke ahşap ambalajda bu damgayı arar; damgasız veya okunamayan palet gümrükte sorun çıkarabilir.",
+        ],
+        links: [["ISPM-15 nedir?", "/rehber/ispm-15-nedir/"]],
+      },
+      {
+        h: "MEPAL ne yapar, ne yapmaz?",
+        p: [
+          "MEPAL, ısıl işlemi kendi tesisinde yapmaz. ISPM-15 uyumlu, HT damgalı palet temin eder ve siparişte ölçü, adet ve damga bilgisini birlikte netleştirir.",
+          "Isıl işlem ve damgalama yetkili işletmelerce yapılır; biz bu paletlerin teslimini ve sevkiyatını planlarız. İhracat dosyanızda gereken evrak için alıcınızın ve gümrük müşavirinizin talebini baz alın.",
+        ],
+        links: [["İhracat paleti", "/urunler/ihracat-paleti/"]],
+      },
+      {
+        h: "ISPM-15 şartı özetle",
+        list: [
+          "Ahşap, çekirdeğinde en az 56 °C sıcaklığa ulaşacak şekilde en az 30 dakika ısıl işlem görmelidir.",
+          "Ahşap kabuksuz olmalıdır.",
+          "Damga okunaklı olmalı ve palette görünür yerde bulunmalıdır.",
+          "Kontrplak, OSB gibi işlenmiş ahşap ürünleri genellikle kapsam dışıdır.",
+          "Kural ve istisnalar ülkeye göre farklılaşabilir; alıcı ülkenin güncel şartını doğrulayın.",
+        ],
+        links: [["İhracatta palet ve ambalaj kuralları", "/rehber/ihracatta-palet-ve-ambalaj-kurallari/"]],
+      },
+      {
+        h: "Sevkiyat öncesi kontrol listesi",
+        steps: [
+          "Palet üzerindeki IPPC damgasının net okunduğunu ve HT ibaresinin bulunduğunu kontrol edin.",
+          "Ülke kodu ve işletme kodunun dolu olduğunu doğrulayın.",
+          "Tahtalarda böcek deliği, kabuk kalıntısı ve küf olmadığını gözleyin.",
+          "Paletin ölçüsünün konteynere veya tıra uygun olduğunu teyit edin.",
+          "Alıcı ülkenin ek şartı varsa siparişten önce bildirin.",
+        ],
+        links: [["Konteynere kaç palet sığar", "/rehber/konteynere-ve-tira-kac-palet-sigar/"]],
+      },
+      {
+        h: "Isıl işlemli palet ile sandık ilişkisi",
+        p: [
+          "Ağır veya hassas ürünlerde palet tek başına yeterli olmayabilir; bu durumda ahşap sandık gerekir. Ham ahşap sandık da aynı ISPM-15 şartlarına tabidir.",
+        ],
+        links: [["Ahşap sandık", "/urunler/ahsap-sandik/"], ["İhracat ve lojistik sektörü", "/sektorler/ihracat-ve-lojistik/"]],
+      },
+      {
+        h: "Fiyat ve teslimat",
+        p: [
+          "Fiyat ölçüye, adede ve damga şartına göre belirlenir. Güncel kademeli rakamlar fiyat tablosunda yer alır; özel ölçü veya büyük parti için teklif alın.",
+        ],
+        links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
+      },
+    ],
+    faq: [
+      { q: "Isıl işlemli palet ile ihracat paleti aynı mı?", a: "Pratikte aynı kategoridir: ISPM-15 uyumlu, HT damgalı ahşap palet. İhracat paleti sayfası ürünü genel çerçevesiyle, bu sayfa ısıl işlem ve damga bilgisiyle anlatır." },
+      { q: "Isıl işlemi kendiniz mi yapıyorsunuz?", a: "Hayır. MEPAL ISPM-15 uyumlu, HT damgalı palet temin eder; ısıl işlem ve damgalama yetkili işletmelerce yapılır." },
+      { q: "HT damgası ne anlama gelir?", a: "HT, ısıl işlem (heat treatment) kısaltmasıdır. Damgada IPPC logosu, ülke kodu ve üretici kodu ile birlikte yer alır." },
+      { q: "Her ülke ısıl işlemli palet ister mi?", a: "ISPM-15 birçok ülkede uygulanır, ancak ek şartlar ve istisnalar ülkeye göre değişir. Alıcı ülkenin güncel kuralını sevkiyattan önce doğrulayın." },
+      { q: "Damgasız palet ihracatta kullanılabilir mi?", a: "Ham ahşap palette damga yoksa gümrükte sorun çıkabilir, yük geri çevrilebilir. İhracatta mutlaka damgalı palet kullanın." },
+    ],
+  },
 ];
 
 export const productBySlug = (slug: string) => products.find((p) => p.slug === slug);
