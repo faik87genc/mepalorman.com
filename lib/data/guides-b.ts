@@ -284,7 +284,7 @@ export const guidesB: Guide[] = [
         h: "Maliyet ve tedarik tarafı",
         p: [
           "100x120 palet daha çok ahşap kullandığından birim maliyeti genellikle 80x120'ye göre daha yüksektir; fakat bir palete daha çok ürün sığdırdığınız için palet başına nakliye ve elleçleme maliyeti düşebilir. Doğru karşılaştırma, birim palet fiyatı değil, taşınan ürün başına toplam maliyettir.",
-          "Güncel fiyatlar için fiyat tablolarına bakın veya ihtiyacınızı belirterek teklif alın. İkinci el seçenekler de iki ölçüde bulunur.",
+          "Güncel fiyat için ihtiyacınızı belirterek WhatsApp'tan teklif alın. İkinci el seçenekler de iki ölçüde bulunur.",
         ],
         links: [
           ["Euro palet fiyatları", "/euro-palet-fiyatlari/"],
@@ -951,7 +951,7 @@ export const guidesB: Guide[] = [
       {
         h: "Maliyet ve tedarik",
         p: [
-          "Plastik palet fiyatı tip, ağırlık, malzeme (yeni veya geri dönüştürülmüş) ve adede göre değişir. Güncel fiyatları fiyat tablosundan inceleyebilir, ihtiyacınızı belirterek teklif alabilirsiniz. Karşılaştırma yaparken palet başına değil, kullanım ömrü boyunca toplam maliyete bakın.",
+          "Plastik palet fiyatı tip, ağırlık, malzeme (yeni veya geri dönüştürülmüş) ve adede göre değişir. Güncel fiyat için ihtiyacınızı belirterek WhatsApp'tan teklif alabilirsiniz. Karşılaştırma yaparken palet başına değil, kullanım ömrü boyunca toplam maliyete bakın.",
         ],
         links: [
           ["Plastik palet fiyatları", "/plastik-palet-fiyatlari/"],
@@ -987,7 +987,7 @@ export const guidesB: Guide[] = [
         h: "Maliyet nerelerden oluşur?",
         p: [
           "Palet gideri birçok kalemin toplamıdır: alım bedeli, depolama alanı, taşıma, hasar nedeniyle yenileme, kayıp ve atık. Sadece alım fiyatını düşürmeye odaklanmak, diğer kalemlerde kaybettirebilir. Aşağıdaki yöntemlerin çoğu bu kalemlerin birden fazlasını aynı anda azaltır.",
-          "Bu yazıda rakam verilmez; güncel fiyatlar için fiyat tablolarına bakın veya teklif alın.",
+          "Bu yazıda rakam verilmez; güncel fiyat için WhatsApp'tan teklif alın.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"]],
       },

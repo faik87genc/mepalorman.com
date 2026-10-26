@@ -14,9 +14,9 @@ export const regions: Region[] = [
     keyword: "gebze palet",
     art: "region",
     distance: "depomuz Gebze’de · yaklaşık 3–20 km · 5–25 dk",
-    blurb: "Depomuz Pelitli’de: Gebze OSB, Plastikçiler OSB ve Balçık fabrikalarına dakikalar içinde, aynı gün çıkış imkânı.",
+    blurb: "Depomuz Pelitli’de: Gebze OSB, Plastikçiler OSB ve Balçık fabrikalarına kısa mesafe, hızlı çıkış planı.",
     answer:
-      "MEPAL’in deposu Gebze Pelitli Mahallesi’nde, Maden Sokak No:34’tedir. Gebze’deki fabrikalara Euro palet, ikinci el palet ve plastik palet satıyor; fabrikada biriken hurda ve kırık paletleri yerinden alıyoruz. Stoğa göre çoğunlukla ertesi iş günü teslim edilir, net süre teklifte bildirilir.",
+      "MEPAL’in deposu Gebze Pelitli Mahallesi’nde, Maden Sokak No:34’tedir. Gebze’deki fabrikalara Euro palet, ikinci el palet ve plastik palet satıyor; fabrikada biriken hurda ve kırık paletleri yerinden alıyoruz. Stoğa göre teslim edilir, net süre teklifte bildirilir.",
     zones: ["Pelitli", "Balçık", "Gebze Organize Sanayi Bölgesi (GOSB)", "Gebze Plastikçiler OSB", "Mollafenari", "Hacıhalil", "Osmangazi", "Beylikbağı", "Gebze Güzeller Sanayi", "Çayırova sınırı sanayisi"],
     nearby: ["dilovasi-palet", "cayirova-palet", "darica-palet"],
     sections: [
@@ -61,7 +61,7 @@ export const regions: Region[] = [
           ["İkinci el palet", "/urunler/ikinci-el-palet/"],
           ["100x120 palet", "/urunler/100x120-palet/"],
           ["İhracat paleti", "/urunler/ihracat-paleti/"],
-          ["Güncel fiyat tablosu", "/palet-fiyatlari/"],
+          ["Fiyat al", "/palet-fiyatlari/"],
         ],
       },
       {
@@ -102,7 +102,7 @@ export const regions: Region[] = [
       { q: "Gebze OSB ve Plastikçiler OSB’ye ne kadar sürede ulaşılır?", a: "Depodan OSB’lere trafiğe göre yaklaşık 5–25 dakikalık yol vardır. Teslim saati stok ve araç programına göre netleşir, teklifte bildirilir." },
       { q: "Fabrikamızdaki kırık paletleri yerinde alıyor musunuz?", a: "Evet. Miktar, palet türü ve durumuna göre Gebze’deki tesislerden hurda ve kırık palet alıyoruz. Fotoğraf ya da adet bilgisiyle ön değerlendirme yapılır." },
       { q: "Küçük adetle (örneğin 50 palet) alışveriş mümkün mü?", a: "Mümkün. Depodan kendi aracınızla yükleyebilir ya da adrese teslim isteyebilirsiniz. Güncel koşullar için teklif alın." },
-      { q: "Palet fiyatlarını nereden görebilirim?", a: "Fiyatlar güncel fiyat tablosunda yer alır; stok, adet ve ölçüye göre değiştiği için kesin tutarı teklifte netleştiririz." },
+      { q: "Palet fiyatını nereden öğrenebilirim?", a: "Güncel fiyatı WhatsApp'tan alabilirsiniz; stok, adet ve ölçüye göre değiştiği için kesin tutarı teklifte netleştiririz." },
     ],
   },
   {
@@ -161,9 +161,9 @@ export const regions: Region[] = [
       {
         h: "Teslimat",
         p: [
-          "Gebze deposundan Dilovası’na tek araçla gidilir. Kapı girişlerinde araç boyu ve yükleme rampası kısıtı olan tesislerde aracımızı buna göre planlarız. Net süre teklifte bildirilir; çoğunlukla stok ve araç programına göre ertesi iş günü hedeflenir.",
+          "Gebze deposundan Dilovası’na tek araçla gidilir. Kapı girişlerinde araç boyu ve yükleme rampası kısıtı olan tesislerde aracımızı buna göre planlarız. Net süre teklifte bildirilir; stok ve araç programına göre en kısa süre hedeflenir.",
         ],
-        links: [["Teklif al", "/teklif-al/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Teklif al", "/teklif-al/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
@@ -229,7 +229,7 @@ export const regions: Region[] = [
           "Boşaltma noktası, saat aralığı ve forklift bilgisini paylaşın.",
           "Araç adresinize gelir, sayım ve teslim yapılır.",
         ],
-        links: [["Teklif al", "/teklif-al/"], ["Güncel fiyatlar", "/palet-fiyatlari/"]],
+        links: [["Teklif al", "/teklif-al/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
@@ -278,7 +278,7 @@ export const regions: Region[] = [
       {
         h: "Dar zamanlı siparişler",
         p: [
-          "Şekerpınar’daki işletmelerin önemli bir kısmı sipariş alıp aynı gün sevk etmek zorunda. Sabah haber verilen palet ihtiyacını stoğa ve araç programına göre aynı gün ya da ertesi iş günü karşılamaya çalışıyoruz; net süre teklifte yazılır. Taahhüt edilen saat dışında bir söz vermiyoruz, çünkü trafik ve yükleme sırası bunu etkiler.",
+          "Şekerpınar’daki işletmelerin önemli bir kısmı sipariş alıp aynı gün sevk etmek zorunda. Sabah haber verilen palet ihtiyacını stoğa ve araç programına göre en kısa sürede karşılamaya çalışıyoruz; net süre teklifte yazılır. Taahhüt edilen saat dışında bir söz vermiyoruz, çünkü trafik ve yükleme sırası bunu etkiler.",
         ],
         links: [["Toptan palet", "/hizmetler/toptan-palet/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -291,7 +291,7 @@ export const regions: Region[] = [
       },
     ],
     faq: [
-      { q: "Şekerpınar’a aynı gün palet teslimatı yapılır mı?", a: "Stok ve araç programı uygunsa mümkün olabilir; garanti vermiyoruz. Çoğunlukla ertesi iş günü hedeflenir, net süre teklifte bildirilir." },
+      { q: "Şekerpınar’a hızlı palet teslimatı yapılır mı?", a: "Stok ve araç programı uygunsa mümkün olabilir; garanti vermiyoruz. Mümkün olan en kısa süre hedeflenir, net süre teklifte bildirilir." },
       { q: "Küçük bir atölye için kaç paletten itibaren satış yapıyorsunuz?", a: "Belirli bir alt sınır koymuyoruz; adet küçükse depodan alım ya da toplu sevkiyata ekleme tercih edilebilir." },
       { q: "Standart dışı ölçüde palet üretir misiniz?", a: "Evet, özel ölçülü sıfır palet üretimi yapıyoruz. Ürün ölçüsü ve ağırlığını bildirmeniz yeterlidir." },
       { q: "Hurda paletler için bir ücret ödeyecek miyim?", a: "Paletin durumuna ve miktara göre değişir. Değerlendirme sonrası net koşul teklifte netleşir." },
@@ -414,7 +414,7 @@ export const regions: Region[] = [
         p: [
           "Pendik’teki işletmelerden hurda palet alımında en önemli konu erişimdir: araç giriş saati, yükleme rampası ve park imkânı. Bunları bildirirseniz aracı buna göre planlarız. Kurtköy ve çevresine genellikle Gebze’den TEM üzerinden gidilir; süre trafiğe göre değişir ve net bilgi teklifte yer alır.",
         ],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
@@ -535,7 +535,7 @@ export const regions: Region[] = [
         p: [
           "İstanbul içindeki depolarda yer pahalıdır; biriken kırık palet hem yer kaplar hem de çevreye şikâyet yaratabilir. Hurda palet alımı için adet bilgisi ve yükleme noktası yeterlidir. Kaç araçla alınacağı miktara göre belirlenir.",
         ],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Güncel fiyatlar", "/palet-fiyatlari/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
@@ -659,7 +659,7 @@ export const regions: Region[] = [
         p: [
           "Gebze’den Sancaktepe’ye TEM üzerinden gidilir. Samandıra çevresinde sanayi siteleri içi yollar dar olabilir. Araç boyu ve boşaltma noktası bilgisi gelirse aracı ona göre seçeriz. Net süre teklifte yazılır.",
         ],
-        links: [["Teklif al", "/teklif-al/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Teklif al", "/teklif-al/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
@@ -728,7 +728,7 @@ export const regions: Region[] = [
         p: [
           "Gebze’den İzmit’e D-100 ya da otoyol üzerinden gidilir. İzmit içi trafik özellikle mesai çıkışlarında yavaşlayabilir. Net süre teklifle birlikte bildirilir.",
         ],
-        links: [["Teklif al", "/teklif-al/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Teklif al", "/teklif-al/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
@@ -950,7 +950,7 @@ export const regions: Region[] = [
         p: [
           "Atölyelerde kırık palet genellikle kapı önünde biriktiği için sokak düzenini bozar. Küçük atölyelerin birikmiş hurda paletlerini topluca almak istiyoruz; yeter ki erişim imkânı olsun. Dar sokaklarda büyük araç giremeyebileceğinden, araç tipi önceden planlanır.",
         ],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
@@ -1075,7 +1075,7 @@ export const regions: Region[] = [
           "Üretici tesislerde kırık, çürük ya da kullanım ömrünü doldurmuş palet düzenli olarak birikir. Yerinden alım için adet, tür ve yükleme noktasını bildirmeniz yeterlidir. Miktar yeterliyse araç planlanır; küçük partilerde iki üç talep birleştirilebilir.",
           "Düzenli ihtiyacı olan tesisler için hem satış hem hurda alımını tek programda toplamak mümkündür: yeni ya da onarılmış paletler gelir, kullanılamaz paletler aynı araçla geri döner.",
         ],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet alım-satım", "/hizmetler/palet-alim-satim/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet alım-satım", "/hizmetler/palet-alim-satim/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
@@ -1106,7 +1106,7 @@ export const regions: Region[] = [
         h: "Anadolu yakası: depoya en yakın bölge",
         p: [
           "İstanbul’un Anadolu yakası, Gebze deposuna Kocaeli sınırından hemen sonra başlar. Tuzla’daki tersane ve kimya tesisleri ile organize sanayi bölgeleri, Pendik ve Kurtköy’deki lojistik ve üretim alanları, Kartal, Maltepe, Ümraniye, Çekmeköy, Sancaktepe ve Sultanbeyli’deki küçük ve orta ölçekli atölyeler palet tüketicisidir.",
-          "Bu yakada TEM ve D-100 ile hızlı bağlantı sayesinde depodan çıkış çoğu zaman aynı gün ya da ertesi iş günü planlanabilir. Süre hat boyunca trafik yoğunluğuna bağlıdır; sabah ve akşam saatlerinden kaçınan yükleme düzeni tavsiye ederiz.",
+          "Bu yakada TEM ve D-100 ile hızlı bağlantı sayesinde depodan çıkış kısa sürede planlanabilir. Süre hat boyunca trafik yoğunluğuna bağlıdır; sabah ve akşam saatlerinden kaçınan yükleme düzeni tavsiye ederiz.",
         ],
         links: [
           ["Tuzla", "/bolge/tuzla-palet/"],
@@ -1169,7 +1169,7 @@ export const regions: Region[] = [
     distance: "yaklaşık 5–8 km · 10–15 dk",
     blurb: "Pelitli deposundan Balçık fabrikalarına dakikalar içinde palet çıkışı.",
     answer:
-      "Balçık, Gebze’nin sanayi mahallelerinden biridir ve MEPAL’in Pelitli deposuna yaklaşık 5–8 km uzaklıktadır. Buradaki fabrikalara Euro palet, ikinci el palet, plastik palet ve HT damgalı ihracat paleti sağlar, hurda paletleri yerinden alırız. Stoğa göre çoğunlukla ertesi iş günü, acil işlerde daha kısa sürede teslim planlanır.",
+      "Balçık, Gebze’nin sanayi mahallelerinden biridir ve MEPAL’in Pelitli deposuna yaklaşık 5–8 km uzaklıktadır. Buradaki fabrikalara Euro palet, ikinci el palet, plastik palet ve HT damgalı ihracat paleti sağlar, hurda paletleri yerinden alırız. Stoğa göre kısa sürede, acil işlerde daha kısa sürede teslim planlanır.",
     zones: ["Balçık Mahallesi", "Balçık sanayi siteleri", "Gebze Plastikçiler OSB çevresi", "Pelitli", "Mollafenari", "Hacıhalil", "Gebze Güzeller yönü"],
     nearby: ["gebze-palet", "dilovasi-palet", "cayirova-palet", "darica-palet"],
     sections: [
@@ -1182,9 +1182,9 @@ export const regions: Region[] = [
         links: [["Gebze sayfası", "/bolge/gebze-palet/"], ["Kimya ve plastik sektörü", "/sektorler/kimya-ve-plastik/"]],
       },
       {
-        h: "Aynı gün çıkış ve acil ihtiyaç",
+        h: "Hızlı çıkış ve acil ihtiyaç",
         p: [
-          "Sevkiyatın öne çekildiği, bir tırın beklenenden erken geldiği ya da paletlerin yarısının kırık çıktığı anlar Balçık’ta sık yaşanır. Mesafe kısa olduğundan stoğumuzda bulunan ürün için aynı gün çıkış mümkün olabilir; bunun için sabah saatlerinde ürün ve adet bilgisini bildirmeniz işleri hızlandırır.",
+          "Sevkiyatın öne çekildiği, bir tırın beklenenden erken geldiği ya da paletlerin yarısının kırık çıktığı anlar Balçık’ta sık yaşanır. Mesafe kısa olduğundan stoğumuzda bulunan ürün için hızlı çıkış mümkün olabilir; bunun için sabah saatlerinde ürün ve adet bilgisini bildirmeniz işleri hızlandırır.",
           "Kendi aracınızla gelmek isterseniz yol 10–15 dakikayı bulmaz. Önce telefonla arayın, ürün hazır tutulsun.",
         ],
         list: [
@@ -1222,7 +1222,7 @@ export const regions: Region[] = [
       },
     ],
     faq: [
-      { q: "Balçık’a teslimat ne kadar sürer?", a: "Depo yakın olduğu için stoktaki ürünlerde çoğunlukla ertesi iş günü, acil işlerde daha kısa sürede çıkış planlanır. Net süre teklifte bildirilir." },
+      { q: "Balçık’a teslimat ne kadar sürer?", a: "Depo yakın olduğu için stoktaki ürünlerde kısa sürede, acil işlerde öncelikle çıkış planlanır. Net süre teklifte bildirilir." },
       { q: "Depodan kendim yükleme yapabilir miyim?", a: "Evet. Pelitli deposu Pazartesi–Cumartesi 08:30–18:00 arasında açıktır; gelmeden önce stok teyidi alın." },
       { q: "Küçük adetli sipariş alıyor musunuz?", a: "Evet. Birkaç adetten tır dolusuna kadar talepler değerlendirilir; koşullar teklifte bildirilir." },
       { q: "Hurda palet için araç gönderir misiniz?", a: "Miktar yeterliyse evet. Adet ve fotoğrafla WhatsApp’tan yazın." },
@@ -1277,7 +1277,7 @@ export const regions: Region[] = [
           "Tesisler için en verimli düzen, haftalık ya da iki haftalık sabit sevkiyat programıdır: ihtiyaç duyulan palet gelir, kullanılamaz hale gelen palet aynı araçla geri alınır. Böylece depo alanı yığılmadan temiz kalır. Hacim büyüdüğünde ürün, kalite sınıfı ve teslim penceresi yazılı olarak teklifte netleştirilir.",
           "Hurda ve onarılabilir paletleri yerinden alıyoruz; onarıma uygun olanlar tamir edilerek tekrar sevkiyata verilir.",
         ],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet tamiri", "/hizmetler/palet-tamiri/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Palet tamiri", "/hizmetler/palet-tamiri/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
       {
         h: "Giriş ve teslimat koordinasyonu",
@@ -1341,14 +1341,14 @@ export const regions: Region[] = [
       {
         h: "Hızlı çıkış ve düzenli tedarik",
         p: [
-          "Mesafe kısa olduğu için stoktaki ürünlerde aynı gün ya da ertesi iş günü çıkış planlanabilir. Düzenli hammadde girişi ve mamul çıkışı olan tesisler için haftalık program tavsiye ederiz. Net süre ve koşullar teklifte bildirilir.",
+          "Mesafe kısa olduğu için stoktaki ürünlerde kısa sürede çıkış planlanabilir. Düzenli hammadde girişi ve mamul çıkışı olan tesisler için haftalık program tavsiye ederiz. Net süre ve koşullar teklifte bildirilir.",
           "Üretim sırasında hasar gören ya da kullanım ömrü biten paletleri yerinden alıyoruz. Aynı araçla yeni palet getirip kullanılmış paleti geri almak mümkündür.",
         ],
         links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Fiyat tablosu", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
-      { q: "Plastikçiler OSB’ye ne kadar sürede teslim edersiniz?", a: "Depo yakın olduğu için stoktaki ürünlerde çoğunlukla aynı gün ya da ertesi iş günü çıkış planlanır. Net süre teklifte bildirilir." },
+      { q: "Plastikçiler OSB’ye ne kadar sürede teslim edersiniz?", a: "Depo yakın olduğu için stoktaki ürünlerde kısa sürede çıkış planlanır. Net süre teklifte bildirilir." },
       { q: "Granül çuvalları için hangi palet uygundur?", a: "Çuvalın yüzey ve ağırlığına göre sağlam, düzgün yüzeyli bir ahşap ya da plastik palet önerilir. Ürün ve adedi yazın, uygun seçimi birlikte belirleyelim." },
       { q: "Plastik palet mi ahşap palet mi tercih etmeliyim?", a: "Hijyen ve yıkanabilirlik öncelikliyse plastik, maliyet ve esneklik öncelikliyse ahşap palet uygundur." },
       { q: "Hurda ve kırık palet alıyor musunuz?", a: "Evet. Adet, tür ve yükleme noktasını bildirmeniz yeterlidir." },
@@ -1521,14 +1521,14 @@ export const regions: Region[] = [
           "Gebze’den Maltepe’ye TEM, D-100 ve Anadolu yakası bağlantı yolları kullanılır. Trafik yoğunluğu süreyi belirgin biçimde etkiler; bu nedenle teslimat saatleri sabah erken ya da trafik azaldığında planlanır. Net süre teklifte bildirilir.",
           "Biriken kırık ve hurda paletleri yerinden alıyoruz. Küçük miktarlar için bölgeden diğer talepler birleştirilir; adet ve fotoğrafla yazmanız yeterlidir.",
         ],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [
       { q: "Maltepe’ye küçük adetle palet gönderir misiniz?", a: "Evet, ancak mesafe nedeniyle talepler birleştirilerek planlanır. Koşullar teklifte bildirilir." },
       { q: "Mağaza ya da atölye için temiz palet bulunur mu?", a: "Evet. Temiz, sınıflandırılmış ikinci el ya da sıfır palet seçenekleri sunulur." },
       { q: "Maltepe’den hurda palet alıyor musunuz?", a: "Evet. Adet, tür ve adresle yazarsanız yerinden alım planlanır." },
-      { q: "Teslimat ne kadar sürer?", a: "Stok ve araç programına göre planlanır, çoğunlukla ertesi iş günü; net süre teklifte bildirilir." },
+      { q: "Teslimat ne kadar sürer?", a: "Stok ve araç programına göre planlanır, kısa sürede; net süre teklifte bildirilir." },
     ],
   },
   {
@@ -1579,7 +1579,7 @@ export const regions: Region[] = [
           "Gebze’den Çekmeköy’e TEM otoyolu ve Anadolu yakası bağlantı yolları üzerinden gidilir. Yoğun trafik saatlerinde süre belirgin biçimde uzayabilir. Mümkünse sabah erken ya da öğleden sonra teslimat penceresi seçmenizi öneririz. Net süre teklifte bildirilir.",
           "Biriken kırık ve hurda paletleri yerinden alıyoruz. Küçük partilerde yakındaki diğer taleplerle birleştirme yapılır; adet, tür ve fotoğrafla yazmanız yeterlidir.",
         ],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Güncel fiyat tablosu", "/palet-fiyatlari/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Teklif al", "/teklif-al/"], ["Fiyat al", "/palet-fiyatlari/"]],
       },
     ],
     faq: [

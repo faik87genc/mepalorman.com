@@ -124,7 +124,7 @@ export function SectionsView({ sections, cta }: { sections: Section[]; cta?: { m
           {cta && i === (cta.after ?? 0) && (
             <aside className="cta-box">
               <p>
-                <strong>Güncel fiyat ve stok için 30 saniyede teklif alın.</strong> Aynı gün dönüş yapıyoruz.
+                <strong>Güncel fiyat ve stok için 30 saniyede teklif alın.</strong> En kısa sürede dönüş yapıyoruz.
               </p>
               <CtaButtons message={cta.message} source="inline" />
             </aside>
@@ -185,7 +185,7 @@ export function PriceTable({ rowKeys, compact = false }: { rowKeys?: string[]; c
           </tbody>
         </table>
       </div>
-      <p className="note">Ürün, adet ve teslimat ilini yazın; aynı gün net fiyatla dönelim. Büyük adetlerde birim fiyat düşer. Nakliye ve KDV ayrıca hesaplanır.</p>
+      <p className="note">Ürün, adet ve teslimat ilini yazın; en kısa sürede net fiyatla dönelim. Büyük adetlerde birim fiyat düşer. Nakliye ve KDV ayrıca hesaplanır.</p>
     </div>
   );
 }
@@ -229,7 +229,7 @@ export function FinalCta({ message, title = "Palet mi lazım, paletinizi mi satm
       <div className="wrap final-in">
         <div>
           <h2>{title}</h2>
-          <p>Ürün, adet ve konumunuzu yazın; aynı gün teklifle dönelim. Mesai dışında sabah 08:30’da arıyoruz.</p>
+          <p>Ürün, adet ve konumunuzu yazın; en kısa sürede teklifle dönelim. Mesai dışında sabah 08:30’da arıyoruz.</p>
         </div>
         <div className="cta-row">
           <Link prefetch={false} className="btn btn-gold" href="/teklif-al/">

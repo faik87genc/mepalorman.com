@@ -71,7 +71,7 @@ export const products: Product[] = [
         h: "Sıfır mı ikinci el mi seçmeli?",
         p: [
           "Gıdayla temas eden depolarda, ihracatta ve raf yükü yüksek işlerde sıfır palet mantıklıdır. Fabrika içi dolaşım ve iç lojistikte ise onarılmış ikinci el Euro ölçülü palet maliyeti belirgin biçimde düşürür.",
-          "Sıfır palet güncel fiyatı kademeli adetlere göre değişir. Hacim arttıkça birim maliyet düşer; en doğru rakam için güncel fiyat tablosuna bakın veya teklif alın.",
+          "Sıfır palet güncel fiyatı kademeli adetlere göre değişir. Hacim arttıkça birim maliyet düşer; en doğru rakam için WhatsApp'tan teklif alın.",
         ],
         links: [
           ["Euro palet fiyatları", "/euro-palet-fiyatlari/"],
@@ -93,7 +93,7 @@ export const products: Product[] = [
         h: "Sipariş ve teslimat",
         steps: [
           "Adet, sıfır/ikinci el tercihi ve teslim adresini WhatsApp veya teklif formuyla iletin.",
-          "Stok ve araç programına göre teklif ve teslim zamanı bildirilir; çoğunlukla ertesi iş günü çıkış mümkündür, net süre teklifte yazılır.",
+          "Stok ve araç programına göre teklif ve teslim zamanı bildirilir; çıkış mümkündür, net süre teklifte yazılır.",
           "Palet Gebze deposundan araçla adresinize gelir; boşaltma sırasında adet kontrolü yapılır.",
         ],
         links: [["Teklif al", "/teklif-al/"]],
@@ -105,7 +105,7 @@ export const products: Product[] = [
       { q: "Bir tıra kaç adet 80x120 palet sığar?", a: "13,6 m'lik standart tırda tek katta yaklaşık 33 adet yerleşir. Üst üste yükleme mümkünse bu rakam yük yüksekliğine göre artar." },
       { q: "Minimum sipariş adedi var mı?", a: "Toplu tedarik ağırlıklıdır; küçük adetler için stok durumuna göre WhatsApp'tan sorabilirsiniz." },
       { q: "Paletin ağırlığı neden değişiyor?", a: "Ahşabın nem oranı ağırlığı doğrudan etkiler. Taze kereste ağır, kurutulmuş kereste hafiftir; bu fark yaklaşık birkaç kilogramdır." },
-      { q: "Fiyat nasıl öğrenilir?", a: "Fiyatlar adet kademesine göre değişir. Güncel fiyat tablosuna bakın ya da WhatsApp'tan teklif isteyin." },
+      { q: "Fiyat nasıl öğrenilir?", a: "Fiyatlar adede göre değişir. Güncel fiyat için WhatsApp'tan teklif isteyin." },
     ],
   },
 
@@ -194,7 +194,7 @@ export const products: Product[] = [
       { q: "EPAL damgasız Euro palet ihracatta kullanılır mı?", a: "Kullanılabilir; fakat alıcı EPAL takası şart koşuyorsa kabul etmez. Ayrıca ihracat paleti için ISPM-15 ısıl işlem damgası gerekir." },
       { q: "İkinci el EPAL palet güvenli mi?", a: "Kondisyonu uygunsa evet. Sağlam bloklar, eksiksiz tahta ve okunur damga aranır; sınıflandırma bu yüzden önemlidir." },
       { q: "EPAL palet kaç kg taşır?", a: "Dinamik olarak yaklaşık 1.500 kg. Raf üzerinde güvenli yük sistemin kendi sınırına göre belirlenir." },
-      { q: "Fiyat nasıl öğrenilir?", a: "Güncel ikinci el fiyat tablosuna bakın ya da adedi yazarak WhatsApp'tan teklif isteyin." },
+      { q: "Fiyat nasıl öğrenilir?", a: "Adedi yazarak WhatsApp'tan güncel fiyat isteyin." },
     ],
   },
 
@@ -275,7 +275,7 @@ export const products: Product[] = [
       {
         h: "Teslimat ve sipariş",
         p: [
-          "Gebze deposundaki stok ve araç programına göre sipariş çoğunlukla ertesi iş günü sevk edilir; net süre teklifte bildirilir. Sıfır ve ikinci el seçeneklerin güncel fiyatı adet kademesine göre değişir: güncel fiyat tablosuna bakın veya teklif alın.",
+          "Gebze deposundaki stok ve araç programına göre sipariş sevk edilir; net süre teklifte bildirilir. Sıfır ve ikinci el seçeneklerin fiyatı adede göre değişir: güncel fiyat için WhatsApp'tan teklif alın.",
         ],
         links: [["Teklif al", "/teklif-al/"]],
       },
@@ -286,7 +286,7 @@ export const products: Product[] = [
       { q: "Bir tıra kaç adet 100x120 palet girer?", a: "Standart 13,6 m tırda tek katta yaklaşık 26 adet yerleşir (iki sıra)." },
       { q: "İhracatta 100x120 kullanılır mı?", a: "Evet; ISPM-15 uyumlu, HT damgalı olması gerekir." },
       { q: "Sıfır mı ikinci el mi almalıyım?", a: "Gıda ve ihracatta sıfır, iç lojistik ve depoda onarılmış ikinci el uygun olur." },
-      { q: "Fiyat nasıl öğrenilir?", a: "Güncel ahşap palet fiyat tablosuna bakın, ya da WhatsApp'tan adet yazarak teklif alın." },
+      { q: "Fiyat nasıl öğrenilir?", a: "Adedi yazarak WhatsApp'tan güncel fiyat alın." },
     ],
   },
 
@@ -357,7 +357,7 @@ export const products: Product[] = [
       },
       {
         h: "Sipariş ve teslimat",
-        p: ["Gebze deposundan Dilovası, Gebze OSB ve çevresindeki kimya tesislerine kısa sürede sevk edilir. Stok ve araç programına göre çoğunlukla ertesi iş günü; net süre teklifte bildirilir. Güncel fiyat için fiyat tablosuna bakın."],
+        p: ["Gebze deposundan Dilovası, Gebze OSB ve çevresindeki kimya tesislerine kısa sürede sevk edilir. Stok ve araç programına göre net süre teklifte bildirilir. Güncel fiyat için WhatsApp'tan yazın."],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Dilovası palet", "/bolge/dilovasi-palet/"]],
       },
     ],
@@ -441,7 +441,7 @@ export const products: Product[] = [
       {
         h: "Alım satım, hurda ve takas",
         p: [
-          "MEPAL ikinci el paletleri hem satar hem de işletmelerin elindeki kullanılmış paletleri değerlendirir. Elinizde fazla ya da hasarlı palet varsa hurda palet alımı hizmetiyle birlikte stoklarınızı toparlayabilirsiniz. Güncel fiyat için ikinci el fiyat tablosuna bakın.",
+          "MEPAL ikinci el paletleri hem satar hem de işletmelerin elindeki kullanılmış paletleri değerlendirir. Elinizde fazla ya da hasarlı palet varsa hurda palet alımı hizmetiyle birlikte stoklarınızı toparlayabilirsiniz. Güncel fiyat için WhatsApp'tan yazın.",
         ],
         links: [
           ["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"],
@@ -456,7 +456,7 @@ export const products: Product[] = [
       { q: "İkinci el palet ihracatta kullanılır mı?", a: "Önerilmez; ihracatta HT damgalı ISPM-15 uyumlu palet gerekir." },
       { q: "Elimdeki paletleri satabilir miyim?", a: "Evet; adet ve kondisyonu iletirseniz alım için değerlendiririz." },
       { q: "Paletler onarılıyor mu?", a: "Evet; kırık tahta ve blok değişimi yapılır, ardından sınıflandırılır." },
-      { q: "Teslimat ne kadar sürer?", a: "Stok ve araç programına göre çoğunlukla ertesi iş günü; net süre teklifte bildirilir." },
+      { q: "Teslimat ne kadar sürer?", a: "Stok ve araç programına göre kısa sürede; net süre teklifte bildirilir." },
     ],
   },
 
@@ -530,8 +530,8 @@ export const products: Product[] = [
         h: "Sipariş ve teslimat",
         steps: [
           "Ölçü, adet ve yük bilgisini iletin.",
-          "Teklif gelir; güncel fiyat adet kademesine göre değişir, fiyat tablosuna bakabilirsiniz.",
-          "Stok ve araç programına göre sevk edilir; çoğunlukla ertesi iş günü, net süre teklifte bildirilir.",
+          "Teklif gelir; güncel fiyat adede göre değişir, WhatsApp'tan öğrenebilirsiniz.",
+          "Stok ve araç programına göre sevk edilir; en kısa sürede, net süre teklifte bildirilir.",
         ],
         links: [["Ahşap palet fiyatları", "/ahsap-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -542,7 +542,7 @@ export const products: Product[] = [
       { q: "Özel ölçü sıfır palet yaptırabilir miyim?", a: "Evet; ölçü ve yük bilgisiyle özel ölçü üretim teklifi alabilirsiniz." },
       { q: "İhracat için uygun mu?", a: "HT damgalı, ISPM-15 uyumlu olarak istenirse uygundur." },
       { q: "Paletler kuru mu teslim edilir?", a: "Kuru kereste hedeflenir; nem şartı varsa teklifte belirtin." },
-      { q: "Fiyat nasıl öğrenilir?", a: "Güncel fiyat tablosuna bakın veya WhatsApp'tan teklif isteyin." },
+      { q: "Fiyat nasıl öğrenilir?", a: "Güncel fiyat için WhatsApp'tan teklif isteyin." },
     ],
   },
 
@@ -614,7 +614,7 @@ export const products: Product[] = [
       },
       {
         h: "Sipariş ve teslimat",
-        p: ["Model, ölçü ve adet bilgisiyle teklif isteyin. Plastik paletler Gebze deposundan stok ve araç programına göre sevk edilir; net süre teklifte bildirilir. Güncel fiyat tablosuna bakın."],
+        p: ["Model, ölçü ve adet bilgisiyle teklif isteyin. Plastik paletler Gebze deposundan stok ve araç programına göre sevk edilir; net süre teklifte bildirilir. Güncel fiyat için WhatsApp'tan yazın."],
         links: [["Teklif al", "/teklif-al/"]],
       },
     ],
@@ -805,7 +805,7 @@ export const products: Product[] = [
       {
         h: "Sipariş ve teslimat",
         p: [
-          "Turpal ölçülerinde ya da benzer standartta palete ihtiyacınız varsa adet ve şartnameyi WhatsApp'tan iletin. Stok durumuna göre ikinci el ve sıfır alternatifleri sunarız. Fiyat Turpal damgası şartına göre değişir; güncel fiyat tablosuna bakın veya teklif alın.",
+          "Turpal ölçülerinde ya da benzer standartta palete ihtiyacınız varsa adet ve şartnameyi WhatsApp'tan iletin. Stok durumuna göre ikinci el ve sıfır alternatifleri sunarız. Fiyat Turpal damgası şartına göre değişir; güncel fiyat için WhatsApp'tan teklif alın.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -1152,7 +1152,7 @@ export const products: Product[] = [
         h: "Fiyatı ne belirler?",
         p: [
           "Takozlu palet fiyatı ölçüye, tahta kalınlığına, takoz sayısına, ahşap cinsine ve adede göre değişir. Sıfır ya da ikinci el olması da etkiler. Sabit bir liste yerine ölçünüze göre teklif hazırlanır.",
-          "Standart ölçülerdeki güncel kademeli rakamlar için fiyat tablosuna bakabilirsiniz; farklı ölçü için teklif alın.",
+          "Standart ölçüler için güncel fiyatı WhatsApp'tan öğrenebilirsiniz; farklı ölçü için teklif alın.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -1343,7 +1343,7 @@ export const products: Product[] = [
       {
         h: "Fiyat ve teslimat",
         p: [
-          "Fiyat sınıfa ve adet kademesine göre belirlenir. Güncel rakamlar fiyat tablosunda yer alır; büyük partiler için teklif alın.",
+          "Fiyat sınıfa ve adet kademesine göre belirlenir. Güncel fiyat için WhatsApp'tan yazın; büyük partiler için teklif alın.",
         ],
         steps: [
           "Sınıf tercihini, adedi ve teslim adresini bildirin.",
@@ -1437,7 +1437,7 @@ export const products: Product[] = [
       {
         h: "Fiyat ve teslimat",
         p: [
-          "Fiyat ölçüye, adede ve damga şartına göre belirlenir. Güncel kademeli rakamlar fiyat tablosunda yer alır; özel ölçü veya büyük parti için teklif alın.",
+          "Fiyat ölçüye, adede ve damga şartına göre belirlenir. Güncel fiyat için WhatsApp'tan yazın; özel ölçü veya büyük parti için teklif alın.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },

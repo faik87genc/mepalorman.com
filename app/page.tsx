@@ -15,7 +15,7 @@ import type { FAQ } from "@/lib/types";
 
 export const metadata: Metadata = pageMeta({
   title: "Palet Satışı Türkiye Geneli | Euro, Ahşap, Plastik | MEPAL",
-  description: "Gebze deposundan euro palet, ahşap palet, plastik palet, ikinci el palet satışı ve hurda palet alımı. WhatsApp'tan aynı gün güncel fiyat ve hızlı teklif.",
+  description: "Gebze deposundan euro palet, ahşap palet, plastik palet, ikinci el palet satışı ve hurda palet alımı. WhatsApp'tan güncel fiyat ve hızlı teklif.",
   path: "/",
 });
 
@@ -36,7 +36,7 @@ const faq: FAQ[] = [
   { q: "Hangi bölgelere teslimat yapıyorsunuz?", a: "Gebze depomuzdan Türkiye genelinde sevkiyat yapıyoruz. Kocaeli ve İstanbul’da en hızlı teslimat sağlanır; diğer illerde süre ve nakliye maliyeti miktara ve mesafeye göre teklifte bildirilir." },
   { q: "İhracat için ısıl işlemli (ISPM-15) palet temin ediyor musunuz?", a: "Evet, HT damgalı ISPM-15 uyumlu ihracat paleti temin ediyoruz. Ülkenizin gereksinimleri için rehber yazımıza bakabilir veya bize danışabilirsiniz." },
   { q: "Kullanılmış paletlerimi satabilir miyim?", a: "Evet. Hurda ve ikinci el palet alımı yapıyoruz. Paletlerin fotoğrafını WhatsApp'tan veya fotoğraftan değerleme aracımızla gönderirseniz ön değerlendirme yapılır; kesin fiyat yerinde kontrolle verilir." },
-  { q: "Teklif ne kadar sürede gelir?", a: "Mesai saatlerinde çoğunlukla aynı gün dönüş yapıyoruz. Mesai dışı talepleri ertesi sabah 08:30'da arıyoruz." },
+  { q: "Teklif ne kadar sürede gelir?", a: "Mesai saatlerinde en kısa sürede dönüş yapıyoruz. Mesai dışı talepleri ertesi sabah 08:30'da arıyoruz." },
 ];
 
 export default function HomePage() {
@@ -52,14 +52,14 @@ export default function HomePage() {
             <p className="eyebrow">Gebze depo · Türkiye geneli sevkiyat</p>
             <h1>Ahşap ve Plastik Palet Satışı – Gebze Depodan Türkiye Geneli</h1>
             <p className="lead">
-              Bugün fiyat, yarın teslimat. Gebze deposundan Türkiye’nin her yerine toplu palet tedariki: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı.
+              Hızlı fiyat, Gebze deposundan sevkiyat. Gebze deposundan Türkiye’nin her yerine toplu palet tedariki: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı.
             </p>
             <CtaButtons message="Merhaba, palet için fiyat almak istiyorum. Ürün: … Adet: … İl: …" source="home-hero" />
             <ul className="trust-list">
-              <li>WhatsApp&apos;tan aynı gün güncel fiyat</li>
+              <li>WhatsApp&apos;tan güncel fiyat</li>
               <li>Gebze Pelitli’de depo</li>
               <li>ISPM-15 uyumlu ihracat paleti</li>
-              <li>Aynı gün dönüş</li>
+              <li>Hızlı dönüş</li>
             </ul>
           </div>
           <div className="home-hero-photo">
@@ -127,7 +127,7 @@ export default function HomePage() {
         <div className="wrap">
           <p className="eyebrow">Fiyat için WhatsApp</p>
           <h2 id="urunler-h">Palet çeşitleri</h2>
-          <p className="muted">Her ürünün sayfasında ölçü ve taşıma kapasitesi var. Güncel fiyat piyasaya göre değiştiği için WhatsApp&apos;tan aynı gün veriyoruz.</p>
+          <p className="muted">Her ürünün sayfasında ölçü ve taşıma kapasitesi var. Güncel fiyat piyasaya göre değiştiği için WhatsApp&apos;tan veriyoruz.</p>
           <CardGrid items={featured.map((p) => ({ href: `/urunler/${p.slug}/`, title: p.name, blurb: p.blurb, art: p.art, foot: fromPriceLabel(p.slug) ?? "WhatsApp'tan fiyat al" }))} />
           <p className="cta-row">
             <Link prefetch={false} className="btn btn-green" href="/palet-fiyatlari/">

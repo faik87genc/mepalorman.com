@@ -82,7 +82,7 @@ export const guidesA: Guide[] = [
       {
         h: "Euro palet fiyatını ne belirler?",
         p: [
-          "Fiyat; paletin sıfır, ikinci el ya da tamirli olmasına, EPAL damgalı olup olmadığına, ısıl işlem (HT) şartına, adede ve teslim noktasına göre değişir. Güncel rakamlar için Euro palet fiyat tablosuna bakabilir, adet ve teslim adresini belirterek teklif alabilirsiniz. Gebze deposundan Türkiye genelinde stok ve araç programına göre çoğunlukla ertesi iş günü sevkiyat yapılır; net süre teklifte bildirilir.",
+          "Fiyat; paletin sıfır, ikinci el ya da tamirli olmasına, EPAL damgalı olup olmadığına, ısıl işlem (HT) şartına, adede ve teslim noktasına göre değişir. Güncel fiyat için adet ve teslim adresini belirterek WhatsApp'tan teklif alabilirsiniz. Gebze deposundan Türkiye genelinde stok ve araç programına göre sevkiyat yapılır; net süre teklifte bildirilir.",
         ],
         links: [["Euro palet fiyatları", "/euro-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -177,7 +177,7 @@ export const guidesA: Guide[] = [
       {
         h: "İhracatta palet seçerken dikkat edilecekler",
         p: [
-          "Yurt dışına gönderilecek ahşap palet ISPM-15 şartına uymalı, ısıl işlem (HT) damgası taşımalıdır. Damgasız palet gümrükte geri çevrilebilir veya pahalı bir fümigasyon gerektirebilir. Ölçü kararı verirken karşı ülkedeki depo ve rafların hangi palet ölçüsüne göre kurulduğunu da sormak iyi olur. Fiyat için ihracat paleti ve Euro palet fiyat sayfalarındaki güncel tabloya bakın; adet ve teslim noktası için teklif alın.",
+          "Yurt dışına gönderilecek ahşap palet ISPM-15 şartına uymalı, ısıl işlem (HT) damgası taşımalıdır. Damgasız palet gümrükte geri çevrilebilir veya pahalı bir fümigasyon gerektirebilir. Ölçü kararı verirken karşı ülkedeki depo ve rafların hangi palet ölçüsüne göre kurulduğunu da sormak iyi olur. Fiyat için adet ve teslim noktasını belirterek WhatsApp'tan teklif alın.",
         ],
         links: [["ISPM-15 nedir?", "/rehber/ispm-15-nedir/"], ["Euro palet fiyatları", "/euro-palet-fiyatlari/"]],
       },
@@ -267,7 +267,7 @@ export const guidesA: Guide[] = [
       {
         h: "Fiyat ve teklif",
         p: [
-          "Palet fiyatı; çeşit, ölçü, durum, adet, damga şartı ve teslim noktasına göre değişir. Güncel rakamlar için fiyat sayfalarındaki tabloya bakın. Toplu alımda ya da özel ölçüde teklif alın. Gebze deposundan Türkiye genelinde stok ve araç programına göre çoğunlukla ertesi iş günü teslimat planlanır; net süre teklifte bildirilir.",
+          "Palet fiyatı; çeşit, ölçü, durum, adet, damga şartı ve teslim noktasına göre değişir. Güncel fiyat için WhatsApp'tan yazın. Toplu alımda ya da özel ölçüde teklif alın. Gebze deposundan Türkiye genelinde stok ve araç programına göre teslimat planlanır; net süre teklifte bildirilir.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Ahşap palet fiyatları", "/ahsap-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -366,7 +366,7 @@ export const guidesA: Guide[] = [
       {
         h: "Fiyat ve teklif",
         p: [
-          "EPAL damgalı ya da ölçülü paletin fiyatı sıfır/ikinci el durumu, sınıfı ve adede göre değişir. Güncel rakamlar için Euro palet fiyat tablosuna bakın, adet ve sınıf belirterek teklif alın. Stok ve araç programına göre çoğunlukla ertesi iş günü teslimat planlanır; net süre teklifte bildirilir.",
+          "EPAL damgalı ya da ölçülü paletin fiyatı sıfır/ikinci el durumu, sınıfı ve adede göre değişir. Güncel fiyat için adet ve sınıf belirterek WhatsApp'tan teklif alın. Stok ve araç programına göre teslimat planlanır; net süre teklifte bildirilir.",
         ],
         links: [["Euro palet fiyatları", "/euro-palet-fiyatlari/"], ["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -458,7 +458,7 @@ export const guidesA: Guide[] = [
       {
         h: "ISPM-15 uyumlu palet fiyatı",
         p: [
-          "ISPM-15 uyumlu palet, aynı ölçüdeki damgasız palete göre ek işlem gerektirdiği için fiyat farkı oluşturabilir. Güncel rakamlar için ahşap ve Euro palet fiyat sayfalarındaki tabloya bakın, ihracat şartınızı ve adedinizi belirterek teklif alın.",
+          "ISPM-15 uyumlu palet, aynı ölçüdeki damgasız palete göre ek işlem gerektirdiği için fiyat farkı oluşturabilir. Güncel fiyat için ihracat şartınızı ve adedinizi belirterek WhatsApp'tan teklif alın.",
         ],
         links: [["Ahşap palet fiyatları", "/ahsap-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -548,7 +548,7 @@ export const guidesA: Guide[] = [
       {
         h: "Ağır yük için palet teklifi",
         p: [
-          "Taşıyacağınız yükün ağırlığını, ürün ölçüsünü ve depolama biçimini (istif, raf) belirterek teklif alın; size uygun sınıf ve ölçüyü önerelim. Güncel fiyatlar için fiyat sayfalarındaki tabloya bakabilirsiniz. Stok ve araç programına göre çoğunlukla ertesi iş günü teslimat planlanır; net süre teklifte bildirilir.",
+          "Taşıyacağınız yükün ağırlığını, ürün ölçüsünü ve depolama biçimini (istif, raf) belirterek teklif alın; size uygun sınıf ve ölçüyü önerelim. Güncel fiyat için WhatsApp'tan yazabilirsiniz. Stok ve araç programına göre teslimat planlanır; net süre teklifte bildirilir.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"], ["Palet seçici", "/araclar/palet-secici/"]],
       },
@@ -641,7 +641,7 @@ export const guidesA: Guide[] = [
       {
         h: "Palet fiyatları ve özel ölçü teklifi",
         p: [
-          "Özel yükseklikte ya da ölçüde palet gerekiyorsa ölçü, yük ve adet bilgisiyle teklif alın. Standart paletlerin güncel fiyatlarını ilgili fiyat sayfasındaki tablodan görebilirsiniz. Stok ve araç programına göre çoğunlukla ertesi iş günü sevkiyat planlanır; net süre teklifte bildirilir.",
+          "Özel yükseklikte ya da ölçüde palet gerekiyorsa ölçü, yük ve adet bilgisiyle teklif alın. Standart paletlerin güncel fiyatını WhatsApp'tan öğrenebilirsiniz. Stok ve araç programına göre sevkiyat planlanır; net süre teklifte bildirilir.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -734,7 +734,7 @@ export const guidesA: Guide[] = [
       {
         h: "Toplu palet tedariki ve teklif",
         p: [
-          "Tır dolusu palet alıyorsanız, adet ve ölçü bilgisiyle teklif isteyin. Gebze deposundan Türkiye genelinde sevkiyat planlıyoruz. Güncel fiyatlar için fiyat tablosuna bakın; stok ve araç programına göre çoğunlukla ertesi iş günü sevkiyat planlanır, net süre teklifte bildirilir.",
+          "Tır dolusu palet alıyorsanız, adet ve ölçü bilgisiyle teklif isteyin. Gebze deposundan Türkiye genelinde sevkiyat planlıyoruz. Güncel fiyat için WhatsApp'tan yazın; stok ve araç programına göre sevkiyat planlanır, net süre teklifte bildirilir.",
         ],
         links: [["Toptan palet", "/hizmetler/toptan-palet/"], ["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -796,7 +796,7 @@ export const guidesA: Guide[] = [
           "Plastik palet kırılırsa genellikle tamir değil, malzeme geri dönüşümü söz konusudur.",
           "Kaybolan palet maliyeti: Takip yoksa ya da palet müşteri tarafında kalıyorsa kayıp maliyeti hesaba katılmalıdır.",
           "Ağırlık ve nakliye: Palet ağırlığı nakliye maliyetinde küçük ama toplu sevkiyatta fark yaratan bir kalemdir.",
-          "Net rakamlar firmanın döngü sayısına, kayıp oranına ve ürün tipine göre değiştiği için bu rehberde sabit rakam vermiyoruz. Güncel fiyatlar için fiyat tablosuna bakıp kendi döngü sayınızla hesap yapabilirsiniz.",
+          "Net rakamlar firmanın döngü sayısına, kayıp oranına ve ürün tipine göre değiştiği için bu rehberde sabit rakam vermiyoruz. Güncel fiyatı WhatsApp'tan öğrenip kendi döngü sayınızla hesap yapabilirsiniz.",
         ],
         links: [["Plastik palet fiyatları", "/plastik-palet-fiyatlari/"], ["Ahşap palet fiyatları", "/ahsap-palet-fiyatlari/"]],
       },
@@ -924,7 +924,7 @@ export const guidesA: Guide[] = [
       {
         h: "İkinci el palet nereden alınmalı?",
         p: [
-          "Tedarikçinin palet sınıflandırması yaptığı, toplu alımda numune gösterdiği ve fatura kesebildiği bir firmayı tercih edin. Elinizde adet, ölçü ve sınıf yazılı teklif olmalıdır. MEPAL; ikinci el palet alım-satımı, palet tamiri ve hurda palet değerlendirmesi hizmeti verir. Güncel fiyatlar için ikinci el palet fiyat tablosuna bakın, adet ve sınıf belirtip teklif alın.",
+          "Tedarikçinin palet sınıflandırması yaptığı, toplu alımda numune gösterdiği ve fatura kesebildiği bir firmayı tercih edin. Elinizde adet, ölçü ve sınıf yazılı teklif olmalıdır. MEPAL; ikinci el palet alım-satımı, palet tamiri ve hurda palet değerlendirmesi hizmeti verir. Güncel fiyat için adet ve sınıf belirtip WhatsApp'tan teklif alın.",
         ],
         links: [["İkinci el palet", "/urunler/ikinci-el-palet/"], ["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"], ["Palet alım satım", "/hizmetler/palet-alim-satim/"]],
       },
@@ -1011,7 +1011,7 @@ export const guidesA: Guide[] = [
           "Hiç kullanılamayan palet: Hurda olarak değerlendirin ya da parça için tamire verin.",
         ],
         p: [
-          "Sınıf seçimi fiyatı doğrudan etkiler. Güncel rakamlar için ikinci el palet fiyat tablosuna bakın; sınıf, adet ve teslim noktası belirterek teklif alın. Stok ve araç programına göre çoğunlukla ertesi iş günü sevkiyat planlanır; net süre teklifte bildirilir.",
+          "Sınıf seçimi fiyatı doğrudan etkiler. Güncel fiyat için sınıf, adet ve teslim noktası belirterek WhatsApp'tan teklif alın. Stok ve araç programına göre sevkiyat planlanır; net süre teklifte bildirilir.",
         ],
         links: [["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -1099,10 +1099,10 @@ export const guidesA: Guide[] = [
           "Yükün cinsini ve ağırlığını bildirin.",
           "Sıfır veya ikinci el, ihracat damgası gerekli mi belirtin.",
           "Adet ve teslim adresini yazın.",
-          "Teklif alın; güncel fiyat için fiyat sayfasındaki tabloya bakın.",
+          "Teklif alın; güncel fiyat için WhatsApp'tan yazın.",
         ],
         p: [
-          "Gebze deposundan Türkiye genelinde stok ve araç programına göre çoğunlukla ertesi iş günü teslimat planlanır; net süre teklifte bildirilir.",
+          "Gebze deposundan Türkiye genelinde stok ve araç programına göre teslimat planlanır; net süre teklifte bildirilir.",
         ],
         links: [["Palet fiyatları", "/palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
       },

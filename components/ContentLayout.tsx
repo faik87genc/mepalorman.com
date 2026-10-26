@@ -25,7 +25,7 @@ export function ContactCard({ message }: { message: string }) {
   return (
     <section className="side-card">
       <h2>Hızlı teklif</h2>
-      <p>Ürün, adet ve il yazın; aynı gün güncel fiyatla dönelim.</p>
+      <p>Ürün, adet ve il yazın; güncel fiyatla dönelim.</p>
       <a className="btn btn-wa" href={waLink(message)} data-evt="whatsapp_click" data-src="sidebar" rel="noopener" target="_blank">
         WhatsApp ile Fiyat Al
       </a>

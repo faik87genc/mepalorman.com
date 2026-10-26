@@ -28,7 +28,7 @@ const quoteSection = (what: string): Section => ({
     "Stok durumuna göre net birim fiyat, toplam tutar ve teslim planı bildirilir.",
     "Onaydan sonra paletler hazırlanır; Gebze deposundan teslim alabilir veya Türkiye genelinde araçla sevk isteyebilirsiniz.",
   ],
-  p: ["Teslimat stok ve araç programına göre çoğunlukla ertesi iş günü yapılır; net süre teklifte bildirilir."],
+  p: ["Teslimat stok ve araç programına göre yapılır; net süre teklifte bildirilir."],
   links: [["Teklif al", "/teklif-al/"], ["Palet seçici", "/araclar/palet-secici/"]],
 });
 
@@ -95,7 +95,7 @@ export const pricePages: PricePage[] = [
     description: "Ahşap palet fiyatları: sıfır Euro, 100x120, CP, ISPM-15 ihracat ve özel ölçü. WhatsApp'tan güncel fiyat, Gebze depodan hızlı teslim.",
     h1: "Ahşap Palet Fiyatları — Sıfır ve İkinci El",
     answer:
-      "Ahşap palet fiyatı ölçüye, sınıfa ve adede göre değişir. Tabloda sıfır ve ikinci el ahşap paletler listelenir; güncel fiyat için WhatsApp'tan yazın. Özel ölçüler için teklif alın.",
+      "Ahşap palet fiyatı ölçüye, sınıfa ve adede göre değişir. Listede sıfır ve ikinci el ahşap paletler listelenir; güncel fiyat için WhatsApp'tan yazın. Özel ölçüler için teklif alın.",
     keyword: "ahşap palet fiyatları",
     art: "wood",
     rowKeys: [
@@ -149,7 +149,7 @@ export const pricePages: PricePage[] = [
     description: "İkinci el palet fiyatları: Euro ölçülü 1. ve 2. sınıf, 100x120 ikinci el. WhatsApp'tan güncel fiyat, Gebze depodan teslim, WhatsApp'tan teklif.",
     h1: "İkinci El Palet Fiyatları — 1. ve 2. Sınıf",
     answer:
-      "İkinci el palet fiyatı, paletin sınıfına ve adedine göre belirlenir. Tabloda Euro ölçülü 1. ve 2. sınıf ile 100x120 ikinci el paletler listelenir; sıfır palet karşılaştırma için eklenmiştir.",
+      "İkinci el palet fiyatı, paletin sınıfına ve adedine göre belirlenir. Listede Euro ölçülü 1. ve 2. sınıf ile 100x120 ikinci el paletler listelenir; sıfır palet karşılaştırma için eklenmiştir.",
     keyword: "ikinci el palet fiyatları",
     art: "used",
     rowKeys: ["euro-ikinci-el-1", "euro-ikinci-el-2", "ahsap-ikinci-el-100x120", "euro-sifir"],
@@ -204,7 +204,7 @@ export const pricePages: PricePage[] = [
     description: "Euro palet (80x120) fiyatları: sıfır, ikinci el 1. ve 2. sınıf ve ISPM-15 ihracat paleti. WhatsApp'tan güncel fiyat, Gebze depodan teslim.",
     h1: "Euro Palet Fiyatları — 80x120",
     answer:
-      "Euro palet (80x120) fiyatı; sıfır mı ikinci el mi olduğuna, sınıfa ve ısıl işleme göre değişir. Tabloda sıfır, ikinci el 1. ve 2. sınıf ve ISPM-15 uyumlu ihracat paleti listelenir; güncel fiyat için WhatsApp'tan yazın.",
+      "Euro palet (80x120) fiyatı; sıfır mı ikinci el mi olduğuna, sınıfa ve ısıl işleme göre değişir. Listede sıfır, ikinci el 1. ve 2. sınıf ve ISPM-15 uyumlu ihracat paleti listelenir; güncel fiyat için WhatsApp'tan yazın.",
     keyword: "euro palet fiyatları",
     art: "euro",
     rowKeys: ["euro-sifir", "euro-ikinci-el-1", "euro-ikinci-el-2", "ihracat-ispm15"],
@@ -254,7 +254,7 @@ export const pricePages: PricePage[] = [
     description: "Plastik palet fiyatları: hafif hizmet, ağır hizmet (raf uyumlu) ve 100x120. WhatsApp'tan güncel fiyat, ahşap ile karşılaştırma, hızlı teklif.",
     h1: "Plastik Palet Fiyatları — Hafif ve Ağır Hizmet",
     answer:
-      "Plastik palet fiyatı hizmet sınıfına, ölçüye ve adede göre değişir. Tabloda hafif hizmet, çelik takviyeli ağır hizmet ve 100x120 plastik paletler listelenir; güncel fiyat için WhatsApp'tan yazın.",
+      "Plastik palet fiyatı hizmet sınıfına, ölçüye ve adede göre değişir. Listede hafif hizmet, çelik takviyeli ağır hizmet ve 100x120 plastik paletler listelenir; güncel fiyat için WhatsApp'tan yazın.",
     keyword: "plastik palet fiyatları",
     art: "plastic",
     rowKeys: ["plastik-hafif", "plastik-agir", "plastik-100x120", "euro-sifir"],
@@ -402,7 +402,7 @@ export const pricePages: PricePage[] = [
       {
         h: "Özel ölçü palet fiyatı nasıl belirlenir?",
         p: [
-          "Standart ölçülü paletler hazır stoktan çıkar ve fiyatları tabloda görünür. Özel ölçülü palet ise yüke göre tasarlanır ve üretilir; bu yüzden fiyat, ölçü ve yük bilgisi belli olmadan hesaplanamaz. Aşağıdaki tabloda özel ölçülü ve 145x145 satırları “teklif alın” olarak görünür; sebebi budur.",
+          "Standart ölçülü paletler hazır stoktan çıkar ve fiyatı hızlıca verilir. Özel ölçülü palet ise yüke göre tasarlanır ve üretilir; bu yüzden fiyat, ölçü ve yük bilgisi belli olmadan hesaplanamaz. Bu yüzden özel ölçülü ve 145x145 paletler için de fiyat teklifle verilir.",
           "Teklifin doğru olması için hangi bilgilerin gerektiğini bilmek, süreci hızlandırır.",
         ],
         links: [["Özel ölçülü palet", "/urunler/ozel-olcu-palet/"], ["145x145 palet", "/urunler/145x145-palet/"]],

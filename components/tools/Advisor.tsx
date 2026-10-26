@@ -12,7 +12,7 @@ export default function Advisor() {
   if (!started)
     return (
       <div className="panel">
-        <p>Yükünüzü ve kullanım yerini yazın; uygun paleti, gerekçesini ve fiyat bilgisini söyleyelim. Yapay zekâ destekli asistan yalnızca palet konusunda yanıt verir ve fiyatı sitedeki güncel tablodan alır.</p>
+        <p>Yükünüzü ve kullanım yerini yazın; uygun paleti, gerekçesini ve fiyat bilgisini söyleyelim. Yapay zekâ destekli asistan yalnızca palet konusunda yanıt verir ve fiyat için sizi WhatsApp&apos;a yönlendirir.</p>
         <button type="button" className="btn btn-gold" data-evt="ai_chat_start" data-src="advisor" onClick={() => setStarted(true)}>
           Palet Danışmanını Başlat
         </button>

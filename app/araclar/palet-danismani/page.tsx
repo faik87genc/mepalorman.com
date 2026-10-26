@@ -14,7 +14,7 @@ export default function Page() {
     <ContentLayout
       crumbs={[["Araçlar", "/araclar/"], ["Palet Danışmanı", "/araclar/palet-danismani/"]]}
       h1="Palet Danışmanı"
-      answer="Ne taşıdığınızı ve nereye gönderdiğinizi yazın; asistan uygun paleti, gerekçesini ve fiyat bilgisini (sitedeki güncel tablodan) söyler."
+      answer="Ne taşıdığınızı ve nereye gönderdiğinizi yazın; asistan uygun paleti, gerekçesini söyler, fiyat için WhatsApp'a yönlendirir."
       art="service"
       message="Merhaba, palet danışmanı ile görüştüm, teklif almak istiyorum."
       side={<SideCard title="İlgili sayfalar" links={[["Palet seçici", "/araclar/palet-secici/"]]} />}

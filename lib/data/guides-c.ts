@@ -73,7 +73,7 @@ export const guidesC: Guide[] = [
         h: "Sıfır mı, ikinci el mi?",
         p: [
           "Sıfır palet tutarlı görünüm ve tam ömür sunar; gıda, otomatik hat ve ihracat gibi hassas kullanımlarda tercih edilir. İkinci el palet ise birim maliyeti belirgin biçimde düşürür ve yurt içi sevkiyat, depolama gibi işlerde yeterlidir. Seçim, yükün değerine, müşterinin paleti geri verip vermeyeceğine ve ürünün gideceği yere bağlıdır.",
-          "Güncel birim fiyatlar için ahşap palet fiyat tablosuna bakabilir, ölçü ve adet bilgisiyle teklif isteyebilirsiniz.",
+          "Güncel birim fiyat için ölçü ve adet bilgisiyle WhatsApp'tan teklif isteyebilirsiniz.",
         ],
         links: [["Ahşap palet fiyatları", "/ahsap-palet-fiyatlari/"], ["Sıfır ahşap palet", "/urunler/sifir-ahsap-palet/"], ["Teklif al", "/teklif-al/"]],
       },
@@ -158,7 +158,7 @@ export const guidesC: Guide[] = [
         h: "Gerçek maliyeti nasıl hesaplarsınız?",
         p: ["Yalnızca etiket fiyatına bakmak yanıltıcıdır. Karşılaştırmada şu kalemleri birlikte düşünün:"],
         steps: [
-          "Birim satın alma fiyatı: güncel fiyat tablosundan ilgili satırı seçin.",
+          "Birim satın alma fiyatı: ilgili ürün için WhatsApp'tan güncel fiyat alın.",
           "Paletin kaç sevkiyat dönmesini bekliyorsunuz? Dönmeyen paletin maliyeti her sevkiyata tam yazılır.",
           "Hasar ve iade riski: kırılan palet nedeniyle zarar gören ürünün maliyeti.",
           "Onarım ve ayıklama emeği: ikinci elde depoya girişte kontrol gerekir.",
@@ -177,13 +177,13 @@ export const guidesC: Guide[] = [
       {
         h: "Teklif alırken ne belirtmelisiniz?",
         p: [
-          "Net teklif için ölçü, sıfır veya ikinci el tercihi (ikinci elde sınıf), yaklaşık adet, teslim adresi ve ihracat kullanımı olup olmadığı yeterlidir. Güncel tabloya bakıp WhatsApp veya teklif formu üzerinden bilgi göndermeniz yeterlidir; stok durumuna göre net fiyat ve teslim planı iletilir.",
+          "Net teklif için ölçü, sıfır veya ikinci el tercihi (ikinci elde sınıf), yaklaşık adet, teslim adresi ve ihracat kullanımı olup olmadığı yeterlidir. WhatsApp veya teklif formu üzerinden bilgi göndermeniz yeterlidir; stok durumuna göre net fiyat ve teslim planı iletilir.",
         ],
         links: [["Teklif al", "/teklif-al/"], ["Palet seçici", "/araclar/palet-secici/"]],
       },
     ],
     faq: [
-      { q: "İkinci el palet sıfırdan ne kadar ucuz?", a: "Fark ölçüye, sınıfa ve adede göre değişir; kesin oran söylemek yerine güncel fiyat tablosundaki satırları karşılaştırmanızı öneririz. Tabloda aynı ölçünün sıfır ve ikinci el fiyatı yan yana görülebilir." },
+      { q: "İkinci el palet sıfırdan ne kadar ucuz?", a: "Fark ölçüye, sınıfa ve adede göre değişir; kesin oran söylemek yerine aynı ölçünün sıfır ve ikinci el fiyatını WhatsApp'tan birlikte istemenizi öneririz." },
       { q: "İkinci el palet ihracatta kullanılabilir mi?", a: "Kullanılabilmesi için ISPM-15 uyumlu ve HT damgalı olması, ayrıca varış ülkesi ve alıcı şartlarına uygun görünümde olması gerekir. Emin değilseniz sıfır ihracat paleti daha güvenli bir tercihtir." },
       { q: "İkinci el paletin kalitesini nasıl anlarım?", a: "Blok ve kızakların bütünlüğüne, kırık veya çatlak tahtalara, çürük, küf ve kokuya, dışarı taşan çivilere bakın. Sınıf bilgisini satıcıdan yazılı isteyin." },
       { q: "Karışık sipariş verebilir miyim?", a: "Evet. Sıfır ve ikinci el paletleri aynı teklifte isteyebilirsiniz; ölçü ve adetleri belirtmeniz yeterlidir." },
@@ -209,7 +209,7 @@ export const guidesC: Guide[] = [
         h: "Aynı görünen iki palet neden farklı fiyatlanır?",
         p: [
           "Piyasada iki teklif alıp farklı fiyatlarla karşılaşmak olağandır. Bunun nedeni çoğu zaman firmaların keyfî davranması değil, paletlerin aynı olmamasıdır. Aynı 80x120 ölçüsündeki iki palet; tahta kalınlığı, kereste kalitesi, bloğun yapısı, sınıfı ve ısıl işlem durumu bakımından birbirinden çok farklı olabilir.",
-          "Bu yazıda fiyatı belirleyen unsurları sırayla ele alıyoruz. Güncel rakamlar için sayfa sonundaki fiyat tablolarına bakabilirsiniz; burada rakam değil mantık anlatılır.",
+          "Bu yazıda fiyatı belirleyen unsurları sırayla ele alıyoruz. Güncel fiyat için WhatsApp'tan yazabilirsiniz; burada rakam değil mantık anlatılır.",
         ],
       },
       {
@@ -254,7 +254,7 @@ export const guidesC: Guide[] = [
       {
         h: "Adet, düzenli alım ve teslimat",
         p: [
-          "Fiyat tablolarında adetler kademelere ayrılır: küçük, orta ve büyük sipariş. Adet arttıkça birim fiyat düşer; düzenli ve planlı alımlarda ayrıca teklif hazırlanabilir. Teslimatta ise depodan kendi aracınızla alım ile adrese sevkiyat arasında fark vardır. Nakliye, adrese, adede ve araç planına göre teklifte ayrıca bildirilir.",
+          "Fiyat; küçük, orta ve büyük sipariş adedine göre değişir. Adet arttıkça birim fiyat düşer; düzenli ve planlı alımlarda ayrıca teklif hazırlanabilir. Teslimatta ise depodan kendi aracınızla alım ile adrese sevkiyat arasında fark vardır. Nakliye, adrese, adede ve araç planına göre teklifte ayrıca bildirilir.",
           "Hizmet alanımız Türkiye geneli olup depomuz Gebze'dedir; Kocaeli ve İstanbul'a teslimat en hızlı yapılan bölgelerdir.",
         ],
         links: [["Toptan palet", "/hizmetler/toptan-palet/"], ["Palet fiyatları", "/palet-fiyatlari/"]],
@@ -274,9 +274,9 @@ export const guidesC: Guide[] = [
     ],
     faq: [
       { q: "Palet fiyatları neden sürekli değişiyor?", a: "Ağırlıklı olarak kereste ve ham madde piyasasındaki değişim, mevsim ve talep yoğunluğu fiyata yansır. Bu yüzden büyük siparişte güncel teklif almak gerekir." },
-      { q: "Fiyatlara nakliye dahil mi?", a: "Fiyat tabloları palet fiyatını gösterir. Nakliye, adrese, adede ve araç planına göre teklifte ayrıca bildirilir." },
+      { q: "Fiyatlara nakliye dahil mi?", a: "Palet fiyatı ile nakliye ayrı hesaplanır. Nakliye, adrese, adede ve araç planına göre teklifte ayrıca bildirilir." },
       { q: "Toplu alımda indirim alabilir miyim?", a: "Evet. Birim fiyat adet kademesine göre düşer; çok büyük veya düzenli alımlar için ayrıca teklif hazırlanır." },
-      { q: "Özel ölçülü paletin fiyatı neden tabloda yok?", a: "Çünkü ölçü, yük ve adede göre ayrı hesaplanır. Ölçü ve yük bilgisini paylaştığınızda teklif verilir." },
+      { q: "Özel ölçülü paletin fiyatı neden hazır değil?", a: "Çünkü ölçü, yük ve adede göre ayrı hesaplanır. Ölçü ve yük bilgisini paylaştığınızda teklif verilir." },
       { q: "En düşük fiyatlı teklifi seçmek doğru mu?", a: "Teklifler aynı ölçü, sınıf ve özelliklerde ise doğrudur. Sınıf veya tahta kalınlığı farklıysa düşük fiyat çoğu zaman düşük dayanıma işaret eder." },
     ],
   },

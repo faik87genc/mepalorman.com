@@ -137,7 +137,7 @@ export default function Wizard() {
                 </p>
               </>
             ) : (
-              <p style={{ margin: ".5rem 0 0" }}>Güncel fiyatı aynı gün veriyoruz; bilgilerinizi bırakın veya WhatsApp&apos;tan yazın, size dönelim.</p>
+              <p style={{ margin: ".5rem 0 0" }}>Güncel fiyatı en kısa sürede veriyoruz; bilgilerinizi bırakın veya WhatsApp&apos;tan yazın, size dönelim.</p>
             )}
           </div>
           <div className="form-row">

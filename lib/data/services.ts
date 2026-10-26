@@ -85,7 +85,7 @@ export const services: Service[] = [
     description: "İkinci el ve sıfır palet alım satımı: Euro ölçülü, 100x120 ve özel ölçülü paletleri Gebze deposundan alın, fazla paletinizi bize satın.",
     h1: "Palet Alım Satım — Alın, Satın, Değiştirin",
     answer:
-      "Hem palet satın alabilir hem de elinizdeki fazla paletleri bize satabilirsiniz. Sıfır ve ikinci el ahşap palet, plastik palet ve ikinci el EPAL ölçülü palet Gebze deposundan temin edilir. Güncel fiyatlar için fiyat tablosuna bakın veya teklif alın.",
+      "Hem palet satın alabilir hem de elinizdeki fazla paletleri bize satabilirsiniz. Sıfır ve ikinci el ahşap palet, plastik palet ve ikinci el EPAL ölçülü palet Gebze deposundan temin edilir. Güncel fiyat için WhatsApp'tan teklif alın.",
     keyword: "palet alım satım",
     art: "service",
     blurb: "Sıfır ve ikinci el palet temini; fazla paletlerinizin alımı tek adreste.",
@@ -139,7 +139,7 @@ export const services: Service[] = [
           "Stok durumuna göre fiyat ve teslim planı bildirilir.",
           "Onaydan sonra paletler hazırlanır; depodan teslim alabilir veya araçla sevk isteyebilirsiniz.",
         ],
-        p: ["Teslimat stok ve araç programına göre çoğunlukla ertesi iş günü yapılır; net süre teklifte bildirilir."],
+        p: ["Teslimat stok ve araç programına göre yapılır; net süre teklifte bildirilir."],
         links: [["Teklif al", "/teklif-al/"]],
       },
     ],
@@ -147,7 +147,7 @@ export const services: Service[] = [
       { q: "Hem alım hem satım yapıyor musunuz?", a: "Evet. Sıfır ve ikinci el palet satışı yapıyoruz, sağlam ve onarılabilir paletlerinizi de değerlendirme sonrası satın alıyoruz." },
       { q: "İkinci el paletler hangi sınıflarda?", a: "Euro ölçülü ikinci el paletler 1. sınıf (sağlam, onarılmış) ve 2. sınıf (yerli kullanım) olarak ayrılır. Sınıf farkları palet kalite sınıfları rehberinde açıklanmıştır." },
       { q: "EPAL paletleri satıyor musunuz?", a: "İkinci el EPAL palet alım-satımı yapıyoruz. EPAL tescilli bir markadır; yeni palet tarafında EPAL ölçülerinde Euro palet (80x120) tedarik edilir." },
-      { q: "Fiyatlar neye göre değişiyor?", a: "Palet tipi, sınıfı, ölçüsü ve sipariş adedi fiyatı belirler. Güncel fiyat tablosu sitede yayındadır; büyük adetlerde teklif alınması önerilir." },
+      { q: "Fiyatlar neye göre değişiyor?", a: "Palet tipi, sınıfı, ölçüsü ve sipariş adedi fiyatı belirler. Güncel fiyatı WhatsApp'tan alabilirsiniz; büyük adetlerde teklif alınması önerilir." },
       { q: "Paletleri kapıma getiriyor musunuz?", a: "Evet, Türkiye genelinde araçla sevkiyat yapılır (Kocaeli ve İstanbul’da en hızlı). İsterseniz Gebze deposundan kendiniz de alabilirsiniz." },
     ],
   },
@@ -246,7 +246,7 @@ export const services: Service[] = [
       },
       {
         h: "Adet kademeleri",
-        p: ["Fiyat tablolarımız üç kademe üzerinden çalışır. Her kademede birim fiyat, adet arttıkça düşer. Güncel rakamlar için fiyat tablosuna bakın."],
+        p: ["Birim fiyat sipariş adedine göre belirlenir ve adet arttıkça düşer. Güncel fiyat için WhatsApp'tan yazın."],
         table: {
           head: ["Kademe", "Kimler için", "Not"],
           rows: [
@@ -265,7 +265,7 @@ export const services: Service[] = [
           "Tek seferlik veya parça parça sevkiyat seçilir. Büyük işlerde tır dolusu yükleme planlanır.",
           "Araçla teslim yapılır; depodan teslim almak da mümkündür.",
         ],
-        p: ["Teslimat, stok ve araç programına göre çoğunlukla ertesi iş günü yapılır; büyük hacimlerde süre üretim planına bağlıdır ve net süre teklifte bildirilir."],
+        p: ["Teslimat, stok ve araç programına göre yapılır; büyük hacimlerde süre üretim planına bağlıdır ve net süre teklifte bildirilir."],
         links: [["1 tırda kaç palet var?", "/rehber/1-tir-kac-palet-alir/"]],
       },
       {
@@ -288,7 +288,7 @@ export const services: Service[] = [
       },
     ],
     faq: [
-      { q: "Toptan fiyat hangi adetten başlıyor?", a: "Fiyatlar üç kademeye göre yayımlanır: 1–50, 51–200 ve 201 adet üzeri. Daha büyük veya düzenli ihtiyaçlarda özel teklif hazırlanır." },
+      { q: "Toptan fiyat hangi adetten başlıyor?", a: "Fiyat sipariş adedine göre belirlenir; küçük, orta ve büyük partiler için ayrı hesap yapılır. Daha büyük veya düzenli ihtiyaçlarda özel teklif hazırlanır." },
       { q: "Aylık düzenli tedarik yapıyor musunuz?", a: "Evet. İhtiyacınızı ve sıklığı bildirdiğinizde stok ve araç planına göre düzenli sevkiyat takvimi oluşturulur." },
       { q: "Kurumsal fatura kesiyor musunuz?", a: "Evet, sipariş için yasal düzenlemelere uygun fatura düzenlenir. Cari ve vade gibi koşullar görüşülerek belirlenir." },
       { q: "Hangi paletlerde toptan alım yapılabiliyor?", a: "Euro ölçülü, 100x120 ve CP paletler, ikinci el paletler, ISPM-15 uyumlu ihracat paleti ve plastik paletlerde toptan teklif alabilirsiniz." },
@@ -444,7 +444,7 @@ export const services: Service[] = [
         h: "Türkiye geneli sevkiyat",
         p: [
           "Depomuz Gebze'dedir. Kocaeli ve İstanbul'a planlama en hızlıdır; diğer illere sevkiyat adet, mesafe ve araç programına göre ayrı planlanır. Süre vaadi vermiyoruz; stok ve araç durumuna göre net zaman teklifte yazılır.",
-          "Fiyat tablosundaki rakamlar palet bedelidir. Nakliyenin dahil olup olmadığı teklifte açıkça belirtilir.",
+          "Teklifteki rakam palet bedelidir. Nakliyenin dahil olup olmadığı teklifte açıkça belirtilir.",
         ],
         links: [["Türkiye geneli palet sevkiyatı", "/turkiye-geneli-palet-sevkiyati/"], ["Toptan palet", "/hizmetler/toptan-palet/"]],
       },
@@ -461,7 +461,7 @@ export const services: Service[] = [
     ],
     faq: [
       { q: "Türkiye'nin her iline sevkiyat yapıyor musunuz?", a: "Depomuz Gebze'dedir; Türkiye genelindeki tesislere adet ve mesafeye göre planlı sevkiyat yapılır. Kocaeli ve İstanbul'da en hızlıdır, diğer illerde süre ve bedel teklifte bildirilir." },
-      { q: "Fiyatlara nakliye dahil mi?", a: "Fiyat tablosundaki rakamlar palet bedelidir. Nakliyenin dahil olup olmadığı teklifte ayrıca ve açıkça yazılır." },
+      { q: "Fiyatlara nakliye dahil mi?", a: "Teklifteki rakam palet bedelidir. Nakliyenin dahil olup olmadığı teklifte ayrıca ve açıkça yazılır." },
       { q: "Teslimat ne kadar sürer?", a: "Stok ve araç programına göre çoğunlukla kısa sürede planlanır; ancak mesafe ve adet süreyi değiştirir. Net süre teklifte bildirilir." },
       { q: "Az sayıda palet için de nakliye yapılıyor mu?", a: "Evet; adet azaldıkça birim nakliye maliyeti yükselebilir. Küçük adetler için stok ve araç durumunu WhatsApp'tan sorabilirsiniz." },
       { q: "Teslimat adresinde forklift yoksa ne olur?", a: "Boşaltma yönteminin siparişte önceden netleştirilmesi gerekir. Ekipman yoksa araç tipi ve elle boşaltma planı buna göre belirlenir." },

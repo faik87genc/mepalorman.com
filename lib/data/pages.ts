@@ -64,7 +64,7 @@ export const staticPages: StaticPage[] = [
         steps: [
           "İhtiyacınızı bize iletirsiniz: ölçü, adet, yeni ya da ikinci el tercihi ve teslimat adresi. Telefon, WhatsApp veya teklif sihirbazı yeterlidir.",
           "Güncel stok ve fiyat durumuna göre size net bir teklif hazırlarız. Fiyatı etkileyen unsurlar ölçü, kalite sınıfı, adet ve teslimat noktasıdır.",
-          "Teklifi onaylarsanız sevkiyat planlanır. Stok ve araç programına göre teslimat çoğunlukla ertesi iş günü yapılır; net süre teklifte bildirilir.",
+          "Teklifi onaylarsanız sevkiyat planlanır. Stok ve araç programına göre teslimat yapılır; net süre teklifte bildirilir.",
           "Teslimat sonrası ihtiyaç duyarsanız hasarlı ve hurda paletlerinizi de geri alırız.",
         ],
         links: [["Teklif al", "/teklif-al/"]],
@@ -72,7 +72,7 @@ export const staticPages: StaticPage[] = [
       {
         h: "Depo ve ofis",
         p: [
-          "Palet stoklarımız Gebze'deki depomuzdan sevk edilir. Gebze OSB, Plastikçiler OSB, Balçık, Dilovası OSB, Şekerpınar ve Tuzla OSB bölgesine depodan yaklaşık 5 ile 25 dakika mesafedeyiz. Anadolu yakasındaki işletmelere Kadıköy ofisimizden destek veriyoruz.",
+          "Palet stoklarımız Gebze'deki depomuzdan sevk edilir. Gebze OSB, Plastikçiler OSB, Balçık, Dilovası OSB, Şekerpınar ve Tuzla OSB bölgesine depoya yakın mesafedeyiz. Anadolu yakasındaki işletmelere Kadıköy ofisimizden destek veriyoruz.",
         ],
         list: [
           "Depo / sevkiyat noktası: Pelitli Mah., Maden Sk. No:34, 41400 Gebze / Kocaeli",
@@ -85,9 +85,9 @@ export const staticPages: StaticPage[] = [
       {
         h: "Neden güvenilir bir tedarikçiyiz?",
         list: [
-          "Şeffaf fiyat: güncel fiyat tablosu sitede yayındadır, teklifte sürpriz kalem yoktur.",
+          "Şeffaf fiyat: teklifte nakliye ve KDV ayrı yazılır, sürpriz kalem yoktur.",
           "ISPM-15 uyumu: ihracat paletlerinde uluslararası ahşap ambalaj standardına uygun, HT damgalı ürün temin ederiz.",
-          "Gerçek depo: stoklu çalışırız; paleti görmeden karar vermek zorunda kalmazsınız, depomuzu ziyaret edebilirsiniz.",
+          "Gerçek depo: paleti görmeden karar vermek zorunda kalmazsınız, depomuzu ziyaret edebilirsiniz.",
           "Marka dürüstlüğü: EPAL ve Turpal tescilli markalardır; bu markalarla ilgili yalnızca doğru ifadeleri kullanırız.",
         ],
         links: [
@@ -129,13 +129,13 @@ export const staticPages: StaticPage[] = [
       "Palet sektöründe ISPM-15, EPAL, Turpal ve ISO belgelerinin ne anlama geldiği. Belge kopyaları talep üzerine paylaşılır.",
     h1: "Belgeler ve Standartlar",
     answer:
-      "Bu sayfa, palet alırken karşınıza çıkan ISPM-15, EPAL, Turpal ve ISO gibi belge ve standartların ne anlama geldiğini anlatır. Belge kopyalarımızı talep üzerine paylaşırız; sahip olduğumuz belgeler hazırlandıkça bu sayfaya eklenecektir.",
+      "Bu sayfa, palet alırken karşınıza çıkan ISPM-15, EPAL, Turpal ve ISO gibi belge ve standartların ne anlama geldiğini anlatır. Belge kopyalarımızı talep üzerine paylaşırız.",
     sections: [
       {
         h: "Belge kopyaları talep üzerine paylaşılır",
         p: [
           "Satın alma ya da tedarikçi onay süreçlerinizde belge isterseniz telefon, WhatsApp veya e-posta ile bize ulaşın. İlgili belgeleri ve ürün için gerekli bilgileri paylaşırız.",
-          "Sahip olunan belgeler hazırlandıkça bu sayfaya eklenecektir.",
+          "Hangi belgeye ihtiyacınız olduğunu yazmanız yeterlidir.",
         ],
         links: [["İletişim", "/iletisim/"]],
       },
@@ -259,7 +259,7 @@ export const staticPages: StaticPage[] = [
       {
         h: "Müşteri yorumları",
         p: [
-          "Google işletme profilimizdeki müşteri yorumları, kayıtlar hazır olduğunda bu sayfaya eklenecektir.",
+          "Müşteri görüşlerini sitede yayımlamıyoruz; tedarikçi değerlendirmesi için bize yazabilirsiniz.",
         ],
       },
     ],
@@ -471,7 +471,7 @@ export const staticPages: StaticPage[] = [
         h: "Sipariş süreci",
         steps: [
           "Ürün, ölçü, adet ve teslimat ilini WhatsApp’tan, telefonla veya teklif sihirbazıyla bildirin.",
-          "Aynı gün güncel fiyat, stok durumu ve nakliye bilgisiyle dönelim.",
+          "Güncel fiyat, stok durumu ve nakliye bilgisiyle dönelim.",
           "Onaydan sonra paletler hazırlanır; araç programı belirlenir.",
           "Sevkiyat yapılır; teslimatta adet ve kalite kontrolü birlikte yapılır.",
         ],

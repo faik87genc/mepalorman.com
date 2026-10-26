@@ -19,7 +19,7 @@ export default function ContactPage() {
         <div className="wrap">
           <p className="eyebrow">İletişim</p>
           <h1>Bize ulaşın.</h1>
-          <p className="lead">Ürün, adet ve teslimat ilinizi yazın; mesai saatlerinde çoğunlukla aynı gün net fiyatla dönüyoruz.</p>
+          <p className="lead">Ürün, adet ve teslimat ilinizi yazın; mesai saatlerinde en kısa sürede net fiyatla dönüyoruz.</p>
         </div>
       </header>
 
@@ -79,7 +79,7 @@ export default function ContactPage() {
         <section className="contact-form" aria-labelledby="teklif-formu-h">
           <p className="eyebrow">Teklif formu</p>
           <h2 id="teklif-formu-h">Fiyat teklifi isteyin</h2>
-          <p className="contact-form-sub">Formu doldurun, mesai saatlerinde aynı gün; mesai dışında ertesi sabah 08:30&apos;da dönüyoruz.</p>
+          <p className="contact-form-sub">Formu doldurun, mesai saatlerinde en kısa sürede; mesai dışında ertesi sabah 08:30&apos;da dönüyoruz.</p>
           <MiniQuote />
         </section>
       </div>

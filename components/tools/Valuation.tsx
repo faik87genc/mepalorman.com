@@ -94,7 +94,7 @@ export default function Valuation() {
       )}
       {unavailable && (
         <div className="result">
-          <p>Otomatik ön değerleme şu anda devre dışı. Fotoğrafı WhatsApp’tan gönderin, aynı gün size dönelim.</p>
+          <p>Otomatik ön değerleme şu anda devre dışı. Fotoğrafı WhatsApp’tan gönderin, en kısa sürede size dönelim.</p>
         </div>
       )}
       {(result || unavailable) && (

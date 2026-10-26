@@ -38,7 +38,7 @@ function fallback(q: string): string {
   if (/ikinci|2\.? ?el|kullanılmış/.test(t)) return pick("ikinci-el-palet", "Yurt içi tek yönlü sevkiyatta ikinci el sağlam palet maliyeti düşürür.");
   if (/hurda|sat(mak|ar)|alıyor/.test(t)) return "Hurda ve ikinci el palet alıyoruz. Fotoğraf göndererek ön değerleme alabilirsiniz: /araclar/fotograftan-palet-degerleme/";
   if (/ağır|1000|1\.000|ton|makine/.test(t)) return pick("100x120-palet", "Ağır yüklerde daha geniş ve güçlü yapı gerekir; 100×120 veya özel ölçülü palet düşünün.");
-  if (/fiyat|kaç ?(tl|para)|ne kadar/.test(t)) return "Güncel fiyat için WhatsApp'tan ürün ve adedi yazın, aynı gün dönüş yapıyoruz.";
+  if (/fiyat|kaç ?(tl|para)|ne kadar/.test(t)) return "Güncel fiyat için WhatsApp'tan ürün ve adedi yazın, en kısa sürede dönüş yapıyoruz.";
   return pick("80x120-euro-palet", "Çoğu sektör için en yaygın seçim 80x120 Euro palettir; yük ve kullanım yerini yazarsanız daha doğru öneri verebilirim.");
 }
 

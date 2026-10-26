@@ -5,7 +5,7 @@ export const site = {
   short: "MEPAL",
   legalName: "MEPAL Orman Ürünleri Sanayi ve Ticaret Ltd. Şti.",
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mepalorman.com",
-  tagline: "Ahşap ve plastik palette bugün fiyat, yarın teslimat.",
+  tagline: "Ahşap ve plastik palette hızlı fiyat, Gebze depodan sevkiyat.",
   description:
     "Gebze deposundan Türkiye genelinde toplu palet tedariki ve sevkiyatı: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı. Güncel fiyat, hızlı teklif.",
   phone: "0536 866 83 07",
