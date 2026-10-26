@@ -17,7 +17,7 @@ export default function ProductsIndex() {
       <Breadcrumbs items={[["Ürünler", "/urunler/"]]} />
       <PageHero h1="Palet Çeşitleri ve Ürünler" answer="Euro palet, 100x120, CP, 145x145, plastik, ikinci el ve ISPM-15 ihracat paleti. Her ürün sayfasında ölçü, taşıma kapasitesi, adet kademeli fiyat ve teklif butonu bulunur." />
       <div className="wrap">
-        <CardGrid items={products.map((p) => ({ href: `/urunler/${p.slug}/`, title: p.name, blurb: p.blurb, art: p.art, foot: fromPriceLabel(p.slug) ?? "Ölçüye göre teklif" }))} />
+        <CardGrid items={products.map((p) => ({ href: `/urunler/${p.slug}/`, title: p.name, blurb: p.blurb, art: p.art, foot: fromPriceLabel(p.slug) ?? "WhatsApp'tan fiyat al" }))} />
       </div>
       <FinalCta message="Merhaba, palet çeşitleri için fiyat almak istiyorum. Ürün: … Adet: … İl: …" />
     </>

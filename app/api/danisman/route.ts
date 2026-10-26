@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { callClaude, clean, clientIp, originOk, rateLimited } from "@/lib/api";
-import { PRICE_ROWS, PRICES_UPDATED_LABEL, tl } from "@/lib/data/prices";
+import { PRICE_ROWS } from "@/lib/data/prices";
 import { products } from "@/lib/data/products";
 import { site, waLink } from "@/lib/site";
 
@@ -10,11 +10,11 @@ const catalog = () =>
   products.map((p) => `- ${p.name} (/urunler/${p.slug}/): ${p.blurb}`).join("\n");
 
 const priceTable = () =>
-  PRICE_ROWS.map((r) => `- ${r.name} [${r.spec}]: ${r.tiers ? r.tiers.map((v) => tl(v)).join(" / ") + " (1–50 / 51–200 / 201+ adet, KDV hariç)" : "teklif"}`).join("\n");
+  PRICE_ROWS.map((r) => `- ${r.name} [${r.spec}]`).join("\n");
 
 const system = () => `Sen ${site.name} (Gebze, Kocaeli) için çalışan Palet Danışmanı'sın. Yalnızca palet seçimi, ölçü, kapasite, ISPM-15, ihracat, ikinci el/hurda palet ve teklif süreci hakkında Türkçe, kısa (en fazla 6 cümle) ve net cevap ver.
 KURALLAR:
-- Fiyatı SADECE aşağıdaki listeden ver (güncelleme: ${PRICES_UPDATED_LABEL}); listede yoksa "teklif gerekir" de. Asla fiyat uydurma. Fiyatlar KDV hariç, yaklaşık ve nakliye hariçtir.
+- Fiyat/rakam VERME ve uydurma. Fiyat sorulursa ürünü ve adedi sor, güncel fiyat için WhatsApp'tan yazmasını söyle. Aşağıdaki liste yalnızca ürün çeşitleridir.
 - Teslim süresi için kesin söz verme: "stok ve araç programına göre, net süre teklifte" de.
 - EPAL/Turpal lisansı olduğunu iddia etme; "EPAL ölçülerinde" de.
 - Konu dışı soruları kibarca reddet. Kişisel veri (TC, kart, şifre) isteme; kullanıcı yazarsa uyar.
@@ -38,7 +38,7 @@ function fallback(q: string): string {
   if (/ikinci|2\.? ?el|kullanılmış/.test(t)) return pick("ikinci-el-palet", "Yurt içi tek yönlü sevkiyatta ikinci el sağlam palet maliyeti düşürür.");
   if (/hurda|sat(mak|ar)|alıyor/.test(t)) return "Hurda ve ikinci el palet alıyoruz. Fotoğraf göndererek ön değerleme alabilirsiniz: /araclar/fotograftan-palet-degerleme/";
   if (/ağır|1000|1\.000|ton|makine/.test(t)) return pick("100x120-palet", "Ağır yüklerde daha geniş ve güçlü yapı gerekir; 100×120 veya özel ölçülü palet düşünün.");
-  if (/fiyat|kaç ?(tl|para)|ne kadar/.test(t)) return "Güncel adet kademeli fiyatlar için /palet-fiyatlari/ sayfasına bakın veya WhatsApp'tan ürün ve adedi yazın.";
+  if (/fiyat|kaç ?(tl|para)|ne kadar/.test(t)) return "Güncel fiyat için WhatsApp'tan ürün ve adedi yazın, aynı gün dönüş yapıyoruz.";
   return pick("80x120-euro-palet", "Çoğu sektör için en yaygın seçim 80x120 Euro palettir; yük ve kullanım yerini yazarsanız daha doğru öneri verebilirim.");
 }
 

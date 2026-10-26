@@ -1,15 +1,16 @@
-import { PRICE_ROWS, tl } from "@/lib/data/prices";
+import { PRICE_ROWS, tl, type PriceRow } from "@/lib/data/prices";
 
-/** "690 ₺'den" style label: lowest tier price among rows linked to a product. */
+const tiersOf = (r: PriceRow): number[] => r.tiers ?? [];
+
+/** "690 ₺'den" style label: lowest tier price among rows linked to a product. Undefined while prices are not published. */
 export function fromPriceLabel(productSlug: string): string | undefined {
-  const rows = PRICE_ROWS.filter((r) => r.product === productSlug && r.tiers);
-  if (!rows.length) return undefined;
-  const min = Math.min(...rows.map((r) => Math.min(...r.tiers!)));
-  return `${tl(min)}’den başlayan fiyatlar · KDV hariç`;
+  const vals = PRICE_ROWS.filter((r) => r.product === productSlug).flatMap(tiersOf);
+  if (!vals.length) return undefined;
+  return `${tl(Math.min(...vals))}’den başlayan fiyatlar · KDV hariç`;
 }
 
 export function priceRange(rowKeys: string[]): { low: number; high: number } | undefined {
-  const vals = PRICE_ROWS.filter((r) => rowKeys.includes(r.key) && r.tiers).flatMap((r) => r.tiers!);
+  const vals = PRICE_ROWS.filter((r) => rowKeys.includes(r.key)).flatMap(tiersOf);
   if (!vals.length) return undefined;
   return { low: Math.min(...vals), high: Math.max(...vals) };
 }

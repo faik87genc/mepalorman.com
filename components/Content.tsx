@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { FAQ, Section, Table } from "@/lib/types";
-import { PRICES_UPDATED_LABEL, PRICE_ROWS, TIERS, VAT_NOTE, rowByKey, tl } from "@/lib/data/prices";
+import { PRICE_ROWS, rowByKey } from "@/lib/data/prices";
 import { waLink, telHref, site } from "@/lib/site";
 import { breadcrumbLd, faqLd } from "@/lib/seo";
 import { slugify } from "@/lib/format";
@@ -157,20 +157,13 @@ export function PriceTable({ rowKeys, compact = false }: { rowKeys?: string[]; c
     <div className="price-block">
       <div className="table-wrap">
         <table className="price-table">
-          <caption>
-            Son güncelleme: {PRICES_UPDATED_LABEL} · {VAT_NOTE}
-          </caption>
+          <caption>Fiyatlar piyasaya göre değiştiği için güncel fiyatı WhatsApp&apos;tan veriyoruz.</caption>
           <thead>
             <tr>
               <th scope="col">Ürün</th>
               {!compact && <th scope="col">Durum</th>}
-              {TIERS.map((t) => (
-                <th key={t} scope="col" className="num">
-                  {t}
-                </th>
-              ))}
-              <th scope="col">
-                <span className="sr">Teklif</span>
+              <th scope="col" className="num">
+                Fiyat
               </th>
             </tr>
           </thead>
@@ -182,20 +175,9 @@ export function PriceTable({ rowKeys, compact = false }: { rowKeys?: string[]; c
                   <small>{r.spec}</small>
                 </th>
                 {!compact && <td>{r.condition}</td>}
-                {r.tiers ? (
-                  r.tiers.map((v, i) => (
-                    <td key={i} className="num">
-                      {tl(v)}
-                    </td>
-                  ))
-                ) : (
-                  <td className="num quote" colSpan={3}>
-                    Ölçü ve adede göre teklif
-                  </td>
-                )}
-                <td>
+                <td className="num">
                   <a className="btn btn-sm btn-wa" href={waLink(`Merhaba, ${r.name} (${r.spec}) için fiyat almak istiyorum. Adet: … İl: …`)} data-evt="whatsapp_click" data-src="price-table" rel="noopener" target="_blank">
-                    Fiyat Al
+                    WhatsApp&apos;tan fiyat al
                   </a>
                 </td>
               </tr>
@@ -203,7 +185,7 @@ export function PriceTable({ rowKeys, compact = false }: { rowKeys?: string[]; c
           </tbody>
         </table>
       </div>
-      <p className="note">Adet kademeleri aynı sevkiyattaki toplam adede göredir. Nakliye ve KDV ayrıca hesaplanır; net fiyat için teklif alın.</p>
+      <p className="note">Ürün, adet ve teslimat ilini yazın; aynı gün net fiyatla dönelim. Büyük adetlerde birim fiyat düşer. Nakliye ve KDV ayrıca hesaplanır.</p>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function Page() {
     <ContentLayout
       crumbs={[["Teklif al", "/teklif-al/"]]}
       h1="Palet Teklif Sihirbazı"
-      answer="Ürünü, adedi ve teslimat yerini seçin; güncel fiyat aralığını anında görün ve tek tıkla WhatsApp'tan veya formla teklif isteyin. Yaklaşık 30 saniye sürer."
+      answer="Ürünü, adedi ve teslimat yerini seçin; tek tıkla WhatsApp'tan veya formla güncel fiyat isteyin. Yaklaşık 30 saniye sürer."
       art="truck"
       message="Merhaba, palet için teklif almak istiyorum."
       side={<SideCard title="İlgili sayfalar" links={[]} />}

@@ -8,7 +8,7 @@ import type { Section } from "@/lib/types";
 const tierSection = (extra: string): Section => ({
   h: "Toptan alım kademeleri",
   p: [
-    "Fiyat tablosu üç adet kademesi üzerinden okunur: 1–50, 51–200 ve 201 adet üzeri. Adet arttıkça birim fiyat düşer. " + extra,
+    "Net birim fiyat ürüne, sipariş adedine ve teslim noktasına göre belirlenir; adet arttıkça birim fiyat düşer. " + extra,
   ],
   table: {
     head: ["Kademe", "Tipik kullanım", "Not"],
@@ -36,10 +36,10 @@ export const pricePages: PricePage[] = [
   {
     slug: "palet-fiyatlari",
     title: "Palet Fiyatları | Güncel Liste | MEPAL Gebze",
-    description: "Güncel palet fiyatları: Euro, 100x120, CP, ISPM-15 ihracat ve plastik palet. Adet kademeli liste, Gebze depodan teslim. Teklif için WhatsApp.",
+    description: "Güncel palet fiyatları: Euro, 100x120, CP, ISPM-15 ihracat ve plastik palet. WhatsApp'tan güncel fiyat, Gebze depodan teslim. Teklif için WhatsApp.",
     h1: "Palet Fiyatları — Güncel Liste",
     answer:
-      "Aşağıdaki tabloda sıfır ve ikinci el ahşap palet ile plastik palet fiyatları adet kademesine göre listelenir. Fiyatlar KDV hariç ve adet başınadır; büyük adetler ve özel ölçüler için teklif alın.",
+      "Aşağıdaki tabloda sıfır ve ikinci el ahşap palet ile plastik palet çeşitleri listelenir. Fiyatlar kereste ve ham madde piyasasına göre değiştiği için güncel fiyatı WhatsApp'tan hızla veriyoruz; büyük adetler ve özel ölçüler için de aynı yolla teklif alın.",
     keyword: "palet fiyatları",
     art: "big",
     rowKeys: [
@@ -61,7 +61,7 @@ export const pricePages: PricePage[] = [
           "Teslimat: depodan teslim mi, adrese sevkiyat mı",
         ],
       },
-      tierSection("Tablodaki her satır için üç kademenin fiyatı yan yana verilir."),
+      tierSection("Fiyat için ürünü ve adedi WhatsApp'tan yazmanız yeterli."),
       {
         h: "Sıfır ve ikinci el palet karşılaştırması",
         table: {
@@ -79,8 +79,8 @@ export const pricePages: PricePage[] = [
       quoteSection("Palet fiyat teklifi"),
     ],
     faq: [
-      { q: "Palet fiyatları ne sıklıkla güncelleniyor?", a: "Tablodaki fiyatlar tarih ile birlikte yayımlanır. Kereste ve ham madde piyasasına göre değişebildiği için büyük siparişlerde güncel teklif alınması gerekir." },
-      { q: "Fiyatlara KDV dahil mi?", a: "Hayır. Tablodaki fiyatlar KDV hariç, TL cinsinden ve adet başınadır." },
+      { q: "Palet fiyatları ne sıklıkla güncelleniyor?", a: "Kereste ve ham madde piyasasına göre değişebildiği için büyük siparişlerde güncel teklif alınması gerekir." },
+      { q: "Fiyatlara KDV dahil mi?", a: "Fiyatlar KDV hariç verilir; KDV ve nakliye teklifte ayrıca belirtilir." },
       { q: "En ucuz palet hangisi?", a: "Genel olarak ikinci el ahşap palet en düşük maliyetli seçenektir. Ancak gıda, ihracat veya otomatik hat gibi hassas kullanımlarda sıfır veya uygun palet gerekir; sadece fiyata bakmak yanıltabilir." },
       { q: "Fiyatı tabloda olmayan palet için teklif alabilir miyim?", a: "Evet. Özel ölçülü paletler ve 145x145 gibi ölçüler tabloda “teklif alın” olarak yer alır, ölçü ve yüke göre hesaplanır." },
       { q: "Toplu alımda indirim var mı?", a: "Evet. Fiyat adet kademesine göre düşer; çok büyük veya düzenli alımlarda ayrıca teklif hazırlanır." },
@@ -92,10 +92,10 @@ export const pricePages: PricePage[] = [
   {
     slug: "ahsap-palet-fiyatlari",
     title: "Ahşap Palet Fiyatları | Sıfır ve İkinci El | MEPAL",
-    description: "Ahşap palet fiyatları: sıfır Euro, 100x120, CP, ISPM-15 ihracat ve özel ölçü. Adet kademeli güncel liste, Gebze depodan hızlı teslim.",
+    description: "Ahşap palet fiyatları: sıfır Euro, 100x120, CP, ISPM-15 ihracat ve özel ölçü. WhatsApp'tan güncel fiyat, Gebze depodan hızlı teslim.",
     h1: "Ahşap Palet Fiyatları — Sıfır ve İkinci El",
     answer:
-      "Ahşap palet fiyatı ölçüye, sınıfa ve adede göre değişir. Tabloda sıfır ve ikinci el ahşap paletler üç adet kademesiyle listelenir; fiyatlar KDV hariç, adet başınadır. Özel ölçüler için teklif alın.",
+      "Ahşap palet fiyatı ölçüye, sınıfa ve adede göre değişir. Tabloda sıfır ve ikinci el ahşap paletler listelenir; güncel fiyat için WhatsApp'tan yazın. Özel ölçüler için teklif alın.",
     keyword: "ahşap palet fiyatları",
     art: "wood",
     rowKeys: [
@@ -135,10 +135,10 @@ export const pricePages: PricePage[] = [
     ],
     faq: [
       { q: "Ahşap palet fiyatı neden değişiyor?", a: "Başlıca neden kereste maliyetidir. Ölçü, kalite, ısıl işlem ve sipariş adedi de birim fiyatı doğrudan etkiler." },
-      { q: "Ahşap palet fiyatlarına KDV dahil mi?", a: "Hayır. Tablo KDV hariç, adet başı TL fiyatını gösterir." },
+      { q: "Ahşap palet fiyatlarına KDV dahil mi?", a: "Fiyatlar KDV hariç verilir; KDV ve nakliye teklifte ayrıca belirtilir." },
       { q: "ISPM-15 damgalı palet neden daha pahalı?", a: "HT damgalı palet, ısıl işlem uygulanmış ve uluslararası kurala uygun işaretlenmiş ahşaptan yapılır. Bu ek süreç maliyete yansır. Biz ISPM-15 uyumlu, HT damgalı ihracat paleti temin ediyoruz." },
       { q: "Özel ölçülü ahşap palet fiyatı nasıl belirlenir?", a: "Ölçü, taşıyacağı yük ve adet bilindiğinde kereste ihtiyacı hesaplanıp teklif verilir. Bu nedenle tabloda “teklif alın” görünür." },
-      { q: "100x120 ahşap palet fiyatı Euro paletten farklı mı?", a: "Evet. Daha büyük taban daha fazla kereste kullanır ve farklı bir fiyat grubunda yer alır. Güncel farkı tabloda görebilirsiniz." },
+      { q: "100x120 ahşap palet fiyatı Euro paletten farklı mı?", a: "Evet. Daha büyük taban daha fazla kereste kullanır ve farklı bir fiyat grubunda yer alır. Güncel farkı WhatsApp'tan öğrenebilirsiniz." },
     ],
     related: ["palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "sifir-ahsap-palet", "100x120-palet", "cp-palet", "ozel-olcu-palet"],
     guides: ["palet-cesitleri-ve-secimi", "palet-kalite-siniflari", "100x120-ile-80x120-palet-farki", "cp-paletleri-olcu-tablosu"],
@@ -146,10 +146,10 @@ export const pricePages: PricePage[] = [
   {
     slug: "ikinci-el-palet-fiyatlari",
     title: "İkinci El Palet Fiyatları | 1. ve 2. Sınıf | MEPAL",
-    description: "İkinci el palet fiyatları: Euro ölçülü 1. ve 2. sınıf, 100x120 ikinci el. Adet kademeli güncel liste, Gebze depodan teslim, WhatsApp'tan teklif.",
+    description: "İkinci el palet fiyatları: Euro ölçülü 1. ve 2. sınıf, 100x120 ikinci el. WhatsApp'tan güncel fiyat, Gebze depodan teslim, WhatsApp'tan teklif.",
     h1: "İkinci El Palet Fiyatları — 1. ve 2. Sınıf",
     answer:
-      "İkinci el palet fiyatı, paletin sınıfına ve adedine göre belirlenir. Tabloda Euro ölçülü 1. ve 2. sınıf ile 100x120 ikinci el paletler adet kademesiyle listelenir; sıfır palet karşılaştırma için eklenmiştir.",
+      "İkinci el palet fiyatı, paletin sınıfına ve adedine göre belirlenir. Tabloda Euro ölçülü 1. ve 2. sınıf ile 100x120 ikinci el paletler listelenir; sıfır palet karşılaştırma için eklenmiştir.",
     keyword: "ikinci el palet fiyatları",
     art: "used",
     rowKeys: ["euro-ikinci-el-1", "euro-ikinci-el-2", "ahsap-ikinci-el-100x120", "euro-sifir"],
@@ -192,7 +192,7 @@ export const pricePages: PricePage[] = [
       { q: "İkinci el palet gıda sevkiyatında kullanılır mı?", a: "Genellikle önerilmez. Temiz, kokusuz ve standart yapı gerektiğinde sıfır palet daha güvenlidir." },
       { q: "İkinci el EPAL palet var mı?", a: "İkinci el EPAL palet alım-satımı yapıyoruz. Stok durumu ve sınıf için teklif isteyin." },
       { q: "İkinci el palet ihracatta kullanılabilir mi?", a: "İhracatta ISPM-15 uyumlu, HT damgalı palet gerekir. İkinci el palette damganın varlığı ve durumu kontrol edilmelidir; güvenli çözüm yeni HT damgalı paletdir." },
-      { q: "Fiyatlara KDV dahil mi?", a: "Hayır. Tablodaki fiyatlar KDV hariç, adet başınadır." },
+      { q: "Fiyatlara KDV dahil mi?", a: "Fiyatlar KDV hariç verilir; KDV ve nakliye teklifte ayrıca belirtilir." },
       { q: "Sipariş ettiğim sınıfın aynısı gelecek mi?", a: "Teklifte sınıf ve adet netleştirilir. Büyük partilerde örnek fotoğraf veya yerinde inceleme talep edebilirsiniz." },
     ],
     related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "ikinci-el-palet", "epal-palet", "80x120-euro-palet", "100x120-palet"],
@@ -201,10 +201,10 @@ export const pricePages: PricePage[] = [
   {
     slug: "euro-palet-fiyatlari",
     title: "Euro Palet Fiyatları | 80x120 Güncel Liste | MEPAL",
-    description: "Euro palet (80x120) fiyatları: sıfır, ikinci el 1. ve 2. sınıf ve ISPM-15 ihracat paleti. Adet kademeli güncel liste, Gebze depodan teslim.",
+    description: "Euro palet (80x120) fiyatları: sıfır, ikinci el 1. ve 2. sınıf ve ISPM-15 ihracat paleti. WhatsApp'tan güncel fiyat, Gebze depodan teslim.",
     h1: "Euro Palet Fiyatları — 80x120",
     answer:
-      "Euro palet (80x120) fiyatı; sıfır mı ikinci el mi olduğuna, sınıfa ve ısıl işleme göre değişir. Tabloda sıfır, ikinci el 1. ve 2. sınıf ve ISPM-15 uyumlu ihracat paleti adet kademesiyle verilir. Fiyatlar KDV hariç, adet başınadır.",
+      "Euro palet (80x120) fiyatı; sıfır mı ikinci el mi olduğuna, sınıfa ve ısıl işleme göre değişir. Tabloda sıfır, ikinci el 1. ve 2. sınıf ve ISPM-15 uyumlu ihracat paleti listelenir; güncel fiyat için WhatsApp'tan yazın.",
     keyword: "euro palet fiyatları",
     art: "euro",
     rowKeys: ["euro-sifir", "euro-ikinci-el-1", "euro-ikinci-el-2", "ihracat-ispm15"],
@@ -243,7 +243,7 @@ export const pricePages: PricePage[] = [
       { q: "Euro palet fiyatı hangi tip için geçerli?", a: "Tablo sıfır, ikinci el 1. sınıf, ikinci el 2. sınıf ve ISPM-15 uyumlu ihracat paleti satırlarını ayrı ayrı gösterir." },
       { q: "EPAL palet satıyor musunuz?", a: "EPAL tescilli bir markadır; biz EPAL ölçülerinde Euro palet temin ediyoruz ve ikinci el EPAL palet alım-satımı yapıyoruz." },
       { q: "İhracat için hangi Euro palet?", a: "ISPM-15 uyumlu, HT damgalı Euro ölçülü palet gerekir. Tablonun ihracat satırı bu pakete aittir." },
-      { q: "Toplu alımda fiyat düşer mi?", a: "Evet. 51 adet ve 201 adet üzeri kademelerde birim fiyat düşer." },
+      { q: "Toplu alımda fiyat düşer mi?", a: "Evet. Adet arttıkça birim fiyat düşer; adedi yazın, size özel fiyat verelim." },
     ],
     related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "plastik-palet-fiyatlari", "80x120-euro-palet", "epal-palet", "ihracat-paleti", "ikinci-el-palet"],
     guides: ["euro-palet-olculeri", "epal-palet-ile-standart-palet-farki", "palet-kac-kg-tasir", "ispm-15-nedir"],
@@ -251,10 +251,10 @@ export const pricePages: PricePage[] = [
   {
     slug: "plastik-palet-fiyatlari",
     title: "Plastik Palet Fiyatları | Hafif ve Ağır | MEPAL",
-    description: "Plastik palet fiyatları: hafif hizmet, ağır hizmet (raf uyumlu) ve 100x120. Adet kademeli güncel liste, ahşap ile karşılaştırma, hızlı teklif.",
+    description: "Plastik palet fiyatları: hafif hizmet, ağır hizmet (raf uyumlu) ve 100x120. WhatsApp'tan güncel fiyat, ahşap ile karşılaştırma, hızlı teklif.",
     h1: "Plastik Palet Fiyatları — Hafif ve Ağır Hizmet",
     answer:
-      "Plastik palet fiyatı hizmet sınıfına, ölçüye ve adede göre değişir. Tabloda hafif hizmet, çelik takviyeli ağır hizmet ve 100x120 plastik paletler adet kademesiyle listelenir. Fiyatlar KDV hariç, adet başınadır.",
+      "Plastik palet fiyatı hizmet sınıfına, ölçüye ve adede göre değişir. Tabloda hafif hizmet, çelik takviyeli ağır hizmet ve 100x120 plastik paletler listelenir; güncel fiyat için WhatsApp'tan yazın.",
     keyword: "plastik palet fiyatları",
     art: "plastic",
     rowKeys: ["plastik-hafif", "plastik-agir", "plastik-100x120", "euro-sifir"],
@@ -294,7 +294,7 @@ export const pricePages: PricePage[] = [
       { q: "Hafif ve ağır hizmet plastik palet farkı nedir?", a: "Ağır hizmet paletlerde çelik takviye bulunur, raf yüküne ve yüksek kapasiteye uygundur. Hafif hizmet paletler zeminde veya hafif yüklerde kullanılır." },
       { q: "Plastik palet ISPM-15 gerektirir mi?", a: "Hayır. ISPM-15 ahşap ambalaj malzemesi için geçerlidir; plastik palet kapsam dışındadır." },
       { q: "Plastik palet gıda ve ilaçta uygun mu?", a: "Nem emmediği ve yıkanabildiği için hijyen gerektiren sektörlerde sık tercih edilir. Üretici belgeleri ve kullanım koşulları için teklifte bilgi talep edin." },
-      { q: "Fiyatlara KDV dahil mi?", a: "Hayır. Tablo KDV hariç, adet başı TL fiyatını gösterir." },
+      { q: "Fiyatlara KDV dahil mi?", a: "Fiyatlar KDV hariç verilir; KDV ve nakliye teklifte ayrıca belirtilir." },
     ],
     related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet", "80x120-euro-palet", "ihracat-paleti"],
     guides: ["plastik-palet-cesitleri", "ahsap-palet-mi-plastik-palet-mi", "palet-raf-sistemleri-ve-raf-yuku", "gida-sektoru-icin-palet-secimi"],
@@ -372,7 +372,7 @@ export const pricePages: PricePage[] = [
       {
         h: "Sağlam paletleriniz için güncel satış fiyatları",
         p: [
-          "Hurda değerleme alım tarafıdır. Eğer ikinci el palet satın almak istiyorsanız, ölçü ve sınıfa göre güncel birim fiyatlar ikinci el palet fiyat sayfasında adet kademeleriyle listelenir.",
+          "Hurda değerleme alım tarafıdır. Eğer ikinci el palet satın almak istiyorsanız, ölçü ve sınıfa göre güncel birim fiyatlar ikinci el palet fiyat sayfasından WhatsApp ile öğrenebilirsiniz.",
         ],
         links: [["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"], ["Palet alım satım", "/hizmetler/palet-alim-satim/"]],
       },

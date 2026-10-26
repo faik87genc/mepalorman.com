@@ -2,7 +2,6 @@ import { products } from "@/lib/data/products";
 import { services } from "@/lib/data/services";
 import { guides } from "@/lib/data/guides";
 import { regions } from "@/lib/data/regions";
-import { PRICES_UPDATED_LABEL } from "@/lib/data/prices";
 import { absoluteUrl, site, warehouseAddress } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -13,7 +12,7 @@ export function GET() {
 
 > ${site.description}
 
-${site.legalName} — depo: ${warehouseAddress}. Telefon/WhatsApp: ${site.phone}. E-posta: ${site.email}. Çalışma saatleri: ${site.hours}. Fiyatlar KDV hariçtir; son güncelleme ${PRICES_UPDATED_LABEL}.
+${site.legalName} — depo: ${warehouseAddress}. Telefon/WhatsApp: ${site.phone}. E-posta: ${site.email}. Çalışma saatleri: ${site.hours}. Fiyatlar sitede yayınlanmaz; güncel fiyat WhatsApp'tan verilir (KDV hariç).
 
 ## Fiyatlar
 ${line("Palet fiyatları (tüm ürünler)", "/palet-fiyatlari/")}

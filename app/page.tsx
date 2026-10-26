@@ -11,12 +11,11 @@ import { guides } from "@/lib/data/guides";
 import { sectors } from "@/lib/data/sectors";
 import { fromPriceLabel } from "@/lib/format";
 import { pageMeta } from "@/lib/seo";
-import { PRICES_UPDATED_LABEL } from "@/lib/data/prices";
 import type { FAQ } from "@/lib/types";
 
 export const metadata: Metadata = pageMeta({
   title: "Palet Satışı Türkiye Geneli | Euro, Ahşap, Plastik | MEPAL",
-  description: "Gebze deposundan euro palet, ahşap palet, plastik palet, ikinci el palet satışı ve hurda palet alımı. Tarihli güncel fiyat tablosu, WhatsApp'tan hızlı teklif.",
+  description: "Gebze deposundan euro palet, ahşap palet, plastik palet, ikinci el palet satışı ve hurda palet alımı. WhatsApp'tan aynı gün güncel fiyat ve hızlı teklif.",
   path: "/",
 });
 
@@ -26,13 +25,13 @@ const SERVICES: { icon: string; title: string; text: string; href: string }[] = 
   { icon: "recycle", title: "İkinci El Palet", text: "Kontrol edilmiş, yeniden kullanılabilir paletler; maliyet odaklı sevkiyat ve depolama için.", href: "/urunler/ikinci-el-palet/" },
   { icon: "box", title: "Ahşap Palet", text: "Standart ve özel ölçülü sıfır ahşap paletler; sanayi ve lojistik kullanımı için.", href: "/urunler/sifir-ahsap-palet/" },
   { icon: "layers", title: "Euro Palet", text: "800×1200 mm euro ölçülü palet tedariki; lojistik ve ihracat akışları için.", href: "/urunler/80x120-euro-palet/" },
-  { icon: "boxes", title: "Toptan Palet Tedariki", text: "Tek seferlik veya düzenli toplu siparişler; adet kademeli fiyat.", href: "/hizmetler/toptan-palet/" },
+  { icon: "boxes", title: "Toptan Palet Tedariki", text: "Tek seferlik veya düzenli toplu siparişler; adet arttıkça avantajlı fiyat.", href: "/hizmetler/toptan-palet/" },
   { icon: "handshake", title: "İkinci El Palet Alımı", text: "Fazla kalan kullanılabilir paletlerinizi satın alıyoruz.", href: "/hizmetler/palet-alim-satim/" },
   { icon: "truck", title: "Hurda Palet Alımı", text: "Hasarlı ve hurda paletleri sahanızdan topluyor, geri dönüşüme gönderiyoruz.", href: "/hizmetler/hurda-palet-alimi/" },
 ];
 
 const faq: FAQ[] = [
-  { q: "Palet fiyatlarına KDV dahil mi?", a: "Sitedeki fiyat tabloları KDV hariç, adet başına TL olarak verilir. Nakliye ve KDV, teklif aşamasında teslimat ilinize göre ayrıca hesaplanır." },
+  { q: "Palet fiyatlarına KDV dahil mi?", a: "Fiyatlar KDV hariç verilir. Nakliye ve KDV, teklif aşamasında teslimat ilinize göre ayrıca hesaplanır." },
   { q: "En az kaç adet palet satıyorsunuz?", a: "Toplu alım odaklı çalışıyoruz; adet kademeleri tablolarda 1–50, 51–200 ve 201+ olarak gösterilir. Küçük miktarlar için de stok durumuna göre teklif verebiliriz." },
   { q: "Hangi bölgelere teslimat yapıyorsunuz?", a: "Gebze depomuzdan Türkiye genelinde sevkiyat yapıyoruz. Kocaeli ve İstanbul’da en hızlı teslimat sağlanır; diğer illerde süre ve nakliye maliyeti miktara ve mesafeye göre teklifte bildirilir." },
   { q: "İhracat için ısıl işlemli (ISPM-15) palet temin ediyor musunuz?", a: "Evet, HT damgalı ISPM-15 uyumlu ihracat paleti temin ediyoruz. Ülkenizin gereksinimleri için rehber yazımıza bakabilir veya bize danışabilirsiniz." },
@@ -57,7 +56,7 @@ export default function HomePage() {
             </p>
             <CtaButtons message="Merhaba, palet için fiyat almak istiyorum. Ürün: … Adet: … İl: …" source="home-hero" />
             <ul className="trust-list">
-              <li>Tarihli güncel fiyat tablosu</li>
+              <li>WhatsApp&apos;tan aynı gün güncel fiyat</li>
               <li>Gebze Pelitli’de depo</li>
               <li>ISPM-15 uyumlu ihracat paleti</li>
               <li>Aynı gün dönüş</li>
@@ -126,13 +125,13 @@ export default function HomePage() {
 
       <section className="section" aria-labelledby="urunler-h">
         <div className="wrap">
-          <p className="eyebrow">Güncel fiyatlar</p>
-          <h2 id="urunler-h">Palet çeşitleri ve fiyatları</h2>
-          <p className="muted">Her ürünün sayfasında ölçü, taşıma kapasitesi ve adet kademeli fiyat tablosu var. Fiyatlar {PRICES_UPDATED_LABEL} tarihinde güncellendi.</p>
-          <CardGrid items={featured.map((p) => ({ href: `/urunler/${p.slug}/`, title: p.name, blurb: p.blurb, art: p.art, foot: fromPriceLabel(p.slug) ?? "Ölçüye göre teklif" }))} />
+          <p className="eyebrow">Fiyat için WhatsApp</p>
+          <h2 id="urunler-h">Palet çeşitleri</h2>
+          <p className="muted">Her ürünün sayfasında ölçü ve taşıma kapasitesi var. Güncel fiyat piyasaya göre değiştiği için WhatsApp&apos;tan aynı gün veriyoruz.</p>
+          <CardGrid items={featured.map((p) => ({ href: `/urunler/${p.slug}/`, title: p.name, blurb: p.blurb, art: p.art, foot: fromPriceLabel(p.slug) ?? "WhatsApp'tan fiyat al" }))} />
           <p className="cta-row">
             <Link prefetch={false} className="btn btn-green" href="/palet-fiyatlari/">
-              Palet fiyatları tablosu
+              Palet çeşitleri ve fiyat al
             </Link>
             <Link prefetch={false} className="btn btn-ghost" href="/urunler/">
               Tüm ürünler
@@ -143,11 +142,11 @@ export default function HomePage() {
 
       <section className="section" aria-labelledby="fiyat-h">
         <div className="wrap">
-          <p className="eyebrow">Fiyat özeti</p>
-          <h2 id="fiyat-h">Güncel palet fiyatları — {PRICES_UPDATED_LABEL}</h2>
+          <p className="eyebrow">Fiyat al</p>
+          <h2 id="fiyat-h">Güncel palet fiyatı için WhatsApp</h2>
           <PriceTable rowKeys={["euro-ikinci-el-1", "euro-sifir", "ahsap-sifir-100x120", "ihracat-ispm15", "plastik-hafif"]} compact />
           <p>
-            <Link prefetch={false} href="/palet-fiyatlari/">Tüm fiyatları gör →</Link>
+            <Link prefetch={false} href="/palet-fiyatlari/">Tüm ürünler için fiyat al →</Link>
           </p>
         </div>
       </section>

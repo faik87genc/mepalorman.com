@@ -124,7 +124,7 @@ export default function Wizard() {
       )}
       {step === 4 && (
         <form onSubmit={submit} className="form" noValidate>
-          <h2 style={{ fontSize: "1.3rem" }}>5/{STEPS} · Fiyat aralığınız hazır</h2>
+          <h2 style={{ fontSize: "1.3rem" }}>5/{STEPS} · Talebiniz hazır</h2>
           <div className="result" aria-live="polite">
             <strong>{productLabel}</strong>
             <br />
@@ -137,7 +137,7 @@ export default function Wizard() {
                 </p>
               </>
             ) : (
-              <p style={{ margin: ".5rem 0 0" }}>Bu ürün ölçü ve adede göre özel teklif gerektirir; bilgilerinizi bırakın, size dönelim.</p>
+              <p style={{ margin: ".5rem 0 0" }}>Güncel fiyatı aynı gün veriyoruz; bilgilerinizi bırakın veya WhatsApp&apos;tan yazın, size dönelim.</p>
             )}
           </div>
           <div className="form-row">

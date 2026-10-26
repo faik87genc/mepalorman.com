@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FaqList, PriceTable, RelatedLinks, SectionsView } from "@/components/Content";
 import { ContentLayout, SideCard } from "@/components/ContentLayout";
-import { PRICES_UPDATED, PRICES_UPDATED_LABEL } from "@/lib/data/prices";
+import { PRICES_UPDATED } from "@/lib/data/prices";
 import { pricePageBySlug, pricePages } from "@/lib/data/pricePages";
 import { staticPageBySlug, staticPages } from "@/lib/data/pages";
 import { products } from "@/lib/data/products";
@@ -42,7 +42,7 @@ export default async function RootPage({ params }: Props) {
         answer={pp.answer}
         art={pp.art}
         message={message}
-        meta={`Fiyatlar son güncelleme: ${PRICES_UPDATED_LABEL} · KDV hariç`}
+        meta="Güncel fiyat için WhatsApp · KDV hariç"
         ld={[productLd({ name: pp.h1, description: pp.description, path, low: range?.low, high: range?.high, updated: PRICES_UPDATED })]}
         side={
           <>
@@ -53,7 +53,7 @@ export default async function RootPage({ params }: Props) {
       >
         {pp.rowKeys.length > 0 && (
           <section className="block">
-            <h2>Güncel fiyat tablosu</h2>
+            <h2>Fiyat al</h2>
             <PriceTable rowKeys={pp.rowKeys} />
           </section>
         )}
