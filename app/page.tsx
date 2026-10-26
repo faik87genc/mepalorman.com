@@ -31,8 +31,8 @@ const SERVICES: { icon: string; title: string; text: string; href: string }[] = 
 ];
 
 const faq: FAQ[] = [
-  { q: "Palet fiyatlarına KDV dahil mi?", a: "Fiyatlar KDV hariç verilir. Nakliye ve KDV, teklif aşamasında teslimat ilinize göre ayrıca hesaplanır." },
-  { q: "En az kaç adet palet satıyorsunuz?", a: "Toplu alım odaklı çalışıyoruz; adet kademeleri tablolarda 1–50, 51–200 ve 201+ olarak gösterilir. Küçük miktarlar için de stok durumuna göre teklif verebiliriz." },
+  { q: "Palet fiyatlarına KDV dahil mi?", a: "Fiyatlar KDV hariç verilir. Güncel fiyatı WhatsApp'tan alırsınız; nakliye ve KDV, teklif aşamasında teslimat ilinize göre ayrıca hesaplanır." },
+  { q: "En az kaç adet palet satıyorsunuz?", a: "Toplu alım odaklı çalışıyoruz; adet arttıkça birim fiyat düşer. Küçük miktarlar için de stok durumuna göre teklif verebiliriz." },
   { q: "Hangi bölgelere teslimat yapıyorsunuz?", a: "Gebze depomuzdan Türkiye genelinde sevkiyat yapıyoruz. Kocaeli ve İstanbul’da en hızlı teslimat sağlanır; diğer illerde süre ve nakliye maliyeti miktara ve mesafeye göre teklifte bildirilir." },
   { q: "İhracat için ısıl işlemli (ISPM-15) palet temin ediyor musunuz?", a: "Evet, HT damgalı ISPM-15 uyumlu ihracat paleti temin ediyoruz. Ülkenizin gereksinimleri için rehber yazımıza bakabilir veya bize danışabilirsiniz." },
   { q: "Kullanılmış paletlerimi satabilir miyim?", a: "Evet. Hurda ve ikinci el palet alımı yapıyoruz. Paletlerin fotoğrafını WhatsApp'tan veya fotoğraftan değerleme aracımızla gönderirseniz ön değerlendirme yapılır; kesin fiyat yerinde kontrolle verilir." },

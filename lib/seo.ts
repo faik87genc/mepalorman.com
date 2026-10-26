@@ -30,7 +30,7 @@ export const orgLd = (): Ld => ({
   name: site.name,
   legalName: site.legalName,
   url: site.baseUrl,
-  logo: absoluteUrl("/icon.svg"),
+  logo: absoluteUrl("/assets/logo-mark.png"),
   email: site.email,
   telephone: site.phoneE164,
   taxID: site.taxNo,
@@ -55,7 +55,6 @@ export const localBusinessLd = (): Ld => ({
   image: absoluteUrl("/opengraph-image"),
   telephone: site.phoneE164,
   email: site.email,
-  priceRange: "₺₺",
   parentOrganization: { "@id": `${site.baseUrl}/#organization` },
   address: {
     "@type": "PostalAddress",
