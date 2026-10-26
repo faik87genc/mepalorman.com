@@ -100,7 +100,8 @@ li { margin-bottom: .35em; }
 .trust-list li::before { content: "✓"; color: var(--wa); margin-right: .4rem; font-weight: 700; }
 
 /* Content */
-.main { padding-bottom: 3rem; }
+.main { padding-bottom: 0; }
+.main > :last-child:not(.final-cta) { margin-bottom: 3rem; }
 .content-grid { display: grid; gap: 2.4rem; }
 @media (min-width: 980px) { .content-grid { grid-template-columns: minmax(0, 1fr) 320px; } .content-grid.single { grid-template-columns: minmax(0, 820px); } }
 .block { margin: 0 0 2.4rem; }
