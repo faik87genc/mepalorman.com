@@ -43,7 +43,9 @@ export async function POST(req: Request) {
       const fd = await req.formData();
       raw = Object.fromEntries(fd.entries());
     } else {
-      raw = await req.json();
+      const parsed: unknown = await req.json();
+      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return fail(400, "Geçersiz istek.");
+      raw = parsed as Record<string, unknown>;
     }
   } catch {
     return fail(400, "Geçersiz istek.");
