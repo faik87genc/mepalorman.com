@@ -1018,7 +1018,7 @@ export const regions: Region[] = [
     name: "Kocaeli",
     wave: 1,
     title: "Kocaeli Palet Tedariği: Euro, Ahşap, Plastik | MEPAL",
-    description: "Kocaeli genelinde palet tedariği: İzmit, Körfez, Derince, Gölcük, Karamürsel, Kandıra ve Dilovası fabrikalarına Gebze depodan toplu palet, hurda palet alımı.",
+    description: "Kocaeli genelinde palet tedariği: İzmit, Körfez, Derince, Gölcük, Karamürsel, Kandıra, Dilovası fabrikalarına Gebze depodan palet; hurda palet alımı.",
     h1: "Kocaeli Palet Tedariği",
     keyword: "kocaeli palet",
     art: "region",
@@ -1091,7 +1091,7 @@ export const regions: Region[] = [
     name: "İstanbul",
     wave: 2,
     title: "İstanbul Palet Tedariği: Anadolu ve Avrupa | MEPAL",
-    description: "İstanbul’da Anadolu ve Avrupa yakası sanayi alanlarına palet tedariği: Euro, ahşap, ikinci el ve plastik palet; hurda palet alımı. Gebze depodan toplu sevkiyat.",
+    description: "İstanbul’da Anadolu ve Avrupa yakası sanayiye palet tedariği: Euro, ahşap, ikinci el, plastik palet; hurda palet alımı. Gebze depodan toplu sevkiyat.",
     h1: "İstanbul Palet Tedariği",
     keyword: "istanbul palet",
     art: "region",
@@ -1300,7 +1300,7 @@ export const regions: Region[] = [
     name: "Plastikçiler OSB",
     wave: 1,
     title: "Plastikçiler OSB Palet Tedariği | MEPAL",
-    description: "Gebze Plastikçiler OSB tesislerine palet: Euro, ikinci el, plastik ve HT paleti. Pelitli depodan dakikalar içinde sevkiyat, hurda palet alımı, hızlı teklif.",
+    description: "Gebze Plastikçiler OSB tesislerine palet: Euro, ikinci el, plastik ve HT paleti. Pelitli depodan kısa sürede sevkiyat, hurda palet alımı.",
     h1: "Plastikçiler OSB Palet Tedariği",
     keyword: "plastikçiler osb palet",
     art: "region",
@@ -1314,7 +1314,7 @@ export const regions: Region[] = [
       {
         h: "Plastikçiler OSB nedir",
         p: [
-          "Gebze Plastikçiler Organize Sanayi Bölgesi, 2000’li yılların başında plastik sektörüne yönelik kurulmuş, yaklaşık 140 hektarlık bir alanda yüz kırkın üzerinde sanayi parseline sahip bir bölgedir. Plastik enjeksiyon, ekstrüzyon, şişirme, ambalaj filmi, boru ve profil, geri dönüşüm ve kalıp işleri bölgenin ana faaliyet alanlarıdır.",
+          "Gebze Plastikçiler Organize Sanayi Bölgesi, plastik sektörüne yönelik kurulmuş, Gebze’de yer alan bir organize sanayi bölgesidir. Plastik enjeksiyon, ekstrüzyon, şişirme, ambalaj filmi, boru ve profil, geri dönüşüm ve kalıp işleri bölgenin ana faaliyet alanlarıdır.",
           "Plastik üretimi hacimli ama hafif bir yük üretir. Mamul çoğunlukla koli, çuval, bigbag, kasa ya da rulo halinde paletlenir; bu da paletin yük taşıma kapasitesinden çok boyutlarına ve istiflenebilirliğine önem kazandırır.",
         ],
         links: [["Kimya ve plastik", "/sektorler/kimya-ve-plastik/"], ["Gebze sayfası", "/bolge/gebze-palet/"]],
@@ -1374,7 +1374,7 @@ export const regions: Region[] = [
       {
         h: "İMES OSB nerede, ne üretir",
         p: [
-          "İMES, İstanbul’daki İMES Sanayi Sitesi ile karıştırılabilen ama ondan ayrı bir yapıdır. İMES OSB, Kocaeli’nin Dilovası ilçesindedir ve makine sektörü firmalarının yoğun olduğu, üç yüzün üzerinde firmanın ve on binlerce çalışanın yer aldığı bir organize sanayi bölgesi olarak bilinir. Metal işleme, makine imalatı, kalıp, hidrolik ve pnömatik parçalar, ağır ekipman ve yan sanayi bölgenin ana kolları arasındadır.",
+          "İMES, İstanbul’daki İMES Sanayi Sitesi ile karıştırılabilen ama ondan ayrı bir yapıdır. İMES OSB, Kocaeli’nin Dilovası ilçesindedir ve makine sektörü firmalarının yoğun olduğu bir organize sanayi bölgesi olarak bilinir. Metal işleme, makine imalatı, kalıp, hidrolik ve pnömatik parçalar, ağır ekipman ve yan sanayi bölgenin ana kolları arasındadır.",
           "Makine sanayisinin palet ihtiyacı diğer sektörlerden farklıdır: ürünler ağır, köşeli ve çoğu zaman standart dışı ölçülüdür. Bu nedenle sıradan bir Euro palet her zaman yeterli olmaz.",
         ],
         links: [["Dilovası sayfası", "/bolge/dilovasi-palet/"], ["Otomotiv ve yan sanayi", "/sektorler/otomotiv-ve-yan-sanayi/"]],

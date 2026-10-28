@@ -27,7 +27,28 @@ const SERVICES: { icon: string; title: string; text: string; href: string }[] = 
   { icon: "layers", title: "Euro Palet", text: "800×1200 mm euro ölçülü palet tedariki; lojistik ve ihracat akışları için.", href: "/urunler/80x120-euro-palet/" },
   { icon: "boxes", title: "Toptan Palet Tedariki", text: "Tek seferlik veya düzenli toplu siparişler; adet arttıkça avantajlı fiyat.", href: "/hizmetler/toptan-palet/" },
   { icon: "handshake", title: "İkinci El Palet Alımı", text: "Fazla kalan kullanılabilir paletlerinizi satın alıyoruz.", href: "/hizmetler/palet-alim-satim/" },
-  { icon: "truck", title: "Hurda Palet Alımı", text: "Hasarlı ve hurda paletleri sahanızdan topluyor, geri dönüşüme gönderiyoruz.", href: "/hizmetler/hurda-palet-alimi/" },
+  { icon: "truck", title: "Hurda Palet Alımı", text: "Hurda ve fazla paletleri sahanızdan topluyor, sağlam kalanları onarıp geri kalanı geri dönüşüme gönderiyoruz.", href: "/hizmetler/hurda-palet-alimi/" },
+  { icon: "recycle", title: "Hasarlı Palet Alımı", text: "Kırık tahtası ya da çatlak takozu olan, tamire elverişli paletleri sınıflayıp satın alıyoruz.", href: "/hizmetler/hasarli-palet-alimi/" },
+  { icon: "truck", title: "Kırık Palet Alımı", text: "Yapısı dağılmış kırık paletleri toplu halde tesisinizden yükleyip ahşap geri dönüşümüne yönlendiriyoruz.", href: "/hizmetler/kirik-palet-alimi/" },
+  { icon: "layers", title: "Isıl İşlemli ve İhracat Paleti", text: "ISPM-15 uyumlu, HT damgalı ısıl işlemli palet ve ihracat paleti temini; ambalaj paleti seçiminde destek.", href: "/urunler/isil-islemli-palet/" },
+];
+
+const TERMS: [string, string][] = [
+  ["80x120 palet (Euro palet)", "/urunler/80x120-euro-palet/"],
+  ["EUR palet nedir?", "/rehber/eur-palet-nedir/"],
+  ["EPAL palet", "/urunler/epal-palet/"],
+  ["Çakma EPAL palet", "/urunler/cakma-epal-palet/"],
+  ["Orta palet", "/urunler/orta-palet/"],
+  ["Kalın orta palet", "/urunler/kalin-orta-palet/"],
+  ["100x120 palet", "/urunler/100x120-palet/"],
+  ["CP3 palet (1140×1140)", "/urunler/cp3-palet/"],
+  ["İkinci el Euro palet", "/urunler/ikinci-el-euro-palet/"],
+  ["Ambalaj paleti", "/urunler/ambalaj-paleti/"],
+  ["İhracat paleti", "/urunler/ihracat-paleti/"],
+  ["Isıl işlemli palet", "/urunler/isil-islemli-palet/"],
+  ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"],
+  ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"],
+  ["Palet fotoğrafları", "/galeri/"],
 ];
 
 const faq: FAQ[] = [
@@ -35,8 +56,9 @@ const faq: FAQ[] = [
   { q: "En az kaç adet palet satıyorsunuz?", a: "Toplu alım odaklı çalışıyoruz; adet arttıkça birim fiyat düşer. Küçük miktarlar için de stok durumuna göre teklif verebiliriz." },
   { q: "Hangi bölgelere teslimat yapıyorsunuz?", a: "Gebze depomuzdan Türkiye genelinde sevkiyat yapıyoruz. Kocaeli ve İstanbul’da en hızlı teslimat sağlanır; diğer illerde süre ve nakliye maliyeti miktara ve mesafeye göre teklifte bildirilir." },
   { q: "İhracat için ısıl işlemli (ISPM-15) palet temin ediyor musunuz?", a: "Evet, HT damgalı ISPM-15 uyumlu ihracat paleti temin ediyoruz. Ülkenizin gereksinimleri için rehber yazımıza bakabilir veya bize danışabilirsiniz." },
-  { q: "Kullanılmış paletlerimi satabilir miyim?", a: "Evet. Hurda ve ikinci el palet alımı yapıyoruz. Paletlerin fotoğrafını WhatsApp'tan veya fotoğraftan değerleme aracımızla gönderirseniz ön değerlendirme yapılır; kesin fiyat yerinde kontrolle verilir." },
-  { q: "Teklif ne kadar sürede gelir?", a: "Mesai saatlerinde en kısa sürede dönüş yapıyoruz. Mesai dışı talepleri ertesi sabah 08:30'da arıyoruz." },
+  { q: "Kullanılmış paletlerimi satabilir miyim?", a: "Evet. Hurda palet alımı, hasarlı palet alımı, kırık palet alımı ve ikinci el palet alımı yapıyoruz. Paletlerin fotoğrafını WhatsApp'tan veya fotoğraftan değerleme aracımızla gönderirseniz ön değerlendirme yapılır; kesin fiyat yerinde kontrolle verilir." },
+  { q: "Çakma EPAL palet ile EPAL palet aynı mı?", a: "Hayır. Çakma EPAL, 80x120 ölçüde olup EPAL lisansı ve damgası taşımayan palet için kullanılan günlük bir ifadedir. MEPAL EPAL lisanslı üretici değildir; EPAL ölçülerinde Euro palet temin eder ve ikinci el EPAL alım satımı yapar. Damgasız palet açıkça damgasız olarak sunulur." },
+  { q: "Teklif ne kadar sürede gelir?", a: "Mesai saatlerinde (Pazartesi–Cumartesi 08:30–18:00) en kısa sürede dönüş yapıyoruz. Mesai dışı talepler bir sonraki çalışma gününde değerlendirilir." },
 ];
 
 export default function HomePage() {
@@ -52,7 +74,7 @@ export default function HomePage() {
             <p className="eyebrow">Gebze depo · Türkiye geneli sevkiyat</p>
             <h1>Ahşap ve Plastik Palet Satışı – Gebze Depodan Türkiye Geneli</h1>
             <p className="lead">
-              Hızlı fiyat, Gebze deposundan sevkiyat. Gebze deposundan Türkiye’nin her yerine toplu palet tedariki: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı.
+              WhatsApp’tan hızlı fiyat. Gebze deposundan Türkiye’nin her yerine toplu palet tedariki: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı.
             </p>
             <CtaButtons message="Merhaba, palet için fiyat almak istiyorum. Ürün: … Adet: … İl: …" source="home-hero" />
             <ul className="trust-list">
@@ -63,7 +85,7 @@ export default function HomePage() {
             </ul>
           </div>
           <div className="home-hero-photo">
-            <Photo name="depo" priority sizes="(min-width: 900px) 520px, 100vw" />
+            <Photo name="p11" priority sizes="(min-width: 900px) 520px, 100vw" />
           </div>
         </div>
       </header>
@@ -111,12 +133,12 @@ export default function HomePage() {
       <section className="section beige" aria-label="Palet çeşitleri">
         <div className="wrap photo-trio">
           {[
-            { n: "kullanilmis" as const, t: "İkinci El Palet", h: "/urunler/ikinci-el-palet/" },
-            { n: "forklift" as const, t: "Ahşap Palet", h: "/urunler/sifir-ahsap-palet/" },
-            { n: "euro-damga" as const, t: "Euro Palet", h: "/urunler/80x120-euro-palet/" },
+            { n: "p15" as const, t: "İkinci El Palet", h: "/urunler/ikinci-el-palet/" },
+            { n: "p17" as const, t: "Ahşap Palet", h: "/urunler/sifir-ahsap-palet/" },
+            { n: "p13" as const, t: "Euro Palet", h: "/urunler/80x120-euro-palet/" },
           ].map((x) => (
             <Link prefetch={false} key={x.h} href={x.h} className="trio-item">
-              <Photo name={x.n} sizes="(min-width: 900px) 360px, 100vw" alt="" />
+              <Photo name={x.n} sizes="(min-width: 900px) 360px, 100vw" />
               <span>{x.t}</span>
             </Link>
           ))}
@@ -137,6 +159,23 @@ export default function HomePage() {
               Tüm ürünler
             </Link>
           </p>
+        </div>
+      </section>
+
+      <section className="section beige" aria-labelledby="terim-h">
+        <div className="wrap">
+          <p className="eyebrow">Hangi palet?</p>
+          <h2 id="terim-h">EPAL, çakma EPAL, orta palet, CP3: farkı bilerek seçin</h2>
+          <p className="muted">
+            Piyasada aynı ölçüdeki ahşap palete farklı adlar verilir: 80x120 palet, EUR palet, Euro palet, EPAL, çakma EPAL. Orta palet ve kalın orta palet ise tahta kalınlığına göre yapılan günlük sınıflardır. Ne aldığınızı bilmeniz için her terimin kendi sayfası var; ihracat için ısıl işlemli palet, ürününüzü sevkiyata hazırlamak için ambalaj paleti sayfalarına bakabilirsiniz.
+          </p>
+          <ul className="chips">
+            {TERMS.map(([label, href]) => (
+              <li key={href}>
+                <Link prefetch={false} href={href}>{label}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

@@ -13,7 +13,7 @@ export const sectors: Sector[] = [
     keyword: "gıda sektörü palet",
     art: "euro",
     blurb: "Hijyen odaklı sevkiyat için temiz sıfır Euro palet ve plastik palet seçenekleri.",
-    products: ["80x120-euro-palet", "plastik-palet", "sifir-ahsap-palet", "ihracat-paleti"],
+    products: ["80x120-euro-palet", "plastik-palet", "sifir-ahsap-palet", "ambalaj-paleti", "ihracat-paleti"],
     sections: [
       {
         h: "Gıdada palet neden önemlidir?",
@@ -57,7 +57,7 @@ export const sectors: Sector[] = [
           "İhracat sevkiyatı için ISPM-15 uyumlu, HT damgalı palet",
         ],
         p: ["Hangi palet için ne kadar yük geleceğini bildirirseniz öneri hazırlarız. Fiyat için WhatsApp'tan teklif alabilirsiniz. Gebze, Dilovası, Çayırova ve Tuzla'daki tesislere kısa sürede teslim planlanır; net süre teklifte bildirilir."],
-        links: [["Euro palet fiyatları", "/euro-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
+        links: [["Euro palet fiyatları", "/euro-palet-fiyatlari/"], ["Ambalaj paleti", "/urunler/ambalaj-paleti/"], ["Teklif al", "/teklif-al/"]],
       },
     ],
     faq: [
@@ -201,7 +201,7 @@ export const sectors: Sector[] = [
     keyword: "kimya sektörü palet",
     art: "cp",
     blurb: "CP standardı ve kimyasala dayanıklı plastik palet ile güvenli sevkiyat.",
-    products: ["cp-palet", "plastik-palet", "100x120-palet", "ihracat-paleti"],
+    products: ["cp-palet", "cp3-palet", "plastik-palet", "100x120-palet", "ihracat-paleti"],
     sections: [
       {
         h: "Kimya ve plastikte paletin rolü",
@@ -221,7 +221,7 @@ export const sectors: Sector[] = [
           "Plastik palette üst yüzey: kapalı yüzey sızıntıyı tutmaya yardımcı olur",
           "İhracat sevkiyatında ahşap için ISPM-15 uyumlu, HT damgalı palet",
         ],
-        links: [["CP paletleri ölçü tablosu", "/rehber/cp-paletleri-olcu-tablosu/"], ["Palet kaç kg taşır?", "/rehber/palet-kac-kg-tasir/"]],
+        links: [["CP3 palet (1140×1140)", "/urunler/cp3-palet/"], ["CP paletleri ölçü tablosu", "/rehber/cp-paletleri-olcu-tablosu/"], ["Palet kaç kg taşır?", "/rehber/palet-kac-kg-tasir/"]],
       },
       {
         h: "CP palet ve plastik palet karşılaştırması",
@@ -262,7 +262,7 @@ export const sectors: Sector[] = [
     keyword: "ihracat paleti sektör",
     art: "ispm",
     blurb: "ISPM-15 uyumlu palet ve sandık ile gümrük sorunsuz ihracat sevkiyatı.",
-    products: ["ihracat-paleti", "80x120-euro-palet", "ahsap-sandik", "plastik-palet", "100x120-palet"],
+    products: ["ihracat-paleti", "isil-islemli-palet", "ambalaj-paleti", "80x120-euro-palet", "ahsap-sandik", "plastik-palet", "100x120-palet"],
     sections: [
       {
         h: "İhracatta palet kuralları",
@@ -297,7 +297,7 @@ export const sectors: Sector[] = [
           ],
         },
         p: ["ISPM-15 uyumlu, HT damgalı ihracat paleti temin ediyoruz; ısıl işlem tedarikçi tarafından yapılır."],
-        links: [["İhracat paleti", "/urunler/ihracat-paleti/"], ["Ahşap sandık", "/urunler/ahsap-sandik/"]],
+        links: [["İhracat paleti", "/urunler/ihracat-paleti/"], ["Isıl işlemli palet", "/urunler/isil-islemli-palet/"], ["Ambalaj paleti", "/urunler/ambalaj-paleti/"], ["Ahşap sandık", "/urunler/ahsap-sandik/"]],
       },
       {
         h: "Tedarik",
@@ -324,7 +324,7 @@ export const sectors: Sector[] = [
     keyword: "depo paleti",
     art: "container",
     blurb: "Raf uyumlu ve düzenli tedarik edilebilen palet çözümleri.",
-    products: ["80x120-euro-palet", "plastik-palet", "ikinci-el-palet", "epal-palet", "100x120-palet"],
+    products: ["80x120-euro-palet", "plastik-palet", "ikinci-el-palet", "orta-palet", "ambalaj-paleti", "epal-palet", "100x120-palet"],
     sections: [
       {
         h: "Depo ve e-ticarette palet seçimi",
@@ -358,7 +358,7 @@ export const sectors: Sector[] = [
             ["Standart dışı ürün", "Özel ölçülü palet"],
           ],
         },
-        links: [["İkinci el palet", "/urunler/ikinci-el-palet/"], ["Palet seçici", "/araclar/palet-secici/"]],
+        links: [["İkinci el palet", "/urunler/ikinci-el-palet/"], ["Orta palet", "/urunler/orta-palet/"], ["Ambalaj paleti", "/urunler/ambalaj-paleti/"], ["Palet seçici", "/araclar/palet-secici/"]],
       },
       {
         h: "Düzenli tedarik ve palet havuzu",

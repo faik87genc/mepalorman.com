@@ -20,9 +20,24 @@ export const footerGroups: { title: string; links: [string, string][] }[] = [
     ],
   },
   {
+    title: "Ürünler",
+    links: [
+      ["80x120 Euro palet", "/urunler/80x120-euro-palet/"],
+      ["EPAL palet", "/urunler/epal-palet/"],
+      ["Çakma EPAL palet", "/urunler/cakma-epal-palet/"],
+      ["Orta palet", "/urunler/orta-palet/"],
+      ["Kalın orta palet", "/urunler/kalin-orta-palet/"],
+      ["Isıl işlemli palet", "/urunler/isil-islemli-palet/"],
+      ["Ambalaj paleti", "/urunler/ambalaj-paleti/"],
+      ["CP3 palet", "/urunler/cp3-palet/"],
+    ],
+  },
+  {
     title: "Hizmetler",
     links: [
       ["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"],
+      ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"],
+      ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"],
       ["Palet alım satım", "/hizmetler/palet-alim-satim/"],
       ["Palet tamiri", "/hizmetler/palet-tamiri/"],
       ["Toptan / kurumsal palet", "/hizmetler/toptan-palet/"],
@@ -46,6 +61,7 @@ export const footerGroups: { title: string; links: [string, string][] }[] = [
     links: [
       ["Hakkımızda", "/hakkimizda/"],
       ["Sık sorulan sorular", "/sss/"],
+      ["Palet fotoğrafları", "/galeri/"],
       ["Referanslar", "/referanslar/"],
       ["Belgeler", "/belgeler/"],
       ["İletişim", "/iletisim/"],

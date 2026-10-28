@@ -95,7 +95,7 @@ export const pricePages: PricePage[] = [
     description: "Ahşap palet fiyatları: sıfır Euro, 100x120, CP, ISPM-15 ihracat ve özel ölçü. WhatsApp'tan güncel fiyat, Gebze depodan hızlı teslim.",
     h1: "Ahşap Palet Fiyatları — Sıfır ve İkinci El",
     answer:
-      "Ahşap palet fiyatı ölçüye, sınıfa ve adede göre değişir. Listede sıfır ve ikinci el ahşap paletler listelenir; güncel fiyat için WhatsApp'tan yazın. Özel ölçüler için teklif alın.",
+      "Ahşap palet fiyatı ölçüye (80x120, 100x120, CP), sınıfa ve adede göre değişir. Listede sıfır ve ikinci el ahşap paletler listelenir; güncel fiyat için WhatsApp'tan yazın. Özel ölçüler için teklif alın.",
     keyword: "ahşap palet fiyatları",
     art: "wood",
     rowKeys: [
@@ -140,8 +140,8 @@ export const pricePages: PricePage[] = [
       { q: "Özel ölçülü ahşap palet fiyatı nasıl belirlenir?", a: "Ölçü, taşıyacağı yük ve adet bilindiğinde kereste ihtiyacı hesaplanıp teklif verilir. Bu nedenle tabloda “teklif alın” görünür." },
       { q: "100x120 ahşap palet fiyatı Euro paletten farklı mı?", a: "Evet. Daha büyük taban daha fazla kereste kullanır ve farklı bir fiyat grubunda yer alır. Güncel farkı WhatsApp'tan öğrenebilirsiniz." },
     ],
-    related: ["palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "sifir-ahsap-palet", "100x120-palet", "cp-palet", "ozel-olcu-palet"],
-    guides: ["palet-cesitleri-ve-secimi", "palet-kalite-siniflari", "100x120-ile-80x120-palet-farki", "cp-paletleri-olcu-tablosu"],
+    related: ["palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "sifir-ahsap-palet", "100x120-palet", "cp-palet", "orta-palet", "kalin-orta-palet", "ozel-olcu-palet"],
+    guides: ["palet-cesitleri-ve-secimi", "palet-kalite-siniflari", "100x120-ile-80x120-palet-farki", "orta-palet-ve-kalin-orta-palet-farki", "cp-paletleri-olcu-tablosu"],
   },
   {
     slug: "ikinci-el-palet-fiyatlari",
@@ -184,19 +184,19 @@ export const pricePages: PricePage[] = [
       {
         h: "Paletlerinizi satmak isterseniz",
         p: ["Fazla ikinci el paletlerinizi de değerlendiriyoruz. Adedi ve durumu bildirdiğinizde alım teklifi verilir."],
-        links: [["Palet alım satım", "/hizmetler/palet-alim-satim/"], ["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"]],
+        links: [["Palet alım satım", "/hizmetler/palet-alim-satim/"], ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"], ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"], ["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"]],
       },
     ],
     faq: [
       { q: "İkinci el palet 1. sınıf ile 2. sınıf arasındaki fark nedir?", a: "1. sınıf paletler sağlam ve onarılmış, daha tutarlı görünümlüdür. 2. sınıf paletler yerli kullanımdan gelir ve daha çok hafif iç kullanıma uygundur." },
       { q: "İkinci el palet gıda sevkiyatında kullanılır mı?", a: "Genellikle önerilmez. Temiz, kokusuz ve standart yapı gerektiğinde sıfır palet daha güvenlidir." },
       { q: "İkinci el EPAL palet var mı?", a: "İkinci el EPAL palet alım-satımı yapıyoruz. Stok durumu ve sınıf için teklif isteyin." },
-      { q: "İkinci el palet ihracatta kullanılabilir mi?", a: "İhracatta ISPM-15 uyumlu, HT damgalı palet gerekir. İkinci el palette damganın varlığı ve durumu kontrol edilmelidir; güvenli çözüm yeni HT damgalı paletdir." },
+      { q: "İkinci el palet ihracatta kullanılabilir mi?", a: "İhracatta ISPM-15 uyumlu, HT damgalı palet gerekir. İkinci el palette damganın varlığı ve durumu kontrol edilmelidir; güvenli çözüm yeni HT damgalı palettir." },
       { q: "Fiyatlara KDV dahil mi?", a: "Fiyatlar KDV hariç verilir; KDV ve nakliye teklifte ayrıca belirtilir." },
       { q: "Sipariş ettiğim sınıfın aynısı gelecek mi?", a: "Teklifte sınıf ve adet netleştirilir. Büyük partilerde örnek fotoğraf veya yerinde inceleme talep edebilirsiniz." },
     ],
-    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "ikinci-el-palet", "epal-palet", "80x120-euro-palet", "100x120-palet"],
-    guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "palet-omru-nasil-uzatilir", "hurda-paletinizi-nasil-degerlendirirsiniz"],
+    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "ikinci-el-palet", "orta-palet", "kalin-orta-palet", "epal-palet", "cakma-epal-palet", "80x120-euro-palet", "100x120-palet"],
+    guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "orta-palet-ve-kalin-orta-palet-farki", "palet-kalite-siniflari", "palet-omru-nasil-uzatilir", "hurda-paletinizi-nasil-degerlendirirsiniz", "hasarli-ve-kirik-palet-ne-yapilir"],
   },
   {
     slug: "euro-palet-fiyatlari",
@@ -245,8 +245,8 @@ export const pricePages: PricePage[] = [
       { q: "İhracat için hangi Euro palet?", a: "ISPM-15 uyumlu, HT damgalı Euro ölçülü palet gerekir. Tablonun ihracat satırı bu pakete aittir." },
       { q: "Toplu alımda fiyat düşer mi?", a: "Evet. Adet arttıkça birim fiyat düşer; adedi yazın, size özel fiyat verelim." },
     ],
-    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "plastik-palet-fiyatlari", "80x120-euro-palet", "epal-palet", "ihracat-paleti", "ikinci-el-palet"],
-    guides: ["euro-palet-olculeri", "epal-palet-ile-standart-palet-farki", "palet-kac-kg-tasir", "ispm-15-nedir"],
+    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "plastik-palet-fiyatlari", "80x120-euro-palet", "epal-palet", "cakma-epal-palet", "ihracat-paleti", "ikinci-el-palet"],
+    guides: ["euro-palet-olculeri", "eur-palet-nedir", "epal-palet-ile-standart-palet-farki", "cakma-epal-nedir", "palet-kac-kg-tasir", "ispm-15-nedir"],
   },
   {
     slug: "plastik-palet-fiyatlari",
@@ -316,7 +316,7 @@ export const pricePages: PricePage[] = [
           "Hurda palet yığını tek tip bir mal değildir. Aynı depodaki iki parti; sağlam palet oranı, ölçü dağılımı ve kuruluk bakımından çok farklı olabilir. Bu yüzden alım değeri, partiyi görmeden veya fotoğrafını incelemeden doğru verilemez. Sabit bir rakam açıklayan her liste, ya partiyi aşırı basitleştirir ya da gerçek değeri yansıtmaz.",
           "Bu sayfa fiyat tablosu içermez; değerlemeyi hangi unsurların belirlediğini ve süreci net biçimde gösterir. Hurda alımı hizmetinin kapsamı için ilgili hizmet sayfasına bakabilirsiniz.",
         ],
-        links: [["Hurda palet alımı hizmeti", "/hizmetler/hurda-palet-alimi/"]],
+        links: [["Hurda palet alımı hizmeti", "/hizmetler/hurda-palet-alimi/"], ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"], ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"]],
       },
       {
         h: "Alım değerini belirleyen faktörler",
@@ -386,7 +386,7 @@ export const pricePages: PricePage[] = [
       { q: "Ödeme ve yükleme nasıl yapılır?", a: "Değerleme onaylandıktan sonra araç planlanır ve yükleme yapılır. Ödeme koşulları teklifte açıkça belirtilir." },
     ],
     related: ["ikinci-el-palet-fiyatlari", "palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet", "ahsap-sandik"],
-    guides: ["hurda-paletinizi-nasil-degerlendirirsiniz", "palet-kalite-siniflari", "ahsap-palet-geri-donusum", "palet-omru-nasil-uzatilir"],
+    guides: ["hurda-paletinizi-nasil-degerlendirirsiniz", "hasarli-ve-kirik-palet-ne-yapilir", "palet-kalite-siniflari", "ahsap-palet-geri-donusum", "palet-omru-nasil-uzatilir"],
   },
   {
     slug: "ozel-olcu-palet-fiyatlari",
@@ -472,8 +472,8 @@ export const pricePages: PricePage[] = [
       { q: "Özel ölçülü palet ihracat için olabilir mi?", a: "Evet. ISPM-15 uyumlu ve HT damgalı ihracat paleti temin edilebilir; ihracat gereksinimini teklifte belirtin." },
       { q: "Teslimat ne kadar sürer?", a: "Ölçüye, adede ve stok durumuna göre değişir. Net süre teklifte bildirilir." },
     ],
-    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "euro-palet-fiyatlari", "ozel-olcu-palet", "145x145-palet", "ihracat-paleti"],
-    guides: ["palet-cesitleri-ve-secimi", "palet-kac-kg-tasir", "ispm-15-nedir", "palet-maliyetini-dusurmenin-yollari"],
+    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "euro-palet-fiyatlari", "ozel-olcu-palet", "145x145-palet", "ambalaj-paleti", "ihracat-paleti"],
+    guides: ["palet-cesitleri-ve-secimi", "ambalaj-paleti-nedir", "palet-kac-kg-tasir", "ispm-15-nedir", "palet-maliyetini-dusurmenin-yollari"],
   },
 ];
 

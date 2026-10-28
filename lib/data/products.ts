@@ -1,18 +1,19 @@
 import type { Product } from "@/lib/types";
+import { extraProducts } from "./products-extra";
 
 // Ürün sayfaları (/urunler/<slug>/). Fiyatlar burada YAZILMAZ: priceRow ile
 // lib/data/prices.ts içindeki satıra bağlanır.
-export const products: Product[] = [
+const baseProducts: Product[] = [
   // ───────────────────────── 1. 80x120 Euro palet
   {
     slug: "80x120-euro-palet",
     name: "80x120 Euro Palet",
     title: "80x120 Euro Palet | Ölçü, Kapasite, Fiyat | MEPAL",
     description:
-      "80x120 Euro palet: 800×1200 mm ölçü, 9 ayaklı yapı, taşıma kapasitesi ve güncel fiyat. Gebze depodan hızlı teslimat, WhatsApp'tan teklif.",
+      "80x120 palet (Euro palet): 800×1200 mm ölçü, 9 bloklu yapı, kapasite ve güncel fiyat. Gebze deposundan toplu teslimat, WhatsApp'tan teklif.",
     h1: "80x120 Euro Palet — Gebze Depodan Toplu Teslimat",
     answer:
-      "80x120 Euro palet, 800 × 1200 mm ölçülü, 9 ayaklı ve dört yönden çatallanabilen standart ahşap paletdir. Avrupa'da en yaygın kullanılan ölçüdür; gıda, otomotiv ve beyaz eşya sevkiyatında raf ve tır yüklemesine uyumludur. Sıfır ve ikinci el seçenekleri Gebze deposundan toplu verilir.",
+      "80x120 Euro palet (EUR palet), 800 × 1200 mm ölçülü, 9 ayaklı ve dört yönden çatallanabilen standart ahşap palettir; günlük dilde “80x120 palet” diye de anılır. Avrupa'da en yaygın kullanılan ölçüdür; gıda, otomotiv ve beyaz eşya sevkiyatında raf ve tır yüklemesine uyumludur. Sıfır ve ikinci el seçenekleri Gebze deposundan toplu verilir.",
     keyword: "euro palet",
     art: "euro",
     blurb: "800×1200 mm, 9 ayaklı, dört yönden çatallanabilir standart palet.",
@@ -28,14 +29,20 @@ export const products: Product[] = [
       ["Malzeme", "Ahşap, çivili"],
     ],
     uses: ["Gıda ve içecek sevkiyatı", "Otomotiv yan sanayi", "Beyaz eşya", "Raflı depo sistemleri", "E-ticaret ve dağıtım depoları"],
-    related: ["epal-palet", "ikinci-el-palet", "ihracat-paleti"],
-    guides: ["euro-palet-olculeri", "konteynere-ve-tira-kac-palet-sigar", "palet-kac-kg-tasir"],
+    related: ["epal-palet", "ikinci-el-palet", "ihracat-paleti", "cakma-epal-palet", "ikinci-el-euro-palet"],
+    guides: ["euro-palet-olculeri", "eur-palet-nedir", "cakma-epal-nedir", "konteynere-ve-tira-kac-palet-sigar", "palet-kac-kg-tasir"],
     sections: [
       {
         h: "80x120 Euro palet nedir?",
         p: [
           "80x120 Euro palet, 800 × 1200 mm taban ölçüsüne sahip, üst ve alt tahtaları dokuz adet blok (ayak) üzerinde taşıyan ahşap yük platformudur. Dört kenarından da transpalet veya forklift çatalı girebildiği için depoda yön değiştirmeden çalışılır.",
           "Ölçü, Avrupa'daki depo rafı, kamyon kasası ve konteyner düzenlerinin büyük kısmı bu palete göre planlandığı için fiilen sektör standardı hâline gelmiştir. Yük sahibi ile alıcının aynı ölçüyü kullanması, aktarma sırasında yeniden paletleme masrafını ortadan kaldırır.",
+          "Sahada aynı ürüne EUR palet, Euro palet, europalet ya da 80x120 palet denir. Üzerindeki EUR işareti ölçü standardını, EPAL işareti ise ayrı bir kalite sistemini anlatır; damgasız ama aynı ölçüdeki palet “çakma EPAL” diye anılır. Bu terimlerin farkını rehberlerde ayrı ayrı anlattık.",
+        ],
+        links: [
+          ["EUR palet nedir?", "/rehber/eur-palet-nedir/"],
+          ["Çakma EPAL nedir?", "/rehber/cakma-epal-nedir/"],
+          ["Çakma EPAL palet (damgasız)", "/urunler/cakma-epal-palet/"],
         ],
       },
       {
@@ -133,8 +140,8 @@ export const products: Product[] = [
       ["MEPAL hizmeti", "İkinci el EPAL alım satımı, EPAL ölçülü palet"],
     ],
     uses: ["Palet havuzu ve takas sistemleri", "Avrupa'ya ihracat sevkiyatı", "Gıda ve ilaç lojistiği", "Perakende zincirleri"],
-    related: ["80x120-euro-palet", "ikinci-el-palet", "turpal-palet"],
-    guides: ["epal-palet-ile-standart-palet-farki", "euro-palet-olculeri", "ikinci-el-palet-alirken-dikkat-edilecekler"],
+    related: ["80x120-euro-palet", "ikinci-el-palet", "turpal-palet", "cakma-epal-palet"],
+    guides: ["epal-palet-ile-standart-palet-farki", "cakma-epal-nedir", "eur-palet-nedir", "euro-palet-olculeri", "ikinci-el-palet-alirken-dikkat-edilecekler"],
     sections: [
       {
         h: "EPAL nedir, neden damga önemlidir?",
@@ -162,7 +169,12 @@ export const products: Product[] = [
             ["Uygun kullanım", "Havuz, ihracat, perakende", "Fabrika içi, tek yön sevkiyat"],
           ],
         },
-        links: [["EPAL ile standart palet farkı", "/rehber/epal-palet-ile-standart-palet-farki/"]],
+        links: [
+          ["EPAL ile standart palet farkı", "/rehber/epal-palet-ile-standart-palet-farki/"],
+          ["Çakma EPAL nedir?", "/rehber/cakma-epal-nedir/"],
+          ["Çakma EPAL palet (damgasız)", "/urunler/cakma-epal-palet/"],
+          ["EUR palet nedir?", "/rehber/eur-palet-nedir/"],
+        ],
       },
       {
         h: "İkinci el EPAL alırken kontrol listesi",
@@ -207,7 +219,7 @@ export const products: Product[] = [
       "100x120 palet: 1000×1200 mm ölçü, kapasite, kullanım alanları ve sıfır/ikinci el seçenekleri. Kimya, ağır sanayi ve ihracat için Gebze'den teslimat.",
     h1: "100x120 Palet — 1000×1200 mm Endüstriyel Ahşap Palet",
     answer:
-      "100x120 palet, 1000 × 1200 mm ölçülü, Euro paletten daha geniş ve yüksek yük taşıyan endüstriyel ahşap paletdir. Kimya, boya, ağır sanayi ve ihracat gibi, ürünün 80x120 palete sığmadığı veya daha fazla yük alınmak istendiği işlerde tercih edilir.",
+      "100x120 palet, 1000 × 1200 mm ölçülü, Euro paletten daha geniş ve yüksek yük taşıyan endüstriyel ahşap palettir. Kimya, boya, ağır sanayi ve ihracat gibi, ürünün 80x120 palete sığmadığı veya daha fazla yük alınmak istendiği işlerde tercih edilir.",
     keyword: "100x120 palet",
     art: "wood",
     blurb: "1000×1200 mm, geniş taban, daha yüksek yük.",
@@ -294,12 +306,12 @@ export const products: Product[] = [
   {
     slug: "cp-palet",
     name: "CP Palet (114x114)",
-    title: "CP Palet 114x114 | Kimya Paleti Ölçüleri | MEPAL",
+    title: "CP Palet Serisi: CP1, CP2, CP3 Ölçüleri | MEPAL",
     description:
-      "CP palet (CP1–CP3) ölçüleri: 114x114 cm CP3, 100x120 CP1, 80x120 CP2. Kimya sektörü için kapasite, seçim ve Gebze'den teslimat.",
-    h1: "CP Palet — 114x114 ve Kimya Sektörü Paletleri",
+      "CP palet serisi nedir? CP1, CP2 ve CP3 tiplerinin karşılaştırması, kimya sektöründe seçim ölçütleri. CP3 için ayrı sayfa; Gebze'den teklif.",
+    h1: "CP Palet Serisi — CP1, CP2, CP3 ve Kimya Sektörü Paletleri",
     answer:
-      "CP paletler, Avrupa kimya endüstrisinde kullanılan ve CP1'den CP9'a numaralandırılan standart ahşap palet serisidir. En çok sorulan CP3, 1140 × 1140 mm ölçülüdür; CP1 1000×1200 mm, CP2 800×1200 mm'dir. Kimyasal ambalajlar için tasarlanmıştır.",
+      "CP paletler, kimya endüstrisinde kullanılan ve CP1'den CP9'a numaralandırılan palet serisinin genel adıdır; her numara farklı bir taban ölçüsüne karşılık gelir. Bu sayfa seriyi bütün olarak karşılaştırır; 114x114 (1140 × 1140 mm) ölçülü CP3 için ayrı CP3 palet sayfasına bakın.",
     keyword: "cp palet",
     art: "cp",
     blurb: "Kimya sektörü paletleri: CP3 1140×1140 mm, CP1 1000×1200 mm.",
@@ -314,15 +326,16 @@ export const products: Product[] = [
       ["Yaygın kullanım", "Bidon, torba, IBC alt grupları, kimyasal ambalaj"],
     ],
     uses: ["Kimya ve boya üretimi", "Plastik hammadde torbaları", "Bidon ve kova paletleme", "İhracat sevkiyatı"],
-    related: ["100x120-palet", "80x120-euro-palet", "ihracat-paleti"],
+    related: ["cp3-palet", "100x120-palet", "80x120-euro-palet", "ihracat-paleti"],
     guides: ["cp-paletleri-olcu-tablosu", "100x120-ile-80x120-palet-farki", "ihracatta-palet-ve-ambalaj-kurallari"],
     sections: [
       {
         h: "CP palet nedir?",
         p: [
           "CP, kimya sektöründe geliştirilen standart palet sınıfları için kullanılan ortak addır. Seri CP1, CP2, CP3 diye devam eder; her numara farklı bir taban ölçüsüne ve yük profiline karşılık gelir.",
-          "114x114 olarak bilinen CP3, kare tabanı sayesinde paletli yükün dört yönde de aynı dengeyle taşınmasını sağlar. Bidon ve torba dizilimine uygun olduğu için kimya fabrikalarında yaygındır.",
+          "Serinin en çok sorulan üyesi 114x114 olarak bilinen kare tabanlı CP3'tür; onun kullanım alanları ve ahşap/plastik seçimi ayrı sayfada ele alınır. Bu sayfada ise seriyi tip tip karşılaştırıyor ve işinize hangi numaranın yakın olduğunu gösteriyoruz.",
         ],
+        links: [["CP3 palet sayfası", "/urunler/cp3-palet/"]],
       },
       {
         h: "CP palet ölçü tablosu",
@@ -335,8 +348,8 @@ export const products: Product[] = [
             ["CP3", "1140 × 1140", "Kare taban; bidon ve torba"],
           ],
         },
-        p: ["CP4 ve üzeri tipler farklı ölçülere sahiptir; ihtiyacınız oradaysa ölçüyü yazarak teklif isteyin."],
-        links: [["CP paletleri ölçü tablosu", "/rehber/cp-paletleri-olcu-tablosu/"]],
+        p: ["CP4 ve üzeri tipler farklı ölçülere sahiptir; ihtiyacınız oradaysa ölçüyü yazarak teklif isteyin. 1140 × 1140 mm kare ölçüyü tek başına arıyorsanız CP3 palet sayfası bu ölçüye özel ayrıntı verir."],
+        links: [["CP3 palet (1140×1140 mm)", "/urunler/cp3-palet/"], ["CP paletleri ölçü tablosu", "/rehber/cp-paletleri-olcu-tablosu/"]],
       },
       {
         h: "Kimya sektöründe palet seçimi",
@@ -394,8 +407,8 @@ export const products: Product[] = [
       ["Kullanım", "İç lojistik, depo, kısa sevkiyat"],
     ],
     uses: ["Fabrika içi taşıma", "Depolama ve raf alanı", "Tek yön yurt içi sevkiyat", "Maliyet hassas işler"],
-    related: ["80x120-euro-palet", "epal-palet", "sifir-ahsap-palet"],
-    guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "hurda-paletinizi-nasil-degerlendirirsiniz"],
+    related: ["80x120-euro-palet", "epal-palet", "sifir-ahsap-palet", "orta-palet", "kalin-orta-palet"],
+    guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "orta-palet-ve-kalin-orta-palet-farki", "hasarli-ve-kirik-palet-ne-yapilir", "hurda-paletinizi-nasil-degerlendirirsiniz"],
     sections: [
       {
         h: "İkinci el palet nedir?",
@@ -416,7 +429,14 @@ export const products: Product[] = [
             ["Maliyet", "Orta", "En düşük"],
           ],
         },
-        links: [["Palet kalite sınıfları", "/rehber/palet-kalite-siniflari/"]],
+        p: [
+          "Piyasada 1. ve 2. sınıfın arasında kalan paletler için “orta palet” ve “kalın orta palet” gibi günlük adlar da kullanılır. Bunlar resmî sınıf değildir; tahta kalınlığına göre ayrı sayfalarda anlattık.",
+        ],
+        links: [
+          ["Palet kalite sınıfları", "/rehber/palet-kalite-siniflari/"],
+          ["Orta palet", "/urunler/orta-palet/"],
+          ["Kalın orta palet", "/urunler/kalin-orta-palet/"],
+        ],
       },
       {
         h: "Kimlere uygundur?",
@@ -446,6 +466,8 @@ export const products: Product[] = [
         links: [
           ["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"],
           ["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"],
+          ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"],
+          ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"],
           ["Palet alım satım", "/hizmetler/palet-alim-satim/"],
         ],
       },
@@ -469,7 +491,7 @@ export const products: Product[] = [
       "Sıfır ahşap palet: standart, Euro ölçülü, 100x120 ve özel ölçü. Yeni kereste, tahta kalınlığı, kapasite ve teklif. Gebze deposundan teslimat.",
     h1: "Sıfır Ahşap Palet — Yeni Kerestelerden, Gebze'den Teslim",
     answer:
-      "Sıfır ahşap palet, hiç kullanılmamış kerestelerden çivilenmiş yeni paletdir. Hafif hizmet standart paletten Euro ölçülü, 100x120 ve özel ölçüye kadar seçenek vardır. Gıda, ihracat ve raf yükü yüksek işlerde ilk tercih sıfır palettir.",
+      "Sıfır ahşap palet, hiç kullanılmamış kerestelerden çivilenmiş yeni palettir. Hafif hizmet standart paletten Euro ölçülü, 100x120 ve özel ölçüye kadar seçenek vardır. Gıda, ihracat ve raf yükü yüksek işlerde ilk tercih sıfır palettir.",
     keyword: "sıfır palet",
     art: "wood",
     blurb: "Yeni kereste, standart ve Euro ölçülü sıfır ahşap paletler.",
@@ -484,8 +506,8 @@ export const products: Product[] = [
       ["Opsiyonel", "Isıl işlem (HT) damgası"],
     ],
     uses: ["Gıda ve ilaç", "İhracat paketleme", "Raflı depo", "Hafif ve orta yük sevkiyatı"],
-    related: ["80x120-euro-palet", "ozel-olcu-palet", "ihracat-paleti"],
-    guides: ["palet-cesitleri-ve-secimi", "palet-kac-kg-tasir", "ahsap-palet-mi-plastik-palet-mi"],
+    related: ["80x120-euro-palet", "ozel-olcu-palet", "ihracat-paleti", "orta-palet", "ambalaj-paleti"],
+    guides: ["palet-cesitleri-ve-secimi", "palet-kac-kg-tasir", "ahsap-palet-mi-plastik-palet-mi", "orta-palet-ve-kalin-orta-palet-farki"],
     sections: [
       {
         h: "Sıfır ahşap palet nedir?",
@@ -516,7 +538,11 @@ export const products: Product[] = [
           "Raflı depolamada",
           "Marka imajının önemli olduğu perakende sevkiyatında",
         ],
-        links: [["Gıda sektörü için palet seçimi", "/rehber/gida-sektoru-icin-palet-secimi/"]],
+        links: [
+          ["Gıda sektörü için palet seçimi", "/rehber/gida-sektoru-icin-palet-secimi/"],
+          ["Orta palet (sıfırla ikinci el arası)", "/urunler/orta-palet/"],
+          ["Ambalaj paleti seçimi", "/urunler/ambalaj-paleti/"],
+        ],
       },
       {
         h: "Kalite ve malzeme",
@@ -934,16 +960,21 @@ export const products: Product[] = [
       ["MEPAL durumu", "Uyumlu, damgalı palet temini; kendi fırını yok"],
     ],
     uses: ["Avrupa, ABD, Orta Doğu ihracatı", "Konteyner sevkiyatı", "Ağır sanayi ürünleri", "Gıda ve tekstil ihracatı"],
-    related: ["80x120-euro-palet", "ahsap-sandik", "plastik-palet"],
-    guides: ["ispm-15-nedir", "ihracatta-palet-ve-ambalaj-kurallari", "konteynere-ve-tira-kac-palet-sigar"],
+    related: ["80x120-euro-palet", "isil-islemli-palet", "ambalaj-paleti", "ahsap-sandik", "plastik-palet"],
+    guides: ["ispm-15-nedir", "ihracatta-palet-ve-ambalaj-kurallari", "ambalaj-paleti-nedir", "konteynere-ve-tira-kac-palet-sigar"],
     sections: [
       {
         h: "ISPM-15 nedir?",
         p: [
           "ISPM-15, Uluslararası Bitki Koruma Sözleşmesi'nin (IPPC) ahşap ambalaj malzemesi için belirlediği uluslararası standarttır. Amaç, ahşapla birlikte zararlı böceklerin ülkeler arasında taşınmasını önlemektir. Palet, sandık, takoz gibi ham ahşap ambalajlar kapsama girer.",
           "Standardın kabul ettiği temel işlem ısıl işlemdir (HT): ahşabın çekirdek sıcaklığı en az 56 °C'ye ulaşıp en az 30 dakika korunur. Metil bromür ile fumigasyon da standartta yer alır, ancak birçok ülke ve işletme ısıl işlemi tercih eder.",
+          "Piyasada bu ürün ısıl işlemli palet, HT damgalı palet ya da ambalaj paleti (ihracat ambalajı) adlarıyla da aranır. Damga ve işlem ayrıntısı için ısıl işlemli palet sayfasına, malzeme ve ambalaj seçimi için ambalaj paleti sayfasına bakabilirsiniz.",
         ],
-        links: [["ISPM-15 nedir?", "/rehber/ispm-15-nedir/"]],
+        links: [
+          ["ISPM-15 nedir?", "/rehber/ispm-15-nedir/"],
+          ["Isıl işlemli palet", "/urunler/isil-islemli-palet/"],
+          ["Ambalaj paleti", "/urunler/ambalaj-paleti/"],
+        ],
       },
       {
         h: "Damgada ne yazar?",
@@ -1451,5 +1482,7 @@ export const products: Product[] = [
     ],
   },
 ];
+
+export const products: Product[] = [...baseProducts, ...extraProducts];
 
 export const productBySlug = (slug: string) => products.find((p) => p.slug === slug);

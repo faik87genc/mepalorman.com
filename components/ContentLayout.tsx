@@ -65,16 +65,27 @@ export function ContentLayout({
   finalTitle?: string;
   meta?: string;
 }) {
+  const seed = crumbs[crumbs.length - 1]?.[1] ?? h1;
+  const heroPhoto = art ? photoFor(art, seed) : undefined;
+  let figPhoto = art ? photoFor(art, seed, 1) : undefined;
+  if (art && figPhoto === heroPhoto) figPhoto = photoFor(art, seed, 2);
   return (
     <>
-      <PageHero h1={h1} answer={answer} kicker={crumbs[0]?.[0]} photo={art ? photoFor(art) : undefined}>
+      <PageHero h1={h1} answer={answer} kicker={crumbs[0]?.[0]} photo={heroPhoto}>
         {meta && <p className="meta">{meta}</p>}
         <CtaButtons message={message} source="hero" />
         {heroExtra}
       </PageHero>
       <Breadcrumbs items={crumbs} />
       <div className="wrap content-grid">
-        <div className="content-main">{children}</div>
+        <div className="content-main">
+          {figPhoto && (
+            <figure className="page-figure">
+              <Photo name={figPhoto} sizes="(min-width: 900px) 640px, 100vw" />
+            </figure>
+          )}
+          {children}
+        </div>
         <aside className="sidebar" aria-label="Yardımcı bilgiler">
           <ContactCard message={message} />
           {side}
@@ -94,7 +105,7 @@ export function CardGrid({ items }: { items: { href: string; title: string; blur
       {items.map((it, i) => (
         <article key={it.href} className="card">
           <div className="card-photo">
-            <Photo name={photoFor(it.art)} sizes="(min-width: 900px) 360px, 100vw" position={POS[i % POS.length]} alt="" />
+            <Photo name={photoFor(it.art, it.href)} sizes="(min-width: 900px) 360px, 100vw" position={POS[i % POS.length]} />
           </div>
           <div className="card-body">
             <h3>

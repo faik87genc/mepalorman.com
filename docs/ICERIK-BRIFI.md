@@ -47,3 +47,10 @@ Bölge: kocaeli-palet, istanbul-palet, balcik-palet, gebze-osb-palet, plastikcil
 Rehber: ahsap-palet-nedir, sifir-palet-mi-ikinci-el-palet-mi, palet-fiyatlarini-etkileyen-faktorler, ikinci-el-palet-guvenli-mi, ahsap-palet-geri-donusum
 Kurumsal: /sss/, /turkiye-geneli-palet-sevkiyati/
 Not: Hizmet alanı TÜRKİYE GENELİ (depo Gebze'de; Kocaeli/İstanbul en hızlı). "Kocaeli ve İstanbul'a özel" gibi dar ifade kullanma. Rakip adı verme.
+
+## EK 2 (SEO tur 2) — yeni slug'lar
+Ürün (/urunler/<slug>/): cakma-epal-palet, orta-palet, kalin-orta-palet, ambalaj-paleti, cp3-palet
+Hizmet (/hizmetler/<slug>/): hasarli-palet-alimi, kirik-palet-alimi
+Rehber (/rehber/<slug>/): cakma-epal-nedir, orta-palet-ve-kalin-orta-palet-farki, ambalaj-paleti-nedir, eur-palet-nedir, hasarli-ve-kirik-palet-ne-yapilir
+Sayfa: /galeri/
+Not: "cp-palet" CP serisini genel anlatır, 1140×1140 mm ölçüsü "cp3-palet" sayfasına aittir (answer/description farklı tutulur). "Orta palet" ve "kalın orta palet" resmî standart değil, piyasa sınıfıdır; "çakma EPAL" damgasız Euro ölçülü paleti anlatır, EPAL diye sunulmaz.

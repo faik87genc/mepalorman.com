@@ -202,3 +202,10 @@ a.c-card:hover { border-color: var(--green); box-shadow: 0 6px 18px rgba(27, 74,
 .contact-form .btn-green { background: var(--gold); color: var(--ink); }
 .contact-form .btn-green:hover { background: #cda274; color: var(--ink); }
 .contact-faq { padding-bottom: 2.4rem; }
+
+.page-figure { margin: 0 0 1.6rem; border-radius: 12px; overflow: hidden; background: #efe3cc; }
+.page-figure img { display: block; width: 100%; height: auto; max-height: 420px; object-fit: cover; }
+.gallery-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin: 1.4rem 0; }
+.gallery-grid figure { margin: 0; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 2px 10px rgba(26,31,27,.1); }
+.gallery-grid img { display: block; width: 100%; height: auto; }
+.gallery-grid figcaption { padding: .6rem .8rem .8rem; font-size: .92rem; color: #3b463e; }

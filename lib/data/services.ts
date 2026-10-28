@@ -1,7 +1,8 @@
 import type { Service } from "@/lib/types";
+import { extraServices } from "./services-extra";
 
 // Hizmet sayfaları (/hizmetler/<slug>/): hurda-palet-alimi, palet-alim-satim, palet-tamiri, toptan-palet
-export const services: Service[] = [
+const baseServices: Service[] = [
   {
     slug: "hurda-palet-alimi",
     name: "Hurda Palet Alımı",
@@ -13,14 +14,20 @@ export const services: Service[] = [
     keyword: "hurda palet alımı",
     art: "scrap",
     blurb: "Hurda ve fazla paletleriniz yerinden alınır; ahşap atık geri dönüşüme kazandırılır.",
-    related: ["palet-alim-satim", "palet-tamiri", "ikinci-el-palet", "sifir-ahsap-palet"],
-    guides: ["hurda-paletinizi-nasil-degerlendirirsiniz", "ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "palet-omru-nasil-uzatilir"],
+    related: ["hasarli-palet-alimi", "kirik-palet-alimi", "yerinde-palet-toplama", "palet-alim-satim", "palet-tamiri", "ikinci-el-palet", "sifir-ahsap-palet"],
+    guides: ["hasarli-ve-kirik-palet-ne-yapilir", "hurda-paletinizi-nasil-degerlendirirsiniz", "ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "palet-omru-nasil-uzatilir"],
     sections: [
       {
         h: "Ahşap atık geri dönüşümü neden önemli?",
         p: [
           "Üretim ve depolama yapan her işletmede zamanla kırık, çürümüş veya fazla gelen paletler birikir. Bunlar depoda yer kaplar, yangın yükünü artırır ve düzenli toplanmazsa ayrı bir atık maliyeti doğurur.",
           "Ahşap, doğru ayrıştırıldığında değerini koruyan bir malzemedir. Hurda palet alımında amacımız paleti çöpe değil, ikinci bir kullanıma yönlendirmek: sağlam olanlar onarılıp yeniden palet olur, kullanılamayacak durumdakiler ahşap atık olarak geri dönüşüm zincirine verilir.",
+          "Elinizdeki parti tamamen kırık değilse iki ayrı sayfamız işinize yarar: tamire elverişli paletler için hasarlı palet alımı, yapısı dağılmış paletler için kırık palet alımı. Hangisine girdiğinden emin değilseniz fotoğraf göndermeniz yeterlidir.",
+        ],
+        links: [
+          ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"],
+          ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"],
+          ["Hasarlı ve kırık palet ne yapılır?", "/rehber/hasarli-ve-kirik-palet-ne-yapilir/"],
         ],
       },
       {
@@ -114,7 +121,7 @@ export const services: Service[] = [
       {
         h: "Palet satmak istediğinizde",
         p: ["Fazla veya kullanılmayan paletlerinizi satmak için adedi, ölçüyü ve genel durumu bildirmeniz yeterlidir. Sağlam ve sınıflandırılabilir paletler için alım teklifi verilir; kırık ve çürük paletler hurda palet alımı kapsamında ayrıca değerlendirilir."],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"], ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"]],
       },
       {
         h: "Alım satımda sıfır mı, ikinci el mi?",
@@ -174,7 +181,7 @@ export const services: Service[] = [
           "Çatal girişini daraltan ezilmiş köşeler",
         ],
         p: ["Tamir her palet için uygun değildir. Gövdesi çürümüş, kiriş ve takozları geniş ölçüde bozulmuş paletlerde onarım maliyeti yeni paleti aşabilir; bu paletler hurda olarak değerlendirilir."],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"]],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"], ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"]],
       },
       {
         h: "Tamir süreci nasıl işler?",
@@ -468,5 +475,7 @@ export const services: Service[] = [
     ],
   },
 ];
+
+export const services: Service[] = [...baseServices, ...extraServices];
 
 export const serviceBySlug = (slug: string) => services.find((s) => s.slug === slug);
