@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ArtKind } from "@/lib/types";
+import { Art } from "@/components/Art";
 import { Photo, photoFor } from "@/components/Photo";
 import { Breadcrumbs, FinalCta, JsonLd, PageHero, CtaButtons } from "@/components/Content";
 import { site, telHref, waLink } from "@/lib/site";
@@ -66,8 +67,10 @@ export function ContentLayout({
   meta?: string;
 }) {
   const seed = crumbs[crumbs.length - 1]?.[1] ?? h1;
-  const heroPhoto = art ? photoFor(art, seed) : undefined;
-  let figPhoto = art ? photoFor(art, seed, 1) : undefined;
+  // Plastik palet için gerçek fotoğrafımız yok: ahşap fotoğraf yerine çizim kullanılır.
+  const noPhoto = art === "plastic";
+  const heroPhoto = art && !noPhoto ? photoFor(art, seed) : undefined;
+  let figPhoto = art && !noPhoto ? photoFor(art, seed, 1) : undefined;
   if (art && figPhoto === heroPhoto) figPhoto = photoFor(art, seed, 2);
   return (
     <>
@@ -105,7 +108,7 @@ export function CardGrid({ items }: { items: { href: string; title: string; blur
       {items.map((it, i) => (
         <article key={it.href} className="card">
           <div className="card-photo">
-            <Photo name={photoFor(it.art, it.href)} sizes="(min-width: 900px) 360px, 100vw" position={POS[i % POS.length]} />
+            {it.art === "plastic" ? <Art kind="plastic" /> : <Photo name={photoFor(it.art, it.href)} sizes="(min-width: 900px) 360px, 100vw" position={POS[i % POS.length]} />}
           </div>
           <div className="card-body">
             <h3>
