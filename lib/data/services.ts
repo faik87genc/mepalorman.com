@@ -14,7 +14,7 @@ const baseServices: Service[] = [
     keyword: "hurda palet alımı",
     art: "scrap",
     blurb: "Hurda ve fazla paletleriniz yerinden alınır; ahşap atık geri dönüşüme kazandırılır.",
-    related: ["hasarli-palet-alimi", "kirik-palet-alimi", "yerinde-palet-toplama", "palet-alim-satim", "palet-tamiri", "ikinci-el-palet", "sifir-ahsap-palet"],
+    related: ["hasarli-palet-alimi", "kirik-palet-alimi", "yerinde-palet-toplama", "palet-alim-satim", "palet-tamiri", "ikinci-el-palet", "sifir-ahsap-palet", "ahsap-atik-geri-donusumu"],
     guides: ["hasarli-ve-kirik-palet-ne-yapilir", "hurda-paletinizi-nasil-degerlendirirsiniz", "ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "palet-omru-nasil-uzatilir"],
     sections: [
       {
@@ -88,26 +88,26 @@ const baseServices: Service[] = [
   {
     slug: "palet-alim-satim",
     name: "Palet Alım Satım",
-    title: "Palet Alım Satım | İkinci El ve Sıfır Palet | MEPAL",
-    description: "İkinci el ve sıfır palet alım satımı: Euro ölçülü, 100x120 ve özel ölçülü paletleri Gebze deposundan alın, fazla paletinizi bize satın.",
-    h1: "Palet Alım Satım — Alın, Satın, Değiştirin",
+    title: "Paletçi: Palet Alım Satım ve Toplu Tedarik | MEPAL",
+    description: "Palet alan firmalar ve paletçi arayanlar için: sıfır ve ikinci el palet tedariği, toplu alım, fazla palet satışı. Gebze deposundan Türkiye geneli.",
+    h1: "Paletçi: Palet Alım Satım ve Toplu Palet Tedariği",
     answer:
-      "Hem palet satın alabilir hem de elinizdeki fazla paletleri bize satabilirsiniz. Sıfır ve ikinci el ahşap palet, plastik palet ve ikinci el EPAL ölçülü palet Gebze deposundan temin edilir. Güncel fiyat için WhatsApp'tan teklif alın.",
+      "MEPAL hem palet satan hem palet alan bir paletçidir: sıfır ve ikinci el ahşap palet, plastik palet ve ikinci el EPAL palet Gebze deposundan toplu tedarik edilir; fazla veya kullanılmayan paletleriniz değerlendirilip satın alınır. Ürün, adet ve konumu bildirin, teklifi çıkaralım.",
     keyword: "palet alım satım",
     art: "service",
-    blurb: "Sıfır ve ikinci el palet temini; fazla paletlerinizin alımı tek adreste.",
+    blurb: "Paletçi olarak sıfır ve ikinci el palet tedariği, toplu alım ve fazla palet alımı tek adreste.",
     related: ["hurda-palet-alimi", "toptan-palet", "ikinci-el-palet", "80x120-euro-palet", "epal-palet"],
-    guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "palet-cesitleri-ve-secimi", "palet-maliyetini-dusurmenin-yollari"],
+    guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "palet-cesitleri-ve-secimi", "palet-maliyetini-dusurmenin-yollari", "hurda-palet-nereye-satilir", "palet-alirken-teklif-isterken-hangi-bilgiler-gerekir"],
     sections: [
       {
-        h: "Tek adreste hem alım hem satım",
+        h: "Paletçi arıyorsanız: tek adreste tedarik ve alım",
         p: [
-          "Palet ihtiyacı işletmeden işletmeye değişir: bir tarafta sevkiyat için sürekli palet arayan üreticiler, diğer tarafta depolarında fazla palet biriktirenler vardır. Gebze deposumuz bu iki ihtiyacı birbirine bağlar.",
-          "Satın alırken ürünü sınıfıyla ve ölçüsüyle net olarak bilirsiniz; satarken ise paletlerinizin durumuna göre makul bir alım teklifi alırsınız.",
+          "Palet ihtiyacı işletmeden işletmeye değişir: bir tarafta sevkiyat için sürekli palet arayan üreticiler ve depolar, diğer tarafta depolarında fazla palet biriktirenler vardır. Gebze deposumuz bu iki ihtiyacı birbirine bağlar. Palet tedariği için mi geldiniz, fazla paletleriniz için mi, ikisi de aynı muhatapla çözülür.",
+          "Satın alırken ürünü sınıfıyla ve ölçüsüyle net olarak bilirsiniz; satarken ise paletlerinizin durumuna göre alım teklifi alırsınız. Toplu alımlarda teklif adede, palet tipine ve teslimat koşuluna göre kurgulanır.",
         ],
       },
       {
-        h: "Satın alabileceğiniz paletler",
+        h: "Palet alan firmalar için: neler tedarik edilir?",
         list: [
           "Euro ölçülü (80x120) sıfır ahşap palet",
           "Euro ölçülü ikinci el palet, 1. ve 2. sınıf",
@@ -116,12 +116,19 @@ const baseServices: Service[] = [
           "ISPM-15 uyumlu, HT damgalı ihracat paleti temini",
           "Plastik palet ve özel ölçülü ahşap palet",
         ],
-        links: [["Palet fiyatları", "/palet-fiyatlari/"], ["İkinci el palet", "/urunler/ikinci-el-palet/"], ["Euro palet", "/urunler/80x120-euro-palet/"]],
+        p: ["Düzenli ve toplu ihtiyacınız varsa aylık veya haftalık tedarik planı yapılabilir. Güncel fiyat için fiyat tablosuna bakın veya teklif alın."],
+        links: [["Palet fiyatları", "/palet-fiyatlari/"], ["İkinci el palet", "/urunler/ikinci-el-palet/"], ["Euro palet", "/urunler/80x120-euro-palet/"], ["Toptan palet", "/hizmetler/toptan-palet/"]],
       },
       {
-        h: "Palet satmak istediğinizde",
-        p: ["Fazla veya kullanılmayan paletlerinizi satmak için adedi, ölçüyü ve genel durumu bildirmeniz yeterlidir. Sağlam ve sınıflandırılabilir paletler için alım teklifi verilir; kırık ve çürük paletler hurda palet alımı kapsamında ayrıca değerlendirilir."],
-        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"], ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"]],
+        h: "Palet satmak istediğinizde: alım süreci",
+        p: ["Fazla veya kullanılmayan paletlerinizi satmak için süreç birkaç net adımdan oluşur. Sağlam ve sınıflandırılabilir paletler için alım teklifi verilir; kırık ve çürük paletler hurda palet alımı kapsamında ayrıca değerlendirilir."],
+        steps: [
+          "Palet tipi, ölçü, yaklaşık adet ve konumu bildirin; mümkünse fotoğraf ekleyin.",
+          "Fotoğraf ve bilgilere göre ön değerleme yapılır; bu aşama bağlayıcı değildir.",
+          "Gerekirse paletler yerinde görülür; sağlam, tamirlik ve hurda diye sınıflanır.",
+          "Teklif ve ödeme şekli netleşince yükleme günü belirlenir ve paletler tesisinizden yüklenir.",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Hasarlı palet alımı", "/hizmetler/hasarli-palet-alimi/"], ["Hurda palet nereye satılır?", "/rehber/hurda-palet-nereye-satilir/"]],
       },
       {
         h: "Alım satımda sıfır mı, ikinci el mi?",
@@ -137,7 +144,7 @@ const baseServices: Service[] = [
           ],
         },
         p: ["Hangisinin size uygun olduğuna yükünüz, ürününüzün hassasiyeti ve palet dönüş döngünüz karar verir."],
-        links: [["Palet seçici aracı", "/araclar/palet-secici/"]],
+        links: [["Palet seçici aracı", "/araclar/palet-secici/"], ["Sıfır mı ikinci el mi?", "/rehber/sifir-palet-mi-ikinci-el-palet-mi/"]],
       },
       {
         h: "Teklif ve teslimat süreci",
@@ -146,15 +153,16 @@ const baseServices: Service[] = [
           "Stok durumuna göre fiyat ve teslim planı bildirilir.",
           "Onaydan sonra paletler hazırlanır; depodan teslim alabilir veya araçla sevk isteyebilirsiniz.",
         ],
-        p: ["Teslimat stok ve araç programına göre yapılır; net süre teklifte bildirilir."],
-        links: [["Teklif al", "/teklif-al/"]],
+        p: ["Teslimat stok ve araç programına göre yapılır; çoğunlukla ertesi iş günü planlanabilir, net süre teklifte bildirilir."],
+        links: [["Teklif al", "/teklif-al/"], ["Teklif için gerekli bilgiler", "/rehber/palet-alirken-teklif-isterken-hangi-bilgiler-gerekir/"]],
       },
     ],
     faq: [
       { q: "Hem alım hem satım yapıyor musunuz?", a: "Evet. Sıfır ve ikinci el palet satışı yapıyoruz, sağlam ve onarılabilir paletlerinizi de değerlendirme sonrası satın alıyoruz." },
+      { q: "Toplu palet tedariği yapıyor musunuz?", a: "Evet. Düzenli veya tek seferlik toplu ihtiyaçlar için tip, ölçü ve adede göre teklif hazırlanır; periyodik tedarik planlanabilir." },
       { q: "İkinci el paletler hangi sınıflarda?", a: "Euro ölçülü ikinci el paletler 1. sınıf (sağlam, onarılmış) ve 2. sınıf (yerli kullanım) olarak ayrılır. Sınıf farkları palet kalite sınıfları rehberinde açıklanmıştır." },
       { q: "EPAL paletleri satıyor musunuz?", a: "İkinci el EPAL palet alım-satımı yapıyoruz. EPAL tescilli bir markadır; yeni palet tarafında EPAL ölçülerinde Euro palet (80x120) tedarik edilir." },
-      { q: "Fiyatlar neye göre değişiyor?", a: "Palet tipi, sınıfı, ölçüsü ve sipariş adedi fiyatı belirler. Güncel fiyatı WhatsApp'tan alabilirsiniz; büyük adetlerde teklif alınması önerilir." },
+      { q: "Fiyatlar neye göre değişiyor?", a: "Palet tipi, sınıfı, ölçüsü ve sipariş adedi fiyatı belirler. Güncel fiyat tablosuna bakabilir veya adedinizi bildirip teklif alabilirsiniz." },
       { q: "Paletleri kapıma getiriyor musunuz?", a: "Evet, Türkiye genelinde araçla sevkiyat yapılır (Kocaeli ve İstanbul’da en hızlı). İsterseniz Gebze deposundan kendiniz de alabilirsiniz." },
     ],
   },
@@ -313,7 +321,7 @@ const baseServices: Service[] = [
     keyword: "yerinde palet toplama",
     art: "truck",
     blurb: "Tesisinizdeki paletlerin randevulu, planlı biçimde araçla toplanması.",
-    related: ["hurda-palet-alimi", "palet-nakliye-lojistik", "palet-alim-satim", "palet-tamiri"],
+    related: ["hurda-palet-alimi", "palet-nakliye-lojistik", "palet-alim-satim", "palet-tamiri", "ahsap-atik-geri-donusumu"],
     guides: ["palet-nasil-istiflenir", "palet-havuzu-ve-palet-kiralama", "palet-omru-nasil-uzatilir"],
     sections: [
       {

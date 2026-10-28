@@ -46,6 +46,37 @@ const LEGACY_REDIRECTS: [string, string][] = [
   ["blog", "/rehber/"],
   ["hakkimizda-2", "/hakkimizda/"],
   ["iletisim-2", "/iletisim/"],
+  ["hakkimizda", "/hakkimizda/"],
+  ["iletisim", "/iletisim/"],
+  ["contact", "/iletisim/"],
+  ["about", "/hakkimizda/"],
+  ["about-us", "/hakkimizda/"],
+  ["kurumsal", "/hakkimizda/"],
+  ["urunlerimiz", "/urunler/"],
+  ["products", "/urunler/"],
+  ["hizmetlerimiz", "/hizmetler/"],
+  ["services", "/hizmetler/"],
+  ["referanslar-2", "/referanslar/"],
+  ["fiyat-listesi", "/palet-fiyatlari/"],
+  ["fiyatlar", "/palet-fiyatlari/"],
+  ["palet-fiyat", "/palet-fiyatlari/"],
+  ["teklif", "/teklif-al/"],
+  ["teklif-iste", "/teklif-al/"],
+  ["sss-2", "/sss/"],
+  ["galeri-2", "/galeri/"],
+  ["blog/:path*", "/rehber/"],
+  ["category/:path*", "/rehber/"],
+  ["tag/:path*", "/rehber/"],
+  ["urun-kategori/:path*", "/urunler/"],
+  ["product-category/:path*", "/urunler/"],
+  ["product/:path*", "/urunler/"],
+  ["urun/:path*", "/urunler/"],
+  ["author/:path*", "/rehber/"],
+  ["page/:path*", "/"],
+  ["feed", "/rehber/"],
+  ["comments/feed", "/rehber/"],
+  ["wp-login.php", "/"],
+  ["wp-admin", "/"],
 ];
 
 const nextConfig: NextConfig = {
@@ -63,10 +94,14 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
-    return LEGACY_REDIRECTS.flatMap(([from, to]) => [
-      { source: `/${from}`, destination: to, permanent: true },
-      { source: `/${from}/`, destination: to, permanent: true },
-    ]);
+    return LEGACY_REDIRECTS.flatMap(([from, to]) =>
+      from.includes(":path*")
+        ? [{ source: `/${from}`, destination: to, permanent: true }]
+        : [
+            { source: `/${from}`, destination: to, permanent: true },
+            { source: `/${from}/`, destination: to, permanent: true },
+          ],
+    );
   },
 };
 

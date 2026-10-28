@@ -1,6 +1,6 @@
 import type { Service } from "@/lib/types";
 
-// Ek hizmet sayfaları (/hizmetler/<slug>/): hasarli-palet-alimi, kirik-palet-alimi
+// Ek hizmet sayfaları (/hizmetler/<slug>/): hasarli-palet-alimi, kirik-palet-alimi, ahsap-atik-geri-donusumu, isil-islem-ispm-15-uyumlu-palet
 export const extraServices: Service[] = [
   {
     slug: "hasarli-palet-alimi",
@@ -172,6 +172,174 @@ export const extraServices: Service[] = [
       { q: "Yükleme için personel veya ekipman gerekli mi?", a: "Çatallı ekipmanınız varsa yüklemeyi hızlandırır. Yoksa durumu önceden bildirin, yükleme planı buna göre yapılır." },
       { q: "Yağlı veya kimyasal bulaşmış kırık paletleri alıyor musunuz?", a: "Her zaman değil. Bu paletler için önce durumu bildirmenizi rica ederiz; kapsam ve koşullar teklifte netleştirilir." },
       { q: "Düzenli kırık palet çıkışımız var, periyodik alım mümkün mü?", a: "Evet. Aylık veya haftalık çıkış yapan işletmeler için periyodik alım planlanabilir; sıklık ve koşullar görüşmede belirlenir." },
+    ],
+  },
+  {
+    slug: "ahsap-atik-geri-donusumu",
+    name: "Ahşap Atık Geri Dönüşümü",
+    title: "Ahşap Atık Geri Dönüşümü ve Toplama Hizmeti | MEPAL",
+    description: "Palet, kasa ve ahşap ambalaj atıklarınızı tesisinizden toplayıp geri dönüşüme yönlendiriyoruz. Alım süreci, hazırlık, kapsam ve teklif faktörleri.",
+    h1: "Ahşap Atık Geri Dönüşümü: Tesisinizden Toplama ve Alım Süreci",
+    answer:
+      "Palet, kasa, sandık ve diğer ahşap ambalaj atıklarınızı tesisinizden toplu olarak yükleyip alıyoruz; sağlam parçalar yeniden kullanıma, kullanılamayanlar geri dönüşüme yönlendirilir. Bu sayfa alım ve toplama sürecini anlatır; geri dönüşümün palet ömrü açısından nasıl sıralandığını rehberde bulabilirsiniz.",
+    keyword: "ahşap atık geri dönüşümü",
+    art: "scrap",
+    blurb: "Palet, kasa ve ahşap ambalaj atıklarının tesisten toplanması ve geri dönüşüme yönlendirilmesi.",
+    related: ["hurda-palet-alimi", "kirik-palet-alimi", "yerinde-palet-toplama", "hasarli-palet-alimi", "palet-alim-satim"],
+    guides: ["ahsap-palet-geri-donusum", "hurda-palet-nereye-satilir", "hasarli-ve-kirik-palet-ne-yapilir", "hurda-paletinizi-nasil-degerlendirirsiniz", "palet-maliyetini-dusurmenin-yollari"],
+    sections: [
+      {
+        h: "Hangi ahşap atıklar kapsanır?",
+        p: [
+          "Üretim ve lojistik yapan işletmelerde ahşap atık yalnızca kırık paletten oluşmaz. Ürün sevkiyatından kalan sandıklar, kasalar, ambalaj tahtaları, takozlar ve palet artıkları da zamanla birikir. Bu hizmet, bu tür ahşap malzemenin düzenli ve toplu biçimde tesisinizden çıkarılmasını kapsar.",
+          "Palet odaklı bir partiniz varsa kırık palet alımı ve hurda palet alımı sayfalarımız daha ayrıntılıdır. Burada amaç, ahşap atığın hangi süreçten geçerek geri dönüşüme gittiğini ve alım için nelerin gerektiğini anlatmaktır.",
+        ],
+        list: [
+          "Kırık, çürük ve kullanılamaz paletler",
+          "Ahşap sandık, kasa ve ambalaj tahtaları",
+          "Palet artıkları, takoz ve tahta parçaları",
+          "Kullanım dışı kalmış ahşap yükleme malzemeleri",
+        ],
+        links: [["Hurda palet alımı", "/hizmetler/hurda-palet-alimi/"], ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"]],
+      },
+      {
+        h: "Alım ve toplama nasıl işler?",
+        p: ["Süreç, partinin görülmesinden yüklemeye kadar dört adımda ilerler:"],
+        steps: [
+          "Atık türü, yaklaşık miktar ve konumu bildirirsiniz; mümkünse fotoğraf eklersiniz.",
+          "Partinin içeriği ve kirlilik durumuna göre kapsam ve koşullar teklifte netleştirilir.",
+          "Randevu günü araç tesisinize gelir; ahşap sizin gösterdiğiniz alandan yüklenir.",
+          "Yüklenen malzeme türüne göre ayrıştırılır: kullanılabilir parçalar yeniden kullanıma, kalan ahşap geri dönüşüme gider.",
+        ],
+        links: [["Yerinde palet toplama", "/hizmetler/yerinde-palet-toplama/"]],
+      },
+      {
+        h: "Ahşap atığa ne olur?",
+        p: [
+          "Atık ahşabın değerlendirme yolu malzemenin durumuna göre belirlenir. Sağlam tahta ve takozlar söküp ayrılır ve tamir stoğunda ya da yeniden kullanımda değerlendirilir. Temiz ve kuru ahşap geri dönüşüm tesislerine ve ahşap hammadde kullanan işletmelere yönlendirilir. Çivi ve metal aksam ayrıştırılır.",
+          "Yağ, boya veya kimyasal bulaşmış ahşap ile çürümüş veya küflenmiş malzeme normal ahşap atıkla karıştırılmaz; bu parçalar ayrıca ve mevzuata uygun şekilde değerlendirilir. Atığın tehlikeli atık sayılıp sayılmadığı ve işletmenize düşen kayıt-beyan yükümlülükleri konusunda çevre sorumlunuzla veya yetkili mercilerle görüşmenizi öneririz; kapsamı teklifte birlikte netleştiririz.",
+          "Yeterli miktardaki partiler için Türkiye genelinde de planlama yapılır. Düzenli ahşap atığı çıkaran işletmeler için periyodik toplama kurgulanabilir.",
+        ],
+        links: [["Ahşap palet geri dönüşümü", "/rehber/ahsap-palet-geri-donusum/"]],
+      },
+      {
+        h: "Teklifi hangi unsurlar etkiler?",
+        table: {
+          caption: "Ahşap atık alımında değerlendirilen faktörler",
+          head: ["Faktör", "Neden önemli?"],
+          rows: [
+            ["Miktar ve hacim", "Büyük ve tek noktadaki partide araç verimi artar"],
+            ["Atık türü", "Palet, kasa ve karışık ahşap farklı ayrıştırma ister"],
+            ["Ahşabın durumu", "Kuru ve temiz ahşap daha kolay değerlendirilir"],
+            ["Kirlilik", "Yağ, kimyasal, plastik ve metal artıklar işi artırır"],
+            ["Sökülebilir parça oranı", "Kullanılabilir tahta çıkıyorsa teklif lehine olur"],
+            ["Yükleme koşulları", "Araç erişimi, rampa ve ekipman süreyi belirler"],
+            ["Düzenli çıkış", "Periyodik alım planlanabilir"],
+          ],
+        },
+        p: ["Koşullar partinin durumuna göre değiştiği için güncel şartları teklifte yazılı veririz."],
+        links: [["Hurda palet fiyatları", "/hurda-palet-fiyatlari/"], ["Teklif al", "/teklif-al/"]],
+      },
+      {
+        h: "Alıma hazırlanırken",
+        list: [
+          "Sağlam, tamirlik ve kırık ahşabı mümkünse ayrı yığınlara toplayın.",
+          "Streç, çember, karton ve ürün artıklarını temizleyin.",
+          "Yağ veya kimyasal bulaşmış parçaları ayrı not edin.",
+          "Tür ve yaklaşık miktarı gösteren birkaç fotoğraf çekin.",
+          "Araç giriş yolu, yükleme alanı ve çatallı ekipman durumunu bildirin.",
+        ],
+        links: [["Hurda palet nereye satılır?", "/rehber/hurda-palet-nereye-satilir/"], ["Fotoğraftan palet değerleme", "/araclar/fotograftan-palet-degerleme/"]],
+      },
+    ],
+    faq: [
+      { q: "Bu hizmetle hurda palet alımı arasındaki fark nedir?", a: "Hurda palet alımı paletlerin satın alınmasına odaklanır. Ahşap atık geri dönüşümü ise palet dışındaki sandık, kasa ve ambalaj ahşabını da kapsayan toplama ve geri dönüşüm sürecini anlatır; ikisi çoğu zaman aynı yüklemede birleşir." },
+      { q: "Ahşap atığı ücretsiz mi alıyorsunuz?", a: "Miktara, ahşabın durumuna ve yükleme koşullarına göre değişir. Bazı partilerde alım bedeli ödenir, bazılarında yalnızca ücretsiz toplama yapılır; durum teklifte açıkça yazılır." },
+      { q: "Boyalı veya kimyasal bulaşmış ahşabı alıyor musunuz?", a: "Her zaman değil. Durumu baştan bildirmenizi rica ederiz; kapsam ve koşullar teklifte netleştirilir. Bu tür ahşap normal atıkla karıştırılmaz." },
+      { q: "Düzenli toplama mümkün mü?", a: "Evet. Aylık veya haftalık ahşap atığı çıkaran işletmeler için periyodik toplama planlanabilir; sıklık görüşmede belirlenir." },
+      { q: "Atık belgesi veya kayıt sağlıyor musunuz?", a: "Atık yönetimi yükümlülükleri atığın cinsine ve işletmenize göre değişir. Hangi kayıt veya belgenin gerektiğini çevre sorumlunuzla birlikte netleştirip kapsamı teklifte yazılı hale getirelim." },
+    ],
+  },
+  {
+    slug: "isil-islem-ispm-15-uyumlu-palet",
+    name: "ISPM-15 Uyumlu Palet Temini",
+    title: "ISPM-15 Uyumlu, HT Damgalı Palet Temini | MEPAL",
+    description: "İhracat için ISPM-15 uyumlu, HT damgalı ahşap palet temini. Damga okuma, ölçü seçimi ve teklif için gereken bilgiler.",
+    h1: "ISPM-15 Uyumlu, HT Damgalı İhracat Paleti Temini",
+    answer:
+      "İhracatta ahşap paletin ISPM-15 uyumlu olması ve okunur bir HT damgası taşıması gerekir. MEPAL, ISPM-15 uyumlu, HT damgalı palet temin eder; ısıl işlem tedarik zincirinde yapılır ve sonuç paletin üzerindeki damgada görülür. Ölçü, adet ve hedef ülkeyi bildirin, teklifi hazırlayalım.",
+    keyword: "ISPM-15 uyumlu palet",
+    art: "ispm",
+    blurb: "İhracat için ISPM-15 uyumlu, HT damgalı ahşap palet temini.",
+    related: ["ihracat-paleti", "isil-islemli-palet", "80x120-euro-palet", "toptan-palet", "palet-alim-satim"],
+    guides: ["ispm-15-nedir", "ihracatta-palet-ve-ambalaj-kurallari", "konteynere-ve-tira-kac-palet-sigar", "palet-alirken-teklif-isterken-hangi-bilgiler-gerekir", "palet-secimi-yuk-kapasitesi-rehberi"],
+    sections: [
+      {
+        h: "Bu hizmet neyi kapsar?",
+        p: [
+          "İhracat paletinde ISPM-15 uyumu, fiyattan önce karşı ülkenin gümrüğünde sorun çıkmaması anlamına gelir. Bu hizmet, ihracata gidecek ahşap palet ihtiyacınızın uyumlu ve damgalı olarak tedarik edilmesini kapsar: ölçüyü, adedi ve hedef ülkeyi bildirirsiniz, teklifte ürünün uyumluluk durumu açıkça yer alır.",
+          "Isıl işlemin kendi fırınlarımızda yapıldığını iddia etmiyoruz. MEPAL ISPM-15 uyumlu, HT damgalı palet temini yapar; ısıl işlem tedarikçi tarafından yürütülür ve sonuç paletin üzerindeki damgada görülür. Sizin açınızdan önemli olan, damganın okunur ve doğru olmasıdır.",
+        ],
+        links: [["İhracat paleti", "/urunler/ihracat-paleti/"], ["Isıl işlemli palet", "/urunler/isil-islemli-palet/"]],
+      },
+      {
+        h: "ISPM-15 ve HT damgası nedir?",
+        p: [
+          "ISPM-15, uluslararası bitki sağlığı standardıdır; ahşap ambalaj malzemesiyle zararlı taşınmasını önlemek için ahşabın işlenmesini ve işaretlenmesini şart koşar. Yaygın yöntem ısıl işlemdir (HT, Heat Treatment): ahşabın çekirdeği en az 30 dakika boyunca kesintisiz 56 °C’ye ulaştırılır. Ahşabın kabuksuz olması da gerekir.",
+          "İşlem görmüş ahşap, standardın tarif ettiği damgayı taşır. Damgada uluslararası bitki sağlığı sembolü, ülke kodu, işlemi yapan firmayı belirten kod ve işlem kodu (ısıl işlem için HT) yer alır. Damga okunur, silinmemiş ve paletin görünür bir yerinde olmalıdır.",
+        ],
+        table: {
+          caption: "HT damgasında bakılacak unsurlar",
+          head: ["Unsur", "Ne gösterir?"],
+          rows: [
+            ["Bitki sağlığı sembolü", "Palet ISPM-15 sistemine bağlı işaretlenmiştir"],
+            ["Ülke kodu", "İşaretlemenin yapıldığı ülke"],
+            ["Üretici veya işlem kodu", "İşlemi yapan veya sorumlu firma"],
+            ["HT", "Isıl işlem uygulandığını belirtir"],
+          ],
+        },
+        links: [["ISPM-15 nedir?", "/rehber/ispm-15-nedir/"]],
+      },
+      {
+        h: "Ne zaman uyumlu palet gerekir?",
+        list: [
+          "Ahşap palet veya sandık yurt dışına gidecekse (ihracat).",
+          "Alıcı veya gümrük ISPM-15 damgasını şart koşuyorsa.",
+          "Yurt içi sevkiyatta zorunluluk yoktur; ancak palet ileride ihracata da gidebilecekse baştan uyumlu palet almak mantıklıdır.",
+          "Plastik palette ahşap işlem şartı aranmaz; bu durumda başka kriterlere bakılır.",
+        ],
+        p: ["İkinci el veya onarılmış palet ihracat için önerilmez. İhracatta damgası tam ve okunur uyumlu palet kullanmak, gümrükte geri çevrilme riskini azaltır."],
+        links: [["İhracatta palet ve ambalaj kuralları", "/rehber/ihracatta-palet-ve-ambalaj-kurallari/"], ["Ahşap palet mi plastik mi?", "/rehber/ahsap-palet-mi-plastik-palet-mi/"]],
+      },
+      {
+        h: "Teklif için hangi bilgiler gerekir?",
+        steps: [
+          "Palet ölçüsü ve tipi (ör. Euro ölçülü, 100x120, özel ölçü).",
+          "Yaklaşık adet ve tek seferlik mi düzenli mi olduğu.",
+          "Hedef ülke veya alıcının özel şartı.",
+          "Taşınacak yükün yaklaşık ağırlığı.",
+          "Teslim adresi, araç erişimi ve istenen teslim zamanı.",
+        ],
+        p: ["Teslim süresi stok ve araç programına göre belirlenir; net süre teklifte bildirilir. Güncel fiyat için teklif alın."],
+        links: [["Teklif al", "/teklif-al/"], ["Palet teklifi için gerekli bilgiler", "/rehber/palet-alirken-teklif-isterken-hangi-bilgiler-gerekir/"]],
+      },
+      {
+        h: "Teslim aldıktan sonra kontrol",
+        list: [
+          "Damganın her palette okunur ve silinmemiş olduğunu kontrol edin.",
+          "Tahtalarda kabuk kalıntısı veya böcek belirtisi olmadığına bakın.",
+          "Paletleri kuru ve temiz depolayın; ıslanan palet sorun çıkarabilir.",
+          "Konteyner veya tır dizilimini önceden hesaplayın.",
+        ],
+        links: [["Konteynere ve tıra kaç palet sığar?", "/rehber/konteynere-ve-tira-kac-palet-sigar/"], ["Konteyner palet hesaplama", "/araclar/konteyner-palet-hesaplama/"]],
+      },
+    ],
+    faq: [
+      { q: "ISPM-15 ısıl işlemini kendiniz mi yapıyorsunuz?", a: "Hayır. Isıl işlem tedarik zincirinde yapılır; MEPAL ISPM-15 uyumlu, HT damgalı palet temini yapar. İşlem sonucu paletteki damgada görülür." },
+      { q: "HT damgası ne anlama gelir?", a: "Isıl işlem uygulandığını belirtir. Ahşabın çekirdeği en az 30 dakika kesintisiz 56 °C’ye ulaştırılmıştır." },
+      { q: "İhracat için hangi paleti seçmeliyim?", a: "Ahşap palet kullanacaksanız ISPM-15 uyumlu, HT damgalı ve okunur damgalı palet gerekir. Ölçü hedef ülkeye, konteyner dizilimine ve müşteri şartına göre seçilir." },
+      { q: "İkinci el palet ihracatta kullanılabilir mi?", a: "Önerilmez. İhracatta uyumlu ve damgası okunur palet gerekir; onarılmış paletlerde damga ve uyumluluk sorun çıkarabilir." },
+      { q: "Fiyatı nasıl öğrenirim?", a: "Ölçü, adet ve hedef ülkeye göre değişir. Güncel fiyat tablosuna bakabilir veya bilgilerinizi göndererek teklif alabilirsiniz." },
     ],
   },
 ];

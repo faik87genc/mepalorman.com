@@ -57,6 +57,9 @@ const BY_SLUG: Record<string, PhotoName> = {
   "ihracat-paleti": "p03",
   "ambalaj-paleti": "p02",
   "ahsap-sandik": "p02",
+  "tahta-kasa": "p02",
+  "ihracat-sandigi-kasasi": "p03",
+  "ikinci-el-ahsap-palet": "p15",
   "cakma-epal-palet": "p10",
   "orta-palet": "p14",
   "kalin-orta-palet": "p09",
@@ -96,19 +99,26 @@ export function Photo({
   position?: string;
 }) {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      className={className}
-      src={`/img/${name}-1280.webp`}
-      srcSet={`/img/${name}-480.webp 480w, /img/${name}-800.webp 800w, /img/${name}-1280.webp 1280w`}
-      sizes={sizes}
-      width={W}
-      height={H}
-      alt={alt ?? PHOTOS[name]}
-      loading={priority ? "eager" : "lazy"}
-      decoding="async"
-      fetchPriority={priority ? "high" : undefined}
-      style={position ? { objectPosition: position, aspectRatio: `${W} / ${H}` } : { aspectRatio: `${W} / ${H}` }}
-    />
+    <picture>
+      <source
+        type="image/avif"
+        srcSet={`/img/${name}-480.avif 480w, /img/${name}-800.avif 800w, /img/${name}-1280.avif 1280w`}
+        sizes={sizes}
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        className={className}
+        src={`/img/${name}-1280.webp`}
+        srcSet={`/img/${name}-480.webp 480w, /img/${name}-800.webp 800w, /img/${name}-1280.webp 1280w`}
+        sizes={sizes}
+        width={W}
+        height={H}
+        alt={alt ?? PHOTOS[name]}
+        loading={priority ? "eager" : "lazy"}
+        decoding="async"
+        fetchPriority={priority ? "high" : "auto"}
+        style={position ? { objectPosition: position, aspectRatio: `${W} / ${H}` } : { aspectRatio: `${W} / ${H}` }}
+      />
+    </picture>
   );
 }

@@ -2,6 +2,7 @@ import { products } from "@/lib/data/products";
 import { services } from "@/lib/data/services";
 import { guides } from "@/lib/data/guides";
 import { regions } from "@/lib/data/regions";
+import { pricePages } from "@/lib/data/pricePages";
 import { absoluteUrl, site, warehouseAddress } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -15,11 +16,7 @@ export function GET() {
 ${site.legalName} — depo: ${warehouseAddress}. Telefon/WhatsApp: ${site.phone}. E-posta: ${site.email}. Çalışma saatleri: ${site.hours}. Fiyatlar sitede yayınlanmaz; güncel fiyat WhatsApp'tan verilir (KDV hariç).
 
 ## Fiyatlar
-${line("Palet fiyatları (tüm ürünler)", "/palet-fiyatlari/")}
-${line("Ahşap palet fiyatları", "/ahsap-palet-fiyatlari/")}
-${line("İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/")}
-${line("Euro palet fiyatları", "/euro-palet-fiyatlari/")}
-${line("Plastik palet fiyatları", "/plastik-palet-fiyatlari/")}
+${pricePages.map((p) => line(p.h1, `/${p.slug}/`)).join("\n")}
 
 ## Ürünler
 ${products.map((p) => line(p.name, `/urunler/${p.slug}/`, p.blurb)).join("\n")}
@@ -37,6 +34,7 @@ ${guides.map((g) => line(g.h1, `/rehber/${g.slug}/`)).join("\n")}
 ${line("Konteynere ve tıra kaç palet sığar hesaplayıcı", "/araclar/konteyner-palet-hesaplama/")}
 ${line("Palet seçici", "/araclar/palet-secici/")}
 ${line("Teklif sihirbazı", "/teklif-al/")}
+${line("Talepten teslimata süreç", "/surec/")}
 `;
   return new Response(body, { headers: { "content-type": "text/plain; charset=utf-8" } });
 }

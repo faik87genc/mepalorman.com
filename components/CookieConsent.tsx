@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Choice = { analytics: boolean; marketing: boolean };
 const KEY = "mepal-consent-v1";
@@ -49,6 +49,9 @@ export default function CookieConsent() {
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
   const [detail, setDetail] = useState(false);
+  const box = useRef<HTMLDivElement>(null);
+  const opener = useRef<HTMLElement | null>(null);
+  const userOpened = useRef(false);
 
   useEffect(() => {
     const c = load();
@@ -64,6 +67,8 @@ export default function CookieConsent() {
         setAnalytics(!!cur?.analytics);
         setMarketing(!!cur?.marketing);
         setDetail(true);
+        opener.current = el;
+        userOpened.current = true;
         setOpen(true);
         return;
       }
@@ -84,12 +89,39 @@ export default function CookieConsent() {
       /* storage blocked: choice applies to this visit only */
     }
     if (c.analytics && GA_ID) loadGa(GA_ID);
-    setOpen(false);
+    close();
   }
+
+  function close() {
+    setOpen(false);
+    if (userOpened.current) {
+      userOpened.current = false;
+      const back = opener.current;
+      window.setTimeout(() => back?.focus(), 0);
+    }
+  }
+
+  // Kullanıcı "Çerez tercihleri"ni açtıysa odak bandın içine taşınır; otomatik açılışta odak çalınmaz.
+  useEffect(() => {
+    if (open && userOpened.current) box.current?.focus();
+  }, [open]);
 
   if (!open) return null;
   return (
-    <div className="consent" role="dialog" aria-modal="false" aria-label="Çerez tercihleri">
+    <div
+      ref={box}
+      className="consent"
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="consent-title"
+      tabIndex={-1}
+      onKeyDown={(e) => {
+        if (e.key === "Escape") close();
+      }}
+    >
+      <h2 id="consent-title" className="sr">
+        Çerez tercihleri
+      </h2>
       <p>
         Siteyi çalıştırmak için zorunlu çerezler kullanıyoruz. İzin verirseniz ziyaret istatistikleri için analitik çerezler de kullanırız. Ayrıntı:{" "}
         <Link href="/cerez-politikasi/">Çerez politikası</Link>.
@@ -97,7 +129,7 @@ export default function CookieConsent() {
       {detail && (
         <div className="consent-detail">
           <label>
-            <input type="checkbox" checked disabled /> Zorunlu (her zaman açık)
+            <input type="checkbox" checked disabled aria-disabled="true" /> Zorunlu (her zaman açık)
           </label>
           <label>
             <input type="checkbox" checked={analytics} onChange={(e) => setAnalytics(e.target.checked)} /> Analitik

@@ -86,7 +86,7 @@ export const pricePages: PricePage[] = [
       { q: "Toplu alımda indirim var mı?", a: "Evet. Fiyat adet kademesine göre düşer; çok büyük veya düzenli alımlarda ayrıca teklif hazırlanır." },
       { q: "Nakliye fiyata dahil mi?", a: "Tablo palet fiyatını gösterir. Nakliye adrese, adede ve araç planına göre teklifte ayrıca bildirilir." },
     ],
-    related: ["ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "80x120-euro-palet", "ikinci-el-palet", "plastik-palet", "ihracat-paleti"],
+    related: ["tahta-palet-fiyatlari", "80x120-palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "80x120-euro-palet", "ikinci-el-palet", "plastik-palet", "ihracat-paleti"],
     guides: ["palet-maliyetini-dusurmenin-yollari", "ahsap-palet-mi-plastik-palet-mi", "palet-kalite-siniflari", "palet-cesitleri-ve-secimi"],
   },
   {
@@ -140,7 +140,7 @@ export const pricePages: PricePage[] = [
       { q: "Özel ölçülü ahşap palet fiyatı nasıl belirlenir?", a: "Ölçü, taşıyacağı yük ve adet bilindiğinde kereste ihtiyacı hesaplanıp teklif verilir. Bu nedenle tabloda “teklif alın” görünür." },
       { q: "100x120 ahşap palet fiyatı Euro paletten farklı mı?", a: "Evet. Daha büyük taban daha fazla kereste kullanır ve farklı bir fiyat grubunda yer alır. Güncel farkı WhatsApp'tan öğrenebilirsiniz." },
     ],
-    related: ["palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "sifir-ahsap-palet", "100x120-palet", "cp-palet", "orta-palet", "kalin-orta-palet", "ozel-olcu-palet"],
+    related: ["tahta-palet-fiyatlari", "80x120-palet-fiyatlari", "palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "sifir-ahsap-palet", "100x120-palet", "cp-palet", "orta-palet", "kalin-orta-palet", "ozel-olcu-palet"],
     guides: ["palet-cesitleri-ve-secimi", "palet-kalite-siniflari", "100x120-ile-80x120-palet-farki", "orta-palet-ve-kalin-orta-palet-farki", "cp-paletleri-olcu-tablosu"],
   },
   {
@@ -245,7 +245,7 @@ export const pricePages: PricePage[] = [
       { q: "İhracat için hangi Euro palet?", a: "ISPM-15 uyumlu, HT damgalı Euro ölçülü palet gerekir. Tablonun ihracat satırı bu pakete aittir." },
       { q: "Toplu alımda fiyat düşer mi?", a: "Evet. Adet arttıkça birim fiyat düşer; adedi yazın, size özel fiyat verelim." },
     ],
-    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "plastik-palet-fiyatlari", "80x120-euro-palet", "epal-palet", "cakma-epal-palet", "ihracat-paleti", "ikinci-el-palet"],
+    related: ["tahta-palet-fiyatlari", "80x120-palet-fiyatlari", "palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "plastik-palet-fiyatlari", "80x120-euro-palet", "epal-palet", "cakma-epal-palet", "ihracat-paleti", "ikinci-el-palet"],
     guides: ["euro-palet-olculeri", "eur-palet-nedir", "epal-palet-ile-standart-palet-farki", "cakma-epal-nedir", "palet-kac-kg-tasir", "ispm-15-nedir"],
   },
   {
@@ -257,7 +257,7 @@ export const pricePages: PricePage[] = [
       "Plastik palet fiyatı hizmet sınıfına, ölçüye ve adede göre değişir. Listede hafif hizmet, çelik takviyeli ağır hizmet ve 100x120 plastik paletler listelenir; güncel fiyat için WhatsApp'tan yazın.",
     keyword: "plastik palet fiyatları",
     art: "plastic",
-    rowKeys: ["plastik-hafif", "plastik-agir", "plastik-100x120", "euro-sifir"],
+    rowKeys: ["plastik-hafif", "plastik-agir", "plastik-100x120", "plastik-hijyenik", "plastik-ikinci-el", "plastik-palet-kasa", "euro-sifir"],
     sections: [
       {
         h: "Plastik palet fiyatını etkileyen faktörler",
@@ -474,6 +474,130 @@ export const pricePages: PricePage[] = [
     ],
     related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "euro-palet-fiyatlari", "ozel-olcu-palet", "145x145-palet", "ambalaj-paleti", "ihracat-paleti"],
     guides: ["palet-cesitleri-ve-secimi", "ambalaj-paleti-nedir", "palet-kac-kg-tasir", "ispm-15-nedir", "palet-maliyetini-dusurmenin-yollari"],
+  },
+  {
+    slug: "tahta-palet-fiyatlari",
+    title: "Tahta Palet Fiyatları: Kalınlık ve Türe Göre | MEPAL",
+    description: "Tahta palet fiyatı tahta kalınlığına, kuruluğa ve türe göre değişir. Sıfır ve ikinci el tahta paletler için fiyat tablosu ve WhatsApp'tan hızlı teklif.",
+    h1: "Tahta Palet Fiyatları: Tahta Kalınlığı ve Türe Göre",
+    answer:
+      "Tahta palet fiyatını belirleyen asıl kalem kerestedir: tahta kalınlığı, kuruluk düzeyi, tahta ve takoz sayısı. Aşağıdaki tabloda sıfır ve ikinci el tahta paletler listelenir; güncel fiyat için ürünü ve adedi WhatsApp'tan yazmanız yeterlidir.",
+    keyword: "tahta palet fiyatları",
+    art: "wood",
+    rowKeys: [
+      "ahsap-sifir-standart", "euro-sifir", "ahsap-sifir-100x120", "ahsap-ikinci-el-100x120",
+      "euro-ikinci-el-1", "euro-ikinci-el-2", "ozel-olcu",
+    ],
+    sections: [
+      {
+        h: "Tahta palet fiyatı neye göre değişir?",
+        p: ["Günlük konuşmada “tahta palet” denen ürün, ahşap paletin kendisidir. Fiyat farkı çoğunlukla palette kullanılan tahtanın niteliğinden gelir."],
+        list: [
+          "Tahta kalınlığı: ince tahtalı palet hafif yükler içindir, kalın tahtalı palet daha çok kereste harcar ve daha yüksek fiyatlanır",
+          "Tahta ve takoz sayısı: üst yüzeydeki tahta adedi ve altta 9 takoz mu yoksa farklı bir ayak yapısı mı olduğu maliyeti değiştirir",
+          "Kuruluk: iyi kurutulmuş kereste çarpılmaz ve çivi tutuşu daha sağlamdır; yaş kereste ucuzdur ama sorun çıkarır",
+          "Tür: standart, güçlendirilmiş, ISPM-15 uyumlu HT damgalı ve özel ölçülü paletler ayrı fiyat gruplarındadır",
+          "Sıfır veya ikinci el olması; ikinci elde sınıf ve onarım durumu",
+          "Sipariş adedi ve teslimat noktası",
+        ],
+        links: [["Palet fiyatlarını etkileyen faktörler", "/rehber/palet-fiyatlarini-etkileyen-faktorler/"]],
+      },
+      {
+        h: "Tahta kalınlığına göre seçim",
+        table: {
+          head: ["Tahta yapısı", "Uygun kullanım", "Fiyata etkisi"],
+          rows: [
+            ["İnce tahtalı", "Hafif ve tek yönlü sevkiyat, kısa süreli kullanım", "Daha düşük kereste maliyeti"],
+            ["Standart tahtalı", "Genel sanayi, depolama, yurt içi sevkiyat", "Orta düzey"],
+            ["Kalın ve sık tahtalı", "Ağır yük, tekrarlı kullanım, yığın istif", "Daha fazla kereste, daha yüksek fiyat"],
+          ],
+        },
+        p: ["Kalınlık yükle birlikte düşünülmelidir; gereğinden güçlü palete ödeme yapmamak da, hafif palete ağır yük koymamak da maliyeti düşürür."],
+        links: [["İnce palet", "/urunler/ince-palet/"], ["Palet kaç kg taşır?", "/rehber/palet-kac-kg-tasir/"]],
+      },
+      tierSection("Tahta paletlerde 51 adet ve üzeri alımlarda birim fiyat farkı belirgin hissedilir."),
+      {
+        h: "Sıfır ve ikinci el tahta palet",
+        table: {
+          head: ["Ölçüt", "Sıfır tahta palet", "İkinci el tahta palet"],
+          rows: [
+            ["Maliyet", "Daha yüksek", "Belirgin biçimde daha düşük"],
+            ["Görünüm", "Temiz, tek tip", "Kullanım izi olabilir, sınıfa bağlı"],
+            ["Uygun kullanım", "İhracat, gıda ve hassas ürün", "Yurt içi sevkiyat, depolama"],
+            ["Ömür", "Tam ömür", "Onarıma ve sınıfa bağlı"],
+          ],
+        },
+        links: [["Sıfır ahşap palet", "/urunler/sifir-ahsap-palet/"], ["İkinci el ahşap palet", "/urunler/ikinci-el-ahsap-palet/"]],
+      },
+      quoteSection("Tahta palet teklifi"),
+    ],
+    faq: [
+      { q: "Tahta palet ile ahşap palet aynı şey mi?", a: "Evet, günlük dilde tahta palet ahşap palet anlamında kullanılır. Bu sayfada tahta kalınlığı ve türüne göre fiyat mantığı anlatılır." },
+      { q: "Tahta palet fiyatı neden sürekli değişiyor?", a: "Palet maliyetinin büyük bölümü kerestedir. Kereste piyasası, mevsim ve talep birim fiyatı doğrudan etkiler." },
+      { q: "Kalın tahtalı palet her zaman daha mı iyi?", a: "Hayır. Ağır ve tekrarlı yüklerde avantajlıdır; hafif ve tek yönlü sevkiyatta gereksiz maliyet yaratır. Yükünüze göre seçmek en ekonomik yoldur." },
+      { q: "Fiyatlara KDV dahil mi?", a: "Fiyatlar KDV hariç verilir; KDV ve nakliye teklifte ayrıca belirtilir." },
+      { q: "Tabloda olmayan tahta palet için teklif alabilir miyim?", a: "Evet. Ölçü, yük ve adedi bildirirseniz özel üretim dahil teklif hazırlanır." },
+    ],
+    related: ["palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "sifir-ahsap-palet", "ince-palet", "ikinci-el-ahsap-palet", "tahta-kasa"],
+    guides: ["ahsap-palet-nedir", "palet-fiyatlarini-etkileyen-faktorler", "palet-kalite-siniflari", "palet-kac-kg-tasir"],
+  },
+  {
+    slug: "80x120-palet-fiyatlari",
+    title: "80x120 Palet Fiyatları: Ölçü ve Yüke Göre | MEPAL",
+    description: "80x120 palet fiyatları: ahşap ve plastik, sıfır ve ikinci el. Yük kapasitesi ve kullanım amacına göre seçim, fiyat tablosu ve WhatsApp'tan teklif.",
+    h1: "80x120 Palet Fiyatları: Yük ve Kullanıma Göre Seçim",
+    answer:
+      "80x120 (800 × 1200 mm) en yaygın palet ölçüsüdür; fiyat ölçüden çok malzemeye, taşıma kapasitesine ve sıfır ya da ikinci el olmasına göre belirlenir. Tabloda bu ölçüdeki ahşap, plastik ve ihracat paletleri listelenir; güncel fiyat için WhatsApp'tan yazın.",
+    keyword: "80x120 palet fiyatları",
+    art: "euro",
+    rowKeys: [
+      "ahsap-sifir-standart", "euro-sifir", "euro-ikinci-el-1", "euro-ikinci-el-2",
+      "ihracat-ispm15", "plastik-hafif", "plastik-agir",
+    ],
+    sections: [
+      {
+        h: "80x120 ölçüsü neden bu kadar yaygın?",
+        p: [
+          "800 × 1200 mm, Avrupa'da ve Türkiye'de depo rafı, tır ve konteyner planlamasının temel ölçüsüdür. Raf gözleri, konveyör hatları ve istifleme sistemleri bu ölçüye göre tasarlandığı için çoğu işletme önce 80x120 ile başlar.",
+          "Aynı ölçüde farklı kalitede palet bulunur. Bu nedenle fiyat karşılaştırırken yalnızca ölçüye değil, paletin taşıyacağı yüke ve nerede kullanılacağına bakmak gerekir.",
+        ],
+        links: [["100x120 ile 80x120 farkı", "/rehber/100x120-ile-80x120-palet-farki/"], ["Euro palet ölçüleri", "/rehber/euro-palet-olculeri/"]],
+      },
+      {
+        h: "Yüke ve kullanıma göre 80x120 seçimi",
+        table: {
+          head: ["İhtiyaç", "Uygun 80x120 seçenek", "Fiyat yönü"],
+          rows: [
+            ["Hafif yük, tek yönlü sevkiyat", "Standart veya ikinci el ahşap", "En düşük maliyet grubu"],
+            ["Orta yük, tekrarlı kullanım", "Sıfır 9 takozlu ahşap palet", "Orta grup"],
+            ["Ağır yük, istif", "Güçlendirilmiş ahşap veya çelik takviyeli plastik", "Daha yüksek grup"],
+            ["Raf kullanımı", "Raf yükü doğrulanmış ağır hizmet palet", "Üretici verisine bağlı"],
+            ["İhracat", "ISPM-15 uyumlu, HT damgalı palet", "Isıl işlem nedeniyle ayrı grup"],
+            ["Hijyen ve yıkama", "Plastik 80x120", "İlk maliyet yüksek, ömür uzun"],
+          ],
+        },
+        p: ["Yük kapasiteleri üreticiye ve modele göre değişir; kritik işlerde palet yükünü yazılı olarak doğrulatın."],
+        links: [["Palet seçici", "/araclar/palet-secici/"], ["Plastik 80x120", "/urunler/80x120-plastik-palet/"]],
+      },
+      tierSection("80x120 en çok tüketilen ölçü olduğundan düzenli alımlarda kademe avantajı belirgindir."),
+      {
+        h: "Araç ve konteyner planı",
+        p: [
+          "80x120 paletin tır ve konteyner doluluğu yerleşime, yüke ve palet yüksekliğine bağlıdır; yaklaşık değerler rehberde ve konteyner hesaplama aracında bulunur. Sevkiyat maliyetini palet fiyatıyla birlikte düşünmek toplam maliyeti doğru gösterir.",
+        ],
+        links: [["Konteynere ve tıra kaç palet sığar?", "/rehber/konteynere-ve-tira-kac-palet-sigar/"], ["Konteyner palet hesaplama", "/araclar/konteyner-palet-hesaplama/"]],
+      },
+      quoteSection("80x120 palet teklifi"),
+    ],
+    faq: [
+      { q: "80x120 palet kaç cm?", a: "80 × 120 cm, yani 800 × 1200 mm taban ölçüsündedir. Yükseklik palet tipine göre değişir; Euro tipi ahşap palette yaklaşık 14,4 cm'dir." },
+      { q: "80x120 palet fiyatı malzemeye göre nasıl değişir?", a: "İkinci el ahşap en düşük, sıfır ahşap orta, plastik ve ISPM-15 uyumlu palet daha yüksek gruptadır. Güncel rakamlar için tabloya bakın veya teklif isteyin." },
+      { q: "80x120 palet kaç kg taşır?", a: "Ahşapta tipe ve duruma, plastikte modele göre değişir. Dinamik ve raftaki taşıma kapasiteleri ayrı değerlerdir; yaklaşık aralıklar rehberde, kesin değer üretici verisindedir." },
+      { q: "80x120 palet ile Euro palet aynı mı?", a: "Ölçü aynıdır. Euro palet 9 takozlu, standartlaşmış yapıyı anlatır; 80x120 ise sadece taban ölçüsüdür ve farklı yapılarda bulunabilir." },
+      { q: "Fiyatlara KDV dahil mi?", a: "Fiyatlar KDV hariç verilir; KDV ve nakliye teklifte ayrıca belirtilir." },
+    ],
+    related: ["palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "80x120-euro-palet", "80x120-plastik-palet", "ihracat-paleti"],
+    guides: ["euro-palet-olculeri", "100x120-ile-80x120-palet-farki", "palet-kac-kg-tasir", "konteynere-ve-tira-kac-palet-sigar"],
   },
 ];
 

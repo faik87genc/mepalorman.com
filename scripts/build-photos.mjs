@@ -33,3 +33,14 @@ for (let n = 1; n <= 18; n++) {
   }
   console.log(id, "ok");
 }
+
+// AVIF: mevcut WebP çıktılarından (veya yukarıdaki JPEG akışından sonra) -{480,800,1280}.avif üretir.
+for (let n = 1; n <= 18; n++) {
+  const id = `p${String(n).padStart(2, "0")}`;
+  for (const w of [480, 800, 1280]) {
+    const src = `public/img/${id}-${w}.webp`;
+    if (!fs.existsSync(src)) continue;
+    await sharp(src).avif({ quality: w === 480 ? 50 : 55, effort: 4 }).toFile(`public/img/${id}-${w}.avif`);
+  }
+  console.log(id, "avif ok");
+}

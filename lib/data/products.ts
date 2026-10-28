@@ -29,7 +29,7 @@ const baseProducts: Product[] = [
       ["Malzeme", "Ahşap, çivili"],
     ],
     uses: ["Gıda ve içecek sevkiyatı", "Otomotiv yan sanayi", "Beyaz eşya", "Raflı depo sistemleri", "E-ticaret ve dağıtım depoları"],
-    related: ["epal-palet", "ikinci-el-palet", "ihracat-paleti", "cakma-epal-palet", "ikinci-el-euro-palet"],
+    related: ["epal-palet", "ikinci-el-palet", "ihracat-paleti", "cakma-epal-palet", "ikinci-el-euro-palet", "plastik-euro-palet", "80x120-plastik-palet"],
     guides: ["euro-palet-olculeri", "eur-palet-nedir", "cakma-epal-nedir", "konteynere-ve-tira-kac-palet-sigar", "palet-kac-kg-tasir"],
     sections: [
       {
@@ -234,7 +234,7 @@ const baseProducts: Product[] = [
       ["Yaygın ad", "UK / sanayi paleti, kimya paleti ölçüsü"],
     ],
     uses: ["Kimya ve boya fabrikaları", "Ağır sanayi ve metal ürünler", "İhracat sevkiyatı", "Torbalı ve çuvallı ürünler"],
-    related: ["80x120-euro-palet", "cp-palet", "ihracat-paleti"],
+    related: ["80x120-euro-palet", "cp-palet", "ihracat-paleti", "100x120-plastik-palet"],
     guides: ["100x120-ile-80x120-palet-farki", "konteynere-ve-tira-kac-palet-sigar", "palet-kac-kg-tasir"],
     sections: [
       {
@@ -407,7 +407,7 @@ const baseProducts: Product[] = [
       ["Kullanım", "İç lojistik, depo, kısa sevkiyat"],
     ],
     uses: ["Fabrika içi taşıma", "Depolama ve raf alanı", "Tek yön yurt içi sevkiyat", "Maliyet hassas işler"],
-    related: ["80x120-euro-palet", "epal-palet", "sifir-ahsap-palet", "orta-palet", "kalin-orta-palet"],
+    related: ["80x120-euro-palet", "epal-palet", "sifir-ahsap-palet", "orta-palet", "kalin-orta-palet", "ikinci-el-ahsap-palet"],
     guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "orta-palet-ve-kalin-orta-palet-farki", "hasarli-ve-kirik-palet-ne-yapilir", "hurda-paletinizi-nasil-degerlendirirsiniz"],
     sections: [
       {
@@ -596,7 +596,7 @@ const baseProducts: Product[] = [
       ["Çatal girişi", "4 yönlü"],
     ],
     uses: ["Gıda ve içecek", "İlaç ve kozmetik", "Kimya (yıkanabilir yüzey)", "Otomatik depo sistemleri", "Kapalı döngü lojistik"],
-    related: ["80x120-euro-palet", "ihracat-paleti", "sifir-ahsap-palet"],
+    related: ["80x120-euro-palet", "ihracat-paleti", "sifir-ahsap-palet", "80x120-plastik-palet", "100x120-plastik-palet", "hijyenik-plastik-palet", "plastik-euro-palet", "ikinci-el-plastik-palet", "plastik-palet-kasa"],
     guides: ["plastik-palet-cesitleri", "ahsap-palet-mi-plastik-palet-mi", "palet-raf-sistemleri-ve-raf-yuku"],
     sections: [
       {
@@ -1046,7 +1046,7 @@ const baseProducts: Product[] = [
       ["Opsiyonel", "Su geçirmez örtü, nem alıcı, iç ped"],
     ],
     uses: ["Makine ve ekipman sevkiyatı", "İhracat ürünleri", "Cam, seramik, kırılgan eşya", "Değerli veya hassas cihazlar"],
-    related: ["ihracat-paleti", "ozel-olcu-palet", "145x145-palet"],
+    related: ["ihracat-paleti", "ozel-olcu-palet", "145x145-palet", "tahta-kasa", "ihracat-sandigi-kasasi"],
     guides: ["ihracatta-palet-ve-ambalaj-kurallari", "ispm-15-nedir", "palet-cesitleri-ve-secimi"],
     sections: [
       {

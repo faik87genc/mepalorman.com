@@ -16,8 +16,9 @@ export function pageMeta(opts: { title: string; description: string; path: strin
       title: opts.title,
       description: opts.description,
       url,
+      images: [{ url: absoluteUrl("/opengraph-image"), width: 1200, height: 630, alt: site.name }],
     },
-    twitter: { card: "summary_large_image", title: opts.title, description: opts.description },
+    twitter: { card: "summary_large_image", title: opts.title, description: opts.description, images: [absoluteUrl("/opengraph-image")] },
   };
 }
 
@@ -33,7 +34,16 @@ export const orgLd = (): Ld => ({
   logo: absoluteUrl("/assets/logo-mark.png"),
   email: site.email,
   telephone: site.phoneE164,
-  taxID: site.taxNo,
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      telephone: site.phoneE164,
+      email: site.email,
+      availableLanguage: ["tr"],
+      areaServed: "TR",
+    },
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.office.street,
@@ -69,7 +79,7 @@ export const localBusinessLd = (): Ld => ({
   openingHoursSpecification: [
     { "@type": "OpeningHoursSpecification", dayOfWeek: site.hoursSchema.days, opens: site.hoursSchema.opens, closes: site.hoursSchema.closes },
   ],
-  areaServed: ["Gebze", "Kocaeli", "İstanbul", "Tuzla", "Pendik", "Kartal", "Dilovası", "Çayırova"].map((n) => ({ "@type": "AdministrativeArea", name: n })),
+  areaServed: [{ "@type": "Country", name: "Türkiye" }, ...["Gebze", "Kocaeli", "İstanbul", "Tuzla", "Pendik", "Kartal", "Dilovası", "Çayırova"].map((n) => ({ "@type": "AdministrativeArea", name: n }))],
 });
 
 export const websiteLd = (): Ld => ({
@@ -95,26 +105,19 @@ export const faqLd = (faq: FAQ[]): Ld => ({
   mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
 });
 
-export const productLd = (o: { name: string; description: string; path: string; low?: number; high?: number; updated?: string }): Ld => ({
+/** Fiyat yayınlanmadığı için offers/aggregateRating/review YOK; yalnızca anlamlandırma alanları. */
+export const productLd = (o: { name: string; description: string; path: string; image?: string; sku?: string; category?: string; specs?: [string, string][] }): Ld => ({
   "@context": "https://schema.org",
   "@type": "Product",
   name: o.name,
   description: o.description,
   url: absoluteUrl(o.path),
   brand: { "@type": "Brand", name: site.short },
-  ...(o.low !== undefined && o.high !== undefined
-    ? {
-        offers: {
-          "@type": "AggregateOffer",
-          priceCurrency: "TRY",
-          lowPrice: o.low,
-          highPrice: o.high,
-          offerCount: 3,
-          availability: "https://schema.org/InStock",
-          seller: { "@id": `${site.baseUrl}/#depo` },
-          ...(o.updated ? { priceValidUntil: o.updated } : {}),
-        },
-      }
+  ...(o.image ? { image: absoluteUrl(o.image) } : {}),
+  ...(o.sku ? { sku: o.sku } : {}),
+  ...(o.category ? { category: o.category } : {}),
+  ...(o.specs && o.specs.length
+    ? { additionalProperty: o.specs.map(([name, value]) => ({ "@type": "PropertyValue", name, value })) }
     : {}),
 });
 
@@ -125,10 +128,10 @@ export const serviceLd = (o: { name: string; description: string; path: string; 
   description: o.description,
   url: absoluteUrl(o.path),
   provider: { "@id": `${site.baseUrl}/#depo` },
-  areaServed: o.area ?? "Kocaeli, İstanbul",
+  areaServed: o.area ?? { "@type": "Country", name: "Türkiye" },
 });
 
-export const articleLd = (o: { title: string; description: string; path: string; published: string; updated: string }): Ld => ({
+export const articleLd = (o: { title: string; description: string; path: string; published: string; updated: string; image?: string; wordCount?: number; keywords?: string }): Ld => ({
   "@context": "https://schema.org",
   "@type": "Article",
   headline: o.title,
@@ -137,8 +140,38 @@ export const articleLd = (o: { title: string; description: string; path: string;
   datePublished: o.published,
   dateModified: o.updated,
   inLanguage: "tr-TR",
+  ...(o.image ? { image: [absoluteUrl(o.image)] } : {}),
+  ...(o.wordCount ? { wordCount: o.wordCount } : {}),
+  ...(o.keywords ? { keywords: o.keywords } : {}),
   author: { "@type": "Organization", name: site.name, url: site.baseUrl },
   publisher: { "@id": `${site.baseUrl}/#organization` },
 });
+
+/** Hub (liste) sayfaları: CollectionPage + ItemList. */
+export const collectionLd = (o: { name: string; description: string; path: string; items: [string, string][] }): Ld => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: o.name,
+  description: o.description,
+  url: absoluteUrl(o.path),
+  inLanguage: "tr-TR",
+  isPartOf: { "@id": `${site.baseUrl}/#website` },
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: o.items.length,
+    itemListElement: o.items.map(([name, path], i) => ({ "@type": "ListItem", position: i + 1, name, url: absoluteUrl(path) })),
+  },
+});
+
+/** Bölüm metinlerinden yaklaşık kelime sayısı. */
+export const wordCountOf = (sections: { h: string; p?: string[]; list?: string[]; steps?: string[] }[]): number =>
+  sections
+    .map((s) => [s.h, ...(s.p ?? []), ...(s.list ?? []), ...(s.steps ?? [])].join(" "))
+    .join(" ")
+    .split(/\s+/)
+    .filter(Boolean).length;
+
+/** Veri kaydında tarih olmayan sayfalar için tek merkezî son-değişiklik tarihi (sitemap lastmod). */
+export const SITE_UPDATED = "2026-10-28";
 
 export { warehouseAddress, officeAddress };

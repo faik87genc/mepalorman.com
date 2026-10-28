@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FaqList, PriceTable, RelatedLinks, SectionsView } from "@/components/Content";
 import { ContentLayout, SideCard } from "@/components/ContentLayout";
-import { PRICES_UPDATED } from "@/lib/data/prices";
 import { pricePageBySlug, pricePages } from "@/lib/data/pricePages";
 import { staticPageBySlug, staticPages } from "@/lib/data/pages";
 import { products } from "@/lib/data/products";
 import { guideBySlug } from "@/lib/data/guides";
-import { priceRange, trDate } from "@/lib/format";
+import { trDate } from "@/lib/format";
+import { photoFor } from "@/components/Photo";
 import { pageMeta, productLd } from "@/lib/seo";
 
 // Root-level pages: the five price pages and the corporate/legal pages.
@@ -31,7 +31,6 @@ export default async function RootPage({ params }: Props) {
   if (pp) {
     const path = `/${pp.slug}/`;
     const message = `Merhaba, ${pp.keyword} için güncel fiyat almak istiyorum. Adet: … İl: …`;
-    const range = priceRange(pp.rowKeys);
     const guideLinks = pp.guides.map((g) => guideBySlug(g)).filter((g): g is NonNullable<typeof g> => !!g);
     const others = pricePages.filter((x) => x.slug !== pp.slug);
     const relProducts = pp.related.map((s) => products.find((p) => p.slug === s)).filter((x): x is NonNullable<typeof x> => !!x);
@@ -43,7 +42,7 @@ export default async function RootPage({ params }: Props) {
         art={pp.art}
         message={message}
         meta="Güncel fiyat için WhatsApp · KDV hariç"
-        ld={[productLd({ name: pp.h1, description: pp.description, path, low: range?.low, high: range?.high, updated: PRICES_UPDATED })]}
+        ld={[productLd({ name: pp.h1, description: pp.description, path, image: `/img/${photoFor(pp.art, pp.slug)}-1280.webp`, category: "Palet" })]}
         side={
           <>
             <SideCard title="Diğer fiyat sayfaları" links={others.map((o) => [o.h1, `/${o.slug}/`])} />

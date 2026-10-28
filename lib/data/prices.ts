@@ -37,6 +37,9 @@ export const PRICE_ROWS: PriceRow[] = [
   { key: "plastik-hafif", name: "Plastik palet — hafif hizmet", spec: "800 × 1200 mm · kapalı/ızgara üst", tiers: null, condition: "Sıfır", product: "plastik-palet" },
   { key: "plastik-agir", name: "Plastik palet — ağır hizmet (raf uyumlu)", spec: "800 × 1200 mm · çelik takviyeli", tiers: null, condition: "Sıfır", product: "plastik-palet" },
   { key: "plastik-100x120", name: "Plastik palet — 100×120", spec: "1000 × 1200 mm", tiers: null, condition: "Sıfır", product: "plastik-palet" },
+  { key: "plastik-hijyenik", name: "Hijyenik beyaz plastik palet", spec: "800 × 1200 mm · kapalı üst, yıkanabilir", tiers: null, condition: "Sıfır", product: "hijyenik-plastik-palet" },
+  { key: "plastik-ikinci-el", name: "İkinci el plastik palet", spec: "800 × 1200 / 1000 × 1200 mm · duruma göre sınıflı", tiers: null, condition: "İkinci el", product: "ikinci-el-plastik-palet" },
+  { key: "plastik-palet-kasa", name: "Plastik palet kasa", spec: "Palet tabanlı büyük hacimli kasa · modele göre", tiers: null, condition: "Sıfır", product: "plastik-palet-kasa" },
   { key: "ozel-olcu", name: "Özel ölçülü ahşap palet", spec: "Ölçüye ve yüke göre tasarım", tiers: null, condition: "Sıfır", product: "ozel-olcu-palet" },
   { key: "145x145", name: "145×145 ahşap palet", spec: "1450 × 1450 mm", tiers: null, condition: "Sıfır", product: "145x145-palet" },
 ];

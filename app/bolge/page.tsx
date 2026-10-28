@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Breadcrumbs, FinalCta, PageHero } from "@/components/Content";
+import { Breadcrumbs, FinalCta, JsonLd, PageHero } from "@/components/Content";
 import { regions } from "@/lib/data/regions";
-import { pageMeta } from "@/lib/seo";
+import { collectionLd, pageMeta } from "@/lib/seo";
 import { site, warehouseAddress } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
@@ -20,6 +20,7 @@ const WAVES: [1 | 2 | 3, string][] = [
 export default function RegionsIndex() {
   return (
     <>
+      <JsonLd data={collectionLd({ name: "Palet Hizmet Bölgeleri", description: "Gebze Pelitli deposundan Türkiye genelinde palet sevkiyatı; Kocaeli ve İstanbul’da en hızlı teslimat. Bölgenizi seçin.", path: "/bolge/", items: regions.map((p) => [p.name, `/bolge/${p.slug}/`] as [string, string]) })} />
       <Breadcrumbs items={[["Hizmet bölgeleri", "/bolge/"]]} />
       <PageHero h1="Palet Hizmet Bölgeleri" answer={`Deponuz ${warehouseAddress} adresinde. Buradan Türkiye’nin her yerine toplu palet sevkiyatı yapıyoruz; Kocaeli ve İstanbul’da en hızlı teslimat sağlanır. Aşağıda en sık hizmet verdiğimiz bölgeler var; listede olmayan iller için de teklif isteyin. Ofisimiz Kadıköy Kozyatağı'ndadır.`}>
         <p>

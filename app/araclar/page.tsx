@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Breadcrumbs, FinalCta, PageHero } from "@/components/Content";
+import { Breadcrumbs, FinalCta, JsonLd, PageHero } from "@/components/Content";
 import { CardGrid } from "@/components/ContentLayout";
-import { pageMeta } from "@/lib/seo";
+import { collectionLd, pageMeta } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
   title: "Palet Araçları: Hesaplayıcı, Seçici, Danışman | MEPAL",
@@ -20,6 +20,7 @@ const tools = [
 export default function ToolsIndex() {
   return (
     <>
+      <JsonLd data={collectionLd({ name: "Palet Araçları", description: "Konteynere kaç palet sığar, hangi palet doğru, fotoğraftan hurda palet değerleme ve palet danışmanı.", path: "/araclar/", items: tools.map((t) => [t.title, t.href] as [string, string]) })} />
       <Breadcrumbs items={[["Araçlar", "/araclar/"]]} />
       <PageHero h1="Palet Araçları" answer="Doğru paleti seçmenize, yüklemeyi planlamanıza ve hızlı teklif almanıza yardımcı ücretsiz araçlar." />
       <div className="wrap">

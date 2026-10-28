@@ -210,3 +210,45 @@ a.c-card:hover { border-color: var(--green); box-shadow: 0 6px 18px rgba(27, 74,
 .gallery-grid img { display: block; width: 100%; height: auto; }
 .gallery-grid figcaption { padding: .6rem .8rem .8rem; font-size: .92rem; color: #3b463e; }
 .card-photo svg { width: 100%; height: 100%; display: block; }
+
+/* ===== Erişilebilirlik ve performans düzeltmeleri ===== */
+picture { display: contents; }
+
+/* WCAG 1.4.11 / 1.4.3 kontrast: form kenarlıkları ve seçenek düğmeleri >= 3:1, büyük gold metin >= 3:1 */
+input[type="text"], input[type="tel"], input[type="email"], input[type="number"], input[type="file"], select, textarea { border-color: #8a846f; }
+.btn-ghost { border-color: #8a846f; }
+.opt { border-color: #8a846f; }
+.opt:hover { border-color: var(--green); }
+.num-steps b { color: #8a5f2c; }
+.chips a { border-color: #8a846f; }
+
+/* Odak göstergeleri: açık zeminde koyu, koyu zeminde açık halka */
+:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+.topbar :focus-visible, .site-footer :focus-visible, .final-cta :focus-visible, .page-hero :focus-visible, .contact-form :focus-visible, .section.dark :focus-visible { outline-color: #f1d9a8; }
+.btn:focus-visible { outline-offset: 3px; }
+.card:focus-within { border-color: var(--green); }
+.card h3 a:focus-visible { outline: 0; }
+.card:has(h3 a:focus-visible) { outline: 3px solid var(--green); outline-offset: 2px; }
+.nav-mobile summary:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+.faq summary:focus-visible { outline-offset: 4px; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--green); outline-offset: 1px; }
+.contact-form input:focus-visible, .contact-form select:focus-visible, .contact-form textarea:focus-visible { outline-color: #f1d9a8; }
+.skip:focus { outline: 3px solid #f1d9a8; }
+
+/* Yeni sekmede açılan bağlantılar: ekran okuyucuya ipucu (görsel olarak gizli) */
+a[target="_blank"]::after { content: " (yeni sekmede açılır)"; position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.card h3 a[target="_blank"]::after { content: ""; position: absolute; inset: 0; width: auto; height: auto; clip: auto; clip-path: none; }
+
+/* Sabit alt çubuk içeriği örtmesin; odaklanan öğe çubuğun arkasında kalmasın */
+@media (max-width: 899px) {
+  html { scroll-padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
+  .site-footer { padding-bottom: calc(6rem + env(safe-area-inset-bottom, 0px)); }
+  .consent { bottom: calc(66px + env(safe-area-inset-bottom, 0px)); }
+}
+.consent:focus { outline: 3px solid var(--green); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .card:hover, a.c-card:hover { transform: none; }
+  .card:hover .card-photo img, .trio-item:hover img { transform: none; }
+}

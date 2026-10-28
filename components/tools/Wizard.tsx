@@ -69,6 +69,9 @@ export default function Wizard() {
       <div className="wiz-progress" aria-hidden="true">
         <span style={{ width: `${(step / STEPS) * 100}%` }} />
       </div>
+      <p className="sr" role="status">
+        Adım {step + 1} / {STEPS}
+      </p>
       {step === 0 && (
         <>
           <h2 style={{ fontSize: "1.3rem" }}>1/{STEPS} · Hangi paleti arıyorsunuz?</h2>
@@ -79,7 +82,7 @@ export default function Wizard() {
               </button>
             ))}
           </div>
-          <div className="opts">
+          <div className="opts" role="group" aria-label="Palet türü">
             {list.map((k) => (
               <button key={k.key} type="button" className="opt" aria-pressed={rowKey === k.key} onClick={() => setRowKey(k.key)}>
                 {k.label}
@@ -111,7 +114,7 @@ export default function Wizard() {
       {step === 3 && (
         <>
           <h2 style={{ fontSize: "1.3rem" }}>4/{STEPS} · Isıl işlem (ihracat damgası) gerekli mi?</h2>
-          <div className="opts">
+          <div className="opts" role="group" aria-label="Isıl işlem">
             <button type="button" className="opt" aria-pressed={ht === "yes"} onClick={() => setHt("yes")}>
               Evet, yurt dışına gidecek
               <small>ISPM-15 / HT damgalı palet</small>

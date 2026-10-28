@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { Icon } from "@/components/Icons";
+import MobileNav from "@/components/MobileNav";
 import { footerGroups, mainNav } from "@/lib/data/nav";
 import { site, telHref, waLink, warehouseAddress, officeAddress } from "@/lib/site";
 
@@ -35,10 +36,7 @@ export function SiteHeader() {
           <Link prefetch={false} href="/teklif-al/" className="btn btn-green btn-sm bar-cta">
             Teklif Al
           </Link>
-          <details className="nav-mobile">
-            <summary aria-label="Menüyü aç">
-              <span className="burger" aria-hidden="true" />
-            </summary>
+          <MobileNav>
             <nav aria-label="Mobil menü">
               {mainNav.map(([label, href]) => (
                 <Link prefetch={false} key={href} href={href}>
@@ -57,7 +55,7 @@ export function SiteHeader() {
                 </Link>
               </div>
             </nav>
-          </details>
+          </MobileNav>
         </div>
       </header>
     </>
@@ -130,7 +128,7 @@ export function MobileBar() {
           WhatsApp
         </a>
       </div>
-      <a href={waLink(msg)} className="wa-float" aria-label="WhatsApp ile yazın" data-evt="whatsapp_click" data-src="float" rel="noopener" target="_blank">
+      <a href={waLink(msg)} className="wa-float" aria-label="WhatsApp ile yazın (yeni sekmede açılır)" data-evt="whatsapp_click" data-src="float" rel="noopener" target="_blank">
         <Icon name="chat" size={26} />
       </a>
     </>

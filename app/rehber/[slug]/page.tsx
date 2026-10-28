@@ -4,7 +4,8 @@ import { FaqList, RelatedLinks, SectionsView } from "@/components/Content";
 import { ContentLayout, SideCard } from "@/components/ContentLayout";
 import { guideBySlug, guides } from "@/lib/data/guides";
 import { slugify, trDate } from "@/lib/format";
-import { articleLd, pageMeta } from "@/lib/seo";
+import { photoFor } from "@/components/Photo";
+import { articleLd, pageMeta, wordCountOf } from "@/lib/seo";
 
 export const dynamicParams = false;
 export const generateStaticParams = () => guides.map((g) => ({ slug: g.slug }));
@@ -33,7 +34,7 @@ export default async function GuidePage({ params }: Props) {
       art={g.art}
       message={message}
       meta={`${g.readMinutes} dk okuma · Yayın: ${trDate(g.published)} · Güncelleme: ${trDate(g.updated)}`}
-      ld={[articleLd({ title: g.h1, description: g.description, path, published: g.published, updated: g.updated })]}
+      ld={[articleLd({ title: g.h1, description: g.description, path, published: g.published, updated: g.updated, image: `/img/${photoFor(g.art, g.slug)}-1280.webp`, wordCount: wordCountOf(g.sections), keywords: g.keyword })]}
       finalTitle="Bu bilgiyle palet ihtiyacınız için teklif alın"
       side={
         <>

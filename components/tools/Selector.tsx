@@ -69,7 +69,10 @@ export default function Selector() {
           <h2 style={{ fontSize: "1.3rem" }}>
             {step + 1}/{QUESTIONS.length} · {q.title}
           </h2>
-          <div className="opts">
+          <p className="sr" role="status">
+            Soru {step + 1} / {QUESTIONS.length}
+          </p>
+          <div className="opts" role="group" aria-label={q.title}>
             {q.opts.map(([v, label]) => (
               <button
                 key={v}

@@ -17,6 +17,8 @@ export const footerGroups: { title: string; links: [string, string][] }[] = [
       ["İkinci el palet fiyatları", "/ikinci-el-palet-fiyatlari/"],
       ["Euro palet fiyatları", "/euro-palet-fiyatlari/"],
       ["Plastik palet fiyatları", "/plastik-palet-fiyatlari/"],
+      ["Tahta palet fiyatları", "/tahta-palet-fiyatlari/"],
+      ["80x120 palet fiyatları", "/80x120-palet-fiyatlari/"],
     ],
   },
   {
@@ -40,6 +42,9 @@ export const footerGroups: { title: string; links: [string, string][] }[] = [
       ["Kırık palet alımı", "/hizmetler/kirik-palet-alimi/"],
       ["Palet alım satım", "/hizmetler/palet-alim-satim/"],
       ["Palet tamiri", "/hizmetler/palet-tamiri/"],
+      ["Ahşap atık geri dönüşümü", "/hizmetler/ahsap-atik-geri-donusumu/"],
+      ["ISPM-15 uyumlu palet", "/hizmetler/isil-islem-ispm-15-uyumlu-palet/"],
+      ["Talepten teslimata süreç", "/surec/"],
       ["Toptan / kurumsal palet", "/hizmetler/toptan-palet/"],
       ["Sektörler", "/sektorler/"],
       ["Teklif al", "/teklif-al/"],
