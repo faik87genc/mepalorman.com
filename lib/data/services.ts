@@ -97,7 +97,7 @@ const baseServices: Service[] = [
     art: "service",
     blurb: "Paletçi olarak sıfır ve ikinci el palet tedariği, toplu alım ve fazla palet alımı tek adreste.",
     related: ["hurda-palet-alimi", "toptan-palet", "ikinci-el-palet", "80x120-euro-palet", "epal-palet"],
-    guides: ["ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "palet-cesitleri-ve-secimi", "palet-maliyetini-dusurmenin-yollari", "hurda-palet-nereye-satilir", "palet-alirken-teklif-isterken-hangi-bilgiler-gerekir"],
+    guides: ["palet-satin-alma-rehberi", "paletci-nasil-secilir", "ikinci-el-palet-alirken-dikkat-edilecekler", "palet-kalite-siniflari", "palet-cesitleri-ve-secimi", "palet-maliyetini-dusurmenin-yollari", "hurda-palet-nereye-satilir", "palet-alirken-teklif-isterken-hangi-bilgiler-gerekir"],
     sections: [
       {
         h: "Paletçi arıyorsanız: tek adreste tedarik ve alım",
@@ -153,7 +153,7 @@ const baseServices: Service[] = [
           "Stok durumuna göre fiyat ve teslim planı bildirilir.",
           "Onaydan sonra paletler hazırlanır; depodan teslim alabilir veya araçla sevk isteyebilirsiniz.",
         ],
-        p: ["Teslimat stok ve araç programına göre yapılır; çoğunlukla ertesi iş günü planlanabilir, net süre teklifte bildirilir."],
+        p: ["Teslimat stok ve araç programına göre yapılır; net süre teklifte bildirilir."],
         links: [["Teklif al", "/teklif-al/"], ["Teklif için gerekli bilgiler", "/rehber/palet-alirken-teklif-isterken-hangi-bilgiler-gerekir/"]],
       },
     ],
@@ -247,7 +247,7 @@ const baseServices: Service[] = [
     art: "truck",
     blurb: "Adet kademeli fiyat, planlı sevkiyat ve düzenli tedarik için kurumsal çözüm.",
     related: ["palet-alim-satim", "hurda-palet-alimi", "80x120-euro-palet", "ikinci-el-palet", "plastik-palet"],
-    guides: ["palet-maliyetini-dusurmenin-yollari", "1-tir-kac-palet-alir", "palet-cesitleri-ve-secimi", "palet-havuzu-ve-palet-kiralama"],
+    guides: ["paletci-nasil-secilir", "palet-maliyetini-dusurmenin-yollari", "1-tir-kac-palet-alir", "palet-cesitleri-ve-secimi", "palet-havuzu-ve-palet-kiralama"],
     sections: [
       {
         h: "Toptan palet kimler için uygun?",

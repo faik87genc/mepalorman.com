@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site, absoluteUrl, warehouseAddress, officeAddress } from "@/lib/site";
+import { site, absoluteUrl, warehouseAddress, officeAddress, sameAs, warehousePin } from "@/lib/site";
 import type { FAQ } from "@/lib/types";
 
 export function pageMeta(opts: { title: string; description: string; path: string; noindex?: boolean; type?: "website" | "article" }): Metadata {
@@ -31,6 +31,7 @@ export const orgLd = (): Ld => ({
   name: site.name,
   legalName: site.legalName,
   url: site.baseUrl,
+  ...(sameAs.length ? { sameAs } : {}),
   logo: absoluteUrl("/assets/logo-mark.png"),
   email: site.email,
   telephone: site.phoneE164,
@@ -74,7 +75,8 @@ export const localBusinessLd = (): Ld => ({
     addressRegion: site.warehouse.city,
     addressCountry: "TR",
   },
-  geo: { "@type": "GeoCoordinates", latitude: site.warehouse.lat, longitude: site.warehouse.lng },
+  ...(warehousePin ? { geo: { "@type": "GeoCoordinates", latitude: warehousePin.lat, longitude: warehousePin.lng } } : {}),
+  ...(sameAs.length ? { sameAs } : {}),
   hasMap: site.mapsUrl,
   openingHoursSpecification: [
     { "@type": "OpeningHoursSpecification", dayOfWeek: site.hoursSchema.days, opens: site.hoursSchema.opens, closes: site.hoursSchema.closes },

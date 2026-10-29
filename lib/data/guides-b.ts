@@ -303,7 +303,7 @@ export const guidesB: Guide[] = [
   {
     slug: "gida-sektoru-icin-palet-secimi",
     title: "Gıda Sektörü İçin Palet Seçimi | MEPAL",
-    description: "Gıda üretimi ve depolamada ahşap veya plastik palet seçimi: hijyen, koku, ISPM-15, nem ve denetim gereklilikleri.",
+    description: "Gıda üretimi ve depolamada ahşap veya plastik palet seçimi: hijyen, koku, ISPM-15, nem ve denetim gereklilikleri ile pratik öneriler.",
     h1: "Gıda Sektörü İçin Palet Seçimi",
     answer:
       "Gıdada palet ürünle doğrudan temas etmese de hijyen zincirinin parçasıdır. Temiz, kuru, kokusuz ve yapısal olarak sağlam palet şarttır. Plastik palet yıkanabilir olduğu için hijyen kritik alanlarda öne çıkar; ahşap palet ise doğru işlem ve kurulukla gıda lojistiğinde yaygın olarak kullanılmaktadır.",
@@ -971,7 +971,7 @@ export const guidesB: Guide[] = [
   {
     slug: "palet-maliyetini-dusurmenin-yollari",
     title: "Palet Maliyetini Düşürmenin 10 Yolu | MEPAL",
-    description: "Palet giderlerini azaltmanın 10 pratik yolu: doğru ölçü, ikinci el, tamir, toptan alım, geri alım ve hasar kontrolü.",
+    description: "Palet giderlerini azaltmanın 10 pratik yolu: doğru ölçü seçimi, ikinci el, tamir, toplu alım, geri alım ve hasar kontrolü ile maliyet düşürme.",
     h1: "Palet Maliyetini Düşürmenin 10 Yolu",
     answer:
       "Palet maliyeti yalnızca birim alım bedeli değildir; nakliye, hasar, kayıp ve elden çıkarma da içindedir. Doğru ölçü ve kalite sınıfı, ikinci el ve tamirli palet, toptan alım, geri alım ve hasar kontrolü birlikte uygulandığında toplam gider belirgin şekilde düşer.",

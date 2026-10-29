@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import { clean, clientIp, originOk, rateLimited } from "@/lib/api";
+import { clean, clientIp, originOk, rateLimited, tooLarge } from "@/lib/api";
 import { site } from "@/lib/site";
 
 export const runtime = "nodejs";
@@ -33,10 +33,11 @@ async function deliver(l: Lead) {
 
 export async function POST(req: Request) {
   const isForm = !(req.headers.get("content-type") || "").includes("application/json");
-  const fail = (status: number, error: string) => (isForm ? NextResponse.redirect(new URL(`/iletisim/?hata=1`, req.url), 303) : NextResponse.json({ error }, { status }));
+  const fail = (status: number, error: string) => (isForm ? NextResponse.redirect(new URL("/iletisim/?hata=1", site.baseUrl), 303) : NextResponse.json({ error }, { status }));
   if (!originOk(req)) return fail(403, "İstek reddedildi.");
   if (rateLimited(`teklif:${clientIp(req)}`, 6, 10 * 60_000)) return fail(429, "Çok fazla deneme. Lütfen biraz sonra tekrar deneyin veya WhatsApp’tan yazın.");
 
+  if (tooLarge(req, 20_000)) return fail(413, "Geçersiz istek.");
   let raw: Record<string, unknown> = {};
   try {
     if (isForm) {
@@ -52,7 +53,7 @@ export async function POST(req: Request) {
   }
 
   // Honeypot: bots fill the hidden field; pretend success.
-  if (clean(raw.website)) return isForm ? NextResponse.redirect(new URL("/tesekkurler/", req.url), 303) : NextResponse.json({ ok: true });
+  if (clean(raw.website)) return isForm ? NextResponse.redirect(new URL("/tesekkurler/", site.baseUrl), 303) : NextResponse.json({ ok: true });
 
   const lead: Lead = {
     product: clean(raw.product, 160),
@@ -78,5 +79,5 @@ export async function POST(req: Request) {
     console.error("[teklif] e-posta gönderilemedi", e);
     return fail(502, "Talebiniz şu anda iletilemedi. Lütfen WhatsApp’tan yazın veya arayın.");
   }
-  return isForm ? NextResponse.redirect(new URL("/tesekkurler/", req.url), 303) : NextResponse.json({ ok: true });
+  return isForm ? NextResponse.redirect(new URL("/tesekkurler/", site.baseUrl), 303) : NextResponse.json({ ok: true });
 }

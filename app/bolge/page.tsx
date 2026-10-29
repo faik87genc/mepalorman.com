@@ -7,7 +7,7 @@ import { site, warehouseAddress } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Palet Hizmet Bölgeleri: Türkiye Geneli Sevkiyat | MEPAL",
-  description: "Gebze Pelitli deposundan Türkiye genelinde palet sevkiyatı; Kocaeli ve İstanbul’da en hızlı teslimat. Bölgenizi seçin.",
+  description: "Gebze Pelitli deposundan Türkiye genelinde palet sevkiyatı; Kocaeli ve İstanbul ilçelerinden bölgenizi seçin, ilçeye özgü palet bilgilerine ulaşın.",
   path: "/bolge/",
 });
 
@@ -20,9 +20,9 @@ const WAVES: [1 | 2 | 3, string][] = [
 export default function RegionsIndex() {
   return (
     <>
-      <JsonLd data={collectionLd({ name: "Palet Hizmet Bölgeleri", description: "Gebze Pelitli deposundan Türkiye genelinde palet sevkiyatı; Kocaeli ve İstanbul’da en hızlı teslimat. Bölgenizi seçin.", path: "/bolge/", items: regions.map((p) => [p.name, `/bolge/${p.slug}/`] as [string, string]) })} />
+      <JsonLd data={collectionLd({ name: "Palet Hizmet Bölgeleri", description: "Gebze Pelitli deposundan Türkiye genelinde palet sevkiyatı; Kocaeli ve İstanbul ilçelerinden bölgenizi seçin, ilçeye özgü palet bilgilerine ulaşın.", path: "/bolge/", items: regions.map((p) => [p.name, `/bolge/${p.slug}/`] as [string, string]) })} />
       <Breadcrumbs items={[["Hizmet bölgeleri", "/bolge/"]]} />
-      <PageHero h1="Palet Hizmet Bölgeleri" answer={`Deponuz ${warehouseAddress} adresinde. Buradan Türkiye’nin her yerine toplu palet sevkiyatı yapıyoruz; Kocaeli ve İstanbul’da en hızlı teslimat sağlanır. Aşağıda en sık hizmet verdiğimiz bölgeler var; listede olmayan iller için de teklif isteyin. Ofisimiz Kadıköy Kozyatağı'ndadır.`}>
+      <PageHero h1="Palet Hizmet Bölgeleri" answer={`Depomuz ${warehouseAddress} adresinde. Buradan Türkiye’nin her yerine toplu palet sevkiyatı yapıyoruz; Kocaeli ve İstanbul sayfalarında ilçeye özgü bilgiler yer alır; teslim süresi teklifte netleşir. Aşağıda en sık hizmet verdiğimiz bölgeler var; listede olmayan iller için de teklif isteyin. Ofisimiz Kadıköy Kozyatağı'ndadır.`}>
         <p>
           <a className="btn btn-ghost" href={site.mapsUrl} rel="noopener" target="_blank">
             Depo için yol tarifi al

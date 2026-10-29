@@ -37,7 +37,7 @@ export default async function RegionPage({ params }: Props) {
       art="region"
       message={message}
       ld={[serviceLd({ name: `${r.name} palet satışı ve hurda palet alımı`, description: r.description, path, area: r.name })]}
-      meta={`Depodan uzaklık: ${r.distance}`}
+      meta={r.distance}
       side={
         <>
           <section className="side-card">

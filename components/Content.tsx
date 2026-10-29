@@ -64,7 +64,7 @@ export function PageHero({ h1, answer, children, kicker, photo }: { h1: string; 
 
 export function DataTable({ table }: { table: Table }) {
   return (
-    <div className="table-wrap">
+    <div className="table-wrap" role="region" aria-label={table.caption ?? "Tablo"} tabIndex={0}>
       <table>
         {table.caption && <caption>{table.caption}</caption>}
         <thead>
@@ -155,7 +155,7 @@ export function PriceTable({ rowKeys, compact = false }: { rowKeys?: string[]; c
   const rows = rowKeys ? rowKeys.map((k) => rowByKey(k)).filter((r): r is NonNullable<typeof r> => !!r) : PRICE_ROWS;
   return (
     <div className="price-block">
-      <div className="table-wrap">
+      <div className="table-wrap" role="region" aria-label="Fiyat tablosu" tabIndex={0}>
         <table className="price-table">
           <caption>Fiyatlar piyasaya göre değiştiği için güncel fiyatı WhatsApp&apos;tan veriyoruz.</caption>
           <thead>
@@ -192,7 +192,7 @@ export function PriceTable({ rowKeys, compact = false }: { rowKeys?: string[]; c
 
 export function SpecTable({ specs }: { specs: [string, string][] }) {
   return (
-    <div className="table-wrap">
+    <div className="table-wrap" role="region" aria-label="Teknik özellikler" tabIndex={0}>
       <table className="spec-table">
         <tbody>
           {specs.map(([k, v]) => (

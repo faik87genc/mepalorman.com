@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { callClaude, clean, clientIp, originOk, rateLimited } from "@/lib/api";
+import { callClaude, clean, clientIp, originOk, rateLimited, tooLarge } from "@/lib/api";
 import { PRICE_ROWS } from "@/lib/data/prices";
 import { products } from "@/lib/data/products";
 import { site, waLink } from "@/lib/site";
@@ -47,14 +47,15 @@ type Msg = { role: "user" | "assistant"; content: string };
 export async function POST(req: Request) {
   if (!originOk(req)) return NextResponse.json({ error: "İstek reddedildi." }, { status: 403 });
   if (rateLimited(`danisman:${clientIp(req)}`, 20, 10 * 60_000)) return NextResponse.json({ error: "Çok fazla mesaj. Lütfen biraz sonra tekrar deneyin veya WhatsApp’tan yazın." }, { status: 429 });
+  if (tooLarge(req, 20_000)) return NextResponse.json({ error: "Geçersiz istek." }, { status: 413 });
   let body: { messages?: Msg[] };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Geçersiz istek." }, { status: 400 });
   }
-  const messages = (body.messages ?? [])
-    .filter((m) => (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
+  const messages = (Array.isArray(body?.messages) ? body.messages : [])
+    .filter((m) => m && typeof m === "object" && (m.role === "user" || m.role === "assistant") && typeof m.content === "string")
     .slice(-8)
     .map((m) => ({ role: m.role, content: clean(m.content, 800) }))
     .filter((m) => m.content);

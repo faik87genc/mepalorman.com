@@ -28,10 +28,16 @@ export function originOk(req: Request): boolean {
   try {
     const host = new URL(origin).host;
     const own = new URL(site.baseUrl).host;
-    return host === own || host === `www.${own}` || host.startsWith("localhost") || host.startsWith("127.0.0.1");
+    return host === own || host === `www.${own}` || /^(localhost|127\.0\.0\.1)(:\d+)?$/.test(host);
   } catch {
     return false;
   }
+}
+
+/** Rejects oversized bodies early using Content-Length (browsers always send it). */
+export function tooLarge(req: Request, maxBytes: number): boolean {
+  const n = Number(req.headers.get("content-length"));
+  return !Number.isFinite(n) || n > maxBytes;
 }
 
 export const clean = (v: unknown, max = 200): string => (typeof v === "string" ? v.replace(/[\u0000-\u001f\u007f]/g, " ").trim().slice(0, max) : "");

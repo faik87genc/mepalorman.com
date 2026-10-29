@@ -5,6 +5,7 @@ import "./theme.css";
 import { site } from "@/lib/site";
 import { SiteHeader, SiteFooter, MobileBar } from "@/components/SiteChrome";
 import CookieConsent from "@/components/CookieConsent";
+import CopyAttribution from "@/components/CopyAttribution";
 import { JsonLd } from "@/components/Content";
 import { localBusinessLd, orgLd, websiteLd } from "@/lib/seo";
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteFooter />
         <MobileBar />
         <CookieConsent />
+        <CopyAttribution />
         <JsonLd data={[orgLd(), localBusinessLd(), websiteLd()]} />
       </body>
     </html>

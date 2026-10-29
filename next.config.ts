@@ -1,36 +1,39 @@
 import type { NextConfig } from "next";
 
-// Security headers. CSP is enforced for the directives that cannot break
-// rendering; the full allow-list ships as report-only until it has run clean.
+// Security headers. Full CSP is enforced. Nonce/strict-dynamic needs dynamic rendering
+// (Next docs: content-security-policy), which would drop static/ISR caching, and SRI hashing is
+// experimental; so script/style keep 'unsafe-inline' (Next inline bootstrap, inlineCss, JSON-LD)
+// while everything else (origins, frames, objects, forms, base) is locked down.
 // GA4 (googletagmanager) is loaded only after cookie consent.
 const isDev = process.env.NODE_ENV === "development";
 
-const cspEnforced = ["base-uri 'self'", "object-src 'none'", "frame-ancestors 'self'", "form-action 'self'"].join("; ");
-
-const cspReportOnly = [
+const csp = [
   "default-src 'self'",
   "base-uri 'self'",
   "object-src 'none'",
+  "frame-src 'none'",
   "frame-ancestors 'self'",
   "form-action 'self'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://*.google-analytics.com https://*.googletagmanager.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+  `connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com${isDev ? " ws: wss:" : ""}`,
+  "manifest-src 'self'",
   "worker-src 'self' blob:",
+  ...(isDev ? [] : ["upgrade-insecure-requests"]),
 ].join("; ");
 
 const securityHeaders = [
-  { key: "Content-Security-Policy", value: cspEnforced },
-  { key: "Content-Security-Policy-Report-Only", value: cspReportOnly },
+  { key: "Content-Security-Policy", value: csp },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  { key: "X-Permitted-Cross-Domain-Policies", value: "none" },
   { key: "X-DNS-Prefetch-Control", value: "on" },
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=(), interest-cohort=(), serial=(), bluetooth=(), midi=(), display-capture=()" },
 ];
 
 // Old WordPress URLs (mepalorman.com) → new pages. Fill the exact list from the

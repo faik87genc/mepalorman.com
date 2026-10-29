@@ -35,7 +35,7 @@ const sections: Section[] = [
   {
     h: "Teslimat nasıl planlanır?",
     p: [
-      "Depomuz Gebze’dedir. Kocaeli ve İstanbul’da teslimat en hızlı planlanır; Türkiye genelinde de araçla sevkiyat yapılır. Teslimat stok ve araç programına göre belirlenir; çoğunlukla ertesi iş günü planlanabilir, net süre teklifte bildirilir.",
+      "Depomuz Gebze’dedir. Kocaeli ve İstanbul’da teslimat en hızlı planlanır; Türkiye genelinde de araçla sevkiyat yapılır. Teslimat stok ve araç programına göre belirlenir; net süre teklifte bildirilir.",
       "İsterseniz paletleri Gebze deposundan kendi aracınızla da teslim alabilirsiniz.",
     ],
     links: [["Türkiye geneli palet sevkiyatı", "/turkiye-geneli-palet-sevkiyati/"], ["Palet nakliye ve lojistik", "/hizmetler/palet-nakliye-lojistik/"]],
@@ -48,7 +48,7 @@ const sections: Section[] = [
 ];
 
 const faq: FAQ[] = [
-  { q: "Siparişten teslimata kaç gün sürer?", a: "Stok ve araç programına göre değişir; çoğunlukla ertesi iş günü planlanabilir, net süre teklifte bildirilir." },
+  { q: "Siparişten teslimata kaç gün sürer?", a: "Stok ve araç programına göre değişir; net süre teklifte bildirilir." },
   { q: "Teklif almak ücretli mi?", a: "Hayır. Palet tipi, adet ve konumu bildirdiğinizde teklif hazırlanır; teklif almak bir yükümlülük getirmez." },
   { q: "Teklif nasıl iletilir, fiyat ne zaman netleşir?", a: "WhatsApp, telefon veya teklif formundan ulaşabilirsiniz. Güncel fiyat tablosuna bakabilir ya da adedinizi bildirip teklif alabilirsiniz; son rakam ürün, adet ve teslimat koşuluna göre netleşir." },
   { q: "Paletleri depodan kendim alabilir miyim?", a: "Evet. Gebze deposundan teslim alma mümkündür; zamanı önceden birlikte planlarız." },

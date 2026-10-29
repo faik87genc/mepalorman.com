@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { callClaude, clean, clientIp, originOk, rateLimited } from "@/lib/api";
+import { callClaude, clean, clientIp, originOk, rateLimited, tooLarge } from "@/lib/api";
 import { waLink } from "@/lib/site";
 
 export const runtime = "nodejs";
@@ -11,13 +11,14 @@ const PROMPT = `Bu fotoğrafta ikinci el/hurda palet yığını var. Yalnızca g
 export async function POST(req: Request) {
   if (!originOk(req)) return NextResponse.json({ error: "İstek reddedildi." }, { status: 403 });
   if (rateLimited(`degerleme:${clientIp(req)}`, 5, 30 * 60_000)) return NextResponse.json({ error: "Çok fazla deneme. Lütfen biraz sonra tekrar deneyin veya fotoğrafı WhatsApp’tan gönderin." }, { status: 429 });
+  if (tooLarge(req, MAX_B64 + 4_000)) return NextResponse.json({ error: "Fotoğraf çok büyük (en fazla ~1,8 MB)." }, { status: 413 });
   let body: { image?: string; city?: string; note?: string };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Geçersiz istek." }, { status: 400 });
   }
-  const m = /^data:image\/(jpeg|png|webp);base64,([A-Za-z0-9+/=]+)$/.exec(body.image ?? "");
+  const m = /^data:image\/(jpeg|png|webp);base64,([A-Za-z0-9+/=]+)$/.exec(typeof body?.image === "string" ? body.image : "");
   if (!m || m[2].length > MAX_B64) return NextResponse.json({ error: "Geçerli bir fotoğraf (JPG/PNG/WebP, en fazla ~1,8 MB) yükleyin." }, { status: 400 });
   const city = clean(body.city, 60);
   const wa = waLink(`Merhaba, palet yığınımın fotoğrafını değerlendirmek istiyorum. Konum: ${city || "…"}. Fotoğrafı bu mesajla göndereceğim.`);

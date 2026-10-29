@@ -1,5 +1,6 @@
 import type { PricePage } from "./prices";
 import type { Section } from "@/lib/types";
+import { priceDepth } from "./price-depth";
 
 // Fiyat sayfaları: /palet-fiyatlari/, /ahsap-palet-fiyatlari/, /ikinci-el-palet-fiyatlari/,
 // /euro-palet-fiyatlari/, /plastik-palet-fiyatlari/
@@ -32,7 +33,7 @@ const quoteSection = (what: string): Section => ({
   links: [["Teklif al", "/teklif-al/"], ["Palet seçici", "/araclar/palet-secici/"]],
 });
 
-export const pricePages: PricePage[] = [
+const basePricePages: PricePage[] = [
   {
     slug: "palet-fiyatlari",
     title: "Palet Fiyatları | Güncel Liste | MEPAL Gebze",
@@ -87,7 +88,7 @@ export const pricePages: PricePage[] = [
       { q: "Nakliye fiyata dahil mi?", a: "Tablo palet fiyatını gösterir. Nakliye adrese, adede ve araç planına göre teklifte ayrıca bildirilir." },
     ],
     related: ["tahta-palet-fiyatlari", "80x120-palet-fiyatlari", "ahsap-palet-fiyatlari", "ikinci-el-palet-fiyatlari", "euro-palet-fiyatlari", "plastik-palet-fiyatlari", "80x120-euro-palet", "ikinci-el-palet", "plastik-palet", "ihracat-paleti"],
-    guides: ["palet-maliyetini-dusurmenin-yollari", "ahsap-palet-mi-plastik-palet-mi", "palet-kalite-siniflari", "palet-cesitleri-ve-secimi"],
+    guides: ["palet-satin-alma-rehberi", "palet-maliyetini-dusurmenin-yollari", "ahsap-palet-mi-plastik-palet-mi", "palet-kalite-siniflari", "palet-cesitleri-ve-secimi"],
   },
   {
     slug: "ahsap-palet-fiyatlari",
@@ -600,5 +601,12 @@ export const pricePages: PricePage[] = [
     guides: ["euro-palet-olculeri", "100x120-ile-80x120-palet-farki", "palet-kac-kg-tasir", "konteynere-ve-tira-kac-palet-sigar"],
   },
 ];
+
+// Derinlik içeriği (price-depth.ts) son "teklif" bölümünden hemen önce eklenir.
+export const pricePages: PricePage[] = basePricePages.map((p) => {
+  const d = priceDepth[p.slug];
+  if (!d) return p;
+  return { ...p, sections: [...p.sections.slice(0, -1), ...d.sections, ...p.sections.slice(-1)], faq: [...p.faq, ...d.faq] };
+});
 
 export const pricePageBySlug = (slug: string) => pricePages.find((p) => p.slug === slug);

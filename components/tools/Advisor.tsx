@@ -16,7 +16,7 @@ export default function Advisor() {
         <button type="button" className="btn btn-gold" data-evt="ai_chat_start" data-src="advisor" onClick={() => setStarted(true)}>
           Palet Danışmanını Başlat
         </button>
-        <p className="disclaimer">Mesajlarınız yanıt üretmek için yapay zekâ hizmet sağlayıcısına iletilir; kişisel bilgi (TC, kart, şifre) yazmayın. <Link href="/kvkk/">KVKK metni</Link>.</p>
+        <p className="disclaimer">Mesajlarınız yanıt üretmek için yapay zekâ hizmet sağlayıcısına iletilir; kişisel bilgi (TC, kart, şifre) yazmayın. <Link prefetch={false} href="/kvkk/">KVKK metni</Link>.</p>
       </div>
     );
   return <Chat />;

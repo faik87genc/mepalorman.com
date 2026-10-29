@@ -17,7 +17,7 @@ export const staticPages: StaticPage[] = [
     slug: "hakkimizda",
     title: "Hakkımızda | MEPAL Orman Ürünleri",
     description:
-      "MEPAL Orman Ürünleri: Gebze deposundan Türkiye genelinde toplu palet tedariki. Firma bilgileri ve çalışma şeklimiz.",
+      "MEPAL Orman Ürünleri: Gebze deposundan Türkiye genelinde toplu palet tedariki. Firma bilgileri, depo adresi ve çalışma şeklimiz.",
     h1: "MEPAL Orman Ürünleri Hakkında",
     answer:
       "MEPAL Orman Ürünleri Sanayi ve Ticaret Ltd. Şti., Gebze'deki deposundan Türkiye genelindeki fabrika ve depolara toplu palet tedarik eder. Euro palet, ahşap palet, plastik palet ve ikinci el palet satışının yanında palet tamiri ve hurda palet alımı yapar.",
@@ -126,7 +126,7 @@ export const staticPages: StaticPage[] = [
     slug: "belgeler",
     title: "Belgeler ve Standartlar | MEPAL",
     description:
-      "Palet sektöründe ISPM-15, EPAL, Turpal ve ISO belgelerinin ne anlama geldiği. Belge kopyaları talep üzerine paylaşılır.",
+      "Palet sektöründe ISPM-15, EPAL, Turpal ve ISO belgelerinin ne anlama geldiği. Belgeler hakkında bilgi için bizimle iletişime geçin.",
     h1: "Belgeler ve Standartlar",
     answer:
       "Bu sayfa, palet alırken karşınıza çıkan ISPM-15, EPAL, Turpal ve ISO gibi belge ve standartların ne anlama geldiğini anlatır. Belge kopyalarımızı talep üzerine paylaşırız.",
@@ -204,7 +204,7 @@ export const staticPages: StaticPage[] = [
     slug: "referanslar",
     title: "Referanslar ve Hizmet Alanı | MEPAL",
     description:
-      "MEPAL'in palet tedarik ettiği sektörler ve bölgeler. Referans mektubu talep üzerine paylaşılır.",
+      "MEPAL'in palet tedarik ettiği sektörler ve hizmet bölgeleri: Gebze, Kocaeli, İstanbul ve Türkiye geneli. Referans bilgisi için iletişime geçin.",
     h1: "Referanslar ve Hizmet Verdiğimiz Alanlar",
     answer:
       "Gebze deposundan Türkiye genelindeki gıda, otomotiv yan sanayi, beyaz eşya, kimya ve plastik, ihracat ve e-ticaret depolarına palet tedarik ediyoruz. Müşteri adlarını izinsiz yayımlamıyoruz; referans mektubu talep üzerine paylaşılır.",

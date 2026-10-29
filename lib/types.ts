@@ -49,7 +49,7 @@ export type Service = Base & { name: string; blurb: string; related: string[]; g
 export type Region = Base & {
   name: string;
   wave: 1 | 2 | 3;
-  /** Approx. road distance and time from the Gebze Pelitli depot. */
+  /** Neutral dispatch note shown on cards and page header (no km/minute claims). */
   distance: string;
   zones: string[];
   blurb: string;

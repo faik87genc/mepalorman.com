@@ -100,7 +100,7 @@ export const guidesC: Guide[] = [
   {
     slug: "sifir-palet-mi-ikinci-el-palet-mi",
     title: "Sıfır Palet mi İkinci El Palet mi? | MEPAL",
-    description: "Sıfır palet mi ikinci el palet mi? Maliyet, ömür, güvenlik ve kullanım alanına göre karşılaştırma ve karar rehberi.",
+    description: "Sıfır palet mi ikinci el palet mi? Maliyet, ömür, güvenlik ve kullanım alanına göre karşılaştırma ve karar rehberi ile seçim önerileri.",
     h1: "Sıfır Palet mi, İkinci El Palet mi?",
     answer:
       "İç piyasada sevkiyat ve depolama için çoğu işletmede iyi durumdaki ikinci el palet yeterlidir ve maliyeti belirgin biçimde düşürür. Gıda, ihracat, otomatik hat ve müşterinin palet kalitesini denetlediği işlerde sıfır palet daha doğru seçimdir. Karar yükün değerine ve paletin geri dönüp dönmeyeceğine bağlıdır.",

@@ -124,7 +124,7 @@ export default function CookieConsent() {
       </h2>
       <p>
         Siteyi çalıştırmak için zorunlu çerezler kullanıyoruz. İzin verirseniz ziyaret istatistikleri için analitik çerezler de kullanırız. Ayrıntı:{" "}
-        <Link href="/cerez-politikasi/">Çerez politikası</Link>.
+        <Link prefetch={false} href="/cerez-politikasi/">Çerez politikası</Link>.
       </p>
       {detail && (
         <div className="consent-detail">

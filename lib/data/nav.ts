@@ -19,6 +19,8 @@ export const footerGroups: { title: string; links: [string, string][] }[] = [
       ["Plastik palet fiyatları", "/plastik-palet-fiyatlari/"],
       ["Tahta palet fiyatları", "/tahta-palet-fiyatlari/"],
       ["80x120 palet fiyatları", "/80x120-palet-fiyatlari/"],
+      ["Hurda palet fiyatları", "/hurda-palet-fiyatlari/"],
+      ["Özel ölçü palet fiyatları", "/ozel-olcu-palet-fiyatlari/"],
     ],
   },
   {

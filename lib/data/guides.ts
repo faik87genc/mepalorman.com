@@ -4,21 +4,24 @@ import { guidesB } from "./guides-b";
 import { guidesC } from "./guides-c";
 import { guidesD } from "./guides-d";
 import { guidesE } from "./guides-e";
+import { guidesF } from "./guides-f";
 
 // Yeni rehberlere (guides-d) geri bağlantılar: mevcut rehberlerin related listesine eklenir.
 // Yalnızca var olan rehber slug'ları kullanılır.
 const extraRelated: Record<string, string[]> = {
   "epal-palet-ile-standart-palet-farki": ["cakma-epal-nedir", "eur-palet-nedir"],
-  "euro-palet-olculeri": ["eur-palet-nedir"],
+  "euro-palet-olculeri": ["eur-palet-nedir", "palet-sozlugu"],
   "ikinci-el-palet-alirken-dikkat-edilecekler": ["orta-palet-ve-kalin-orta-palet-farki", "hasarli-ve-kirik-palet-ne-yapilir"],
   "palet-kalite-siniflari": ["orta-palet-ve-kalin-orta-palet-farki"],
   "hurda-paletinizi-nasil-degerlendirirsiniz": ["hasarli-ve-kirik-palet-ne-yapilir", "hurda-palet-nereye-satilir"],
   "ihracatta-palet-ve-ambalaj-kurallari": ["ambalaj-paleti-nedir"],
-  "palet-cesitleri-ve-secimi": ["ambalaj-paleti-nedir", "palet-secimi-yuk-kapasitesi-rehberi"],
+  "palet-cesitleri-ve-secimi": ["ambalaj-paleti-nedir", "palet-secimi-yuk-kapasitesi-rehberi", "ahsap-palet-nedir", "palet-sozlugu"],
+  "ahsap-palet-mi-plastik-palet-mi": ["ahsap-palet-nedir"],
   "palet-omru-nasil-uzatilir": ["palet-tamiri-ne-zaman-yapilir"],
   "ahsap-palet-geri-donusum": ["hurda-palet-nereye-satilir"],
   "palet-kac-kg-tasir": ["palet-secimi-yuk-kapasitesi-rehberi"],
-  "palet-fiyatlarini-etkileyen-faktorler": ["palet-alirken-teklif-isterken-hangi-bilgiler-gerekir"],
+  "palet-fiyatlarini-etkileyen-faktorler": ["palet-alirken-teklif-isterken-hangi-bilgiler-gerekir", "palet-satin-alma-rehberi"],
+  "ikinci-el-palet-guvenli-mi": ["palet-tamiri-ne-zaman-yapilir", "paletci-nasil-secilir"],
 };
 
 const withExtraRelated = (g: Guide): Guide => {
@@ -27,7 +30,7 @@ const withExtraRelated = (g: Guide): Guide => {
   return { ...g, related: [...g.related, ...extra.filter((s) => !g.related.includes(s))] };
 };
 
-export const guides: Guide[] = [...guidesA, ...guidesB, ...guidesC, ...guidesD, ...guidesE]
+export const guides: Guide[] = [...guidesA, ...guidesB, ...guidesC, ...guidesD, ...guidesE, ...guidesF]
   .map(withExtraRelated)
   .sort((a, b) => a.week - b.week);
 

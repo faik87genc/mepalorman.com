@@ -197,6 +197,7 @@ td.quote { text-align: center; color: var(--muted); font-style: italic; }
 .foot-addr, .foot-legal { border-top: 1px solid #2c2d31; margin-top: 2rem; padding-top: 1.2rem; }
 .foot-addr p, .foot-legal p { margin-bottom: .4rem; }
 .foot-legal { color: #9a9ba0; font-size: .85rem; }
+.foot-legal p a { text-decoration: underline; text-underline-offset: 3px; }
 .foot-legal .linklike { color: #e3cf9f; }
 
 /* Mobile bar */

@@ -1,5 +1,6 @@
 import type { Product } from "@/lib/types";
 import { extraProducts } from "./products-extra";
+import { productDepth } from "./product-depth";
 
 // Ürün sayfaları (/urunler/<slug>/). Fiyatlar burada YAZILMAZ: priceRow ile
 // lib/data/prices.ts içindeki satıra bağlanır.
@@ -1483,6 +1484,13 @@ const baseProducts: Product[] = [
   },
 ];
 
-export const products: Product[] = [...baseProducts, ...extraProducts];
+// Derinlik içeriği (product-depth.ts) sipariş/teslimat bölümünden hemen önce eklenir.
+const withDepth = (p: Product): Product => {
+  const d = productDepth[p.slug];
+  if (!d) return p;
+  return { ...p, sections: [...p.sections.slice(0, -1), ...d.sections, ...p.sections.slice(-1)], faq: [...p.faq, ...d.faq] };
+};
+
+export const products: Product[] = [...baseProducts, ...extraProducts].map(withDepth);
 
 export const productBySlug = (slug: string) => products.find((p) => p.slug === slug);

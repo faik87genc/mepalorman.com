@@ -264,7 +264,7 @@ export const extraServices: Service[] = [
     slug: "isil-islem-ispm-15-uyumlu-palet",
     name: "ISPM-15 Uyumlu Palet Temini",
     title: "ISPM-15 Uyumlu, HT Damgalı Palet Temini | MEPAL",
-    description: "İhracat için ISPM-15 uyumlu, HT damgalı ahşap palet temini. Damga okuma, ölçü seçimi ve teklif için gereken bilgiler.",
+    description: "İhracat için ISPM-15 uyumlu, HT damgalı ahşap palet temini. Damga okuma, ölçü seçimi ve hızlı teklif için gereken bilgiler burada.",
     h1: "ISPM-15 Uyumlu, HT Damgalı İhracat Paleti Temini",
     answer:
       "İhracatta ahşap paletin ISPM-15 uyumlu olması ve okunur bir HT damgası taşıması gerekir. MEPAL, ISPM-15 uyumlu, HT damgalı palet temin eder; ısıl işlem tedarik zincirinde yapılır ve sonuç paletin üzerindeki damgada görülür. Ölçü, adet ve hedef ülkeyi bildirin, teklifi hazırlayalım.",

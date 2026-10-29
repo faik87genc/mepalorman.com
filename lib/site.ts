@@ -26,9 +26,6 @@ export const site = {
     postalCode: "41400",
     district: "Gebze",
     city: "Kocaeli",
-    // Approximate centre of Pelitli, Gebze — replace with the exact pin from Google Maps.
-    lat: 40.8353,
-    lng: 29.4607,
   },
   office: {
     label: "Merkez ofis",
@@ -38,6 +35,19 @@ export const site = {
     city: "İstanbul",
   },
 } as const;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// GOOGLE İŞLETME PROFİLİ SONRASI DOLDURULACAK ALANLAR (şema bunları otomatik kullanır).
+// Boş bırakılırsa JSON-LD'ye hiçbir şey eklenmez.
+// ─────────────────────────────────────────────────────────────────────────────
+/** Doğrulanmış profiller (Google İşletme Profili, LinkedIn, Instagram, Facebook...). Tam URL yazın. */
+export const sameAs: string[] = [
+  // "https://www.google.com/maps/place/...",
+  // "https://www.linkedin.com/company/...",
+];
+/** Depo konumunun TAM pini (Google Haritalar'dan alınan enlem/boylam). null ise şemaya geo eklenmez. */
+export const warehousePin: { lat: number; lng: number } | null = null;
+// Örnek: export const warehousePin = { lat: 40.12345, lng: 29.12345 };
 
 export const warehouseAddress = `${site.warehouse.street}, ${site.warehouse.postalCode} ${site.warehouse.district} / ${site.warehouse.city}`;
 export const officeAddress = `${site.office.street}, ${site.office.postalCode} ${site.office.district} / ${site.office.city}`;

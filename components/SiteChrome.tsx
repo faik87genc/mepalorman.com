@@ -105,6 +105,9 @@ export function SiteFooter() {
             © {new Date().getFullYear()} {site.legalName} · {site.taxOffice} V.D. {site.taxNo} · MERSİS {site.mersis} · Ticaret Sicil No {site.sicil}
           </p>
           <p>
+            Bu sitedeki metin, görsel ve çizimlerin hakları saklıdır; kaynak gösterilmeden kopyalanamaz. Telif/DMCA ihlal bildirimi: <a href={`mailto:${site.email}?subject=Telif%20bildirimi`}>{site.email}</a> · İçerik doğrulama kodu: MPL-4Q7K-2026
+          </p>
+          <p>
             <button type="button" className="linklike" data-cookie-open>
               Çerez tercihleri
             </button>

@@ -28,7 +28,8 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; }
 .btn-gold:hover { background: #a97e50; color: var(--ink); }
 
 .topbar { background: var(--dark); color: #e9e6dd; font-size: .8rem; }
-.topbar-in { display: flex; align-items: center; gap: 1.4rem; min-height: 38px; }
+.topbar-in { display: flex; flex-wrap: wrap; align-items: center; gap: 0 1.4rem; min-height: 38px; }
+.topbar a { min-height: 32px; }
 .topbar a { color: #e9e6dd; text-decoration: none; display: inline-flex; align-items: center; gap: .4rem; }
 .topbar a:hover { color: #fff; }
 .topbar .topbar-wa { margin-left: auto; color: #d9b387; }
@@ -47,7 +48,8 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; }
 .head-phone { display: none; }
 @media (min-width: 1000px) { .bar-cta { display: inline-flex; } }
 .nav-mobile summary { border: 1px solid var(--line); background: #fff; }
-.nav-mobile nav { position: fixed; left: 0; right: 0; top: 106px; width: auto; border-radius: 0; border-width: 1px 0; max-height: calc(100vh - 106px); overflow: auto; padding: .4rem 1.25rem 1rem; box-shadow: 0 20px 40px rgba(0, 0, 0, .12); }
+.nav-mobile { position: static; }
+.nav-mobile nav { position: absolute; left: 0; right: 0; top: 100%; width: auto; border-radius: 0; border-width: 1px 0; max-height: calc(100vh - 68px); overflow: auto; padding: .4rem 1.25rem 1rem; box-shadow: 0 20px 40px rgba(0, 0, 0, .12); }
 .nav-mobile nav > a { border-bottom: 1px solid var(--line); border-radius: 0; padding: .95rem 0; }
 .nav-mobile-actions { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-top: .9rem; }
 .nav-mobile-actions .btn-gold { grid-column: 1 / -1; }
@@ -252,3 +254,7 @@ a[target="_blank"]::after { content: " (yeni sekmede açılır)"; position: abso
   .card:hover, a.c-card:hover { transform: none; }
   .card:hover .card-photo img, .trio-item:hover img { transform: none; }
 }
+
+/* Hedef boyutu (2.5.8): alt bilgi bağlantıları en az 24px yüksekliğinde */
+.site-footer li a, .foot-contact a { display: inline-block; padding: .2rem 0; }
+.foot-legal .linklike { min-height: 24px; }

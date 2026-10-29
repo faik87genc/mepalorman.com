@@ -349,7 +349,7 @@ export const guidesE: Guide[] = [
           "İstenen teslim zamanı: net tarih mi yoksa esnek mi.",
           "Ödeme şekli ve zamanı: peşin mi, anlaşmalı mı; teklifte yazılı olmalı.",
         ],
-        p: ["Teslim süresi stok ve araç programına göre belirlenir; çoğunlukla ertesi iş günü planlanabilir, net süre teklifte bildirilir. Teklifi onaylamadan önce kapsamın (adet, tip, sınıf, nakliye dahil mi) yazılı olduğundan emin olun."],
+        p: ["Teslim süresi stok ve araç programına göre belirlenir; net süre teklifte bildirilir. Teklifi onaylamadan önce kapsamın (adet, tip, sınıf, nakliye dahil mi) yazılı olduğundan emin olun."],
         links: [["Toptan palet", "/hizmetler/toptan-palet/"], ["Palet nakliye ve lojistik", "/hizmetler/palet-nakliye-lojistik/"]],
       },
       {
@@ -365,7 +365,7 @@ export const guidesE: Guide[] = [
       { q: "Palet teklifi için en az hangi bilgiyi vermeliyim?", a: "Palet tipi ve ölçüsü, yaklaşık adet ve teslim adresi en az gereken bilgilerdir. İhracat veya sınıf tercihi varsa onu da ekleyin." },
       { q: "Fiyatı neden hemen tek rakam olarak söylemiyorsunuz?", a: "Fiyat; ölçü, sınıf, adet, ihracat şartı ve teslimat koşuluna göre değişir. Güncel fiyat tablosuna bakabilir veya adedinizi bildirip teklif alabilirsiniz." },
       { q: "Numune palet görebilir miyim?", a: "Stok ve ürün tipine göre depoda inceleme veya örnek talebi görüşülebilir. Ürün tipini ve adedini bildirmeniz yeterlidir." },
-      { q: "Teslim süresi ne kadar?", a: "Stok ve araç programına göre belirlenir; çoğunlukla ertesi iş günü planlanabilir, net süre teklifte bildirilir." },
+      { q: "Teslim süresi ne kadar?", a: "Stok ve araç programına göre belirlenir; net süre teklifte bildirilir." },
       { q: "Düzenli alımda farklı koşul olur mu?", a: "Evet. Aylık veya haftalık düzenli ihtiyaç bildirildiğinde stok ve sevkiyat planı yapılabilir; koşullar teklifte ayrıca belirtilir." },
     ],
   },
