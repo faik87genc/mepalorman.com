@@ -4,7 +4,12 @@ export const site = {
   name: "MEPAL Orman Ürünleri",
   short: "MEPAL",
   legalName: "MEPAL Orman Ürünleri Sanayi ve Ticaret Ltd. Şti.",
-  baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://mepalorman.com",
+  // The site is served on www; the bare domain 308-redirects to it, so canonical,
+  // og:url and sitemap URLs must use www whatever NEXT_PUBLIC_SITE_URL says.
+  baseUrl: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.mepalorman.com").replace(
+    "//mepalorman.com",
+    "//www.mepalorman.com",
+  ),
   tagline: "Ahşap ve plastik palette hızlı fiyat, Gebze depodan sevkiyat.",
   description:
     "Gebze deposundan Türkiye genelinde toplu palet tedariki ve sevkiyatı: euro palet, ahşap palet, plastik palet, ikinci el palet ve hurda palet alımı. Güncel fiyat, hızlı teklif.",
