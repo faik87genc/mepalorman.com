@@ -49,8 +49,6 @@ const LEGACY_REDIRECTS: [string, string][] = [
   ["blog", "/rehber/"],
   ["hakkimizda-2", "/hakkimizda/"],
   ["iletisim-2", "/iletisim/"],
-  ["hakkimizda", "/hakkimizda/"],
-  ["iletisim", "/iletisim/"],
   ["contact", "/iletisim/"],
   ["about", "/hakkimizda/"],
   ["about-us", "/hakkimizda/"],
