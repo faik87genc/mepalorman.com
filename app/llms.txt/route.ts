@@ -6,10 +6,12 @@ import { pricePages } from "@/lib/data/pricePages";
 import { sectors } from "@/lib/data/sectors";
 import { staticPages } from "@/lib/data/pages";
 import { absoluteUrl, site, warehouseAddress } from "@/lib/site";
+import { getPublishedPosts } from "@/lib/posts";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
-export function GET() {
+export async function GET() {
+  const posts = await getPublishedPosts().catch(() => []);
   const line = (t: string, p: string, d?: string) => `- [${t}](${absoluteUrl(p)})${d ? `: ${d}` : ""}`;
   const body = `# ${site.name}
 
@@ -33,7 +35,7 @@ ${regions.map((r) => line(r.name, `/bolge/${r.slug}/`)).join("\n")}
 ${sectors.map((s) => line(s.name, `/sektorler/${s.slug}/`, s.blurb)).join("\n")}
 
 ## Rehber
-${guides.map((g) => line(g.h1, `/rehber/${g.slug}/`)).join("\n")}
+${posts.map((p) => line(p.title, `/rehber/${p.slug}/`, p.excerpt)).concat([""]).join("\n")}${guides.map((g) => line(g.h1, `/rehber/${g.slug}/`)).join("\n")}
 
 ## Araçlar
 ${line("Konteynere ve tıra kaç palet sığar hesaplayıcı", "/araclar/konteyner-palet-hesaplama/")}

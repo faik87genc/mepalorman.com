@@ -6,8 +6,11 @@ import { guideBySlug, guides } from "@/lib/data/guides";
 import { slugify, trDate } from "@/lib/format";
 import { photoFor } from "@/components/Photo";
 import { articleLd, pageMeta, wordCountOf } from "@/lib/seo";
+import { getPublishedPost } from "@/lib/posts";
+import { PostView, postMetadata } from "@/components/PostView";
 
-export const dynamicParams = false;
+// Koddaki rehberler derlemede üretilir; panelden yazılanlar ilk istekte üretilip önbelleğe alınır.
+export const revalidate = 3600;
 export const generateStaticParams = () => guides.map((g) => ({ slug: g.slug }));
 
 type Props = { params: Promise<{ slug: string }> };
@@ -15,14 +18,21 @@ type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const g = guideBySlug(slug);
-  if (!g) return {};
+  if (!g) {
+    const post = await getPublishedPost(slug);
+    return post ? postMetadata(post) : {};
+  }
   return pageMeta({ title: g.title, description: g.description, path: `/rehber/${g.slug}/`, type: "article" });
 }
 
 export default async function GuidePage({ params }: Props) {
   const { slug } = await params;
   const g = guideBySlug(slug);
-  if (!g) notFound();
+  if (!g) {
+    const post = await getPublishedPost(slug);
+    if (!post) notFound();
+    return <PostView post={post} />;
+  }
   const path = `/rehber/${g.slug}/`;
   const rel = g.related.map((s) => guideBySlug(s)).filter((x): x is NonNullable<typeof x> => !!x);
   const message = `Merhaba, "${g.h1}" yazınızı okudum. Palet için fiyat almak istiyorum. Ürün: … Adet: … İl: …`;

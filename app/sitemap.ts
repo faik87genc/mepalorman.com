@@ -9,8 +9,13 @@ import { pricePages } from "@/lib/data/pricePages";
 import { staticPages } from "@/lib/data/pages";
 import { PRICES_UPDATED } from "@/lib/data/prices";
 import { SITE_UPDATED } from "@/lib/seo";
+import { getPublishedPosts } from "@/lib/posts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+// Panelden yayınlanan yazı hemen görünsün diye istek anında üretilir.
+export const dynamic = "force-dynamic";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getPublishedPosts().catch(() => []);
   const d = (s: string) => new Date(`${s}T12:00:00Z`);
   const at = (path: string, date: string, priority: number) => ({ url: absoluteUrl(path), lastModified: d(date), priority });
   return [
@@ -23,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...regions.map((p) => at(`/bolge/${p.slug}/`, SITE_UPDATED, 0.8)),
     ...sectors.map((p) => at(`/sektorler/${p.slug}/`, SITE_UPDATED, 0.6)),
     ...guides.map((p) => at(`/rehber/${p.slug}/`, p.updated, 0.6)),
+    ...posts.map((p) => at(`/rehber/${p.slug}/`, p.updatedAt, 0.6)),
     ...staticPages.map((p) => at(`/${p.slug}/`, p.updated, 0.4)),
   ];
 }

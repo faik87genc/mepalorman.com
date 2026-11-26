@@ -16,7 +16,7 @@ const csp = [
   "form-action 'self'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://*.google-analytics.com https://*.googletagmanager.com",
+  "img-src 'self' data: blob: https://*.public.blob.vercel-storage.com https://*.google-analytics.com https://*.googletagmanager.com",
   "font-src 'self' data:",
   `connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com${isDev ? " ws: wss:" : ""}`,
   "manifest-src 'self'",
@@ -78,18 +78,20 @@ const LEGACY_REDIRECTS: [string, string][] = [
   ["comments/feed", "/rehber/"],
   ["wp-login.php", "/"],
   ["wp-admin", "/"],
+  ["admin-panel", "/admin/"],
 ];
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
   trailingSlash: true,
-  experimental: { inlineCss: true },
+  experimental: { inlineCss: true, serverActions: { bodySizeLimit: "5mb" } },
   images: { formats: ["image/avif", "image/webp"] },
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },
       { source: "/api/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }, { key: "Cache-Control", value: "no-store" }] },
+      { source: "/admin/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }, { key: "Cache-Control", value: "no-store" }] },
       { source: "/img/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }] },
       { source: "/:all*(svg|png|jpg|jpeg|webp|avif|woff2|ico)", headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=86400" }] },
     ];

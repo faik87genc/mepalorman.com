@@ -257,3 +257,7 @@ input:focus, select:focus, textarea:focus { outline: 3px solid rgba(122, 99, 66,
 .notfound { text-align: center; padding: 4rem 0; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 @media print { .site-header, .mobile-bar, .consent, .site-footer, .final-cta { display: none; } }
+
+/* Panelden yazılan blog yazıları */
+.post-body img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.page-figure > img { width: 100%; height: auto; display: block; }

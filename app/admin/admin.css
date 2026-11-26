@@ -1,0 +1,24 @@
+/* Panelde herkese açık sitenin üst/alt kısmı gizlenir. */
+body:has(.admin) :is(.topbar, .site-header, .site-footer, .mobile-bar, .consent, .wa-float) { display: none; }
+body:has(.admin) { padding-bottom: 0; }
+
+.admin { padding-block: 1.5rem 4rem; }
+.admin h1 { font-size: 1.6rem; margin: 0; }
+.admin-bar { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.admin-bar nav { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.admin label { display: block; font-weight: 600; margin-bottom: 1rem; }
+.admin :is(input[type="text"], input[type="password"], textarea) { display: block; width: 100%; margin-top: .3rem; padding: .65rem .8rem; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; color: var(--ink); font: 400 1rem/1.5 var(--sans); }
+.admin textarea.admin-content { font-family: ui-monospace, Consolas, monospace; font-size: .95rem; }
+.admin small { display: block; font-weight: 400; color: var(--muted); margin-top: .25rem; }
+.admin-login { max-width: 400px; margin: 3rem auto; }
+.admin-note { border: 1px solid var(--line); background: var(--panel); border-radius: var(--radius); padding: .9rem 1.1rem; margin-bottom: 1rem; }
+.admin-note.is-error { border-color: var(--danger); color: var(--danger); }
+.admin-cols { display: grid; gap: 2rem; }
+@media (min-width: 900px) { .admin-cols { grid-template-columns: minmax(0, 1fr) 300px; align-items: start; } }
+.admin-tools { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-bottom: .6rem; }
+.admin-preview { border: 1px solid var(--line); background: #fff; border-radius: var(--radius); padding: 1rem 1.2rem; min-height: 320px; margin-bottom: 1rem; }
+.admin-preview img, .admin-cover { max-width: 100%; height: auto; border-radius: var(--radius); }
+.admin-checks { list-style: none; padding: 0; margin: 0; }
+.admin-checks li { padding: .35rem 0; border-bottom: 1px solid var(--line); font-size: .92rem; }
+.admin-list { list-style: none; padding: 0; }
+.admin-list li { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: space-between; align-items: center; padding: .8rem 0; border-bottom: 1px solid var(--line); }
