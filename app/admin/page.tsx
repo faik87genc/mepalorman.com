@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/guard";
 import { isDatabaseConfigured, listAllPosts, type Post } from "@/lib/posts";
-import { trDate } from "@/lib/format";
-import { logout } from "./actions";
+import { trDate, trDay } from "@/lib/format";
+import { importDrafts, logout } from "./actions";
+import { blogDrafts } from "@/lib/data/blog-drafts";
 
 export default async function AdminHome() {
   await requireAdmin();
@@ -17,6 +18,8 @@ export default async function AdminHome() {
       failed = true;
     }
   }
+  const today = trDay(0);
+  const waiting = blogDrafts.filter((d) => !posts.some((p) => p.slug === d.slug));
   return (
     <>
       <div className="admin-bar">
@@ -32,14 +35,23 @@ export default async function AdminHome() {
       {!configured && <p className="admin-note">Veritabanı bağlı değil. Vercel’de Neon Postgres ekleyip <code>DATABASE_URL</code> tanımlayın; tablo kendiliğinden kurulur.</p>}
       {failed && <p className="admin-note is-error" role="alert">Veritabanına ulaşılamadı. Birkaç saniye sonra sayfayı yenileyin.</p>}
       {configured && !failed && !posts.length && <p className="admin-note">Henüz yazı yok. “Yeni yazı” ile başlayın.</p>}
+      {configured && !failed && waiting.length > 0 && (
+        <form action={importDrafts} className="admin-note">
+          <p>{waiting.length} hazır yazı bekliyor. Başlangıç gününden itibaren günde bir tane, 09:00’da yayınlanacak şekilde planlanır.</p>
+          <div className="admin-tools">
+            <input type="date" name="start" defaultValue={trDay(1)} min={today} required aria-label="Başlangıç günü" />
+            <button className="btn btn-sm btn-dark">Hazır yazıları planla</button>
+          </div>
+        </form>
+      )}
       <ul className="admin-list">
         {posts.map((p) => (
           <li key={p.id}>
             <div>
               <Link href={`/admin/yazi/${p.id}/`}>{p.title}</Link>
-              <small>{p.published ? `Yayında · ${trDate(p.publishedAt)}` : `Taslak · ${trDate(p.updatedAt)}`} · /rehber/{p.slug}/</small>
+              <small>{!p.published ? `Taslak · ${trDate(p.updatedAt)}` : p.publishedAt > today ? `Planlandı · ${trDate(p.publishedAt)}` : `Yayında · ${trDate(p.publishedAt)}`}{p.coverImageUrl ? "" : " · görsel yok"} · /rehber/{p.slug}/</small>
             </div>
-            {p.published && <Link href={`/rehber/${p.slug}/`} className="btn btn-sm btn-ghost">Görüntüle</Link>}
+            {p.published && p.publishedAt <= today && <Link href={`/rehber/${p.slug}/`} className="btn btn-sm btn-ghost">Görüntüle</Link>}
           </li>
         ))}
       </ul>

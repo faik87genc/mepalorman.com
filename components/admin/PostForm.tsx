@@ -33,6 +33,7 @@ function seoChecks(v: typeof EMPTY): [boolean, string][] {
 export function PostForm({ post, justSaved }: { post?: Post; justSaved?: boolean }) {
   const [state, action, pending] = useActionState<SaveState, FormData>(savePost, justSaved ? { ok: "Kaydedildi." } : {});
   const [v, setV] = useState(() => (post ? { ...EMPTY, ...post } : EMPTY));
+  const [date, setDate] = useState(post?.publishedAt ?? "");
   const [preview, setPreview] = useState(false);
   const [upload, setUpload] = useState("");
   const area = useRef<HTMLTextAreaElement>(null);
@@ -137,6 +138,12 @@ export function PostForm({ post, justSaved }: { post?: Post; justSaved?: boolean
           <label>
             Meta açıklama
             <textarea {...field("metaDescription")} rows={2} placeholder={v.excerpt} />
+          </label>
+
+          <label>
+            Yayın tarihi
+            <input type="date" name="publishDate" value={date} onChange={(e) => setDate(e.target.value)} />
+            <small>Boş bırakırsanız hemen yayınlanır. İleri bir tarih seçerseniz o gün 09:00’da görünür.</small>
           </label>
 
           {state.error && <p className="admin-note is-error" role="alert">{state.error}</p>}

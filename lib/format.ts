@@ -17,6 +17,9 @@ export function priceRange(rowKeys: string[]): { low: number; high: number } | u
 
 export const trDate = (iso: string) => new Date(`${iso}T12:00:00Z`).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
 
+/** Türkiye saatiyle bugünden `offset` gün sonrasının tarihi (yyyy-mm-dd). */
+export const trDay = (offset = 0) => new Date(Date.now() + 3 * 3_600_000 + offset * 86_400_000).toISOString().slice(0, 10);
+
 export const slugify = (s: string) =>
   s
     .toLocaleLowerCase("tr-TR")

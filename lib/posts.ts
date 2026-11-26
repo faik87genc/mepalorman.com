@@ -18,7 +18,8 @@ export type Post = {
   updatedAt: string;
 };
 
-export type PostInput = Omit<Post, "id" | "publishedAt" | "updatedAt">;
+/** publishAt: ileri bir yayın zamanı (ISO); null ise hemen yayınlanır. */
+export type PostInput = Omit<Post, "id" | "publishedAt" | "updatedAt"> & { publishAt: string | null };
 
 export const isDatabaseConfigured = () => Boolean(process.env.DATABASE_URL?.trim());
 
@@ -64,7 +65,8 @@ const toPost = (r: Row): Post => ({
   focusKeyword: String(r.focus_keyword),
   published: Boolean(r.published),
   publishedAt: day(r.published_at),
-  updatedAt: day(r.updated_at),
+  // Planlanmış yazıda güncelleme tarihi yayın tarihinden önce görünmesin.
+  updatedAt: [day(r.updated_at), day(r.published_at)].sort()[1],
 });
 
 // Veritabanı yoksa site yalnızca koddaki rehberlerle çalışır. Çalışma anındaki hata
@@ -73,7 +75,7 @@ export const getPublishedPosts = cache(async (): Promise<Post[]> => {
   if (!isDatabaseConfigured()) return [];
   try {
     const sql = await db();
-    const rows = await sql`select * from posts where published order by published_at desc`;
+    const rows = await sql`select * from posts where published and published_at <= now() order by published_at desc`;
     return rows.map(toPost);
   } catch (e) {
     if (process.env.NEXT_PHASE === "phase-production-build") return [];
@@ -105,7 +107,7 @@ export async function createPost(p: PostInput): Promise<string> {
   const sql = await db();
   const [row] = await sql`insert into posts
     (slug, title, excerpt, content, cover_image_url, meta_title, meta_description, focus_keyword, published, published_at)
-    values (${p.slug}, ${p.title}, ${p.excerpt}, ${p.content}, ${p.coverImageUrl}, ${p.metaTitle}, ${p.metaDescription}, ${p.focusKeyword}, ${p.published}, case when ${p.published}::boolean then now() end)
+    values (${p.slug}, ${p.title}, ${p.excerpt}, ${p.content}, ${p.coverImageUrl}, ${p.metaTitle}, ${p.metaDescription}, ${p.focusKeyword}, ${p.published}, case when ${p.published}::boolean then coalesce(${p.publishAt}::timestamptz, now()) end)
     returning id`;
   return String(row.id);
 }
@@ -116,7 +118,11 @@ export async function updatePost(id: string, p: PostInput): Promise<void> {
     slug = ${p.slug}, title = ${p.title}, excerpt = ${p.excerpt}, content = ${p.content},
     cover_image_url = ${p.coverImageUrl}, meta_title = ${p.metaTitle}, meta_description = ${p.metaDescription},
     focus_keyword = ${p.focusKeyword}, published = ${p.published},
-    published_at = case when ${p.published}::boolean then coalesce(published_at, now()) else published_at end,
+    published_at = case
+      when not ${p.published}::boolean then published_at
+      when ${p.publishAt}::timestamptz is not null then ${p.publishAt}::timestamptz
+      when published_at <= now() then published_at
+      else now() end,
     updated_at = now()
     where id = ${id}`;
 }

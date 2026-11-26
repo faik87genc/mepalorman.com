@@ -8,6 +8,7 @@ import { authConfigProblems, createSessionToken, verifyPassword, SESSION_COOKIE_
 import { hasSession, requireAdmin } from "@/lib/guard";
 import { createPost, deletePost, getPostById, slugTaken, updatePost, type PostInput } from "@/lib/posts";
 import { guideBySlug } from "@/lib/data/guides";
+import { blogDrafts } from "@/lib/data/blog-drafts";
 import { slugify } from "@/lib/format";
 
 // Kaba kuvvete karşı: IP başına 10 dakikada 10 deneme (sunucu örneği başına, bellek içi).
@@ -44,6 +45,26 @@ function revalidateBlog(...slugs: string[]) {
   for (const p of ["/rehber", ...slugs.map((s) => `/rehber/${s}`)]) revalidatePath(p);
 }
 
+// İleri tarihli yazılar Türkiye saatiyle 09:00'da görünür.
+const publishTime = (date: string) => `${date}T06:00:00Z`;
+const isFuture = (date: string) => /^\d{4}-\d{2}-\d{2}$/.test(date) && Date.parse(publishTime(date)) > Date.now();
+
+/** Hazır yazıları seçilen günden başlayarak günde bir tane planlar; var olan adresler atlanır. */
+export async function importDrafts(formData: FormData) {
+  await requireAdmin();
+  const start = Date.parse(`${String(formData.get("start") ?? "")}T06:00:00Z`);
+  if (Number.isNaN(start)) redirect("/admin/");
+  const slugs: string[] = [];
+  for (const [i, d] of blogDrafts.entries()) {
+    if (guideBySlug(d.slug) || (await slugTaken(d.slug))) continue;
+    const at = new Date(start + i * 86_400_000);
+    await createPost({ ...d, coverImageUrl: "", published: true, publishAt: at.getTime() > Date.now() ? at.toISOString() : null });
+    slugs.push(d.slug);
+  }
+  revalidateBlog(...slugs);
+  redirect("/admin/");
+}
+
 export type SaveState = { error?: string; ok?: string };
 
 export async function savePost(_prev: SaveState, formData: FormData): Promise<SaveState> {
@@ -52,6 +73,7 @@ export async function savePost(_prev: SaveState, formData: FormData): Promise<Sa
   const id = text("id");
   const title = text("title");
   const content = text("content");
+  const date = text("publishDate");
   const post: PostInput = {
     title,
     slug: slugify(text("slug") || title),
@@ -62,6 +84,7 @@ export async function savePost(_prev: SaveState, formData: FormData): Promise<Sa
     metaDescription: text("metaDescription"),
     focusKeyword: text("focusKeyword"),
     published: formData.get("intent") === "publish",
+    publishAt: isFuture(date) ? publishTime(date) : null,
   };
   if (!title || !post.slug) return { error: "Başlık zorunlu." };
   if (post.published && (!content || !post.excerpt)) return { error: "Yayınlamak için kısa özet ve içerik zorunlu." };
@@ -80,7 +103,7 @@ export async function savePost(_prev: SaveState, formData: FormData): Promise<Sa
     return { error: "Kaydedilemedi: veritabanına ulaşılamadı. Metniniz sayfada duruyor, tekrar deneyin." };
   }
   if (createdId) redirect(`/admin/yazi/${createdId}/?kaydedildi=1`);
-  return { ok: post.published ? "Kaydedildi ve yayında." : "Taslak olarak kaydedildi." };
+  return { ok: !post.published ? "Taslak olarak kaydedildi." : post.publishAt ? "Kaydedildi; seçilen gün 09:00’da yayınlanacak." : "Kaydedildi ve yayında." };
 }
 
 export async function removePost(formData: FormData) {
